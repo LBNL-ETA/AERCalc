@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<dialogs:ConfirmationDialog xmlns:fx="http://ns.adobe.com/mxml/2009"
+                            xmlns:s="library://ns.adobe.com/flex/spark"
+                            xmlns:dialogs="gov.lbl.aercalc.view.dialogs.*"
+                            xmlns:settings="gov.lbl.aercalc.view.settings.*"
+                            title="Preferences"
+                            width="650"
+                            height="500">
+
+    <dialogs:states>
+        <s:State name="general"/>
+        <s:State name="window7"/>
+    </dialogs:states>
+
+    <fx:Script>
+		<![CDATA[
+        import gov.lbl.aercalc.model.settings.SettingsModel;
+
+        [Inject]
+        public var settingsModel:SettingsModel;
+
+        protected override function onCreate():void
+        {
+            super.onCreate();
+            closeButton.visible = true;
+            settingsModel.beginEdit();
+        }
+
+
+        protected override function onSubmit():void
+        {
+            settingsModel.commit();
+        }
+
+        override protected function onCancel():void
+        {
+            settingsModel.cancel();
+        }
+
+
+        protected function onChange(event:Event):void
+        {
+            currentState = prefTabBar.selectedItem.data;
+        }
+        ]]>
+	</fx:Script>
+
+    <!-- tabs -->
+
+    <s:TabBar id="prefTabBar"
+              requireSelection="true"
+              height="22"
+              left="20"
+              top="10"
+              change="onChange(event)">
+
+        <s:layout>
+            <s:HorizontalLayout gap="-1" columnWidth="105" variableColumnWidth="false"/>
+        </s:layout>
+
+        <s:dataProvider>
+            <s:ArrayList>
+                <fx:Object label="General" data="general"/>
+                <fx:Object label="WINDOW7" data="window7"/>
+            </s:ArrayList>
+        </s:dataProvider>
+
+    </s:TabBar>
+
+    <!-- screens for each tab -->
+    <s:BorderContainer id="tabContent" top="33" left="10" right="10" bottom="10" borderColor="#AAAAAA">
+        <settings:GeneralPreferences includeIn="general" top="20" left="20" right="20" bottom="20"/>
+        <settings:Window7Preferences includeIn="window7" top="20" left="20" right="20" bottom="20"/>
+    </s:BorderContainer>
+
+</dialogs:ConfirmationDialog>

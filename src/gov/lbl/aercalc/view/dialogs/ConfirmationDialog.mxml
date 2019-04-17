@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               implements="mx.managers.IFocusManagerComponent">
+
+    <fx:Script>
+		<![CDATA[
+
+        import gov.lbl.aercalc.util.Utils;
+
+        import mx.core.FlexGlobals;
+        import mx.events.CloseEvent;
+        import mx.managers.PopUpManager;
+
+        public var autoClose:Boolean = true;
+
+        protected function onCreate():void
+        {
+            controlButtonsGroup.layoutDirection = Utils.isMac ? "rtl" : "ltr";
+            defaultButton = okButton;
+            closeButton.visible = false;
+            addEventListener(CloseEvent.CLOSE, onClose);
+        }
+
+        protected function onClose(event:Event):void
+        {
+            hide();
+        }
+
+        protected function onSubmit():void
+        {
+
+        }
+
+        protected function onCancel():void
+        {
+
+        }
+
+        public function show():void
+        {
+            PopUpManager.addPopUp(this, FlexGlobals.topLevelApplication as DisplayObject, true);
+            PopUpManager.centerPopUp(this)
+        }
+
+        public function hide():void
+        {
+            PopUpManager.removePopUp(this);
+        }
+
+        private function doSubmit():void
+        {
+            onSubmit();
+            if(autoClose)
+                hide();
+        }
+
+        private function doCancel():void
+        {
+            onCancel();
+            if(autoClose)
+                hide();
+        }
+
+
+        override protected function initializationComplete():void
+        {
+            super.initializationComplete();
+            onCreate();
+        }
+
+        ]]>
+	</fx:Script>
+
+    <s:controlBarContent>
+        <s:HGroup width="100%" horizontalAlign="right" verticalAlign="middle">
+            <s:HGroup id="controlButtonsGroup" horizontalAlign="right" verticalAlign="middle">
+                <s:Button id="okButton" label="OK" click="doSubmit()" styleName="defaultButton" width="90" height="30"/>
+                <s:Button id="cancelButton" label="CANCEL" click="doCancel()" styleName="defaultButton" width="90"
+                          height="30"/>
+            </s:HGroup>
+        </s:HGroup>
+    </s:controlBarContent>
+
+</s:TitleWindow>

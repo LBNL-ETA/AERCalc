@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               title="Simulating Performance"
+               close="onCancel()"
+                width="600"
+                height="500">
+	
+
+    <fx:Script><![CDATA[
+        import mx.core.FlexGlobals;
+        import mx.managers.PopUpManager;
+        import gov.lbl.aercalc.controller.SimulationController;
+
+        private var _onCancelFunction:Function;
+
+        [Bindable]
+        private var _statusMessage:String;
+		
+		[Bindable]
+		private var _thirdPartyAppStatusMessage:String;
+
+        public function show():void
+        {
+            PopUpManager.addPopUp(this, FlexGlobals.topLevelApplication as DisplayObject, true);
+            PopUpManager.centerPopUp(this)
+        }
+
+        public function initProgress(min:Number, max:Number):void {
+            progressBar.minimum = min;
+            progressBar.maximum = max;
+        }
+		
+		/* Swiz can't inject into popups, so we set controller ref manually */
+		public function setOnCancelCallback(f:Function):void{
+			_onCancelFunction = f;
+		}
+
+        public function setProgress(value:int, max:int):void {
+            progressBar.setProgress(value, max);
+        }
+
+        public function setStatusMessage(message:String):void {
+            this._statusMessage = message;
+        }
+		
+		public function setThirdPartyAppStatusMessage(message:String):void {
+			this._thirdPartyAppStatusMessage = "";
+			this._thirdPartyAppStatusMessage = message;
+		}
+
+        protected function onCancel():void {
+			_onCancelFunction();
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+        public function closeDialog():void {
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+        private function cleanup():void {
+			_onCancelFunction = null;
+            progressBar.minimum = 0;
+            progressBar.maximum = 0;
+            progressBar.setProgress(0,0);
+        }
+
+        ]]></fx:Script>
+
+    <s:VGroup  top="10"
+               left="10"
+               right="10">
+        <!-- don't think we need this...redundant
+        <s:Label text="Running EnergyPlus simulations..."
+                 width="100%"
+                 fontWeight="bold"
+                 textAlign="center"/>
+        -->
+        <s:Spacer height="5"/>
+        <s:Label width="100%"
+                 text="{_statusMessage}"
+                 toolTip="{_statusMessage}"
+                 maxDisplayedLines="2"
+                 height="30"
+                 textAlign="center"
+        />
+
+        <s:Group width="100%" height="300">
+            <s:Rect left="0" right="0" top="0" bottom="0" radiusX="5" radiusY="5">
+                <s:fill>
+                    <s:SolidColor color="#19263b"/>
+                </s:fill>
+            </s:Rect>
+
+            <s:Label text="ENERGYPLUS OUTPUT:"
+                     color="#658ac7"
+                     fontSize="9"
+                     left="10"
+                     kerning="on"
+                     trackingLeft="1"
+                     trackingRight="0"
+                     top="5"
+            />
+
+            <s:Label left="20"
+                     top="30"
+                     right="20"
+                     color="#b1c4e4"
+                     height="250"
+                     paddingBottom="10"
+                     text="{_thirdPartyAppStatusMessage}"
+                     maxDisplayedLines="14"
+                     textAlign="left"
+            />
+
+        </s:Group>
+						
+
+        <mx:ProgressBar id="progressBar"
+                        indeterminate="true"
+                        labelPlacement="center"
+                        styleName="progressBar"
+                        minimum="0"
+                        maximum="100"
+                        trackHeight="30"
+                        label=" "
+                        width="100%"
+                        horizontalCenter="0"
+                        verticalCenter="0"/>
+
+    </s:VGroup>
+
+    <s:Button id="btnCancel"
+              right="10"
+              bottom="10"
+              click="onCancel()"
+              label="Cancel"
+              minWidth="90"
+              minHeight="30"/>
+
+
+</s:TitleWindow>

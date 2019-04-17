@@ -1,0 +1,1 @@
+THERM 7 has the ability to model windows with shading layers, dynamic glazing, vacuum glazing and glazing deflection.  The shading systems that can be modeled are venetian blinds, woven shades, cellular shades, vertical louvered blinds, perforated screens and shades with measured BSDF matrices. For further information see  http://windows.lbl.gov/software

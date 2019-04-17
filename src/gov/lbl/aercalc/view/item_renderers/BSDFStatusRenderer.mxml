@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<s:MXAdvancedDataGridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                                  xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <fx:Script>
+        <![CDATA[
+
+        import gov.lbl.aercalc.model.domain.WindowVO;
+        import gov.lbl.aercalc.util.AERCalcResources;
+
+        override public function set data(value:Object):void
+        {
+            imgIcon.source = null;
+            imgIcon.includeInLayout = false;
+            imgIcon.visible = false;
+            if (value){
+                var vo:WindowVO = value as WindowVO;
+                if (!vo.isParent) {
+                    if (vo.hasBSDF){
+                        imgIcon.source = AERCalcResources.TickIcon;
+                        imgIcon.toolTip = "The BDSF for this product is present."
+                    } else {
+                        imgIcon.source = AERCalcResources.CrossIcon;
+                        imgIcon.toolTip = "The BDSF for this product is missing. Please re-import."
+                    }
+                    imgIcon.includeInLayout = true;
+                    imgIcon.visible = true;
+                }
+            }
+        }
+
+        ]]></fx:Script>
+
+    <s:Image id="imgIcon"
+             includeInLayout="false"
+             visible="false"
+             horizontalCenter="0"
+             toolTip=""
+             verticalCenter="0"/>
+
+</s:MXAdvancedDataGridItemRenderer>

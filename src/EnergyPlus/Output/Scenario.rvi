@@ -1,0 +1,32 @@
+eplusout.eso 
+eplusout.csv 
+Surface Outside Face Incident Solar Radiation Rate per Area[W/m2]
+Surface Outside Face Incident Beam Solar Radiation Rate per Area[W/m2]
+Surface Outside Face Incident Sky Diffuse Solar Radiation Rate per Area[W/m2]
+Surface Inside Face Temperature
+Surface Outside Face Sunlit Fraction []
+Surface Window Heat Gain Rate [W]
+Surface Window Heat Gain Energy [J]
+Zone Windows Total Heat Gain Rate[W]
+Zone Mean Air Temperature
+Zone Lights Electric Energy [J]
+Air System Fan Electric Energy
+Air System DX Cooling Coil Electric Energy
+Air System Gas Energy
+Heating Coil Electric Energy
+Zone Thermal Comfort Fanger Model PPD
+Daylighting Reference Point 1 Illuminance
+Daylighting Reference Point 2 Illuminance
+Daylighting Reference Point 1 Glare Index
+Daylighting Reference Point 2 Glare Index
+People Occupant Count
+Site Outdoor Air Drybulb Temperature
+Zone Cooling Setpoint Not Met Time
+Zone Operative Temperature
+Zone Thermal Comfort ASHRAE 55 Adaptive Model Running Average Outdoor Air Temperature
+Zone Thermal Comfort ASHRAE 55 Adaptive Model Temperature
+Zone Thermal Comfort ASHRAE 55 Adaptive Model 90% Acceptability Status
+Zone Thermal Comfort ASHRAE 55 Adaptive Model 80% Acceptability Status
+Surface Window Switchable Glazing Switching Factor
+Surface Window Switchable Glazing Visible Transmittance
+0 

@@ -1,0 +1,2198 @@
+<?xml version="1.0"?>
+<THERM-XML xmlns="http://windows.lbl.gov">
+<ThermVersion>Version 7.7.1.0</ThermVersion>
+<FileVersion>1</FileVersion>
+<SaveDate>2018-11-07T10:52:00</SaveDate>
+
+<Title></Title>
+<CreatedBy></CreatedBy>
+<Company></Company>
+<Client></Client>
+<CrossSectionType>Sill</CrossSectionType>
+<Notes></Notes>
+<Units>SI</Units>
+<MeshControl MeshLevel="8" ErrorCheckFlag="1" ErrorLimit="10.000000" MaxIterations="5" CMAflag="0" />
+<Materials>
+	<Material Name="ID52_CS:C22-951_outerwalls.txt" Type="5" Conductivity="0.120000" Tir="0.000000" EmissivityFront="0.720000" EmissivityBack="0.720000" RGBColor="0x4951F9">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.452852" R="0.494018"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.459007" R="0.457289"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.452852" R="0.494018"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.459007" R="0.457289"/>
+	</Material>
+	<Material Name="ID52_CS:C22-951_innerwalls.txt" Type="5" Conductivity="0.120000" Tir="0.000000" EmissivityFront="0.680000" EmissivityBack="0.680000" RGBColor="0x4951F9">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.480086" R="0.461030"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.483762" R="0.440583"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.480086" R="0.461030"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.483762" R="0.440583"/>
+	</Material>
+	<Material Name="ID52_CS:C22-951_glueline.txt" Type="5" Conductivity="0.120000" Tir="0.000000" EmissivityFront="0.780000" EmissivityBack="0.780000" RGBColor="0x4951F9">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.308959" R="0.656565"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.312156" R="0.598791"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.308959" R="0.656565"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.312156" R="0.598791"/>
+	</Material>
+	<Material Name="Frame Cavity NFRC 100_Cavity_446" Type="1" Conductivity="0.085062" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_445" Type="1" Conductivity="0.034181" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_444" Type="1" Conductivity="0.036407" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_405" Type="1" Conductivity="0.085111" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_404" Type="1" Conductivity="0.034179" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_403" Type="1" Conductivity="0.036407" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_364" Type="1" Conductivity="0.085114" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_363" Type="1" Conductivity="0.034182" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_362" Type="1" Conductivity="0.036408" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_323" Type="1" Conductivity="0.085109" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_322" Type="1" Conductivity="0.034179" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_321" Type="1" Conductivity="0.036409" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_282" Type="1" Conductivity="0.085113" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_281" Type="1" Conductivity="0.034179" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_280" Type="1" Conductivity="0.036407" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_241" Type="1" Conductivity="0.085115" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_240" Type="1" Conductivity="0.034179" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_239" Type="1" Conductivity="0.036408" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_200" Type="1" Conductivity="0.085117" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_199" Type="1" Conductivity="0.034182" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_198" Type="1" Conductivity="0.036412" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_159" Type="1" Conductivity="0.085110" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_158" Type="1" Conductivity="0.034182" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_157" Type="1" Conductivity="0.036408" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_118" Type="1" Conductivity="0.085113" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_117" Type="1" Conductivity="0.034179" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_116" Type="1" Conductivity="0.036408" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_77" Type="1" Conductivity="0.085078" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_76" Type="1" Conductivity="0.034177" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_75" Type="1" Conductivity="0.036411" Tir="-1.000000" Absorptivity="0.000000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+</Materials>
+<BoundaryConditions>
+	<BoundaryCondition Name="Frame Cavity Surface" Type="7" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x0000FF" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeOutE" Type="0" H="2.834231" HeatFLux="0.000000" Temperature="-4.368262" RGBColor="0xFF8000" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="Adiabatic" Type="0" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x000000" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="1" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeInE" Type="0" H="4.491774" HeatFLux="0.000000" Temperature="21.000000" RGBColor="0x8000FF" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+</BoundaryConditions>
+<Polygons>
+	<Polygon ID="455" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-30.751972" />
+		<Point index="1" x="250.098572" y="-30.551991" />
+		<Point index="2" x="249.145172" y="-29.638508" />
+		<Point index="3" x="243.635834" y="-24.263050" />
+		<Point index="4" x="237.116364" y="-17.901997" />
+		<Point index="5" x="236.829987" y="-17.901997" />
+	</Polygon>
+	<Polygon ID="454" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-29.638508" />
+		<Point index="1" x="250.098572" y="-30.551991" />
+		<Point index="2" x="240.387115" y="-17.901997" />
+		<Point index="3" x="240.134979" y="-17.901997" />
+		<Point index="4" x="245.018738" y="-24.263477" />
+	</Polygon>
+	<Polygon ID="453" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-30.551991" />
+		<Point index="1" x="258.799988" y="-30.751972" />
+		<Point index="2" x="271.970001" y="-17.901997" />
+		<Point index="3" x="271.683624" y="-17.901997" />
+		<Point index="4" x="265.157104" y="-24.269932" />
+		<Point index="5" x="259.654816" y="-29.638508" />
+	</Polygon>
+	<Polygon ID="452" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-30.551991" />
+		<Point index="1" x="259.654816" y="-29.638508" />
+		<Point index="2" x="263.786407" y="-24.256763" />
+		<Point index="3" x="268.665009" y="-17.901997" />
+		<Point index="4" x="268.412872" y="-17.901997" />
+	</Polygon>
+	<Polygon ID="451" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-5.252001" />
+		<Point index="1" x="250.000000" y="-5.052004" />
+		<Point index="2" x="236.829987" y="-17.901997" />
+		<Point index="3" x="237.116364" y="-17.901997" />
+		<Point index="4" x="244.497574" y="-10.700136" />
+		<Point index="5" x="249.145172" y="-6.165483" />
+	</Polygon>
+	<Polygon ID="450" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-5.252001" />
+		<Point index="1" x="249.145172" y="-6.165483" />
+		<Point index="2" x="245.650208" y="-10.717974" />
+		<Point index="3" x="240.134979" y="-17.901997" />
+		<Point index="4" x="240.387115" y="-17.901997" />
+	</Polygon>
+	<Polygon ID="449" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-5.052004" />
+		<Point index="1" x="250.098572" y="-5.252001" />
+		<Point index="2" x="258.701416" y="-5.252001" />
+		<Point index="3" x="258.799988" y="-5.052004" />
+		<Point index="4" x="258.701416" y="-4.852007" />
+		<Point index="5" x="250.098602" y="-4.852007" />
+	</Polygon>
+	<Polygon ID="448" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-5.052004" />
+		<Point index="1" x="258.701416" y="-5.252001" />
+		<Point index="2" x="259.654816" y="-6.165483" />
+		<Point index="3" x="264.338837" y="-10.735689" />
+		<Point index="4" x="271.683624" y="-17.901997" />
+		<Point index="5" x="271.970001" y="-17.901997" />
+	</Polygon>
+	<Polygon ID="447" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-6.165483" />
+		<Point index="1" x="258.701416" y="-5.252001" />
+		<Point index="2" x="268.412872" y="-17.901997" />
+		<Point index="3" x="268.665009" y="-17.901997" />
+		<Point index="4" x="263.135010" y="-10.698717" />
+	</Polygon>
+	<Polygon ID="446" Material="Frame Cavity NFRC 100_Cavity_446" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-17.901997" />
+		<Point index="1" x="250.098572" y="-30.551991" />
+		<Point index="2" x="258.701416" y="-30.551991" />
+		<Point index="3" x="268.412872" y="-17.901997" />
+		<Point index="4" x="258.701416" y="-5.252001" />
+		<Point index="5" x="250.098572" y="-5.252001" />
+	</Polygon>
+	<Polygon ID="445" Material="Frame Cavity NFRC 100_Cavity_445" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-17.901997" />
+		<Point index="1" x="243.635834" y="-24.263050" />
+		<Point index="2" x="249.145172" y="-29.638508" />
+		<Point index="3" x="245.018738" y="-24.263477" />
+		<Point index="4" x="240.134979" y="-17.901997" />
+		<Point index="5" x="245.650208" y="-10.717974" />
+		<Point index="6" x="249.145172" y="-6.165483" />
+		<Point index="7" x="244.497574" y="-10.700136" />
+	</Polygon>
+	<Polygon ID="444" Material="Frame Cavity NFRC 100_Cavity_444" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-17.901997" />
+		<Point index="1" x="263.786407" y="-24.256763" />
+		<Point index="2" x="259.654816" y="-29.638508" />
+		<Point index="3" x="265.157104" y="-24.269932" />
+		<Point index="4" x="271.683624" y="-17.901997" />
+		<Point index="5" x="264.338837" y="-10.735689" />
+		<Point index="6" x="259.654816" y="-6.165483" />
+		<Point index="7" x="263.135010" y="-10.698717" />
+	</Polygon>
+	<Polygon ID="414" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-56.451935" />
+		<Point index="1" x="250.098572" y="-56.251953" />
+		<Point index="2" x="249.145172" y="-55.338470" />
+		<Point index="3" x="243.635834" y="-49.963013" />
+		<Point index="4" x="237.116364" y="-43.601963" />
+		<Point index="5" x="236.829987" y="-43.601963" />
+	</Polygon>
+	<Polygon ID="413" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-55.338470" />
+		<Point index="1" x="250.098572" y="-56.251953" />
+		<Point index="2" x="240.387115" y="-43.601963" />
+		<Point index="3" x="240.134979" y="-43.601963" />
+		<Point index="4" x="245.018738" y="-49.963440" />
+	</Polygon>
+	<Polygon ID="412" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-56.251953" />
+		<Point index="1" x="258.799988" y="-56.451935" />
+		<Point index="2" x="271.970001" y="-43.601963" />
+		<Point index="3" x="271.683624" y="-43.601963" />
+		<Point index="4" x="265.157104" y="-49.969894" />
+		<Point index="5" x="259.654816" y="-55.338470" />
+	</Polygon>
+	<Polygon ID="411" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-56.251953" />
+		<Point index="1" x="259.654816" y="-55.338470" />
+		<Point index="2" x="263.786407" y="-49.956726" />
+		<Point index="3" x="268.665009" y="-43.601963" />
+		<Point index="4" x="268.412872" y="-43.601963" />
+	</Polygon>
+	<Polygon ID="410" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-30.951969" />
+		<Point index="1" x="250.000000" y="-30.751972" />
+		<Point index="2" x="236.829987" y="-43.601963" />
+		<Point index="3" x="237.116364" y="-43.601963" />
+		<Point index="4" x="244.497574" y="-36.400105" />
+		<Point index="5" x="249.145172" y="-31.865452" />
+	</Polygon>
+	<Polygon ID="409" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-30.951969" />
+		<Point index="1" x="249.145172" y="-31.865452" />
+		<Point index="2" x="245.650208" y="-36.417942" />
+		<Point index="3" x="240.134979" y="-43.601963" />
+		<Point index="4" x="240.387115" y="-43.601963" />
+	</Polygon>
+	<Polygon ID="408" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-30.751972" />
+		<Point index="1" x="250.098572" y="-30.951969" />
+		<Point index="2" x="258.701416" y="-30.951969" />
+		<Point index="3" x="258.799988" y="-30.751972" />
+		<Point index="4" x="258.701416" y="-30.551991" />
+		<Point index="5" x="250.098572" y="-30.551991" />
+	</Polygon>
+	<Polygon ID="407" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-30.751972" />
+		<Point index="1" x="258.701416" y="-30.951969" />
+		<Point index="2" x="259.654816" y="-31.865452" />
+		<Point index="3" x="264.338837" y="-36.435658" />
+		<Point index="4" x="271.683624" y="-43.601963" />
+		<Point index="5" x="271.970001" y="-43.601963" />
+	</Polygon>
+	<Polygon ID="406" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-31.865452" />
+		<Point index="1" x="258.701416" y="-30.951969" />
+		<Point index="2" x="268.412872" y="-43.601963" />
+		<Point index="3" x="268.665009" y="-43.601963" />
+		<Point index="4" x="263.135010" y="-36.398685" />
+	</Polygon>
+	<Polygon ID="405" Material="Frame Cavity NFRC 100_Cavity_405" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-43.601963" />
+		<Point index="1" x="250.098572" y="-56.251953" />
+		<Point index="2" x="258.701416" y="-56.251953" />
+		<Point index="3" x="268.412872" y="-43.601963" />
+		<Point index="4" x="258.701416" y="-30.951969" />
+		<Point index="5" x="250.098572" y="-30.951969" />
+	</Polygon>
+	<Polygon ID="404" Material="Frame Cavity NFRC 100_Cavity_404" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-43.601963" />
+		<Point index="1" x="243.635834" y="-49.963013" />
+		<Point index="2" x="249.145172" y="-55.338470" />
+		<Point index="3" x="245.018738" y="-49.963440" />
+		<Point index="4" x="240.134979" y="-43.601963" />
+		<Point index="5" x="245.650208" y="-36.417942" />
+		<Point index="6" x="249.145172" y="-31.865452" />
+		<Point index="7" x="244.497574" y="-36.400105" />
+	</Polygon>
+	<Polygon ID="403" Material="Frame Cavity NFRC 100_Cavity_403" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-43.601963" />
+		<Point index="1" x="263.786407" y="-49.956726" />
+		<Point index="2" x="259.654816" y="-55.338470" />
+		<Point index="3" x="265.157104" y="-49.969894" />
+		<Point index="4" x="271.683624" y="-43.601963" />
+		<Point index="5" x="264.338837" y="-36.435658" />
+		<Point index="6" x="259.654816" y="-31.865452" />
+		<Point index="7" x="263.135010" y="-36.398685" />
+	</Polygon>
+	<Polygon ID="373" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-82.151901" />
+		<Point index="1" x="250.098572" y="-81.951920" />
+		<Point index="2" x="249.145172" y="-81.038437" />
+		<Point index="3" x="243.635834" y="-75.662979" />
+		<Point index="4" x="237.116364" y="-69.301926" />
+		<Point index="5" x="236.829987" y="-69.301926" />
+	</Polygon>
+	<Polygon ID="372" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-81.038437" />
+		<Point index="1" x="250.098572" y="-81.951920" />
+		<Point index="2" x="240.387115" y="-69.301926" />
+		<Point index="3" x="240.134979" y="-69.301926" />
+		<Point index="4" x="245.018738" y="-75.663406" />
+	</Polygon>
+	<Polygon ID="371" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-81.951920" />
+		<Point index="1" x="258.799988" y="-82.151901" />
+		<Point index="2" x="271.970001" y="-69.301926" />
+		<Point index="3" x="271.683624" y="-69.301926" />
+		<Point index="4" x="265.157104" y="-75.669861" />
+		<Point index="5" x="259.654816" y="-81.038437" />
+	</Polygon>
+	<Polygon ID="370" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-81.951920" />
+		<Point index="1" x="259.654816" y="-81.038437" />
+		<Point index="2" x="263.786407" y="-75.656693" />
+		<Point index="3" x="268.665009" y="-69.301926" />
+		<Point index="4" x="268.412872" y="-69.301926" />
+	</Polygon>
+	<Polygon ID="369" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-56.651932" />
+		<Point index="1" x="250.000000" y="-56.451935" />
+		<Point index="2" x="236.829987" y="-69.301926" />
+		<Point index="3" x="237.116364" y="-69.301926" />
+		<Point index="4" x="244.497574" y="-62.100067" />
+		<Point index="5" x="249.145172" y="-57.565414" />
+	</Polygon>
+	<Polygon ID="368" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-56.651932" />
+		<Point index="1" x="249.145172" y="-57.565414" />
+		<Point index="2" x="245.650208" y="-62.117905" />
+		<Point index="3" x="240.134979" y="-69.301926" />
+		<Point index="4" x="240.387115" y="-69.301926" />
+	</Polygon>
+	<Polygon ID="367" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-56.451935" />
+		<Point index="1" x="250.098572" y="-56.651932" />
+		<Point index="2" x="258.701416" y="-56.651932" />
+		<Point index="3" x="258.799988" y="-56.451935" />
+		<Point index="4" x="258.701416" y="-56.251953" />
+		<Point index="5" x="250.098572" y="-56.251953" />
+	</Polygon>
+	<Polygon ID="366" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-56.451935" />
+		<Point index="1" x="258.701416" y="-56.651932" />
+		<Point index="2" x="259.654816" y="-57.565414" />
+		<Point index="3" x="264.338837" y="-62.135620" />
+		<Point index="4" x="271.683624" y="-69.301926" />
+		<Point index="5" x="271.970001" y="-69.301926" />
+	</Polygon>
+	<Polygon ID="365" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-57.565414" />
+		<Point index="1" x="258.701416" y="-56.651932" />
+		<Point index="2" x="268.412872" y="-69.301926" />
+		<Point index="3" x="268.665009" y="-69.301926" />
+		<Point index="4" x="263.135010" y="-62.098648" />
+	</Polygon>
+	<Polygon ID="364" Material="Frame Cavity NFRC 100_Cavity_364" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-69.301926" />
+		<Point index="1" x="250.098572" y="-81.951920" />
+		<Point index="2" x="258.701416" y="-81.951920" />
+		<Point index="3" x="268.412872" y="-69.301926" />
+		<Point index="4" x="258.701416" y="-56.651932" />
+		<Point index="5" x="250.098572" y="-56.651932" />
+	</Polygon>
+	<Polygon ID="363" Material="Frame Cavity NFRC 100_Cavity_363" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-69.301926" />
+		<Point index="1" x="243.635834" y="-75.662979" />
+		<Point index="2" x="249.145172" y="-81.038437" />
+		<Point index="3" x="245.018738" y="-75.663406" />
+		<Point index="4" x="240.134979" y="-69.301926" />
+		<Point index="5" x="245.650208" y="-62.117905" />
+		<Point index="6" x="249.145172" y="-57.565414" />
+		<Point index="7" x="244.497574" y="-62.100067" />
+	</Polygon>
+	<Polygon ID="362" Material="Frame Cavity NFRC 100_Cavity_362" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-69.301926" />
+		<Point index="1" x="263.786407" y="-75.656693" />
+		<Point index="2" x="259.654816" y="-81.038437" />
+		<Point index="3" x="265.157104" y="-75.669861" />
+		<Point index="4" x="271.683624" y="-69.301926" />
+		<Point index="5" x="264.338837" y="-62.135620" />
+		<Point index="6" x="259.654816" y="-57.565414" />
+		<Point index="7" x="263.135010" y="-62.098648" />
+	</Polygon>
+	<Polygon ID="332" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-107.851875" />
+		<Point index="1" x="250.098572" y="-107.651894" />
+		<Point index="2" x="249.145172" y="-106.738411" />
+		<Point index="3" x="243.635834" y="-101.362953" />
+		<Point index="4" x="237.116364" y="-95.001900" />
+		<Point index="5" x="236.829987" y="-95.001900" />
+	</Polygon>
+	<Polygon ID="331" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-106.738411" />
+		<Point index="1" x="250.098572" y="-107.651894" />
+		<Point index="2" x="240.387115" y="-95.001900" />
+		<Point index="3" x="240.134979" y="-95.001900" />
+		<Point index="4" x="245.018738" y="-101.363380" />
+	</Polygon>
+	<Polygon ID="330" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-107.651894" />
+		<Point index="1" x="258.799988" y="-107.851875" />
+		<Point index="2" x="271.970001" y="-95.001900" />
+		<Point index="3" x="271.683624" y="-95.001900" />
+		<Point index="4" x="265.157104" y="-101.369835" />
+		<Point index="5" x="259.654816" y="-106.738411" />
+	</Polygon>
+	<Polygon ID="329" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-107.651894" />
+		<Point index="1" x="259.654816" y="-106.738411" />
+		<Point index="2" x="263.786407" y="-101.356667" />
+		<Point index="3" x="268.665009" y="-95.001900" />
+		<Point index="4" x="268.412872" y="-95.001900" />
+	</Polygon>
+	<Polygon ID="328" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-82.351898" />
+		<Point index="1" x="250.000000" y="-82.151901" />
+		<Point index="2" x="236.829987" y="-95.001900" />
+		<Point index="3" x="237.116364" y="-95.001900" />
+		<Point index="4" x="244.497574" y="-87.800034" />
+		<Point index="5" x="249.145172" y="-83.265381" />
+	</Polygon>
+	<Polygon ID="327" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-82.351898" />
+		<Point index="1" x="249.145172" y="-83.265381" />
+		<Point index="2" x="245.650208" y="-87.817871" />
+		<Point index="3" x="240.134979" y="-95.001900" />
+		<Point index="4" x="240.387115" y="-95.001900" />
+	</Polygon>
+	<Polygon ID="326" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-82.151901" />
+		<Point index="1" x="250.098572" y="-82.351898" />
+		<Point index="2" x="258.701416" y="-82.351898" />
+		<Point index="3" x="258.799988" y="-82.151901" />
+		<Point index="4" x="258.701416" y="-81.951920" />
+		<Point index="5" x="250.098572" y="-81.951920" />
+	</Polygon>
+	<Polygon ID="325" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-82.151901" />
+		<Point index="1" x="258.701416" y="-82.351898" />
+		<Point index="2" x="259.654816" y="-83.265381" />
+		<Point index="3" x="264.338837" y="-87.835587" />
+		<Point index="4" x="271.683624" y="-95.001900" />
+		<Point index="5" x="271.970001" y="-95.001900" />
+	</Polygon>
+	<Polygon ID="324" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-83.265381" />
+		<Point index="1" x="258.701416" y="-82.351898" />
+		<Point index="2" x="268.412872" y="-95.001900" />
+		<Point index="3" x="268.665009" y="-95.001900" />
+		<Point index="4" x="263.135010" y="-87.798615" />
+	</Polygon>
+	<Polygon ID="323" Material="Frame Cavity NFRC 100_Cavity_323" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-95.001900" />
+		<Point index="1" x="250.098572" y="-107.651894" />
+		<Point index="2" x="258.701416" y="-107.651894" />
+		<Point index="3" x="268.412872" y="-95.001900" />
+		<Point index="4" x="258.701416" y="-82.351898" />
+		<Point index="5" x="250.098572" y="-82.351898" />
+	</Polygon>
+	<Polygon ID="322" Material="Frame Cavity NFRC 100_Cavity_322" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-95.001900" />
+		<Point index="1" x="243.635834" y="-101.362953" />
+		<Point index="2" x="249.145172" y="-106.738411" />
+		<Point index="3" x="245.018738" y="-101.363380" />
+		<Point index="4" x="240.134979" y="-95.001900" />
+		<Point index="5" x="245.650208" y="-87.817871" />
+		<Point index="6" x="249.145172" y="-83.265381" />
+		<Point index="7" x="244.497574" y="-87.800034" />
+	</Polygon>
+	<Polygon ID="321" Material="Frame Cavity NFRC 100_Cavity_321" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-95.001900" />
+		<Point index="1" x="263.786407" y="-101.356667" />
+		<Point index="2" x="259.654816" y="-106.738411" />
+		<Point index="3" x="265.157104" y="-101.369835" />
+		<Point index="4" x="271.683624" y="-95.001900" />
+		<Point index="5" x="264.338837" y="-87.835587" />
+		<Point index="6" x="259.654816" y="-83.265381" />
+		<Point index="7" x="263.135010" y="-87.798615" />
+	</Polygon>
+	<Polygon ID="291" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-133.551834" />
+		<Point index="1" x="250.098572" y="-133.351852" />
+		<Point index="2" x="249.145172" y="-132.438370" />
+		<Point index="3" x="243.635834" y="-127.062920" />
+		<Point index="4" x="237.116364" y="-120.701866" />
+		<Point index="5" x="236.829987" y="-120.701866" />
+	</Polygon>
+	<Polygon ID="290" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-132.438370" />
+		<Point index="1" x="250.098572" y="-133.351852" />
+		<Point index="2" x="240.387115" y="-120.701866" />
+		<Point index="3" x="240.134979" y="-120.701866" />
+		<Point index="4" x="245.018738" y="-127.063347" />
+	</Polygon>
+	<Polygon ID="289" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-133.351852" />
+		<Point index="1" x="258.799988" y="-133.551834" />
+		<Point index="2" x="271.970001" y="-120.701866" />
+		<Point index="3" x="271.683624" y="-120.701866" />
+		<Point index="4" x="265.157104" y="-127.069801" />
+		<Point index="5" x="259.654816" y="-132.438370" />
+	</Polygon>
+	<Polygon ID="288" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-133.351852" />
+		<Point index="1" x="259.654816" y="-132.438370" />
+		<Point index="2" x="263.786407" y="-127.056633" />
+		<Point index="3" x="268.665009" y="-120.701866" />
+		<Point index="4" x="268.412872" y="-120.701866" />
+	</Polygon>
+	<Polygon ID="287" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-108.051872" />
+		<Point index="1" x="250.000000" y="-107.851875" />
+		<Point index="2" x="236.829987" y="-120.701866" />
+		<Point index="3" x="237.116364" y="-120.701866" />
+		<Point index="4" x="244.497574" y="-113.500008" />
+		<Point index="5" x="249.145172" y="-108.965355" />
+	</Polygon>
+	<Polygon ID="286" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-108.051872" />
+		<Point index="1" x="249.145172" y="-108.965355" />
+		<Point index="2" x="245.650208" y="-113.517845" />
+		<Point index="3" x="240.134979" y="-120.701866" />
+		<Point index="4" x="240.387115" y="-120.701866" />
+	</Polygon>
+	<Polygon ID="285" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-107.851875" />
+		<Point index="1" x="250.098572" y="-108.051872" />
+		<Point index="2" x="258.701416" y="-108.051872" />
+		<Point index="3" x="258.799988" y="-107.851875" />
+		<Point index="4" x="258.701416" y="-107.651894" />
+		<Point index="5" x="250.098572" y="-107.651894" />
+	</Polygon>
+	<Polygon ID="284" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-107.851875" />
+		<Point index="1" x="258.701416" y="-108.051872" />
+		<Point index="2" x="259.654816" y="-108.965355" />
+		<Point index="3" x="264.338837" y="-113.535561" />
+		<Point index="4" x="271.683624" y="-120.701866" />
+		<Point index="5" x="271.970001" y="-120.701866" />
+	</Polygon>
+	<Polygon ID="283" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-108.965355" />
+		<Point index="1" x="258.701416" y="-108.051872" />
+		<Point index="2" x="268.412872" y="-120.701866" />
+		<Point index="3" x="268.665009" y="-120.701866" />
+		<Point index="4" x="263.135010" y="-113.498589" />
+	</Polygon>
+	<Polygon ID="282" Material="Frame Cavity NFRC 100_Cavity_282" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-120.701866" />
+		<Point index="1" x="250.098572" y="-133.351852" />
+		<Point index="2" x="258.701416" y="-133.351852" />
+		<Point index="3" x="268.412872" y="-120.701866" />
+		<Point index="4" x="258.701416" y="-108.051872" />
+		<Point index="5" x="250.098572" y="-108.051872" />
+	</Polygon>
+	<Polygon ID="281" Material="Frame Cavity NFRC 100_Cavity_281" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-120.701866" />
+		<Point index="1" x="243.635834" y="-127.062920" />
+		<Point index="2" x="249.145172" y="-132.438370" />
+		<Point index="3" x="245.018738" y="-127.063347" />
+		<Point index="4" x="240.134979" y="-120.701866" />
+		<Point index="5" x="245.650208" y="-113.517845" />
+		<Point index="6" x="249.145172" y="-108.965355" />
+		<Point index="7" x="244.497574" y="-113.500008" />
+	</Polygon>
+	<Polygon ID="280" Material="Frame Cavity NFRC 100_Cavity_280" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-120.701866" />
+		<Point index="1" x="263.786407" y="-127.056633" />
+		<Point index="2" x="259.654816" y="-132.438370" />
+		<Point index="3" x="265.157104" y="-127.069801" />
+		<Point index="4" x="271.683624" y="-120.701866" />
+		<Point index="5" x="264.338837" y="-113.535561" />
+		<Point index="6" x="259.654816" y="-108.965355" />
+		<Point index="7" x="263.135010" y="-113.498589" />
+	</Polygon>
+	<Polygon ID="250" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-159.251801" />
+		<Point index="1" x="250.098572" y="-159.051819" />
+		<Point index="2" x="249.145172" y="-158.138336" />
+		<Point index="3" x="243.635834" y="-152.762878" />
+		<Point index="4" x="237.116364" y="-146.401825" />
+		<Point index="5" x="236.829987" y="-146.401825" />
+	</Polygon>
+	<Polygon ID="249" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-158.138336" />
+		<Point index="1" x="250.098572" y="-159.051819" />
+		<Point index="2" x="240.387115" y="-146.401825" />
+		<Point index="3" x="240.134979" y="-146.401825" />
+		<Point index="4" x="245.018738" y="-152.763306" />
+	</Polygon>
+	<Polygon ID="248" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-159.051819" />
+		<Point index="1" x="258.799988" y="-159.251801" />
+		<Point index="2" x="271.970001" y="-146.401825" />
+		<Point index="3" x="271.683624" y="-146.401825" />
+		<Point index="4" x="265.157104" y="-152.769760" />
+		<Point index="5" x="259.654816" y="-158.138336" />
+	</Polygon>
+	<Polygon ID="247" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-159.051819" />
+		<Point index="1" x="259.654816" y="-158.138336" />
+		<Point index="2" x="263.786407" y="-152.756592" />
+		<Point index="3" x="268.665009" y="-146.401825" />
+		<Point index="4" x="268.412872" y="-146.401825" />
+	</Polygon>
+	<Polygon ID="246" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-133.751831" />
+		<Point index="1" x="250.000000" y="-133.551834" />
+		<Point index="2" x="236.829987" y="-146.401825" />
+		<Point index="3" x="237.116364" y="-146.401825" />
+		<Point index="4" x="244.497574" y="-139.199966" />
+		<Point index="5" x="249.145172" y="-134.665314" />
+	</Polygon>
+	<Polygon ID="245" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-133.751831" />
+		<Point index="1" x="249.145172" y="-134.665314" />
+		<Point index="2" x="245.650208" y="-139.217804" />
+		<Point index="3" x="240.134979" y="-146.401825" />
+		<Point index="4" x="240.387115" y="-146.401825" />
+	</Polygon>
+	<Polygon ID="244" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-133.551834" />
+		<Point index="1" x="250.098572" y="-133.751831" />
+		<Point index="2" x="258.701416" y="-133.751831" />
+		<Point index="3" x="258.799988" y="-133.551834" />
+		<Point index="4" x="258.701416" y="-133.351852" />
+		<Point index="5" x="250.098572" y="-133.351852" />
+	</Polygon>
+	<Polygon ID="243" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-133.551834" />
+		<Point index="1" x="258.701416" y="-133.751831" />
+		<Point index="2" x="259.654816" y="-134.665314" />
+		<Point index="3" x="264.338837" y="-139.235519" />
+		<Point index="4" x="271.683624" y="-146.401825" />
+		<Point index="5" x="271.970001" y="-146.401825" />
+	</Polygon>
+	<Polygon ID="242" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-134.665314" />
+		<Point index="1" x="258.701416" y="-133.751831" />
+		<Point index="2" x="268.412872" y="-146.401825" />
+		<Point index="3" x="268.665009" y="-146.401825" />
+		<Point index="4" x="263.135010" y="-139.198547" />
+	</Polygon>
+	<Polygon ID="241" Material="Frame Cavity NFRC 100_Cavity_241" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-146.401825" />
+		<Point index="1" x="250.098572" y="-159.051819" />
+		<Point index="2" x="258.701416" y="-159.051819" />
+		<Point index="3" x="268.412872" y="-146.401825" />
+		<Point index="4" x="258.701416" y="-133.751831" />
+		<Point index="5" x="250.098572" y="-133.751831" />
+	</Polygon>
+	<Polygon ID="240" Material="Frame Cavity NFRC 100_Cavity_240" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-146.401825" />
+		<Point index="1" x="243.635834" y="-152.762878" />
+		<Point index="2" x="249.145172" y="-158.138336" />
+		<Point index="3" x="245.018738" y="-152.763306" />
+		<Point index="4" x="240.134979" y="-146.401825" />
+		<Point index="5" x="245.650208" y="-139.217804" />
+		<Point index="6" x="249.145172" y="-134.665314" />
+		<Point index="7" x="244.497574" y="-139.199966" />
+	</Polygon>
+	<Polygon ID="239" Material="Frame Cavity NFRC 100_Cavity_239" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-146.401825" />
+		<Point index="1" x="263.786407" y="-152.756592" />
+		<Point index="2" x="259.654816" y="-158.138336" />
+		<Point index="3" x="265.157104" y="-152.769760" />
+		<Point index="4" x="271.683624" y="-146.401825" />
+		<Point index="5" x="264.338837" y="-139.235519" />
+		<Point index="6" x="259.654816" y="-134.665314" />
+		<Point index="7" x="263.135010" y="-139.198547" />
+	</Polygon>
+	<Polygon ID="209" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-184.951767" />
+		<Point index="1" x="250.098572" y="-184.751785" />
+		<Point index="2" x="249.145172" y="-183.838303" />
+		<Point index="3" x="243.635834" y="-178.462845" />
+		<Point index="4" x="237.116364" y="-172.101791" />
+		<Point index="5" x="236.829987" y="-172.101791" />
+	</Polygon>
+	<Polygon ID="208" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-183.838303" />
+		<Point index="1" x="250.098572" y="-184.751785" />
+		<Point index="2" x="240.387115" y="-172.101791" />
+		<Point index="3" x="240.134979" y="-172.101791" />
+		<Point index="4" x="245.018738" y="-178.463272" />
+	</Polygon>
+	<Polygon ID="207" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-184.751785" />
+		<Point index="1" x="258.799988" y="-184.951767" />
+		<Point index="2" x="271.970001" y="-172.101791" />
+		<Point index="3" x="271.683624" y="-172.101791" />
+		<Point index="4" x="265.157104" y="-178.469727" />
+		<Point index="5" x="259.654816" y="-183.838303" />
+	</Polygon>
+	<Polygon ID="206" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-184.751785" />
+		<Point index="1" x="259.654816" y="-183.838303" />
+		<Point index="2" x="263.786407" y="-178.456558" />
+		<Point index="3" x="268.665009" y="-172.101791" />
+		<Point index="4" x="268.412872" y="-172.101791" />
+	</Polygon>
+	<Polygon ID="205" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-159.451797" />
+		<Point index="1" x="250.000000" y="-159.251801" />
+		<Point index="2" x="236.829987" y="-172.101791" />
+		<Point index="3" x="237.116364" y="-172.101791" />
+		<Point index="4" x="244.497574" y="-164.899933" />
+		<Point index="5" x="249.145172" y="-160.365280" />
+	</Polygon>
+	<Polygon ID="204" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-159.451797" />
+		<Point index="1" x="249.145172" y="-160.365280" />
+		<Point index="2" x="245.650208" y="-164.917770" />
+		<Point index="3" x="240.134979" y="-172.101791" />
+		<Point index="4" x="240.387115" y="-172.101791" />
+	</Polygon>
+	<Polygon ID="203" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-159.251801" />
+		<Point index="1" x="250.098572" y="-159.451797" />
+		<Point index="2" x="258.701416" y="-159.451797" />
+		<Point index="3" x="258.799988" y="-159.251801" />
+		<Point index="4" x="258.701416" y="-159.051819" />
+		<Point index="5" x="250.098572" y="-159.051819" />
+	</Polygon>
+	<Polygon ID="202" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-159.251801" />
+		<Point index="1" x="258.701416" y="-159.451797" />
+		<Point index="2" x="259.654816" y="-160.365280" />
+		<Point index="3" x="264.338837" y="-164.935486" />
+		<Point index="4" x="271.683624" y="-172.101791" />
+		<Point index="5" x="271.970001" y="-172.101791" />
+	</Polygon>
+	<Polygon ID="201" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-160.365280" />
+		<Point index="1" x="258.701416" y="-159.451797" />
+		<Point index="2" x="268.412872" y="-172.101791" />
+		<Point index="3" x="268.665009" y="-172.101791" />
+		<Point index="4" x="263.135010" y="-164.898514" />
+	</Polygon>
+	<Polygon ID="200" Material="Frame Cavity NFRC 100_Cavity_200" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-172.101791" />
+		<Point index="1" x="250.098572" y="-184.751785" />
+		<Point index="2" x="258.701416" y="-184.751785" />
+		<Point index="3" x="268.412872" y="-172.101791" />
+		<Point index="4" x="258.701416" y="-159.451797" />
+		<Point index="5" x="250.098572" y="-159.451797" />
+	</Polygon>
+	<Polygon ID="199" Material="Frame Cavity NFRC 100_Cavity_199" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-172.101791" />
+		<Point index="1" x="243.635834" y="-178.462845" />
+		<Point index="2" x="249.145172" y="-183.838303" />
+		<Point index="3" x="245.018738" y="-178.463272" />
+		<Point index="4" x="240.134979" y="-172.101791" />
+		<Point index="5" x="245.650208" y="-164.917770" />
+		<Point index="6" x="249.145172" y="-160.365280" />
+		<Point index="7" x="244.497574" y="-164.899933" />
+	</Polygon>
+	<Polygon ID="198" Material="Frame Cavity NFRC 100_Cavity_198" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-172.101791" />
+		<Point index="1" x="263.786407" y="-178.456558" />
+		<Point index="2" x="259.654816" y="-183.838303" />
+		<Point index="3" x="265.157104" y="-178.469727" />
+		<Point index="4" x="271.683624" y="-172.101791" />
+		<Point index="5" x="264.338837" y="-164.935486" />
+		<Point index="6" x="259.654816" y="-160.365280" />
+		<Point index="7" x="263.135010" y="-164.898514" />
+	</Polygon>
+	<Polygon ID="168" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-210.651733" />
+		<Point index="1" x="250.098572" y="-210.451752" />
+		<Point index="2" x="249.145172" y="-209.538269" />
+		<Point index="3" x="243.635834" y="-204.162811" />
+		<Point index="4" x="237.116364" y="-197.801758" />
+		<Point index="5" x="236.829987" y="-197.801758" />
+	</Polygon>
+	<Polygon ID="167" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-209.538269" />
+		<Point index="1" x="250.098572" y="-210.451752" />
+		<Point index="2" x="240.387115" y="-197.801758" />
+		<Point index="3" x="240.134979" y="-197.801758" />
+		<Point index="4" x="245.018738" y="-204.163239" />
+	</Polygon>
+	<Polygon ID="166" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-210.451752" />
+		<Point index="1" x="258.799988" y="-210.651733" />
+		<Point index="2" x="271.970001" y="-197.801758" />
+		<Point index="3" x="271.683624" y="-197.801758" />
+		<Point index="4" x="265.157104" y="-204.169693" />
+		<Point index="5" x="259.654816" y="-209.538269" />
+	</Polygon>
+	<Polygon ID="165" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-210.451752" />
+		<Point index="1" x="259.654816" y="-209.538269" />
+		<Point index="2" x="263.786407" y="-204.156525" />
+		<Point index="3" x="268.665009" y="-197.801758" />
+		<Point index="4" x="268.412872" y="-197.801758" />
+	</Polygon>
+	<Polygon ID="164" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-185.151764" />
+		<Point index="1" x="250.000000" y="-184.951767" />
+		<Point index="2" x="236.829987" y="-197.801758" />
+		<Point index="3" x="237.116364" y="-197.801758" />
+		<Point index="4" x="244.497574" y="-190.599899" />
+		<Point index="5" x="249.145172" y="-186.065247" />
+	</Polygon>
+	<Polygon ID="163" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-185.151764" />
+		<Point index="1" x="249.145172" y="-186.065247" />
+		<Point index="2" x="245.650208" y="-190.617737" />
+		<Point index="3" x="240.134979" y="-197.801758" />
+		<Point index="4" x="240.387115" y="-197.801758" />
+	</Polygon>
+	<Polygon ID="162" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-184.951767" />
+		<Point index="1" x="250.098572" y="-185.151764" />
+		<Point index="2" x="258.701416" y="-185.151764" />
+		<Point index="3" x="258.799988" y="-184.951767" />
+		<Point index="4" x="258.701416" y="-184.751785" />
+		<Point index="5" x="250.098572" y="-184.751785" />
+	</Polygon>
+	<Polygon ID="161" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-184.951767" />
+		<Point index="1" x="258.701416" y="-185.151764" />
+		<Point index="2" x="259.654816" y="-186.065247" />
+		<Point index="3" x="264.338837" y="-190.635452" />
+		<Point index="4" x="271.683624" y="-197.801758" />
+		<Point index="5" x="271.970001" y="-197.801758" />
+	</Polygon>
+	<Polygon ID="160" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-186.065247" />
+		<Point index="1" x="258.701416" y="-185.151764" />
+		<Point index="2" x="268.412872" y="-197.801758" />
+		<Point index="3" x="268.665009" y="-197.801758" />
+		<Point index="4" x="263.135010" y="-190.598480" />
+	</Polygon>
+	<Polygon ID="159" Material="Frame Cavity NFRC 100_Cavity_159" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-197.801758" />
+		<Point index="1" x="250.098572" y="-210.451752" />
+		<Point index="2" x="258.701416" y="-210.451752" />
+		<Point index="3" x="268.412872" y="-197.801758" />
+		<Point index="4" x="258.701416" y="-185.151764" />
+		<Point index="5" x="250.098572" y="-185.151764" />
+	</Polygon>
+	<Polygon ID="158" Material="Frame Cavity NFRC 100_Cavity_158" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-197.801758" />
+		<Point index="1" x="243.635834" y="-204.162811" />
+		<Point index="2" x="249.145172" y="-209.538269" />
+		<Point index="3" x="245.018738" y="-204.163239" />
+		<Point index="4" x="240.134979" y="-197.801758" />
+		<Point index="5" x="245.650208" y="-190.617737" />
+		<Point index="6" x="249.145172" y="-186.065247" />
+		<Point index="7" x="244.497574" y="-190.599899" />
+	</Polygon>
+	<Polygon ID="157" Material="Frame Cavity NFRC 100_Cavity_157" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-197.801758" />
+		<Point index="1" x="263.786407" y="-204.156525" />
+		<Point index="2" x="259.654816" y="-209.538269" />
+		<Point index="3" x="265.157104" y="-204.169693" />
+		<Point index="4" x="271.683624" y="-197.801758" />
+		<Point index="5" x="264.338837" y="-190.635452" />
+		<Point index="6" x="259.654816" y="-186.065247" />
+		<Point index="7" x="263.135010" y="-190.598480" />
+	</Polygon>
+	<Polygon ID="127" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-236.351700" />
+		<Point index="1" x="250.098572" y="-236.151718" />
+		<Point index="2" x="249.145172" y="-235.238235" />
+		<Point index="3" x="243.635834" y="-229.862778" />
+		<Point index="4" x="237.116364" y="-223.501724" />
+		<Point index="5" x="236.829987" y="-223.501724" />
+	</Polygon>
+	<Polygon ID="126" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-235.238235" />
+		<Point index="1" x="250.098572" y="-236.151718" />
+		<Point index="2" x="240.387115" y="-223.501724" />
+		<Point index="3" x="240.134979" y="-223.501724" />
+		<Point index="4" x="245.018738" y="-229.863205" />
+	</Polygon>
+	<Polygon ID="125" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-236.151718" />
+		<Point index="1" x="258.799988" y="-236.351700" />
+		<Point index="2" x="271.970001" y="-223.501724" />
+		<Point index="3" x="271.683624" y="-223.501724" />
+		<Point index="4" x="265.157104" y="-229.869659" />
+		<Point index="5" x="259.654816" y="-235.238235" />
+	</Polygon>
+	<Polygon ID="124" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-236.151718" />
+		<Point index="1" x="259.654816" y="-235.238235" />
+		<Point index="2" x="263.786407" y="-229.856491" />
+		<Point index="3" x="268.665009" y="-223.501724" />
+		<Point index="4" x="268.412872" y="-223.501724" />
+	</Polygon>
+	<Polygon ID="123" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-210.851730" />
+		<Point index="1" x="250.000000" y="-210.651733" />
+		<Point index="2" x="236.829987" y="-223.501724" />
+		<Point index="3" x="237.116364" y="-223.501724" />
+		<Point index="4" x="244.497574" y="-216.299866" />
+		<Point index="5" x="249.145172" y="-211.765213" />
+	</Polygon>
+	<Polygon ID="122" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-210.851730" />
+		<Point index="1" x="249.145172" y="-211.765213" />
+		<Point index="2" x="245.650208" y="-216.317703" />
+		<Point index="3" x="240.134979" y="-223.501724" />
+		<Point index="4" x="240.387115" y="-223.501724" />
+	</Polygon>
+	<Polygon ID="121" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-210.651733" />
+		<Point index="1" x="250.098572" y="-210.851730" />
+		<Point index="2" x="258.701416" y="-210.851730" />
+		<Point index="3" x="258.799988" y="-210.651733" />
+		<Point index="4" x="258.701416" y="-210.451752" />
+		<Point index="5" x="250.098572" y="-210.451752" />
+	</Polygon>
+	<Polygon ID="120" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-210.651733" />
+		<Point index="1" x="258.701416" y="-210.851730" />
+		<Point index="2" x="259.654816" y="-211.765213" />
+		<Point index="3" x="264.338837" y="-216.335419" />
+		<Point index="4" x="271.683624" y="-223.501724" />
+		<Point index="5" x="271.970001" y="-223.501724" />
+	</Polygon>
+	<Polygon ID="119" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-211.765213" />
+		<Point index="1" x="258.701416" y="-210.851730" />
+		<Point index="2" x="268.412872" y="-223.501724" />
+		<Point index="3" x="268.665009" y="-223.501724" />
+		<Point index="4" x="263.135010" y="-216.298447" />
+	</Polygon>
+	<Polygon ID="118" Material="Frame Cavity NFRC 100_Cavity_118" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-223.501724" />
+		<Point index="1" x="250.098572" y="-236.151718" />
+		<Point index="2" x="258.701416" y="-236.151718" />
+		<Point index="3" x="268.412872" y="-223.501724" />
+		<Point index="4" x="258.701416" y="-210.851730" />
+		<Point index="5" x="250.098572" y="-210.851730" />
+	</Polygon>
+	<Polygon ID="117" Material="Frame Cavity NFRC 100_Cavity_117" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-223.501724" />
+		<Point index="1" x="243.635834" y="-229.862778" />
+		<Point index="2" x="249.145172" y="-235.238235" />
+		<Point index="3" x="245.018738" y="-229.863205" />
+		<Point index="4" x="240.134979" y="-223.501724" />
+		<Point index="5" x="245.650208" y="-216.317703" />
+		<Point index="6" x="249.145172" y="-211.765213" />
+		<Point index="7" x="244.497574" y="-216.299866" />
+	</Polygon>
+	<Polygon ID="116" Material="Frame Cavity NFRC 100_Cavity_116" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-223.501724" />
+		<Point index="1" x="263.786407" y="-229.856491" />
+		<Point index="2" x="259.654816" y="-235.238235" />
+		<Point index="3" x="265.157104" y="-229.869659" />
+		<Point index="4" x="271.683624" y="-223.501724" />
+		<Point index="5" x="264.338837" y="-216.335419" />
+		<Point index="6" x="259.654816" y="-211.765213" />
+		<Point index="7" x="263.135010" y="-216.298447" />
+	</Polygon>
+	<Polygon ID="86" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-262.051666" />
+		<Point index="1" x="250.098572" y="-261.851685" />
+		<Point index="2" x="249.145172" y="-260.938202" />
+		<Point index="3" x="243.635834" y="-255.562744" />
+		<Point index="4" x="237.116364" y="-249.201691" />
+		<Point index="5" x="236.829987" y="-249.201691" />
+	</Polygon>
+	<Polygon ID="85" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="249.145172" y="-260.938202" />
+		<Point index="1" x="250.098572" y="-261.851685" />
+		<Point index="2" x="240.387115" y="-249.201691" />
+		<Point index="3" x="240.134979" y="-249.201691" />
+		<Point index="4" x="245.018738" y="-255.563171" />
+	</Polygon>
+	<Polygon ID="84" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-261.851685" />
+		<Point index="1" x="258.799988" y="-262.051666" />
+		<Point index="2" x="271.970001" y="-249.201691" />
+		<Point index="3" x="271.683624" y="-249.201691" />
+		<Point index="4" x="265.157104" y="-255.569626" />
+		<Point index="5" x="259.654816" y="-260.938202" />
+	</Polygon>
+	<Polygon ID="83" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="258.701416" y="-261.851685" />
+		<Point index="1" x="259.654816" y="-260.938202" />
+		<Point index="2" x="263.786407" y="-255.556458" />
+		<Point index="3" x="268.665009" y="-249.201691" />
+		<Point index="4" x="268.412872" y="-249.201691" />
+	</Polygon>
+	<Polygon ID="82" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-236.551697" />
+		<Point index="1" x="250.000000" y="-236.351700" />
+		<Point index="2" x="236.829987" y="-249.201691" />
+		<Point index="3" x="237.116364" y="-249.201691" />
+		<Point index="4" x="244.497574" y="-241.999832" />
+		<Point index="5" x="249.145172" y="-237.465179" />
+	</Polygon>
+	<Polygon ID="81" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="250.098572" y="-236.551697" />
+		<Point index="1" x="249.145172" y="-237.465179" />
+		<Point index="2" x="245.650208" y="-242.017670" />
+		<Point index="3" x="240.134979" y="-249.201691" />
+		<Point index="4" x="240.387115" y="-249.201691" />
+	</Polygon>
+	<Polygon ID="79" Material="ID52_CS:C22-951_outerwalls.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="258.799988" y="-236.351700" />
+		<Point index="1" x="258.701416" y="-236.551697" />
+		<Point index="2" x="259.654816" y="-237.465179" />
+		<Point index="3" x="264.338837" y="-242.035385" />
+		<Point index="4" x="271.683624" y="-249.201691" />
+		<Point index="5" x="271.970001" y="-249.201691" />
+	</Polygon>
+	<Polygon ID="78" Material="ID52_CS:C22-951_innerwalls.txt" NSides="5" Type="1" units="mm">
+		<Point index="0" x="259.654816" y="-237.465179" />
+		<Point index="1" x="258.701416" y="-236.551697" />
+		<Point index="2" x="268.412872" y="-249.201691" />
+		<Point index="3" x="268.665009" y="-249.201691" />
+		<Point index="4" x="263.135010" y="-241.998413" />
+	</Polygon>
+	<Polygon ID="77" Material="Frame Cavity NFRC 100_Cavity_77" NSides="6" Type="1" units="mm">
+		<Point index="0" x="240.387115" y="-249.201691" />
+		<Point index="1" x="250.098572" y="-261.851685" />
+		<Point index="2" x="258.701416" y="-261.851685" />
+		<Point index="3" x="268.412872" y="-249.201691" />
+		<Point index="4" x="258.701416" y="-236.551697" />
+		<Point index="5" x="250.098572" y="-236.551697" />
+	</Polygon>
+	<Polygon ID="76" Material="Frame Cavity NFRC 100_Cavity_76" NSides="8" Type="1" units="mm">
+		<Point index="0" x="237.116364" y="-249.201691" />
+		<Point index="1" x="243.635834" y="-255.562744" />
+		<Point index="2" x="249.145172" y="-260.938202" />
+		<Point index="3" x="245.018738" y="-255.563171" />
+		<Point index="4" x="240.134979" y="-249.201691" />
+		<Point index="5" x="245.650208" y="-242.017670" />
+		<Point index="6" x="249.145172" y="-237.465179" />
+		<Point index="7" x="244.497574" y="-241.999832" />
+	</Polygon>
+	<Polygon ID="75" Material="Frame Cavity NFRC 100_Cavity_75" NSides="8" Type="1" units="mm">
+		<Point index="0" x="268.665009" y="-249.201691" />
+		<Point index="1" x="263.786407" y="-255.556458" />
+		<Point index="2" x="259.654816" y="-260.938202" />
+		<Point index="3" x="265.157104" y="-255.569626" />
+		<Point index="4" x="271.683624" y="-249.201691" />
+		<Point index="5" x="264.338837" y="-242.035385" />
+		<Point index="6" x="259.654816" y="-237.465179" />
+		<Point index="7" x="263.135010" y="-241.998413" />
+	</Polygon>
+	<Polygon ID="456" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-262.051666" />
+		<Point index="1" x="250.098572" y="-262.251678" />
+		<Point index="2" x="258.701416" y="-262.251678" />
+		<Point index="3" x="258.799988" y="-262.051666" />
+		<Point index="4" x="258.701416" y="-261.851685" />
+		<Point index="5" x="250.098572" y="-261.851685" />
+	</Polygon>
+	<Polygon ID="457" Material="ID52_CS:C22-951_glueline.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-236.351700" />
+		<Point index="1" x="250.098572" y="-236.551697" />
+		<Point index="2" x="258.701416" y="-236.551697" />
+		<Point index="3" x="258.799988" y="-236.351700" />
+		<Point index="4" x="258.701416" y="-236.151718" />
+		<Point index="5" x="250.098572" y="-236.151718" />
+	</Polygon>
+</Polygons>
+<Boundaries>
+	<BCPolygon ID="443" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-30.551991" />
+		<Point index="1" x="240.387115" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="442" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-30.551991" />
+		<Point index="1" x="250.098572" y="-30.551991" />
+	</BCPolygon>
+	<BCPolygon ID="441" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-17.901997" />
+		<Point index="1" x="258.701416" y="-30.551991" />
+	</BCPolygon>
+	<BCPolygon ID="440" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-5.252001" />
+		<Point index="1" x="268.412872" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="439" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-5.252001" />
+		<Point index="1" x="258.701416" y="-5.252001" />
+	</BCPolygon>
+	<BCPolygon ID="438" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="446" EnclosureID="1" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-17.901997" />
+		<Point index="1" x="250.098602" y="-5.252001" />
+	</BCPolygon>
+	<BCPolygon ID="437" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-24.263050" />
+		<Point index="1" x="237.116364" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="436" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-29.638508" />
+		<Point index="1" x="243.635834" y="-24.263050" />
+	</BCPolygon>
+	<BCPolygon ID="435" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-24.263477" />
+		<Point index="1" x="249.145172" y="-29.638508" />
+	</BCPolygon>
+	<BCPolygon ID="434" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-17.901997" />
+		<Point index="1" x="245.018738" y="-24.263477" />
+	</BCPolygon>
+	<BCPolygon ID="433" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-10.717974" />
+		<Point index="1" x="240.134979" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="432" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-6.165483" />
+		<Point index="1" x="245.650208" y="-10.717974" />
+	</BCPolygon>
+	<BCPolygon ID="431" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-10.700136" />
+		<Point index="1" x="249.145172" y="-6.165483" />
+	</BCPolygon>
+	<BCPolygon ID="430" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="445" EnclosureID="2" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-17.901997" />
+		<Point index="1" x="244.497574" y="-10.700136" />
+	</BCPolygon>
+	<BCPolygon ID="429" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-24.256763" />
+		<Point index="1" x="268.665009" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="428" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-29.638508" />
+		<Point index="1" x="263.786407" y="-24.256763" />
+	</BCPolygon>
+	<BCPolygon ID="427" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-24.269932" />
+		<Point index="1" x="259.654816" y="-29.638508" />
+	</BCPolygon>
+	<BCPolygon ID="426" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-17.901997" />
+		<Point index="1" x="265.157104" y="-24.269932" />
+	</BCPolygon>
+	<BCPolygon ID="425" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-10.735689" />
+		<Point index="1" x="271.683624" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="424" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-6.165483" />
+		<Point index="1" x="264.338837" y="-10.735689" />
+	</BCPolygon>
+	<BCPolygon ID="423" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-10.698717" />
+		<Point index="1" x="259.654816" y="-6.165483" />
+	</BCPolygon>
+	<BCPolygon ID="422" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="444" EnclosureID="3" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-17.901997" />
+		<Point index="1" x="263.135010" y="-10.698717" />
+	</BCPolygon>
+	<BCPolygon ID="402" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-56.251953" />
+		<Point index="1" x="240.387115" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="401" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-56.251953" />
+		<Point index="1" x="250.098572" y="-56.251953" />
+	</BCPolygon>
+	<BCPolygon ID="400" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-43.601963" />
+		<Point index="1" x="258.701416" y="-56.251953" />
+	</BCPolygon>
+	<BCPolygon ID="399" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-30.951969" />
+		<Point index="1" x="268.412872" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="398" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-30.951969" />
+		<Point index="1" x="258.701416" y="-30.951969" />
+	</BCPolygon>
+	<BCPolygon ID="397" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="405" EnclosureID="4" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-43.601963" />
+		<Point index="1" x="250.098602" y="-30.951969" />
+	</BCPolygon>
+	<BCPolygon ID="396" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-49.963013" />
+		<Point index="1" x="237.116364" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="395" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-55.338470" />
+		<Point index="1" x="243.635834" y="-49.963013" />
+	</BCPolygon>
+	<BCPolygon ID="394" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-49.963440" />
+		<Point index="1" x="249.145172" y="-55.338470" />
+	</BCPolygon>
+	<BCPolygon ID="393" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-43.601963" />
+		<Point index="1" x="245.018738" y="-49.963440" />
+	</BCPolygon>
+	<BCPolygon ID="392" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-36.417942" />
+		<Point index="1" x="240.134979" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="391" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-31.865452" />
+		<Point index="1" x="245.650208" y="-36.417942" />
+	</BCPolygon>
+	<BCPolygon ID="390" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-36.400105" />
+		<Point index="1" x="249.145172" y="-31.865452" />
+	</BCPolygon>
+	<BCPolygon ID="389" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="404" EnclosureID="5" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-43.601963" />
+		<Point index="1" x="244.497574" y="-36.400105" />
+	</BCPolygon>
+	<BCPolygon ID="388" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-49.956726" />
+		<Point index="1" x="268.665009" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="387" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-55.338470" />
+		<Point index="1" x="263.786407" y="-49.956726" />
+	</BCPolygon>
+	<BCPolygon ID="386" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-49.969894" />
+		<Point index="1" x="259.654816" y="-55.338470" />
+	</BCPolygon>
+	<BCPolygon ID="385" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-43.601963" />
+		<Point index="1" x="265.157104" y="-49.969894" />
+	</BCPolygon>
+	<BCPolygon ID="384" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-36.435658" />
+		<Point index="1" x="271.683624" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="383" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-31.865452" />
+		<Point index="1" x="264.338837" y="-36.435658" />
+	</BCPolygon>
+	<BCPolygon ID="382" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-36.398685" />
+		<Point index="1" x="259.654816" y="-31.865452" />
+	</BCPolygon>
+	<BCPolygon ID="381" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="403" EnclosureID="6" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-43.601963" />
+		<Point index="1" x="263.135010" y="-36.398685" />
+	</BCPolygon>
+	<BCPolygon ID="361" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-81.951920" />
+		<Point index="1" x="240.387115" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="360" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-81.951920" />
+		<Point index="1" x="250.098572" y="-81.951920" />
+	</BCPolygon>
+	<BCPolygon ID="359" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-69.301926" />
+		<Point index="1" x="258.701416" y="-81.951920" />
+	</BCPolygon>
+	<BCPolygon ID="358" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-56.651932" />
+		<Point index="1" x="268.412872" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="357" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-56.651932" />
+		<Point index="1" x="258.701416" y="-56.651932" />
+	</BCPolygon>
+	<BCPolygon ID="356" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="364" EnclosureID="7" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-69.301926" />
+		<Point index="1" x="250.098602" y="-56.651932" />
+	</BCPolygon>
+	<BCPolygon ID="355" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-75.662979" />
+		<Point index="1" x="237.116364" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="354" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-81.038437" />
+		<Point index="1" x="243.635834" y="-75.662979" />
+	</BCPolygon>
+	<BCPolygon ID="353" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-75.663406" />
+		<Point index="1" x="249.145172" y="-81.038437" />
+	</BCPolygon>
+	<BCPolygon ID="352" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-69.301926" />
+		<Point index="1" x="245.018738" y="-75.663406" />
+	</BCPolygon>
+	<BCPolygon ID="351" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-62.117905" />
+		<Point index="1" x="240.134979" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="350" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-57.565414" />
+		<Point index="1" x="245.650208" y="-62.117905" />
+	</BCPolygon>
+	<BCPolygon ID="349" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-62.100067" />
+		<Point index="1" x="249.145172" y="-57.565414" />
+	</BCPolygon>
+	<BCPolygon ID="348" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="363" EnclosureID="8" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-69.301926" />
+		<Point index="1" x="244.497574" y="-62.100067" />
+	</BCPolygon>
+	<BCPolygon ID="347" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-75.656693" />
+		<Point index="1" x="268.665009" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="346" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-81.038437" />
+		<Point index="1" x="263.786407" y="-75.656693" />
+	</BCPolygon>
+	<BCPolygon ID="345" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-75.669861" />
+		<Point index="1" x="259.654816" y="-81.038437" />
+	</BCPolygon>
+	<BCPolygon ID="344" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-69.301926" />
+		<Point index="1" x="265.157104" y="-75.669861" />
+	</BCPolygon>
+	<BCPolygon ID="343" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-62.135620" />
+		<Point index="1" x="271.683624" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="342" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-57.565414" />
+		<Point index="1" x="264.338837" y="-62.135620" />
+	</BCPolygon>
+	<BCPolygon ID="341" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-62.098648" />
+		<Point index="1" x="259.654816" y="-57.565414" />
+	</BCPolygon>
+	<BCPolygon ID="340" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="362" EnclosureID="9" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-69.301926" />
+		<Point index="1" x="263.135010" y="-62.098648" />
+	</BCPolygon>
+	<BCPolygon ID="320" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-107.651894" />
+		<Point index="1" x="240.387115" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="319" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-107.651894" />
+		<Point index="1" x="250.098572" y="-107.651894" />
+	</BCPolygon>
+	<BCPolygon ID="318" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-95.001900" />
+		<Point index="1" x="258.701416" y="-107.651894" />
+	</BCPolygon>
+	<BCPolygon ID="317" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-82.351898" />
+		<Point index="1" x="268.412872" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="316" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-82.351898" />
+		<Point index="1" x="258.701416" y="-82.351898" />
+	</BCPolygon>
+	<BCPolygon ID="315" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="323" EnclosureID="10" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-95.001900" />
+		<Point index="1" x="250.098602" y="-82.351898" />
+	</BCPolygon>
+	<BCPolygon ID="314" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-101.362953" />
+		<Point index="1" x="237.116364" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="313" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-106.738411" />
+		<Point index="1" x="243.635834" y="-101.362953" />
+	</BCPolygon>
+	<BCPolygon ID="312" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-101.363380" />
+		<Point index="1" x="249.145172" y="-106.738411" />
+	</BCPolygon>
+	<BCPolygon ID="311" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-95.001900" />
+		<Point index="1" x="245.018738" y="-101.363380" />
+	</BCPolygon>
+	<BCPolygon ID="310" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-87.817871" />
+		<Point index="1" x="240.134979" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="309" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-83.265381" />
+		<Point index="1" x="245.650208" y="-87.817871" />
+	</BCPolygon>
+	<BCPolygon ID="308" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-87.800034" />
+		<Point index="1" x="249.145172" y="-83.265381" />
+	</BCPolygon>
+	<BCPolygon ID="307" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="322" EnclosureID="11" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-95.001900" />
+		<Point index="1" x="244.497574" y="-87.800034" />
+	</BCPolygon>
+	<BCPolygon ID="306" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-101.356667" />
+		<Point index="1" x="268.665009" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="305" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-106.738411" />
+		<Point index="1" x="263.786407" y="-101.356667" />
+	</BCPolygon>
+	<BCPolygon ID="304" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-101.369835" />
+		<Point index="1" x="259.654816" y="-106.738411" />
+	</BCPolygon>
+	<BCPolygon ID="303" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-95.001900" />
+		<Point index="1" x="265.157104" y="-101.369835" />
+	</BCPolygon>
+	<BCPolygon ID="302" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-87.835587" />
+		<Point index="1" x="271.683624" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="301" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-83.265381" />
+		<Point index="1" x="264.338837" y="-87.835587" />
+	</BCPolygon>
+	<BCPolygon ID="300" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-87.798615" />
+		<Point index="1" x="259.654816" y="-83.265381" />
+	</BCPolygon>
+	<BCPolygon ID="299" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="321" EnclosureID="12" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-95.001900" />
+		<Point index="1" x="263.135010" y="-87.798615" />
+	</BCPolygon>
+	<BCPolygon ID="279" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-133.351852" />
+		<Point index="1" x="240.387115" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="278" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-133.351852" />
+		<Point index="1" x="250.098572" y="-133.351852" />
+	</BCPolygon>
+	<BCPolygon ID="277" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-120.701866" />
+		<Point index="1" x="258.701416" y="-133.351852" />
+	</BCPolygon>
+	<BCPolygon ID="276" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-108.051872" />
+		<Point index="1" x="268.412872" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="275" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-108.051872" />
+		<Point index="1" x="258.701416" y="-108.051872" />
+	</BCPolygon>
+	<BCPolygon ID="274" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="282" EnclosureID="13" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-120.701866" />
+		<Point index="1" x="250.098602" y="-108.051872" />
+	</BCPolygon>
+	<BCPolygon ID="273" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-127.062920" />
+		<Point index="1" x="237.116364" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="272" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-132.438370" />
+		<Point index="1" x="243.635834" y="-127.062920" />
+	</BCPolygon>
+	<BCPolygon ID="271" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-127.063347" />
+		<Point index="1" x="249.145172" y="-132.438370" />
+	</BCPolygon>
+	<BCPolygon ID="270" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-120.701866" />
+		<Point index="1" x="245.018738" y="-127.063347" />
+	</BCPolygon>
+	<BCPolygon ID="269" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-113.517845" />
+		<Point index="1" x="240.134979" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="268" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-108.965355" />
+		<Point index="1" x="245.650208" y="-113.517845" />
+	</BCPolygon>
+	<BCPolygon ID="267" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-113.500008" />
+		<Point index="1" x="249.145172" y="-108.965355" />
+	</BCPolygon>
+	<BCPolygon ID="266" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="281" EnclosureID="14" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-120.701866" />
+		<Point index="1" x="244.497574" y="-113.500008" />
+	</BCPolygon>
+	<BCPolygon ID="265" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-127.056633" />
+		<Point index="1" x="268.665009" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="264" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-132.438370" />
+		<Point index="1" x="263.786407" y="-127.056633" />
+	</BCPolygon>
+	<BCPolygon ID="263" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-127.069801" />
+		<Point index="1" x="259.654816" y="-132.438370" />
+	</BCPolygon>
+	<BCPolygon ID="262" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-120.701866" />
+		<Point index="1" x="265.157104" y="-127.069801" />
+	</BCPolygon>
+	<BCPolygon ID="261" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-113.535561" />
+		<Point index="1" x="271.683624" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="260" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-108.965355" />
+		<Point index="1" x="264.338837" y="-113.535561" />
+	</BCPolygon>
+	<BCPolygon ID="259" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-113.498589" />
+		<Point index="1" x="259.654816" y="-108.965355" />
+	</BCPolygon>
+	<BCPolygon ID="258" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="280" EnclosureID="15" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-120.701866" />
+		<Point index="1" x="263.135010" y="-113.498589" />
+	</BCPolygon>
+	<BCPolygon ID="238" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-159.051819" />
+		<Point index="1" x="240.387115" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="237" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-159.051819" />
+		<Point index="1" x="250.098572" y="-159.051819" />
+	</BCPolygon>
+	<BCPolygon ID="236" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-146.401825" />
+		<Point index="1" x="258.701416" y="-159.051819" />
+	</BCPolygon>
+	<BCPolygon ID="235" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-133.751831" />
+		<Point index="1" x="268.412872" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="234" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-133.751831" />
+		<Point index="1" x="258.701416" y="-133.751831" />
+	</BCPolygon>
+	<BCPolygon ID="233" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="241" EnclosureID="16" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-146.401825" />
+		<Point index="1" x="250.098602" y="-133.751831" />
+	</BCPolygon>
+	<BCPolygon ID="232" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-152.762878" />
+		<Point index="1" x="237.116364" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="231" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-158.138336" />
+		<Point index="1" x="243.635834" y="-152.762878" />
+	</BCPolygon>
+	<BCPolygon ID="230" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-152.763306" />
+		<Point index="1" x="249.145172" y="-158.138336" />
+	</BCPolygon>
+	<BCPolygon ID="229" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-146.401825" />
+		<Point index="1" x="245.018738" y="-152.763306" />
+	</BCPolygon>
+	<BCPolygon ID="228" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-139.217804" />
+		<Point index="1" x="240.134979" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="227" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-134.665314" />
+		<Point index="1" x="245.650208" y="-139.217804" />
+	</BCPolygon>
+	<BCPolygon ID="226" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-139.199966" />
+		<Point index="1" x="249.145172" y="-134.665314" />
+	</BCPolygon>
+	<BCPolygon ID="225" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="240" EnclosureID="17" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-146.401825" />
+		<Point index="1" x="244.497574" y="-139.199966" />
+	</BCPolygon>
+	<BCPolygon ID="224" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-152.756592" />
+		<Point index="1" x="268.665009" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="223" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-158.138336" />
+		<Point index="1" x="263.786407" y="-152.756592" />
+	</BCPolygon>
+	<BCPolygon ID="222" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-152.769760" />
+		<Point index="1" x="259.654816" y="-158.138336" />
+	</BCPolygon>
+	<BCPolygon ID="221" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-146.401825" />
+		<Point index="1" x="265.157104" y="-152.769760" />
+	</BCPolygon>
+	<BCPolygon ID="220" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-139.235519" />
+		<Point index="1" x="271.683624" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="219" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-134.665314" />
+		<Point index="1" x="264.338837" y="-139.235519" />
+	</BCPolygon>
+	<BCPolygon ID="218" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-139.198547" />
+		<Point index="1" x="259.654816" y="-134.665314" />
+	</BCPolygon>
+	<BCPolygon ID="217" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="239" EnclosureID="18" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-146.401825" />
+		<Point index="1" x="263.135010" y="-139.198547" />
+	</BCPolygon>
+	<BCPolygon ID="197" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-184.751785" />
+		<Point index="1" x="240.387115" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="196" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-184.751785" />
+		<Point index="1" x="250.098572" y="-184.751785" />
+	</BCPolygon>
+	<BCPolygon ID="195" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-172.101791" />
+		<Point index="1" x="258.701416" y="-184.751785" />
+	</BCPolygon>
+	<BCPolygon ID="194" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-159.451797" />
+		<Point index="1" x="268.412872" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="193" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-159.451797" />
+		<Point index="1" x="258.701416" y="-159.451797" />
+	</BCPolygon>
+	<BCPolygon ID="192" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="200" EnclosureID="19" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-172.101791" />
+		<Point index="1" x="250.098602" y="-159.451797" />
+	</BCPolygon>
+	<BCPolygon ID="191" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-178.462845" />
+		<Point index="1" x="237.116364" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="190" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-183.838303" />
+		<Point index="1" x="243.635834" y="-178.462845" />
+	</BCPolygon>
+	<BCPolygon ID="189" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-178.463272" />
+		<Point index="1" x="249.145172" y="-183.838303" />
+	</BCPolygon>
+	<BCPolygon ID="188" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-172.101791" />
+		<Point index="1" x="245.018738" y="-178.463272" />
+	</BCPolygon>
+	<BCPolygon ID="187" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-164.917770" />
+		<Point index="1" x="240.134979" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="186" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-160.365280" />
+		<Point index="1" x="245.650208" y="-164.917770" />
+	</BCPolygon>
+	<BCPolygon ID="185" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-164.899933" />
+		<Point index="1" x="249.145172" y="-160.365280" />
+	</BCPolygon>
+	<BCPolygon ID="184" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="199" EnclosureID="20" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-172.101791" />
+		<Point index="1" x="244.497574" y="-164.899933" />
+	</BCPolygon>
+	<BCPolygon ID="183" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-178.456558" />
+		<Point index="1" x="268.665009" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="182" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-183.838303" />
+		<Point index="1" x="263.786407" y="-178.456558" />
+	</BCPolygon>
+	<BCPolygon ID="181" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-178.469727" />
+		<Point index="1" x="259.654816" y="-183.838303" />
+	</BCPolygon>
+	<BCPolygon ID="180" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-172.101791" />
+		<Point index="1" x="265.157104" y="-178.469727" />
+	</BCPolygon>
+	<BCPolygon ID="179" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-164.935486" />
+		<Point index="1" x="271.683624" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="178" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-160.365280" />
+		<Point index="1" x="264.338837" y="-164.935486" />
+	</BCPolygon>
+	<BCPolygon ID="177" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-164.898514" />
+		<Point index="1" x="259.654816" y="-160.365280" />
+	</BCPolygon>
+	<BCPolygon ID="176" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="198" EnclosureID="21" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-172.101791" />
+		<Point index="1" x="263.135010" y="-164.898514" />
+	</BCPolygon>
+	<BCPolygon ID="156" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-210.451752" />
+		<Point index="1" x="240.387115" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="155" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-210.451752" />
+		<Point index="1" x="250.098572" y="-210.451752" />
+	</BCPolygon>
+	<BCPolygon ID="154" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-197.801758" />
+		<Point index="1" x="258.701416" y="-210.451752" />
+	</BCPolygon>
+	<BCPolygon ID="153" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-185.151764" />
+		<Point index="1" x="268.412872" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="152" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-185.151764" />
+		<Point index="1" x="258.701416" y="-185.151764" />
+	</BCPolygon>
+	<BCPolygon ID="151" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="159" EnclosureID="22" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-197.801758" />
+		<Point index="1" x="250.098602" y="-185.151764" />
+	</BCPolygon>
+	<BCPolygon ID="150" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-204.162811" />
+		<Point index="1" x="237.116364" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="149" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-209.538269" />
+		<Point index="1" x="243.635834" y="-204.162811" />
+	</BCPolygon>
+	<BCPolygon ID="148" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-204.163239" />
+		<Point index="1" x="249.145172" y="-209.538269" />
+	</BCPolygon>
+	<BCPolygon ID="147" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-197.801758" />
+		<Point index="1" x="245.018738" y="-204.163239" />
+	</BCPolygon>
+	<BCPolygon ID="146" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-190.617737" />
+		<Point index="1" x="240.134979" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="145" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-186.065247" />
+		<Point index="1" x="245.650208" y="-190.617737" />
+	</BCPolygon>
+	<BCPolygon ID="144" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-190.599899" />
+		<Point index="1" x="249.145172" y="-186.065247" />
+	</BCPolygon>
+	<BCPolygon ID="143" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="158" EnclosureID="23" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-197.801758" />
+		<Point index="1" x="244.497574" y="-190.599899" />
+	</BCPolygon>
+	<BCPolygon ID="142" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-204.156525" />
+		<Point index="1" x="268.665009" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="141" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-209.538269" />
+		<Point index="1" x="263.786407" y="-204.156525" />
+	</BCPolygon>
+	<BCPolygon ID="140" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-204.169693" />
+		<Point index="1" x="259.654816" y="-209.538269" />
+	</BCPolygon>
+	<BCPolygon ID="139" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-197.801758" />
+		<Point index="1" x="265.157104" y="-204.169693" />
+	</BCPolygon>
+	<BCPolygon ID="138" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-190.635452" />
+		<Point index="1" x="271.683624" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="137" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-186.065247" />
+		<Point index="1" x="264.338837" y="-190.635452" />
+	</BCPolygon>
+	<BCPolygon ID="136" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-190.598480" />
+		<Point index="1" x="259.654816" y="-186.065247" />
+	</BCPolygon>
+	<BCPolygon ID="135" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="157" EnclosureID="24" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-197.801758" />
+		<Point index="1" x="263.135010" y="-190.598480" />
+	</BCPolygon>
+	<BCPolygon ID="115" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-236.151718" />
+		<Point index="1" x="240.387115" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="114" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-236.151718" />
+		<Point index="1" x="250.098572" y="-236.151718" />
+	</BCPolygon>
+	<BCPolygon ID="113" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-223.501724" />
+		<Point index="1" x="258.701416" y="-236.151718" />
+	</BCPolygon>
+	<BCPolygon ID="112" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-210.851730" />
+		<Point index="1" x="268.412872" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="111" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-210.851730" />
+		<Point index="1" x="258.701416" y="-210.851730" />
+	</BCPolygon>
+	<BCPolygon ID="110" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="118" EnclosureID="25" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-223.501724" />
+		<Point index="1" x="250.098602" y="-210.851730" />
+	</BCPolygon>
+	<BCPolygon ID="109" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-229.862778" />
+		<Point index="1" x="237.116364" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="108" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-235.238235" />
+		<Point index="1" x="243.635834" y="-229.862778" />
+	</BCPolygon>
+	<BCPolygon ID="107" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-229.863205" />
+		<Point index="1" x="249.145172" y="-235.238235" />
+	</BCPolygon>
+	<BCPolygon ID="106" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-223.501724" />
+		<Point index="1" x="245.018738" y="-229.863205" />
+	</BCPolygon>
+	<BCPolygon ID="105" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-216.317703" />
+		<Point index="1" x="240.134979" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="104" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-211.765213" />
+		<Point index="1" x="245.650208" y="-216.317703" />
+	</BCPolygon>
+	<BCPolygon ID="103" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-216.299866" />
+		<Point index="1" x="249.145172" y="-211.765213" />
+	</BCPolygon>
+	<BCPolygon ID="102" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="117" EnclosureID="26" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-223.501724" />
+		<Point index="1" x="244.497574" y="-216.299866" />
+	</BCPolygon>
+	<BCPolygon ID="101" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-229.856491" />
+		<Point index="1" x="268.665009" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="100" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-235.238235" />
+		<Point index="1" x="263.786407" y="-229.856491" />
+	</BCPolygon>
+	<BCPolygon ID="99" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-229.869659" />
+		<Point index="1" x="259.654816" y="-235.238235" />
+	</BCPolygon>
+	<BCPolygon ID="98" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-223.501724" />
+		<Point index="1" x="265.157104" y="-229.869659" />
+	</BCPolygon>
+	<BCPolygon ID="97" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-216.335419" />
+		<Point index="1" x="271.683624" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="96" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-211.765213" />
+		<Point index="1" x="264.338837" y="-216.335419" />
+	</BCPolygon>
+	<BCPolygon ID="95" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-216.298447" />
+		<Point index="1" x="259.654816" y="-211.765213" />
+	</BCPolygon>
+	<BCPolygon ID="94" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="116" EnclosureID="27" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-223.501724" />
+		<Point index="1" x="263.135010" y="-216.298447" />
+	</BCPolygon>
+	<BCPolygon ID="74" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-261.851685" />
+		<Point index="1" x="240.387115" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="73" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-261.851685" />
+		<Point index="1" x="250.098572" y="-261.851685" />
+	</BCPolygon>
+	<BCPolygon ID="72" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.412872" y="-249.201691" />
+		<Point index="1" x="258.701416" y="-261.851685" />
+	</BCPolygon>
+	<BCPolygon ID="71" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-236.551697" />
+		<Point index="1" x="268.412872" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="58" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.780000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-236.551697" />
+		<Point index="1" x="258.701416" y="-236.551697" />
+	</BCPolygon>
+	<BCPolygon ID="57" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="77" EnclosureID="28" UFactorTag="" Emissivity="0.680000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.387115" y="-249.201691" />
+		<Point index="1" x="250.098602" y="-236.551697" />
+	</BCPolygon>
+	<BCPolygon ID="56" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="243.635834" y="-255.562744" />
+		<Point index="1" x="237.116364" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="33" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-260.938202" />
+		<Point index="1" x="243.635834" y="-255.562744" />
+	</BCPolygon>
+	<BCPolygon ID="32" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.018738" y="-255.563171" />
+		<Point index="1" x="249.145172" y="-260.938202" />
+	</BCPolygon>
+	<BCPolygon ID="31" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="240.134979" y="-249.201691" />
+		<Point index="1" x="245.018738" y="-255.563171" />
+	</BCPolygon>
+	<BCPolygon ID="30" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="245.650208" y="-242.017670" />
+		<Point index="1" x="240.134979" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="29" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="249.145172" y="-237.465179" />
+		<Point index="1" x="245.650208" y="-242.017670" />
+	</BCPolygon>
+	<BCPolygon ID="28" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="244.497574" y="-241.999832" />
+		<Point index="1" x="249.145172" y="-237.465179" />
+	</BCPolygon>
+	<BCPolygon ID="27" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="76" EnclosureID="29" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="237.116364" y="-249.201691" />
+		<Point index="1" x="244.497574" y="-241.999832" />
+	</BCPolygon>
+	<BCPolygon ID="25" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.786407" y="-255.556458" />
+		<Point index="1" x="268.665009" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="24" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-260.938202" />
+		<Point index="1" x="263.786407" y="-255.556458" />
+	</BCPolygon>
+	<BCPolygon ID="23" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.157104" y="-255.569626" />
+		<Point index="1" x="259.654816" y="-260.938202" />
+	</BCPolygon>
+	<BCPolygon ID="70" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.683624" y="-249.201691" />
+		<Point index="1" x="265.157104" y="-255.569626" />
+	</BCPolygon>
+	<BCPolygon ID="69" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="264.338837" y="-242.035385" />
+		<Point index="1" x="271.683624" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="68" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.720000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="259.654816" y="-237.465179" />
+		<Point index="1" x="264.338837" y="-242.035385" />
+	</BCPolygon>
+	<BCPolygon ID="67" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.135010" y="-241.998413" />
+		<Point index="1" x="259.654816" y="-237.465179" />
+	</BCPolygon>
+	<BCPolygon ID="66" BC="Frame Cavity Surface" units="mm" MaterialName="ID52_CS:C22-951_innerwalls.txt" PolygonID="75" EnclosureID="30" UFactorTag="" Emissivity="0.680000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="268.665009" y="-249.201691" />
+		<Point index="1" x="263.135010" y="-241.998413" />
+	</BCPolygon>
+	<BCPolygon ID="60" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="86" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-249.201691" />
+		<Point index="1" x="250.000000" y="-262.051666" />
+	</BCPolygon>
+	<BCPolygon ID="61" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="456" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-262.051666" />
+		<Point index="1" x="250.098572" y="-262.251678" />
+	</BCPolygon>
+	<BCPolygon ID="62" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="456" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098572" y="-262.251678" />
+		<Point index="1" x="258.701416" y="-262.251678" />
+	</BCPolygon>
+	<BCPolygon ID="63" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="456" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-262.251678" />
+		<Point index="1" x="258.799988" y="-262.051666" />
+	</BCPolygon>
+	<BCPolygon ID="64" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="84" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-262.051666" />
+		<Point index="1" x="271.970001" y="-249.201691" />
+	</BCPolygon>
+	<BCPolygon ID="65" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="79" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-249.201691" />
+		<Point index="1" x="258.799988" y="-236.351700" />
+	</BCPolygon>
+	<BCPolygon ID="80" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="125" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-236.351700" />
+		<Point index="1" x="271.970001" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="87" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="120" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-223.501724" />
+		<Point index="1" x="258.799988" y="-210.651733" />
+	</BCPolygon>
+	<BCPolygon ID="88" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="166" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-210.651733" />
+		<Point index="1" x="271.970001" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="89" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="161" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-197.801758" />
+		<Point index="1" x="258.799988" y="-184.951767" />
+	</BCPolygon>
+	<BCPolygon ID="90" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="207" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-184.951767" />
+		<Point index="1" x="271.970001" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="91" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="202" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-172.101791" />
+		<Point index="1" x="258.799988" y="-159.251801" />
+	</BCPolygon>
+	<BCPolygon ID="92" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="248" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-159.251801" />
+		<Point index="1" x="271.970001" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="1" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="243" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-146.401825" />
+		<Point index="1" x="258.799988" y="-133.551834" />
+	</BCPolygon>
+	<BCPolygon ID="4" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="289" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-133.551834" />
+		<Point index="1" x="271.970001" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="12" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="284" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-120.701866" />
+		<Point index="1" x="258.799988" y="-107.851875" />
+	</BCPolygon>
+	<BCPolygon ID="13" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="330" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-107.851875" />
+		<Point index="1" x="271.970001" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="19" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="325" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-95.001900" />
+		<Point index="1" x="258.799988" y="-82.151901" />
+	</BCPolygon>
+	<BCPolygon ID="20" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="371" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-82.151901" />
+		<Point index="1" x="271.970001" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="43" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="366" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-69.301926" />
+		<Point index="1" x="258.799988" y="-56.451935" />
+	</BCPolygon>
+	<BCPolygon ID="44" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="412" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-56.451935" />
+		<Point index="1" x="271.970001" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="93" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="407" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-43.601963" />
+		<Point index="1" x="258.799988" y="-30.751972" />
+	</BCPolygon>
+	<BCPolygon ID="128" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="453" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-30.751972" />
+		<Point index="1" x="271.970001" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="129" BC="ShadeInE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="448" EnclosureID="0" UFactorTag="Edge" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="271.970001" y="-17.901997" />
+		<Point index="1" x="258.799988" y="-5.052004" />
+	</BCPolygon>
+	<BCPolygon ID="130" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="449" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.799988" y="-5.052004" />
+		<Point index="1" x="258.701416" y="-4.852007" />
+	</BCPolygon>
+	<BCPolygon ID="131" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="449" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="258.701416" y="-4.852007" />
+		<Point index="1" x="250.098602" y="-4.852007" />
+	</BCPolygon>
+	<BCPolygon ID="132" BC="Adiabatic" units="mm" MaterialName="ID52_CS:C22-951_glueline.txt" PolygonID="449" EnclosureID="0" UFactorTag="" Emissivity="0.780000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.098602" y="-4.852007" />
+		<Point index="1" x="250.000000" y="-5.052004" />
+	</BCPolygon>
+	<BCPolygon ID="133" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="451" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-5.052004" />
+		<Point index="1" x="236.829987" y="-17.901997" />
+	</BCPolygon>
+	<BCPolygon ID="134" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="455" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-17.901997" />
+		<Point index="1" x="250.000000" y="-30.751972" />
+	</BCPolygon>
+	<BCPolygon ID="169" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="410" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-30.751972" />
+		<Point index="1" x="236.829987" y="-43.601963" />
+	</BCPolygon>
+	<BCPolygon ID="170" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="414" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-43.601963" />
+		<Point index="1" x="250.000000" y="-56.451935" />
+	</BCPolygon>
+	<BCPolygon ID="171" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="369" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-56.451935" />
+		<Point index="1" x="236.829987" y="-69.301926" />
+	</BCPolygon>
+	<BCPolygon ID="172" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="373" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-69.301926" />
+		<Point index="1" x="250.000000" y="-82.151901" />
+	</BCPolygon>
+	<BCPolygon ID="173" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="328" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-82.151901" />
+		<Point index="1" x="236.829987" y="-95.001900" />
+	</BCPolygon>
+	<BCPolygon ID="174" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="332" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-95.001900" />
+		<Point index="1" x="250.000000" y="-107.851875" />
+	</BCPolygon>
+	<BCPolygon ID="175" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="287" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-107.851875" />
+		<Point index="1" x="236.829987" y="-120.701866" />
+	</BCPolygon>
+	<BCPolygon ID="210" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="291" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-120.701866" />
+		<Point index="1" x="250.000000" y="-133.551834" />
+	</BCPolygon>
+	<BCPolygon ID="211" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="246" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="250.000000" y="-133.551834" />
+		<Point index="1" x="236.829987" y="-146.401825" />
+	</BCPolygon>
+	<BCPolygon ID="212" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="250" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="236.829987" y="-146.401825" />
+		<Point index="1" x="250.000000" y="-159.251801" />
+	</BCPolygon>
+	<BCPolygon ID="213" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="205" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-159.251801" />
+		<Point index="1" x="236.829987" y="-172.101791" />
+	</BCPolygon>
+	<BCPolygon ID="214" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="209" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-172.101791" />
+		<Point index="1" x="250.000000" y="-184.951767" />
+	</BCPolygon>
+	<BCPolygon ID="215" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="164" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-184.951767" />
+		<Point index="1" x="236.829987" y="-197.801758" />
+	</BCPolygon>
+	<BCPolygon ID="216" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="168" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-197.801758" />
+		<Point index="1" x="250.000000" y="-210.651733" />
+	</BCPolygon>
+	<BCPolygon ID="251" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="123" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-210.651733" />
+		<Point index="1" x="236.829987" y="-223.501724" />
+	</BCPolygon>
+	<BCPolygon ID="252" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="127" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.829987" y="-223.501724" />
+		<Point index="1" x="250.000000" y="-236.351700" />
+	</BCPolygon>
+	<BCPolygon ID="253" BC="ShadeOutE" units="mm" MaterialName="ID52_CS:C22-951_outerwalls.txt" PolygonID="82" EnclosureID="0" UFactorTag="" Emissivity="0.720000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-236.351700" />
+		<Point index="1" x="236.829987" y="-249.201691" />
+	</BCPolygon>
+</Boundaries>
+<Results>
+	<Case>
+		<U-factors>
+			<Tag>Edge</Tag>
+			<DeltaT units="C" value="25.368261" />
+			<Projection>
+				<Length-type>Total length</Length-type>
+				<Length units="mm" value="368.006073" />
+				<U-factor units="W/m2-K" value="1.048639" />
+			</Projection>
+			<Projection>
+				<Length-type>Projected X</Length-type>
+				<Length units="mm" value="13.170013" />
+				<U-factor units="W/m2-K" value="29.301830" />
+			</Projection>
+			<Projection>
+				<Length-type>Projected Y</Length-type>
+				<Length units="mm" value="256.999664" />
+				<U-factor units="W/m2-K" value="1.501580" />
+			</Projection>
+			<Projection>
+				<Length-type>Custom length</Length-type>
+				<Length units="mm" value="0.000000" />
+				<U-factor value="NA" />
+			</Projection>
+			<Projection>
+				<Length-type>Projected in glass plane</Length-type>
+				<Length units="mm" value="13.170044" />
+				<U-factor units="W/m2-K" value="29.301764" />
+			</Projection>
+			<Projection>
+				<Length-type>Custom rotation</Length-type>
+				<Length units="mm" value="13.170044" />
+				<ProjectionAngle>0.000000</ProjectionAngle>
+				<U-factor units="W/m2-K" value="29.301764" />
+			</Projection>
+		</U-factors>
+		<FrameCavities>
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_446_Cavity_446" Conductivity="0.085062" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_445_Cavity_445" Conductivity="0.034181" EquivalentLength="4.260902" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_444_Cavity_444" Conductivity="0.036407" EquivalentLength="4.260892" EquivalentHeight="8.314707" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_405_Cavity_405" Conductivity="0.085111" EquivalentLength="22.655510" EquivalentHeight="20.452045" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_404_Cavity_404" Conductivity="0.034179" EquivalentLength="4.260901" EquivalentHeight="8.314724" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_403_Cavity_403" Conductivity="0.036407" EquivalentLength="4.260892" EquivalentHeight="8.314704" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_364_Cavity_364" Conductivity="0.085114" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_363_Cavity_363" Conductivity="0.034182" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_362_Cavity_362" Conductivity="0.036408" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_323_Cavity_323" Conductivity="0.085109" EquivalentLength="22.655512" EquivalentHeight="20.452053" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_322_Cavity_322" Conductivity="0.034179" EquivalentLength="4.260902" EquivalentHeight="8.314729" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_321_Cavity_321" Conductivity="0.036409" EquivalentLength="4.260892" EquivalentHeight="8.314709" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_282_Cavity_282" Conductivity="0.085113" EquivalentLength="22.655510" EquivalentHeight="20.452042" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_281_Cavity_281" Conductivity="0.034179" EquivalentLength="4.260902" EquivalentHeight="8.314724" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_280_Cavity_280" Conductivity="0.036407" EquivalentLength="4.260892" EquivalentHeight="8.314704" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_241_Cavity_241" Conductivity="0.085115" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_240_Cavity_240" Conductivity="0.034179" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_239_Cavity_239" Conductivity="0.036408" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_200_Cavity_200" Conductivity="0.085117" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_199_Cavity_199" Conductivity="0.034182" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_198_Cavity_198" Conductivity="0.036412" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_159_Cavity_159" Conductivity="0.085110" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_158_Cavity_158" Conductivity="0.034182" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_157_Cavity_157" Conductivity="0.036408" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_118_Cavity_118" Conductivity="0.085113" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_117_Cavity_117" Conductivity="0.034179" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_116_Cavity_116" Conductivity="0.036408" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_77_Cavity_77" Conductivity="0.085078" EquivalentLength="22.655510" EquivalentHeight="20.452049" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_76_Cavity_76" Conductivity="0.034177" EquivalentLength="4.260901" EquivalentHeight="8.314726" HeatFlowDirection="left" />
+			<FrameCavity Name="Frame Cavity NFRC 100_Cavity_75_Cavity_75" Conductivity="0.036411" EquivalentLength="4.260892" EquivalentHeight="8.314706" HeatFlowDirection="left" />
+		</FrameCavities>
+	</Case>
+</Results>
+</THERM-XML>

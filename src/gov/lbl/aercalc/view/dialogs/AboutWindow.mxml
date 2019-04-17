@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   creationComplete="onCC()"
+			   width="900"
+			   height="620"
+			   close="onCloseWindow()"
+			   horizontalCenter="0"
+			   verticalCenter="0"
+			   title="About AERCalc"
+>
+	
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	
+	<fx:Metadata>
+		[Event(name="close", type="flash.events.Event")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[
+		import flash.filters.DropShadowFilter;
+		
+		import mx.core.FlexGlobals;
+		import mx.managers.PopUpManager;
+		
+		import gov.lbl.aercalc.model.ApplicationModel;
+		import gov.lbl.aercalc.util.AboutInfo;
+		import gov.lbl.aercalc.util.AERCalcResources;
+		import gov.lbl.aercalc.util.Utils;
+
+
+		[Bindable]
+		public var version:String;
+
+		protected var _msg:String = "Some about info goes here.";
+
+		public function show():void
+		{
+			PopUpManager.addPopUp(this, FlexGlobals.topLevelApplication as DisplayObject, true);
+			PopUpManager.centerPopUp(this)
+		}
+		public function onCloseWindow():void {
+			PopUpManager.removePopUp(this);
+		}
+
+		protected function onCC():void {
+			version = "Version : " + AboutInfo.applicationVersion;
+
+			var myFilter:DropShadowFilter = new DropShadowFilter();
+			myFilter.alpha = .2;
+			myFilter.color = 0x000000;
+			myFilter.distance = 5;
+			this.filters = [myFilter];
+		}
+		]]>
+	</fx:Script>
+	
+	<s:Group width="900" height="150">
+		
+		<s:Rect top="0" bottom="0" left="0" right="0">
+			<s:fill>
+				<s:LinearGradient>
+					<s:GradientEntry color="{Utils.COLOR_BLUE_1}" ratio="0" alpha="1"/>
+					<s:GradientEntry color="{Utils.COLOR_BLUE_2}" ratio=".5" alpha="1"/>
+				</s:LinearGradient>
+			</s:fill>
+			<s:stroke>
+				<s:SolidColorStroke color="#E1E1E1" alpha=".8"/>
+			</s:stroke>
+		</s:Rect>
+
+		<s:HGroup left="0" right="20" verticalAlign="top" verticalCenter="0" paddingTop="20">
+
+			<s:VGroup paddingBottom="10"  paddingLeft="10" gap="0" width="580">
+				<s:Image source="@Embed('/assets/img/logo.png')" width="400" height="41"/>
+				<s:VGroup paddingLeft="12">
+					<s:Spacer height="10"/>
+					<s:Label text="by Lawrence Berkeley National Laboratory" fontSize="13" color="#ffffff"/>
+					<s:Label text="{'Version ' + AboutInfo.applicationVersion}" fontSize="13" color="#FFFFFF"/>
+					<s:Spacer height="20"/>
+				</s:VGroup>
+			
+			</s:VGroup>
+
+			<s:VGroup width="200">
+				<s:Image source="{AERCalcResources.DOE_LOGO_WHITE}" alpha=".8"/>
+			</s:VGroup>
+
+		</s:HGroup>
+
+	</s:Group>
+	
+	<s:HGroup width="840" top="180" bottom="0" left="20" right="20">
+		
+		<s:VGroup width="560" height="100%">
+			
+			<s:Scroller width="560" height="100%" >
+	
+				<s:RichEditableText editable="false" 
+									width="100%"
+									top="0"
+								    clipAndEnableScrolling="true"
+									height="100%">
+					<s:textFlow>
+						<s:TextFlow >
+															
+							<s:p><s:span fontWeight='bold'>Program Development Team:</s:span></s:p>
+							
+							<s:p><s:a href='https://www.lbl.gov' target='_blank' lineHeight='170%' fontStyle="italic">Lawrence Berkeley National Laboratory</s:a></s:p>
+								
+							<s:p>D. Charlie Curcija</s:p>
+							<s:p>Stephen Czarnecki</s:p>
+							<s:p>Robert Hart</s:p>
+							<s:p>Christian Kohler</s:p>
+							<s:p>Robin Mitchell</s:p>
+							<s:p>Jinqing Peng</s:p>
+							<s:p>Simon Vidanovic</s:p>
+							
+							<s:p><s:a href='https://www.mcquilleninteractive.com' target='_blank' lineHeight='170%' fontStyle="italic">McQuillen Interactive</s:a></s:p>
+							<s:p>Daniel McQuillen</s:p>		
+							
+							<s:p/>
+													
+							<s:p><s:span fontWeight='bold' >Copyright Notice</s:span></s:p>
+							
+							<s:p>License language is under development. Please treat this as internal testing version and don't distribute further.</s:p>
+	
+							<s:p/>
+							
+							<s:p><s:span fontWeight='bold' >Open Source Libraries</s:span></s:p>
+							<s:p >
+								<s:a href='https://flex.apache.org/' target='_blank' lineHeight="170%">Apache Flex</s:a>
+								<s:br/>
+								<s:a href='https://code.google.com/p/swizframework/' target='_blank'>SWIZ</s:a>
+								<s:br/>
+								<s:a href='https://github.com/AlexandruCiobanu/flexxb' target='_blank'>FlexXB</s:a>
+							</s:p>
+							<s:br/>
+							<s:p>See license.txt in the application folder for complete license information</s:p>
+	
+	
+	
+						</s:TextFlow>
+					</s:textFlow>
+				</s:RichEditableText>	
+				</s:Scroller>
+			</s:VGroup>
+		
+			<s:VGroup width="280" gap="10">
+				
+				<s:Label text="VERSIONS" fontWeight="bold"/>
+				<s:HGroup>
+					<s:Label text="AERCalc" /> 
+					<s:Label text="{AboutInfo.applicationVersion}" />
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="WINDOW"/> 
+					<s:Label text="{ApplicationModel.VERSION_WINDOW}" />
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="EnergyPlus"/> 
+					<s:Label text="{ApplicationModel.VERSION_ENERGYPLUS}" />
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="THERM"/> 
+					<s:Label text="{ApplicationModel.VERSION_THERM}" />
+				</s:HGroup>
+				<s:HGroup>
+					<s:Label text="ESCalc"/> 
+					<s:Label text="{ApplicationModel.VERSION_ESCALC}" />
+				</s:HGroup>
+				
+			</s:VGroup>
+		
+	</s:HGroup>
+
+	<s:controlBarLayout>
+		<s:HorizontalLayout horizontalAlign="right" 
+							paddingBottom="5" 
+							paddingTop="5"
+							paddingLeft="10"
+							paddingRight="10"/>
+	</s:controlBarLayout>
+	
+	<s:controlBarContent>		
+			<s:Button label="OK" 
+					  click="onCloseWindow()" 
+					  width="120" 
+					  height="30"/>		
+	</s:controlBarContent>
+	
+</s:TitleWindow>

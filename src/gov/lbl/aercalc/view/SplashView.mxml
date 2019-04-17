@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+         xmlns:s="library://ns.adobe.com/flex/spark"
+         width="600"
+         height="365"
+        >
+
+
+
+
+    <fx:Script>
+    <![CDATA[
+        import gov.lbl.aercalc.model.ApplicationModel;
+
+        [Inject]
+        [Bindable]
+        public var applicationModel:ApplicationModel;
+
+
+        ]]>
+	</fx:Script>
+
+    <s:Rect left="0" top="0" right="0" bottom="0">
+        <s:filters>
+            <s:DropShadowFilter
+                    blurX="20" blurY="20"
+                    alpha="0.32"
+                    distance="11"
+                    angle="90"
+                    knockout="true"/>
+        </s:filters>
+        <s:fill>
+            <s:SolidColor color="0x000000"/>
+        </s:fill>
+    </s:Rect>
+
+    <s:Image source="@Embed('/assets/img/splash_screen.png')"
+             width="100%"
+             height="100%"
+             left="0"
+             top="0"
+    />
+
+    <s:HGroup bottom="115" left="15" textAlign="right" verticalAlign="middle">
+        <s:Label text="{applicationModel.loadingProgress}" color="#FFFFFF"/>
+        <s:Spacer width="5"/>
+        <s:BusyIndicator symbolColor="#FFFFFFF" rotationInterval="200"  />
+    </s:HGroup>
+
+</s:Group>

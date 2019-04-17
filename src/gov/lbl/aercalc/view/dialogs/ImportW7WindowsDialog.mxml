@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:ResizableTitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+                                 xmlns:s="library://ns.adobe.com/flex/spark"
+                                 xmlns:mx="library://ns.adobe.com/flex/mx"
+                                 xmlns:components="gov.lbl.aercalc.view.components.*"
+                                 skinClass="gov.lbl.aercalc.view.components.ResizeableTitleWindowSkin"
+                                 title="{_windowTitle}"
+                                 close="closeDialog()"
+                                 initialize="onInit()"
+                                 width="1050"
+                                 height="700">
+
+    <fx:Script>
+		<![CDATA[
+
+            import gov.lbl.aercalc.util.AERCalcResources;
+
+            import mx.collections.ArrayCollection;
+			import mx.collections.ListCollectionView;
+			import mx.core.FlexGlobals;
+			import mx.managers.PopUpManager;
+			import mx.managers.ToolTipManager;
+
+			import gov.lbl.aercalc.controller.W7ImportController;
+			import gov.lbl.aercalc.model.ApplicationModel;
+			import gov.lbl.aercalc.model.ImportModel;
+			import gov.lbl.aercalc.model.domain.W7WindowImportVO;
+			import gov.lbl.aercalc.util.Utils;
+
+        [Bindable]
+        public var progressMsg:String = "";
+
+        [Bindable]
+        public var importModel:ImportModel;
+
+        [Bindable]
+        public var importController:W7ImportController;
+
+        [Bindable]
+        private var _uFactorHeader:String;
+
+		[Bindable]
+		private var _airInfiltrationHeader:String;
+
+        [Bindable]
+        public var lstValid:ListCollectionView;
+
+        [Bindable]
+        public var lstInvalid:ListCollectionView;
+
+        [Bindable]
+        private var _windowTitle:String = "Import from WINDOW7";
+
+        import gov.lbl.aercalc.view.components.InfoMessage;
+
+
+        public function selectAll():void {
+            if (this.dgWindows){
+                this.dgWindows.selectAll();
+            }
+        }
+
+
+        public function deselectAll():void {
+            this.dgWindows.selectedIndex = -1;
+        }
+
+
+        private function createCustomTip(event:Object):void {
+            var infoMsg:InfoMessage = new InfoMessage();
+
+            var msg:String = "W7 window names must have the following pattern:<br/><br/>" +
+                    "&nbsp;&nbsp;&nbsp;&nbsp;<i>name</i>::<i>attachment type</i>::<i>attachment position</i>::<i>base window type</i><br/><br/>" +
+                    "Valid window types:<br/>";
+
+            for (var i:uint=0; i<ImportModel.shadingSystemTypes.length; i++){
+                var type:Object = ImportModel.shadingSystemTypes[i] as Object;
+                msg += "    <b>" + type['data'] + "</b> : " + type['label'] + "<br/>";
+            }
+
+            msg += "<br/>Valid attachment positions:<br/>";
+
+            for (var i:uint=0; i<ImportModel.attachmentPositions.length; i++){
+                var type:Object = ImportModel.attachmentPositions[i] as Object;
+                msg += "    <b>" + type['data'] + "</b> : " + type['label'] + "<br/>";
+            }
+            msg += "<br/>Valid base window types:<br/>";
+
+            var baseWindowTypes:Array = ImportModel.VALID_BASE_CASE_WINDOW_IDS
+            for (i=0; i<baseWindowTypes.length; i++){
+                var baseWindowType:String = baseWindowTypes[i] as String;
+                msg += "&nbsp;&nbsp;&nbsp;&nbsp;<b>" + baseWindowType + "</b><br/>";
+            }
+
+            msg += "<br/><br/>";
+
+
+            infoMsg.bodyText = msg;
+            event.toolTip = infoMsg;
+        }
+
+
+
+        public function show():void {
+            PopUpManager.addPopUp(this, FlexGlobals.topLevelApplication as DisplayObject, true);
+            PopUpManager.centerPopUp(this);
+        }
+
+
+        public function setImportProgress(value:uint, total:uint):void {
+
+            //add a bit extra to bar when value = 0, since each item takes awhile
+            //and we don't want it looking like nothing is happening
+            progressBarImport.setProgress(value * 10 + 1, total * 10 + 1);
+        }
+
+
+        public function set w7ImportPath(value:String):void{
+            _windowTitle = "Import from WINDOW7  :: " + value
+        }
+
+        public function refreshLists():void {
+
+            lstValid = new ListCollectionView(importModel.w7GlazingSystemsAC);
+            lstValid.filterFunction = function (item:Object):Boolean {
+                return item.importState != ImportModel.IMPORT_STATE_INVALID
+            };
+
+
+            lstInvalid = new ListCollectionView(importModel.w7GlazingSystemsAC);
+            lstInvalid.filterFunction = function (item:Object):Boolean {
+                return item.importState == ImportModel.IMPORT_STATE_INVALID
+            };
+
+            lstValid.refresh();
+            lstInvalid.refresh();
+        }
+
+
+        protected function onInit():void {
+            ToolTipManager.showDelay = 0;
+            updateHeaders();
+        }
+
+
+        protected function onCancel():void {
+            importController.onUserCancelGetList();
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+
+        protected function onDone():void {
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+
+        protected function onCancelDialog():void {
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+
+        protected function onCancelImport():void {
+            importController.onUserCancelWindowImport();
+            this.currentState = "default";
+        }
+
+
+        public function closeDialog():void {
+            cleanup();
+            PopUpManager.removePopUp(this);
+        }
+
+
+        private function cleanup():void {
+            this.title = "";
+            this.currentState = "default";
+            importModel = null;
+            importController = null;
+        }
+
+
+        protected function onImport():void {
+
+            //show progress
+            this.currentState = "importingSelected";
+
+            //gather list of selected rows
+            var selectedItems:Vector.<Object> = dgWindows.selectedItems;
+
+            //send rows to controller
+            importController.startWindowImport(selectedItems);
+
+        }
+
+
+        public function importFinished():void {
+            this.currentState = "default";
+            this.dgWindows.clearSelection();
+        }
+
+
+        protected function updateHeaders():void {
+            if (ApplicationModel.currUnits == "IP") {
+                _uFactorHeader = "U-factor (Btu/h-ft2-F)";
+				_airInfiltrationHeader = "Air Infilt. (cfm/ft2)";				
+            } else {
+                _uFactorHeader = "U-factor (W/m2-K)";
+				_airInfiltrationHeader = "Air Infilt. (l/s)";				
+            }
+
+        }
+
+
+        protected function shadingSystemTypeLabelFunction(item:Object, column:GridColumn):String {
+            return importModel.getShadingSystemName(item.shadingSystemType);
+        }
+			
+		//TODO: Update these when we implement switch between SI / IP
+			
+		protected function shgcLabelFunction(item:Object, column:GridColumn):String {
+			return Utils.roundValue(item.SHGC, 2);
+		}
+			
+			
+		protected function tvisLabelFunction(item:Object, column:GridColumn):String {
+			return Utils.roundValue(item.Tvis, 2);
+		}
+			
+			
+		protected function uvalLabelFunction(item:Object, column:GridColumn):String {
+			return Utils.roundValue(item.UvalWinter, 2);
+		}
+		
+
+        ]]>
+	</fx:Script>
+
+    <fx:Declarations>
+        <s:State name="default"/>
+        <s:State name="gettingList"/>
+        <s:State name="listError"/>
+        <s:State name="importingSelected"/>
+        <s:State name="importError"/>
+    </fx:Declarations>
+
+    <s:VGroup top="10"
+              left="10"
+              right="10"
+              bottom="10"
+              enabled.gettingList="false"
+              enabled.importingSelected="false">
+
+        <s:Label text="WINDOW7 Products List" top="10" left="10"/>
+
+        <s:VGroup  width="100%"
+                   height="100%"
+                   gap="0"
+                   top="40"
+                   left="10"
+        >
+
+            <s:HGroup width="100%" verticalAlign="bottom">
+                <s:ButtonBar id="btnTabButtons"
+                             dataProvider="{importViewStack}"
+                />
+                <s:Spacer width="100%"/>
+                <s:VGroup>
+                    <s:Button skinClass="gov.lbl.aercalc.view.skins.InfoButtonSkin"
+                              width="25"
+                              height="25"
+                              horizontalCenter="0"
+                              verticalCenter="0"
+                              bottom="5"
+                              toolTip=" "
+                              toolTipCreate="createCustomTip(event)"/>
+                    <s:Spacer height="3"/>
+                </s:VGroup>
+
+            </s:HGroup>
+
+
+            <mx:ViewStack id="importViewStack"
+                          borderStyle="solid"
+                          width="100%"
+                          height="100%">
+
+                <s:NavigatorContent id="importsValid" label="Available to Import">
+
+                    <s:DataGrid id="dgWindows"
+                                width="100%"
+                                height="100%"
+                                selectionMode="multipleRows"
+                                dataProvider="{lstValid}">
+                        <s:columns>
+                            <s:ArrayList>
+
+                                <s:GridColumn
+                                        width="30"
+                                        headerText=""
+                                        dataField="status"
+                                >
+                                    <s:itemRenderer>
+                                        <fx:Component>
+                                            <s:GridItemRenderer>
+                                                <fx:Script><![CDATA[
+
+                                                    import gov.lbl.aercalc.model.ImportModel;
+                                                    import gov.lbl.aercalc.util.AERCalcResources;
+
+                                                    override public function prepare(hasBeenRecycled:Boolean):void
+                                                    {
+                                                        if (!data) return;
+                                                        switch(data.importState){
+                                                            case ImportModel.IMPORT_STATE_AVAILABLE :
+                                                                imgIcon.source = null;
+                                                                break;
+                                                            case  ImportModel.IMPORT_STATE_FAILED :
+                                                                imgIcon.source = AERCalcResources.CrossIcon;
+                                                                break;
+                                                            case  ImportModel.IMPORT_STATE_COMPLETE :
+                                                                imgIcon.source = AERCalcResources.TickIcon;
+                                                                break;
+                                                        }
+                                                        imgIcon.invalidateProperties();
+                                                    }
+
+                                                    ]]>
+                                                </fx:Script>
+                                                <s:Image id="imgIcon" horizontalCenter="0" verticalCenter="0"/>
+                                            </s:GridItemRenderer>
+                                        </fx:Component>
+                                    </s:itemRenderer>
+                                </s:GridColumn>
+
+                                <s:GridColumn
+                                        dataField="W7ID"
+                                        headerText="W7 ID"
+                                        width="80"
+                                />
+                                <s:GridColumn
+                                        dataField="W7GlzSysID"
+                                        headerText="W7 GlzSys ID"
+                                        width="90"
+                                />
+                                <s:GridColumn
+                                        dataField="W7ShdSysID"
+                                        headerText="W7 ShdSys ID"
+                                        width="60"
+                                />
+                                <s:GridColumn
+                                        dataField="cgdbVersion"
+                                        headerText="CGDB Ver."
+                                        width="60"
+                                        
+                                />
+                                <s:GridColumn
+                                        dataField="name"
+                                        width="200"
+                                        showDataTips="true"
+                                        dataTipField="name"
+                                        headerText="Window Name"/>
+
+                                <s:GridColumn
+                                        dataField="shadingSystemManufacturer"
+                                        headerText="Manufacturer"
+                                        showDataTips="true"
+                                        dataTipField="shadingSystemManufacturer"
+                                        width="80"
+                                />
+
+
+                                <s:GridColumn
+                                        dataField="shadingMaterialManufacturer"
+                                        headerText="Material Manufacturer"
+                                        showDataTips="true"
+                                        dataTipField="shadingMaterialManufacturer"
+                                        width="80"/>
+
+                                <s:GridColumn
+                                        dataField="shadingSystemType"
+                                        headerText="Window Attachment"
+                                        width="150"
+                                        labelFunction="shadingSystemTypeLabelFunction"
+                                >
+
+                                </s:GridColumn>                            
+
+								<s:GridColumn
+									dataField="SHGC"
+									headerText="SHGC"
+                                    width="60"
+									labelFunction="shgcLabelFunction"/>
+								
+								<s:GridColumn
+									dataField="Tvis"
+									headerText="TVis"
+                                    width="60"
+									labelFunction="tvisLabelFunction"/>
+								
+                                <s:GridColumn
+                                        id="uFactor"
+                                        dataField="UvalWinter"
+                                        width="80"
+                                        headerText="{_uFactorHeader}"
+										labelFunction="uvalLabelFunction"/>
+
+
+                            </s:ArrayList>
+                        </s:columns>
+                    </s:DataGrid>
+
+                </s:NavigatorContent>
+
+                <s:NavigatorContent id="importsInvalid" label="Unavailable for Import">
+
+                    <s:DataGrid id="dgWindowsInvalid"
+                                width="100%"
+                                height="100%"
+                                selectionMode="multipleRows"
+                                dataProvider="{lstInvalid}">
+                        <s:columns>
+                            <s:ArrayList>
+                                <s:GridColumn
+                                        width="30"
+                                        headerText=""
+                                        dataField="status"
+                                >
+                                    <s:itemRenderer>
+                                        <fx:Component>
+                                            <s:GridItemRenderer>
+                                                <fx:Script>
+                                                    <![CDATA[
+
+                                                    import gov.lbl.aercalc.util.AERCalcResources;
+                                                    ]]>
+                                                 </fx:Script>
+                                                <s:Image source="{AERCalcResources.CrossIcon}"
+                                                         horizontalCenter="0"
+                                                         toolTip="{data.errorMessage}"
+                                                         verticalCenter="0"/>
+                                            </s:GridItemRenderer>
+                                        </fx:Component>
+                                    </s:itemRenderer>
+                                </s:GridColumn>
+
+                                <s:GridColumn
+                                        dataField="W7ID"
+                                        headerText="W7 ID"
+                                        width="60"
+                                />
+                                <s:GridColumn
+                                        dataField="W7GlzSysID"
+                                        headerText="W7 GlzSys ID"
+                                        width="60"
+                                />
+                                <s:GridColumn
+                                        dataField="W7ShdSysID"
+                                        headerText="W7 ShdSys ID"
+                                        width="60"
+                                />
+                                <s:GridColumn
+                                        dataField="cgdbVersion"
+                                        headerText="CGDB Ver."
+                                        width="60"
+                                />
+                                <s:GridColumn
+                                        dataField="name"
+                                        width="200"
+                                        showDataTips="true"
+                                        dataTipField="name"
+                                        headerText="Window Name"/>
+
+                                <s:GridColumn
+                                        dataField="shadingSystemManufacturer"
+                                        headerText="Manufacturer"
+                                        showDataTips="true"
+                                        dataTipField="shadingSystemManufacturer"
+                                        width="80"/>
+
+                                <s:GridColumn
+                                        dataField="shadingMaterialManufacturer"
+                                        headerText="Material Manufacturer"
+                                        showDataTips="true"
+                                        dataTipField="shadingMaterialManufacturer"
+                                        width="80"/>
+
+                                <s:GridColumn
+                                        dataField="shadingSystemType"
+                                        headerText="Window Attachment"/>
+
+                                <s:GridColumn
+                                        dataField="SHGC"
+                                        headerText="SHGC"
+                                        width="60"
+										labelFunction="shgcLabelFunction"/>
+
+                                <s:GridColumn
+                                        dataField="Tvis"
+                                        headerText="TVis"
+                                        width="60"
+										labelFunction="tvisLabelFunction"/>
+
+                                <s:GridColumn
+                                        dataField="UvalWinter"
+                                        width="80"
+                                        headerText="{_uFactorHeader}"
+										labelFunction="uvalLabelFunction"/>
+
+                            </s:ArrayList>
+                        </s:columns>
+                    </s:DataGrid>
+
+
+                </s:NavigatorContent>
+
+            </mx:ViewStack>
+
+        </s:VGroup>
+
+
+
+        <s:HGroup width="100%">
+
+            <s:VGroup>
+                <s:HGroup>
+                    <s:Image source="{AERCalcResources.TickIcon}"/>
+                    <s:Label text="= window import complete."/>
+                </s:HGroup>
+                <s:HGroup>
+                    <s:Image source="{AERCalcResources.CrossIcon}"/>
+                    <s:Label text="= window cannot be imported."/>
+                </s:HGroup>
+            </s:VGroup>
+
+            <s:Spacer width="100%"/>
+
+            <s:Button id="btnImport"
+                      label="Import"
+                      height="30"
+                      minWidth="90"
+                      includeIn="default"
+                      enabled="{dgWindows.selectedIndices.length>0}"
+                      click="onImport()"
+            />
+
+            <s:Button id="btnDone"
+                      label="Done"
+                      includeIn="default"
+                      height="30"
+                      minWidth="90"
+                      click="onDone()"
+            />
+
+        </s:HGroup>
+
+    </s:VGroup>
+
+    <s:Group width="500"
+             height="250"
+             horizontalCenter="0"
+             verticalCenter="0"
+             includeIn="gettingList">
+
+        <s:Rect width="100%" height="100%">
+            <s:fill>
+                <s:SolidColor color="#FFFFFF" alpha=".8"/>
+            </s:fill>
+            <s:stroke>
+                <s:SolidColorStroke color="#999999"/>
+            </s:stroke>
+        </s:Rect>
+
+        <s:HGroup  horizontalCenter="0"
+                   verticalAlign="middle"
+                   verticalCenter="-60">
+            <s:Label
+                        text.gettingList="Loading all glazing systems from WINDOW..."
+                        text.importingSelected="Importing selected products from WINDOW..."
+            />
+            <s:Spacer width="10"/>
+            <s:BusyIndicator symbolColor="#999999" />
+        </s:HGroup>
+
+        <mx:ProgressBar id="progressBarGettingList"
+                        indeterminate="true"
+                        labelPlacement="center"
+                        styleName="progressBar"
+                        minimum="0"
+                        maximum="100"
+                        label=" "
+                        trackHeight="50"
+                        left="50"
+                        right="50"
+                        horizontalCenter="0"
+                        verticalCenter="0"/>
+
+        <s:Button id="btnCancelList"
+                  label="Cancel"
+                  includeIn="gettingList"
+                  height="30"
+                  minWidth="120"
+                  click="onCancel()"
+                  horizontalCenter="0"
+                  verticalCenter="80"
+        />
+
+
+    </s:Group>
+
+    <s:Group width="500"
+             height="250"
+             horizontalCenter="0"
+             verticalCenter="0"
+             includeIn="importingSelected">
+
+        <s:Rect width="100%" height="100%">
+            <s:fill>
+                <s:SolidColor color="#FFFFFF" alpha=".8"/>
+            </s:fill>
+            <s:stroke>
+                <s:SolidColorStroke color="#999999"/>
+            </s:stroke>
+        </s:Rect>
+
+        <s:HGroup horizontalCenter="0"
+                  verticalCenter="-60"
+                  verticalAlign="middle">
+            <s:Label  text.gettingList="Loading all glazing systems from WINDOW..."
+                      text.importingSelected="Importing selected glazing systems from WINDOW..."  />
+            <s:Spacer width="10"/>
+            <s:BusyIndicator symbolColor="#999999" />
+        </s:HGroup>
+
+
+        <mx:ProgressBar id="progressBarImport"
+                        indeterminate="false"
+                        labelPlacement="center"
+                        styleName="progressBar"
+                        mode="manual"
+                        label=" "
+                        trackHeight="50"
+                        left="50"
+                        right="50"
+                        horizontalCenter="0"
+                        verticalCenter="0"/>
+
+        <s:Button id="btnCancelImport"
+                  label="Cancel Import"
+                  includeIn="importingSelected"
+                  height="30"
+                  minWidth="120"
+                  click="onCancelImport()"
+                  horizontalCenter="0"
+                  verticalCenter="80"
+        />
+
+
+
+    </s:Group>
+
+</components:ResizableTitleWindow>

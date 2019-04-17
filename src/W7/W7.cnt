@@ -1,0 +1,122 @@
+:Base w6.hlp
+1 1.  Introduction
+2 1.  Introduction=TH_1
+2 1.1.  Overview=TH_2
+2 1.2.  Complex Glazing Features for WINDOW 6
+3 1.2.  Complex Glazing Features for WINDOW 6=TH_3
+3 1.2.1.  Overview of Changes from WINDOW 5
+4 1.2.1.  Overview of Changes from WINDOW 5=TH_4
+4 Program Settings:=TH_5
+4 Shading Layer Library:=TH_6
+4 Glass Library=TH_7
+4 Glazing System Library=TH_8
+4 Frame Library=TH_9
+4 Window Library=TH_10
+4 Calculation Results=TH_11
+2 1.3.  Complex Glazing Features for THERM 6
+3 1.3.  Complex Glazing Features for THERM 6=TH_12
+3 1.3.2.  Overview of Changes from THERM 6=TH_13
+1 2.  WINDOW 6 and THERM 6 Quick Start
+2 2.  WINDOW 6 and THERM 6 Quick Start=TH_14
+2 2.1.  Make a Venetian Blind=TH_15
+2 2.2.  Make the Glazing System with the Venetian Blind=TH_16
+2 2.3.  Glazing System Results
+3 2.3.  Glazing System Results=TH_17
+3 2.3.1.  Results at Normal Incidence=TH_18
+3 2.3.2.  Results for Multiple Incident Angles=TH_19
+1 2.4.  Import the Glazing System into THERM 6=TH_20
+2 2.5.  Import the THERM 6 files into the WINDOW 6 Frame Library=TH_21
+2 2.6.  Create a Window=TH_22
+2 W6-02-1=TH_23
+1 3.  WINDOW 6 and THERM 6 Installation
+2 3.  WINDOW 6 and THERM 6 Installation=TH_24
+2 3.1.  System Requirements=TH_25
+2 3.2.  Installation Procedures for WINDOW
+3 3.2.  Installation Procedures for WINDOW=TH_26
+3 3.2.1.  Before Installing WINDOW=TH_27
+3 3.2.2.  Installing WINDOW=TH_28
+2 3.3.  Installation Problems
+3 3.3.  Installation Problems=TH_29
+3 3.3.1.  Not enough disk space=TH_30
+3 3.3.2.  Previous Version Detected=TH_31
+1 3.4.  Uninstalling WINDOW=TH_32
+2 3.5.  Installation Procedures for THERM
+3 3.5.  Installation Procedures for THERM=TH_33
+3 3.5.3.  Before Installing THERM=TH_34
+3 3.5.4.  Installing THERM=TH_35
+1 4.  WINDOW 6 Detailed Description
+2 4.  WINDOW 6 Detailed Description=TH_36
+2 4. 1.  Preferences=TH_37
+2 4.2.  Shading Layer Library
+3 4.2.  Shading Layer Library=TH_40
+3 4.2.1.  Shading Layer Library List View=TH_41
+3 4.2.2.  Shading Layer Library Detailed View
+4 4.2.2.  Shading Layer Library Detailed View=TH_43
+4 4.2.2.1.  Venetian Blind, Horizontal=TH_46
+4 4.2.2.2.  Homogeneous Diffusing Shade:=TH_48
+4 4.2.2.3.  Shade with BSDF Data=TH_50
+4 4.2.2.4.  Shade with Spectral Data for a Venetian Blind=TH_52
+2 4.3.  Shade Material Library
+3 4.3.  Shade Material Library=TH_55
+3 4.3.1.  Shade Material Library List View=TH_56
+3 4.3.2.  Shade Material Library Detailed View
+4 4.3.2.  Shade Material Library Detailed View=TH_60
+4 Spectral Data for Shade Materials=TH_65
+4 BSDF Data for Shade Materials=TH_66
+4 Diffusing Shade Materials=TH_67
+2 4.4.  Glass Library=TH_68
+2 4.5.  Glazing System Library
+3 4.5.  Glazing System Library=TH_69
+3 4.5.1.  Glazing System Library List View=TH_70
+3 4.5.2.  Glazing System Library Detailed View
+4 4.5.2.  Glazing System Library Detailed View=TH_71
+4 4.5.2.1.Glazing System with Venetian Blind Shading System=TH_72
+4 4.5.2.2.  Glazing System with Shading Layer that has Spectral Data for Shade Material (WINDAT Example)=TH_76
+4 4.5.2.3.  Glazing System with Shading Layer that has BSDF file reference=TH_77
+4 4.5.2.4.  Glazing System with Diffusing Shade Layer=TH_78
+4 4.5.2.5.  Glazing System with Diffusing Layer from the Glass Library=TH_79
+2 4.6.  Calculation Results
+3 4.6.  Calculation Results=TH_80
+4 4.6.1.  Glazing System Results=TH_81
+4 4.6.2.  Matrix Calculation Results=TH_82
+4 4.6.3.  Tabular Results=TH_83
+4 4.6.4.  Solar Front Transmittance=TH_84
+4 4.6.5.  Solar Front Transmittance vs Profile Angle=TH_85
+4 4.6.6.  Hourly Solar Front Transmittance=TH_86
+2 4.7.  Whole Window Results=TH_87
+1 5.  THERM 6 Detailed Description
+2 5.  THERM 6 Detailed Description=TH_88
+2 5.1.  WINDOW 6 Databases with Shading Devices=TH_89
+2 5.2.  Importing WINDOW 6 Glazing Systems with Interior or Exterior Shading Devices
+3 5.2.  Importing WINDOW 6 Glazing Systems with Interior or Exterior Shading Devices=TH_90
+3 5.2.1.  Insert the Glazing System=TH_91
+3 5.2.2.  Define the Boundary Conditions=TH_92
+2 5.3.  Importing WINDOW 6 Glazing Systems with an Integral Shading Device
+3 5.3.  Importing WINDOW 6 Glazing Systems with an Integral Shading Device=TH_93
+3 5.3.1.  Insert the Glazing System=TH_94
+3 5.3.2.  Define the Boundary Conditions=TH_95
+1 5.4.  Import the THERM 6 Files into the WINDOW 6 Frame Library=TH_96
+1 6.  Technical Reference
+2 6.  Technical Reference=TH_97
+2 6.1.  Complex Calculation Methodology Overview
+3 6.1.  Complex Calculation Methodology Overview=TH_98
+3 6.1.1.  Matrix Method Calculation Engine=TH_99
+3 6.1.2.  Venetian Blind Algorithms=TH_100
+3 6.1.3.  Angular Coordinates (Basis)=TH_101
+1 6.2.  ISO 9050 Wavelength Set=TH_102
+2 6.3.  W6 BTDF Output File Documentation
+3 6.3.  W6 BTDF Output File Documentation=TH_103
+3 6.3.1.  W6 Full-Basis (145 angles)
+4 6.3.1.  W6 Full-Basis (145 angles)=TH_104
+4 Angle indices for W6 Full Basis=TH_105
+3 6.1.2.  W6 Half-Basis (73 angles)
+4 6.1.2.  W6 Half-Basis (73 angles)=TH_106
+4 Angle indices for W6 Half Basis=TH_107
+3 6.1.2.  W6 Quarter-Basis (41 angles)
+4 6.1.2.  W6 Quarter-Basis (41 angles)=TH_108
+4 Angle indices for W6 Quarter Basis=TH_109
+2 6.4.  Documentation for LBNL BSDF XML spec=TH_110
+2 6.4.  Standards Files used in WINDOW 6
+3 6.4.  Standards Files used in WINDOW 6=TH_111
+3 6.4.1. W5_NFRC_2003.std=TH_112
+3 W6-06-1=TH_113

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<s:MXAdvancedDataGridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                                  xmlns:s="library://ns.adobe.com/flex/spark"
+                                  xmlns:mx="library://ns.adobe.com/flex/mx"
+>
+    <fx:Script>
+		<![CDATA[
+        import gov.lbl.aercalc.model.domain.WindowVO;
+
+        override public function set data(value:Object):void
+        {
+            super.data = value;
+            if (value){
+                var vo:WindowVO = value as WindowVO;
+                if (vo.isParent){
+                    lblName.text = vo.getChildShadingSystemManufacturer();
+                } else {
+                    lblName.text = vo.shadingSystemManufacturer;
+                }
+
+            }
+
+        }
+        ]]>
+	</fx:Script>
+
+    <s:Label id="lblName" top="5" bottom="5" left="30" right="10"/>
+
+</s:MXAdvancedDataGridItemRenderer>

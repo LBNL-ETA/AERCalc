@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Example from: http://blogs.adobe.com/dloverin/2011/05/using-validators-with-spark-cell-editors.html
+
+This example uses a NumberValidator to validate user input.
+
+A few interesting things to understand about this example:
+
+* Public variables minValue, maxValue, and domain have been added to make the
+  editor more re-usable.
+
+* Validators are used by the GridItemEditor.validate() method to determine if
+  the entered data is valid.
+
+* Editor stays up if GridItemEditor.validate() returns false and the Enter key is
+  used to end the editor session. If the user clicks away from the cell editor
+  then and the data is bad, then editing session is cancelled and the data is
+  discarded.
+
+-->
+<s:GridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009"
+                  xmlns:s="library://ns.adobe.com/flex/spark"
+                  width="400"
+                  height="300">
+    <fx:Script>
+        <![CDATA[
+        import mx.events.ValidationResultEvent;
+
+        // Parameterize this editor a bit by allowing it to
+        // be used for various ranges and number types.
+        public var minValue:Number;
+        public var maxValue:Number;
+        public var domain:String;
+
+        override public function prepare():void
+        {
+            super.prepare();
+
+            // Set values from the editor onto the actual
+            // number valdiator.
+            if (!isNaN(minValue))
+            {
+                numberValidator.minValue = minValue;
+            }
+
+            if (!isNaN(maxValue))
+            {
+                numberValidator.maxValue = maxValue;
+            }
+
+            if (domain != null)
+            {
+                numberValidator.domain = domain;
+            }
+
+            // Adjust the padding so the text appears in the same position
+            // in the editor as the renderer.
+            var paddingTop:int = textInput.getStyle("paddingTop");
+            var paddingLeft:int = textInput.getStyle("paddingLeft");
+            var paddingBottom:int = textInput.getStyle("paddingBottom");
+            var paddingRight:int = textInput.getStyle("paddingRight");
+            textInput.setStyle("paddingTop", paddingTop + 3);
+            textInput.setStyle("paddingLeft", paddingLeft + 3);
+            textInput.setStyle("paddingBottom", paddingBottom + 3);
+            textInput.setStyle("paddingRight", paddingRight + 4);
+
+            if (this.data.isParent){
+                textInput.text = "";
+                textInput.enabled=false;
+            }
+        }
+
+        override public function setFocus():void
+        {
+            textInput.setFocus();
+        }
+
+        ]]>
+    </fx:Script>
+    <fx:Declarations>
+        <s:NumberValidator id="numberValidator"
+                           source="{textInput}"
+                           property="text"
+                           fractionalDigits="2"
+                           triggerEvent="keyUp"/>
+    </fx:Declarations>
+
+    <s:TextInput id="textInput"
+                 text="@{value}"
+                 top="0"
+                 left="0"
+                 bottom="0"
+                 right="0" />
+
+</s:GridItemEditor>

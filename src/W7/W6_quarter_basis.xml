@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layer xmlns="http://windows.lbl.gov" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://windows.lbl.gov
+BSDF.xsd">
+	<!-- XML file containing the angles for the reduced basis set to speed up WINDOW6 calcs. Created by Christian Kohler on 11/3/2005, jckohler@lbl.gov.Updated by DCC and JCK March 22nd 2006, to fix bounds and midpoints. This file follows the same style sheet as the BSDF XML files -->
+	<DataDefinition>
+		<AngleBasis>
+			<AngleBasisType>Incidence</AngleBasisType>
+			<Name>WINDOW6 Quarter Basis</Name>
+			<AngleBasisBlock>
+				<Theta>0</Theta>
+				<Bound>9</Bound>
+				<nPhis>1</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>18</Theta>
+				<Bound>27</Bound>
+				<nPhis>8</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>36</Theta>
+				<Bound>45</Bound>
+				<nPhis>12</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>54</Theta>
+				<Bound>63</Bound>
+				<nPhis>12</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>76.5</Theta>
+				<Bound>90</Bound>
+				<nPhis>8</nPhis>
+			</AngleBasisBlock>
+		</AngleBasis>
+	</DataDefinition>
+</Layer>

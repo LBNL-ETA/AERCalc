@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       xmlns:s="library://ns.adobe.com/flex/spark"
+                       xmlns:mx="library://ns.adobe.com/flex/mx"
+                       xmlns:swiz="http://swiz.swizframework.org"
+                       xmlns:menu="gov.lbl.aercalc.view.components.menu.*"
+                       xmlns:view="gov.lbl.aercalc.view.*"
+                       xmlns:components="gov.lbl.aercalc.view.components.*"
+                       creationComplete="onCC()"
+					   applicationComplete="onAC()"
+					   frameRate="45"
+					   width="1000"
+					   height="700"
+>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexNativeMenuEvent;
+			
+			import gov.lbl.aercalc.config.Beans;
+			import gov.lbl.aercalc.events.MenuEvent;
+			import gov.lbl.aercalc.model.ApplicationModel;
+			import gov.lbl.aercalc.model.MenuModel;
+			import gov.lbl.aercalc.model.PopupModel;
+			import gov.lbl.aercalc.model.settings.AppSettings;
+			import gov.lbl.aercalc.view.dialogs.AboutWindow;
+
+
+        [Bindable]
+        [Inject]
+        public var popupModel:PopupModel;
+
+        [Bindable]
+        [Inject]
+        public var appSettings:AppSettings;
+
+        [Bindable]
+        [Inject]
+        public var menuModel:MenuModel;
+
+
+		private function onCC():void{
+			var t:Timer = new Timer(2000, 1);
+			t.addEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
+			t.start()
+		}
+
+		private function onAC():void{
+			this.stage.nativeWindow.addEventListener(NativeWindowBoundsEvent.RESIZE, resize);
+			this.stage.nativeWindow.maximize();
+
+			nativeWindow.x = (Capabilities.screenResolutionX - nativeWindow.width) / 2;
+			nativeWindow.y = (Capabilities.screenResolutionY - nativeWindow.height) / 2;
+		}
+
+		private function resize(event:NativeWindowBoundsEvent):void{
+			this.stage.nativeWindow.activate();
+		}
+
+		private function onTimerComplete(event:TimerEvent):void{
+			this.removeElement(splashView);
+			event.target.removeEventListener(TimerEvent.TIMER_COMPLETE, onTimerComplete);
+		}
+
+
+        protected function onMenuItemClick(event:FlexNativeMenuEvent):void {
+            if (event.item && event.item.command) {
+                var cmd:String = event.item.command;
+                var evt:MenuEvent = new MenuEvent(MenuEvent.MENU_COMMAND);
+                evt.command = cmd;
+                evt.prop = event.item.prop;
+                dispatchEvent(evt);
+            }
+        }
+			
+        ]]>
+	</fx:Script>
+	
+	<fx:Style source="/assets/css/default.css"/>
+	
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	
+	<s:menu>
+		<menu:DataNativeMenu id="appMenu"
+							 showRoot="false"
+							 labelField="label"
+							 dataProvider="{mainMenu}"
+							 itemClick="onMenuItemClick(event)"/>
+	</s:menu>
+
+	<fx:Declarations>
+		
+		<swiz:Swiz beanProviders="{[Beans]}">
+			<swiz:config>
+				<swiz:SwizConfig eventPackages="gov.lbl.aercalc.events"
+								 viewPackages="gov.lbl"/>
+			</swiz:config>
+			
+		</swiz:Swiz>
+		
+		<menu:MainMenu id="mainMenu" model="{menuModel}"/>
+		
+		<components:PopupDisplay popup="{AboutWindow}"
+								 center="false" 
+								 modal="false"
+								 display="{popupModel.showAboutPopup}"/>
+
+
+		<s:TraceTarget id="traceTarget"
+					   includeDate="true"
+					   includeTime="true"
+					   includeLevel="true"
+					   level="{appSettings.logEventLevel}"/>
+
+	</fx:Declarations>	
+	
+	<view:AppView id="appView" width="100%" height="100%"/>
+
+	<view:SplashView id="splashView" horizontalCenter="0" verticalCenter="0" width="600" height="365" />
+	
+</s:WindowedApplication>

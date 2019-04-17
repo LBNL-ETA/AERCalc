@@ -1,0 +1,13 @@
+:Base THERM6.hlp
+1 5.  THERM 6 Detailed Description
+2 5.  THERM 6 Detailed Description=TH_1
+2 5.1.  WINDOW 6 Databases with Shading Devices=TH_2
+2 5.2.  Importing WINDOW 6 Glazing Systems with Interior or Exterior Shading Devices
+3 5.2.  Importing WINDOW 6 Glazing Systems with Interior or Exterior Shading Devices=TH_3
+3 5.2.1.  Insert the Glazing System=TH_4
+3 5.2.2.  Define the Boundary Conditions=TH_5
+2 5.3.  Importing WINDOW 6 Glazing Systems with an Integral Shading Device
+3 5.3.  Importing WINDOW 6 Glazing Systems with an Integral Shading Device=TH_6
+3 5.3.1.  Insert the Glazing System=TH_7
+3 5.3.2.  Define the Boundary Conditions=TH_8
+1 5.4.  Import the THERM 6 Files into the WINDOW 6 Frame Library=TH_9

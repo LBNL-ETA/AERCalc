@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<settings:SettingsEditor xmlns:fx="http://ns.adobe.com/mxml/2009"
+                         xmlns:s="library://ns.adobe.com/flex/spark"
+                         xmlns:settings="gov.lbl.aercalc.view.settings.*"
+                         gap="15">
+
+
+    <fx:Script>
+		<![CDATA[
+        import gov.lbl.aercalc.events.PrecisionEvent;
+        import gov.lbl.aercalc.model.settings.AppSettings;
+        import gov.lbl.aercalc.util.Utils;
+		import flash.events.EventDispatcher;
+
+        import mx.logging.LogEventLevel;
+
+			
+
+        protected override function read(settings:AppSettings):void
+        {
+            logDebugMessages.selected = settings.logEventLevel == LogEventLevel.DEBUG;
+            epPrecision.value = settings.epPrecision;
+            showIDColumn.selected = settings.showIDColumn;
+			keepIntermediateFiles.selected = settings.keepIntermediateFiles;
+        }
+
+        protected override function write(settings:AppSettings):void
+        {
+            logDebugMessages.selected ? settings.logEventLevel = LogEventLevel.DEBUG : settings.logEventLevel = LogEventLevel.INFO;
+
+            if (settings.epPrecision != epPrecision.value){
+                settings.epPrecision = epPrecision.value;
+
+                //Update Utils, since it has the utility method that rounds EPH and EPC
+                Utils.epFormatter.precision = epPrecision.value;
+
+                var evt:PrecisionEvent = new PrecisionEvent(PrecisionEvent.PRECISION_CHANGED, true);
+                evt.precision = epPrecision.value;
+                dispatcher.dispatchEvent(evt);
+            }
+
+            settings.showIDColumn = showIDColumn.selected;
+			settings.keepIntermediateFiles = keepIntermediateFiles.selected;
+
+        }
+        ]]>
+	</fx:Script>
+
+    <s:HGroup width="100%"  verticalAlign="top">
+        <s:Label text="Log" paddingTop="5" width="95"/>
+        <s:CheckBox id="logDebugMessages"
+                    change="onChange()"/>
+        <s:Label text="Show debug messages" paddingTop="5"/>
+    </s:HGroup>
+
+    <s:HGroup width="100%"  verticalAlign="top">
+        <s:Label text="Precision" paddingTop="5" width="95"/>
+        <s:NumericStepper id="epPrecision"
+                          minimum="0"
+                          maximum="4"
+                          change="onChange()"/>
+        <s:Label text="Precision for display of computed EPH and EPC values"
+                 width="100%"
+                 maxDisplayedLines="3"
+                 styleName="formNote"
+                 paddingTop="5"/>
+    </s:HGroup>
+
+    <s:HGroup width="100%"  verticalAlign="top">
+        <s:Label text="Product list" paddingTop="5" width="95"/>
+        <s:CheckBox id="showIDColumn"
+                    change="onChange()"/>
+        <s:Label text="Show ID column" paddingTop="5"/>
+    </s:HGroup>
+	
+	<s:HGroup width="100%"  verticalAlign="top">
+		<s:Label text="Debugging" paddingTop="5" width="95"/>
+		<s:CheckBox id="keepIntermediateFiles"
+					change="onChange()"/>
+		<s:Label text="Keep Intermediate Files" paddingTop="5"/>
+	</s:HGroup>
+    
+</settings:SettingsEditor>

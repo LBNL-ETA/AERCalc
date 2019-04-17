@@ -1,0 +1,1308 @@
+!- ##          COMFEN ENERGY PLUS PARAMETERS FILE
+!- ##======================================================================
+! general.inc
+!-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
+
+  VERSION,7.0;
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+
+  Building,
+    small_office,            !- Name
+    0,                       !- North Axis {deg}
+    Suburbs,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExteriorWithReflections,  !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+  ShadowCalculation,
+    20,                      !- Calculation Frequency
+    50000;                   !- Maximum Figures in Shadow Overlap Calculations
+
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP IN HOUR ===========
+
+  Timestep,4;
+
+!-   ===========  ALL OBJECTS IN CLASS: INSIDE CONVECTION ALGORITHM ===========
+
+  SurfaceConvectionAlgorithm:Inside,TARP;
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTSIDE CONVECTION ALGORITHM ===========
+
+  SurfaceConvectionAlgorithm:Outside,SimpleCombined;
+
+!-   ===========  ALL OBJECTS IN CLASS: SOLUTION ALGORITHM ===========
+
+  HeatBalanceAlgorithm,ConductionTransferFunction;
+
+  ZoneCapacitanceMultiplier:ResearchSpecial,
+    1,                       !- Temperature Capacity Multiplier
+    1,                       !- Humidity Capacity Multiplier
+    1;                       !- Carbon Dioxide Capacity Multiplier
+
+!-   ===========  ALL OBJECTS IN CLASS: RUN CONTROL ===========
+
+  SimulationControl,
+    Yes,                     !- Do Zone Sizing Calculation
+    Yes,                     !- Do System Sizing Calculation
+    No,                      !- Do Plant Sizing Calculation
+    No,                      !- Run Simulation for Sizing Periods
+    Yes;                     !- Run Simulation for Weather File Run Periods
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
+
+  RunPeriod,
+    datarun,                 !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    UseWeatherFile,          !- Day of Week for Start Day
+    No,                      !- Use Weather File Holidays and Special Days
+    No,                      !- Use Weather File Daylight Saving Period
+    Yes,                     !- Apply Weekend Holiday Rule
+    Yes,                     !- Use Weather File Rain Indicators
+    Yes;                     !- Use Weather File Snow Indicators
+
+  RunPeriodControl:SpecialDays,
+    New Years Day,           !- Name
+    1 January,               !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Martin Luther King Day,  !- Name
+    3rd Monday in January,   !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Washington's Birthday,   !- Name
+    3rd Monday in February,  !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Memorial Day,            !- Name
+    Last Monday in May,      !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Independence Day,        !- Name
+    4 July,                  !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Labor Day,               !- Name
+    1st Monday in September, !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Veteran's Day,           !- Name
+    11 November,             !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Thanksgiving Day,        !- Name
+    4th Thursday in November,!- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    Christmas Day,           !- Name
+    25 December,             !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+  RunPeriodControl:SpecialDays,
+    New Year's Eve,          !- Name
+    31 December,             !- Start Date
+    1,                       !- Duration {days}
+    Holiday;                 !- Special Day Type
+
+!- ##======================================================================
+!- ##          COMFEN LOCATION INFO FILE
+!- ##======================================================================
+
+  Site:Location,
+    CHICAGO_IL_USA Design_Conditions,  !- Name
+    41.78,                   !- Latitude {deg}
+    -87.75,                  !- Longitude {deg}
+    -6.00,                   !- Time Zone {hr}
+    190.00;                  !- Elevation {m}
+
+!- 4m depth undisturbed ground temperatures
+
+  Site:GroundTemperature:BuildingSurface,5.79,3.71,3.25,3.88,7.01,10.37,13.46,15.61,16.11,14.89,12.22,8.95;
+
+ ! CHICAGO_IL_USA Annual Heating Design Conditions Wind Speed=4.9m/s Wind Dir=270
+ ! Coldest Month=JAN
+ ! CHICAGO_IL_USA Annual Heating 99.6%, MaxDB=-20.6°C
+
+  SizingPeriod:DesignDay,
+    CHICAGO Ann Htg 99.6% Condns DB,  !- Name
+    -20.6,                   !- Maximum Dry-Bulb Temperature {C}
+    0.0,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    -20.6,                   !- Humidity Indicating Conditions at Maximum Dry-Bulb
+    99063.,                  !- Barometric Pressure {Pa}
+    4.9,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    0.00,                    !- Sky Clearness
+    0,                       !- Rain Indicator
+    0,                       !- Snow Indicator
+    21,                      !- Day of Month
+    1,                       !- Month
+    WinterDesignDay,         !- Day Type
+    0,                       !- Daylight Saving Time Indicator
+    WetBulb;                 !- Humidity Indicating Type
+
+ ! CHICAGO Annual Cooling Design Conditions Wind Speed=5.3m/s Wind Dir=230
+ ! Hottest Month=JUL
+ ! CHICAGO_IL_USA Annual Cooling (DB=>MWB) .4%, MaxDB=33.2°C MWB=23.8°C
+
+  SizingPeriod:DesignDay,
+    CHICAGO Ann Clg .4% Condns DB=>MWB,  !- Name
+    33.2,                    !- Maximum Dry-Bulb Temperature {C}
+    10.7,                    !- Daily Dry-Bulb Temperature Range {deltaC}
+    23.8,                    !- Humidity Indicating Conditions at Maximum Dry-Bulb
+    99063.,                  !- Barometric Pressure {Pa}
+    5.3,                     !- Wind Speed {m/s}
+    230,                     !- Wind Direction {deg}
+    1.00,                    !- Sky Clearness
+    0,                       !- Rain Indicator
+    0,                       !- Snow Indicator
+    21,                      !- Day of Month
+    7,                       !- Month
+    SummerDesignDay,         !- Day Type
+    0,                       !- Daylight Saving Time Indicator
+    WetBulb;                 !- Humidity Indicating Type
+
+! material.inc
+!-   ===========  ALL OBJECTS IN CLASS: Material:NoMass ===========
+
+  Material:NoMass,
+    IN-W,                    !- Name
+    Rough,                   !- Roughness
+    2.958648,                !- Thermal Resistance {m2-K/W}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material:NoMass,
+    IN-R,                    !- Name
+    Rough,                   !- Roughness
+    4.4025,                  !- Thermal Resistance {m2-K/W}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material:NoMass,
+    CP01,                    !- Name
+    Rough,                   !- Roughness
+    0.366,                   !- Thermal Resistance {m2-K/W}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
+
+  Material,
+    BR01,                    !- Name
+    VeryRough,               !- Roughness
+    0.009525,                !- Thickness {m}
+    0.163,                   !- Conductivity {W/m-K}
+    1121,                    !- Density {kg/m3}
+    1465,                    !- Specific Heat {J/kg-K}
+    .8,                      !- Thermal Absorptance
+    .8,                      !- Solar Absorptance
+    .8;                      !- Visible Absorptance
+
+  Material,
+    BK05,                    !- Name
+    VeryRough,               !- Roughness
+    0.1016,                  !- Thickness {m}
+    1.311,                   !- Conductivity {W/m-K}
+    2080,                    !- Density {kg/m3}
+    921,                     !- Specific Heat {J/kg-K}
+    .65,                     !- Thermal Absorptance
+    .65,                     !- Solar Absorptance
+    .65;                     !- Visible Absorptance
+
+  Material,
+    ST01,                    !- Name
+    MediumRough,             !- Roughness
+    0.0254,                  !- Thickness {m}
+    1.803,                   !- Conductivity {W/m-K}
+    2243,                    !- Density {kg/m3}
+    837,                     !- Specific Heat {J/kg-K}
+    .65,                     !- Thermal Absorptance
+    .65,                     !- Solar Absorptance
+    .65;                     !- Visible Absorptance
+
+  Material,
+    AC02,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.057,                   !- Conductivity {W/m-K}
+    288,                     !- Density {kg/m3}
+    1340,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    GP02,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.160,                   !- Conductivity {W/m-K}
+    801,                     !- Density {kg/m3}
+    837,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    CC04,                    !- Name
+    MediumRough,             !- Roughness
+    0.1524,                  !- Thickness {m}
+    1.311,                   !- Conductivity {W/m-K}
+    2240,                    !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    CC15,                    !- Name
+    MediumRough,             !- Roughness
+    0.1524,                  !- Thickness {m}
+    1.803,                   !- Conductivity {W/m-K}
+    2240,                    !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    CC24,                    !- Name
+    MediumRough,             !- Roughness
+    0.1016,                  !- Thickness {m}
+    0.361,                   !- Conductivity {W/m-K}
+    1280,                    !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    CB31,                    !- Name
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    0.671,                   !- Conductivity {W/m-K}
+    848,                     !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    PW03,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    PW04,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    PW05,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0191,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    PW06,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0254,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    MediumFurniture,         !- Name
+    MediumSmooth,            !- Roughness
+    0.57,                    !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    513,                     !- Density {kg/m3}
+    1381,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+  Material,
+    SOIL,                    !- Name
+    Rough,                   !- Roughness
+    0.6096,                  !- Thickness {m}
+    1.731,                   !- Conductivity {W/m-K}
+    1842,                    !- Density {kg/m3}
+    1089,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Thermal Absorptance
+    0.75,                    !- Solar Absorptance
+    0.75;                    !- Visible Absorptance
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:AIR ===========
+
+  Material:AirGap,
+    AL21,                    !- Name
+    0.157;                   !- Thermal Resistance {m2-K/W}
+
+  Material:AirGap,
+    AL33,                    !- Name
+    0.162;                   !- Thermal Resistance {m2-K/W}
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+!Construction,
+!    WALL-1,                  !- Name
+!    BK05,                    !- Outside Layer
+!    PW06,                    !- Layer #2
+!    IN-W,                    !- Layer #3
+!    GP02;                    !- Layer #5
+
+  Construction,
+    ROOF-1,                  !- Name
+    BR01,                    !- Outside Layer
+    CC24,                    !- Layer 2
+    IN-R,                    !- Layer 3
+    AL33,                    !- Layer 4
+    AC02;                    !- Layer 5
+
+  Construction,
+    ExtWall_Const,           !- Name
+    ST01,                    !- Outside Layer
+    IN-W,                    !- Layer 2
+    AL21,                    !- Layer 3
+    GP02;                    !- Layer 4
+
+  Construction,
+    FLOOR-1,                 !- Name
+    CC24,                    !- Outside Layer
+    CP01;                    !- Layer 2
+
+  Construction,
+    CEILING-1,               !- Name
+    CP01,                    !- Outside Layer
+    CC24;                    !- Layer 2
+
+  Construction,
+    SLAB-1,                  !- Name
+    SOIL,                    !- Outside Layer
+    CC15;                    !- Layer 2
+
+  Construction,
+    INTWALL-1,               !- Name
+    GP02,                    !- Outside Layer
+    AL21,                    !- Layer 2
+    GP02;                    !- Layer 3
+
+  Construction,
+    Medium Furniture,        !- Name
+    MediumFurniture;         !- Outside Layer
+
+ ! BldgGeom.inc
+!  Small Office
+!
+!   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+! -----------------------   SCENARIO INFORMATION   ----------------------------
+!   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+
+  ZONE,
+    COMFENZone,              !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    3.05,                    !- Ceiling Height {m}
+    85.024841309;            !- Volume {m3}
+
+!
+!   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
+!   -------------------------  Exterior Wall  -------------------------
+
+  BuildingSurface:Detailed,
+    ExtWall,                 !- Name
+    WALL,                    !- Surface Type
+    ExtWall_Const,           !- Construction Name
+    COMFENZone,              !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.5,                     !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.1,4.57,3.05,  !- X,Y,Z ==> Vertex 1 {m}
+    6.1,4.57,0.,  !- X,Y,Z ==> Vertex 2 {m}
+    0.,4.57,0.,  !- X,Y,Z ==> Vertex 3 {m}
+    0.,4.57,3.05;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   -------------------------  Floor  --------------------------------
+ ! U-EFFECTIVE should NOT be used in DOE-2,  ! U-EFFECTIVE Error
+
+  BuildingSurface:Detailed,
+    Floor-COMFENZone,        !- Name
+    FLOOR,                   !- Surface Type
+    FLOOR-1,                 !- Construction Name
+    COMFENZone,              !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Floor-COMFENZone,        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.,                      !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.1,4.57,0.,  !- X,Y,Z ==> Vertex 1 {m}
+    6.1,0.,0.,  !- X,Y,Z ==> Vertex 2 {m}
+    0.,0.,0.,  !- X,Y,Z ==> Vertex 3 {m}
+    0.,4.57,0.;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   --------------------  Left Interior Wall  ---------------------------
+
+  BuildingSurface:Detailed,
+    IntWall-Left,            !- Name
+    WALL,                    !- Surface Type
+    INTWALL-1,               !- Construction Name
+    COMFENZone,              !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    IntWall-Left,            !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.,                      !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.1,0.,3.05,  !- X,Y,Z ==> Vertex 1 {m}
+    6.1,0.,0.,  !- X,Y,Z ==> Vertex 2 {m}
+    6.1,4.57,0.,  !- X,Y,Z ==> Vertex 3 {m}
+    6.1,4.57,3.05;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   --------------------  Back Interior Wall  ---------------------------
+
+  BuildingSurface:Detailed,
+    IntWall-Back,            !- Name
+    WALL,                    !- Surface Type
+    INTWALL-1,               !- Construction Name
+    COMFENZone,              !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    IntWall-Back,            !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.,                      !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.,0.,3.05,  !- X,Y,Z ==> Vertex 1 {m}
+    0.,0.,0.,  !- X,Y,Z ==> Vertex 2 {m}
+    6.1,0.,0.,  !- X,Y,Z ==> Vertex 3 {m}
+    6.1,0.,3.05;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   --------------------  Right Interior Wall  -------------------------
+
+  BuildingSurface:Detailed,
+    IntWall-Right,           !- Name
+    WALL,                    !- Surface Type
+    INTWALL-1,               !- Construction Name
+    COMFENZone,              !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    IntWall-Right,           !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.,                      !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.,4.57,3.05,  !- X,Y,Z ==> Vertex 1 {m}
+    0.,4.57,0.,  !- X,Y,Z ==> Vertex 2 {m}
+    0.,0.,0.,  !- X,Y,Z ==> Vertex 3 {m}
+    0.,0.,3.05;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   -------------------------  Ceiling  -------------------------------
+
+  BuildingSurface:Detailed,
+    Ceiling-COMFENZone,      !- Name
+    CEILING,                 !- Surface Type
+    INTWALL-1,               !- Construction Name
+    COMFENZone,              !- Zone Name
+    Surface,                 !- Outside Boundary Condition
+    Ceiling-COMFENZone,      !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    0.,                      !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.,4.57,3.05,  !- X,Y,Z ==> Vertex 1 {m}
+    0.,0.,3.05,  !- X,Y,Z ==> Vertex 2 {m}
+    6.1,0.,3.05,  !- X,Y,Z ==> Vertex 3 {m}
+    6.1,4.57,3.05;  !- X,Y,Z ==> Vertex 4 {m}
+
+!   ===========  ALL OBJECTS IN CLASS: Daylighting
+
+  Daylighting:Controls,
+    COMFENZone,              !- Zone Name
+    1,                       !- Total Daylighting Reference Points
+    3.05,                    !- X-Coordinate of First Reference Point {m}
+    1.52,                    !- Y-Coordinate of First Reference Point {m}
+    .762,                    !- Z-Coordinate of First Reference Point {m}
+    3.05,                    !- X-Coordinate of Second Reference Point {m}
+    0,                       !- Y-Coordinate of Second Reference Point {m}
+    .762,                    !- Z-Coordinate of Second Reference Point {m}
+    0,                       !- Fraction of Zone Controlled by First Reference Point
+    0,                       !- Fraction of Zone Controlled by Second Reference Point
+    538.195,                 !- Illuminance Setpoint at First Reference Point {lux}
+    538.195,                 !- Illuminance Setpoint at Second Reference Point {lux}
+    1,                       !- Lighting Control Type
+    0,                       !- Glare Calculation Azimuth Angle of View Direction Clockwise from Zone y-Axis {deg}
+    22,                      !- Maximum Allowable Discomfort Glare Index
+    .1,                      !- Minimum Input Power Fraction for Continuous Dimming Control
+    .05,                     !- Minimum Light Output Fraction for Continuous Dimming Control
+    3,                       !- Number of Stepped Control Steps
+    1;                       !- Probability Lighting will be Reset When Needed in Manual Stepped Control
+
+! Space Condition
+!  Small Office
+! Edits to convert from COMFEN2 to COMFEN3 (EPlus 2.1) started by Robin 2/2/09
+! Took out sections for Zones 2-4
+! Changed ZONE-NORTHActSched t ActivitySched
+! Replaced zone name of ZONE-1 to COMFENZone
+! Changed names to Lights_Area, People_Area, Equip_Area
+! Changed Area_zone1 to FloorArea
+!--------------------------------------------------------
+! SPACE CONDITIONS FOR SCENARIO
+!--------------------------------------------------------
+
+  People,
+    COMFENZone People 1,     !- Name
+    COMFENZone,              !- Zone or ZoneList Name
+    OCC-OFC,                 !- Number of People Schedule Name
+    People,                  !- Number of People Calculation Method
+    1,                       !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    ,                        !- Sensible Heat Fraction
+    ActivitySched,           !- Activity Level Schedule Name
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    ,                        !- Enable ASHRAE 55 Comfort Warnings
+    zoneaveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    Work Eff Sch,            !- Work Efficiency Schedule Name
+    Clothing Sch,            !- Clothing Insulation Schedule Name
+    Air velo Sch,            !- Air Velocity Schedule Name
+    Fanger;                  !- Thermal Comfort Model 1 Type
+
+  Lights,
+    COMFENZone Lights,       !- Name
+    COMFENZone,              !- Zone or ZoneList Name
+    LIGHT-OFC,               !- Schedule Name
+    LightingLevel,           !- Design Level Calculation Method
+    299.956481934,           !- Lighting Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.,                      !- Return Air Fraction
+    0.67,                    !- Fraction Radiant
+    0.1,                     !- Fraction Visible
+    1.,                      !- Fraction Replaceable
+    GeneralLights;           !- End-Use Subcategory
+
+  ElectricEquipment,
+    COMFENZone ElecEq,       !- Name
+    COMFENZone,              !- Zone or ZoneList Name
+    EQUIP-OFC,               !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    224.967361450,           !- Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.,                      !- Fraction Latent
+    0.7,                     !- Fraction Radiant
+    0.,                      !- Fraction Lost
+    0;                       !- End-Use Subcategory
+
+  ZoneInfiltration:DesignFlowRate,
+    COMFENZone Infil,        !- Name
+    COMFENZone,              !- Zone or ZoneList Name
+    INF-OFC,                 !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    0.70854039E-02,          !- Design Flow Rate {m3/s}
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour
+    1.,                      !- Constant Term Coefficient
+    0.,                      !- Temperature Term Coefficient
+    0.,                      !- Velocity Term Coefficient
+    0.;                      !- Velocity Squared Term Coefficient
+
+! Schedule.inc
+!  Small Office
+
+  ScheduleTypeLimits,
+    AnyNumber,               !- Name
+    ,                        !- Lower Limit Value
+    ,                        !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    On/OffHV,                !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ScheduleTypeLimits,
+    Control TypeHV,          !- Name
+    0,                       !- Lower Limit Value
+    4,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ScheduleTypeLimits,
+    TemperatureHV,           !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    On/Off,                  !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ScheduleTypeLimits,
+    Fraction,                !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -60,                     !- Lower Limit Value
+    200,                     !- Upper Limit Value
+    CONTINUOUS;              !- Numeric Type
+
+  Schedule:Compact,
+    OCC-OFC,                 !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until:  7:00,0.,         !- Field 3
+    Until:  8:00,0.33,       !- Field 5
+    Until: 9:00,0.67,        !- Field 7
+    Until: 18:00,1.,         !- Field 9
+    Until: 19:00,0.5,        !- Field 11
+    Until: 24:00,0.,         !- Field 13
+    For: CustomDay1 CustomDay2, !- Field 15
+    Until:  7:00,0.,         !- Field 16
+    Until:  8:00,0.33,       !- Field 18
+    Until: 9:00,0.67,        !- Field 20
+    Until: 18:00,1.,         !- Field 22
+    Until: 19:00,0.5,        !- Field 24
+    Until: 24:00,0.,         !- Field 26
+    For: Weekends Holidays WinterDesignDay, !- Field 28
+    Until:  7:00,0.,         !- Field 29
+    Until:  8:00,0.07,       !- Field 31
+    Until: 9:00,0.13,        !- Field 33
+    Until: 12:00,0.2,        !- Field 35
+    Until: 13:00,0.1,        !- Field 37
+    Until: 24:00,0.;         !- Field 39
+
+  Schedule:Compact,
+    LIGHT-OFC,               !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until:  7:00,0.2,        !- Field 3
+    Until: 19:00,0.9,        !- Field 5
+    Until: 24:00,0.2,        !- Field 7
+    For: CustomDay1 CustomDay2, !- Field 9
+    Until:  7:00,0.2,        !- Field 10
+    Until: 19:00,0.9,        !- Field 12
+    Until: 24:00,0.2,        !- Field 14
+    For: Weekends Holidays WinterDesignDay, !- Field 16
+    Until: 24:00,0.2;        !- Field 17
+
+  Schedule:Compact,
+    EQUIP-OFC,               !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until:  7:00,0.17,       !- Field 3
+    Until: 18:00,1.,         !- Field 5
+    Until: 24:00,0.17,       !- Field 7
+    For: CustomDay1 CustomDay2, !- Field 9
+    Until:  7:00,0.17,       !- Field 10
+    Until: 18:00,1.,         !- Field 12
+    Until: 24:00,0.17,       !- Field 14
+    For: Weekends Holidays WinterDesignDay, !- Field 16
+    Until: 24:00,0.17;       !- Field 17
+
+  Schedule:Compact,
+    INF-OFC,                 !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays SummerDesignDay, !- Field 2
+    Until:  6:00,1.0,        !- Field 3
+    Until: 20:00,0.0,        !- Field 5
+    Until: 24:00,1.0,        !- Field 7
+    For: CustomDay1 CustomDay2, !- Field 9
+    Until:  6:00,1.0,        !- Field 10
+    Until: 20:00,0.0,        !- Field 12
+    Until: 24:00,1.0,        !- Field 14
+    For: Weekends Holidays WinterDesignDay, !- Field 16
+    Until:  7:00,1.0,        !- Field 17
+    Until: 14:00,0.0,        !- Field 19
+    Until: 24:00,1.0;        !- Field 21
+
+  Schedule:Compact,
+    ALWAYSON,                !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.;         !- Field 3
+
+! Mehry's nomenclature from COMFEN2
+! ZONE-NORTHActSched,  ! Activity Level Schedule Name
+
+  Schedule:Compact,
+    ActivitySched,           !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,115;        !- Field 3
+
+  Schedule:Compact,
+    SysAvailApplicSch,       !- Name
+    On/OffHV,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0;        !- Field 3
+
+  Schedule:Compact,
+    Zone-Control-Type-Sched, !- Name
+    Control TypeHV,          !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,4;          !- Field 3
+
+  Schedule:Compact,
+    Min OA Sched,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until:  7:00,0.02,       !- Field 3
+    Until: 19:00,1.,         !- Field 5
+    Until: 24:00,0.02,       !- Field 7
+    For: WinterDesignDay SummerDesignDay, !- Field 9
+    Until: 24:00,0.02,       !- Field 10
+    For: Weekends Holidays CustomDay1 CustomDay2, !- Field 12
+    Until: 24:00,0.02;       !- Field 13
+
+!  suggested by Fred B.
+
+  Schedule:Compact,
+    FAN-SCHED,               !- Name
+    On/Off,                  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until:  7:00,0.,         !- Field 3
+    Until: 19:00,1.,         !- Field 5
+    Until: 24:00,0.,         !- Field 7
+    For: Weekends Holidays CustomDay1 CustomDay2, !- Field 9
+    Until: 24:00,0.,         !- Field 10
+    For: WinterDesignDay SummerDesignDay, !- Field 12
+    Until: 24:00,1.;         !- Field 13
+
+  Schedule:Compact,
+    CLG-SCHED,               !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays CustomDay1 CustomDay2, !- Field 2
+    Until:  7:00,40,         !- Field 3
+    Until: 18:00,24,         !- Field 5
+    Until: 24:00,40,         !- Field 7
+    For: Weekends Holidays,  !- Field 9
+    Until:  7:00,40,         !- Field 10
+    Until: 13:00,24,         !- Field 12
+    Until: 24:00,32,         !- Field 14
+    For: SummerDesignDay,    !- Field 16
+    Until: 24:00,24,         !- Field 17
+    For: WinterDesignDay,    !- Field 19
+    Until: 24:00,40;         !- Field 20
+
+  Schedule:Compact,
+    HTG-SCHED,               !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: Weekdays,           !- Field 2
+    Until:  7:00,12.8,       !- Field 3
+    Until: 18:00,21.1,       !- Field 5
+    Until: 24:00,12.8,       !- Field 7
+    For: Weekends Holidays CustomDay1 CustomDay2, !- Field 9
+    Until:  7:00,12.8,       !- Field 10
+    Until: 13:00,21.1,       !- Field 12
+    Until: 24:00,12.8,       !- Field 14
+    For: SummerDesignDay,    !- Field 16
+    Until: 24:00,12.8,       !- Field 17
+    For: WinterDesignDay,    !- Field 19
+    Until: 24:00,21.1;       !- Field 20
+
+!  Thermal comfort schedules
+
+  Schedule:Compact,
+    Work Eff Sch,            !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0;          !- Field 3
+
+  Schedule:Compact,
+    Clothing Sch,            !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.9;        !- Field 3
+
+  Schedule:Compact,
+    Air Velo Sch,            !- Name
+    AnyNumber,               !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.137;      !- Field 3
+
+!  System.inc
+!  Small Office
+!
+! Edits to convert from COMFEN2 to COMFEN3 (EPlus 2.1) started by Robin 2/2/09
+! Took out sections for Zones 2-4
+! Left in names ZONE-1 for now as it is referenced in other places
+!
+!======== file: PerfCurves.inc ====Start========
+
+  CURVE:BIQUADRATIC,
+    WindACCoolCapFT,         !- Name
+    0.942587793,             !- Coefficient1 Constant
+    0.009543347,             !- Coefficient2 x
+    0.000683770,             !- Coefficient3 x**2
+    -0.011042676,            !- Coefficient4 y
+    0.000005249,             !- Coefficient5 y**2
+    -0.000009720,            !- Coefficient6 x*y
+    -999.0,                  !- Minimum Value of x
+    999.0,                   !- Maximum Value of x
+    -999.0,                  !- Minimum Value of y
+    999.0;                   !- Maximum Value of y
+
+  CURVE:BIQUADRATIC,
+    WindACEIRFT,             !- Name
+    0.342414409,             !- Coefficient1 Constant
+    0.034885008,             !- Coefficient2 x
+    -0.000623700,            !- Coefficient3 x**2
+    0.004977216,             !- Coefficient4 y
+    0.000437951,             !- Coefficient5 y**2
+    -0.000728028,            !- Coefficient6 x*y
+    12.77778,                !- Minimum Value of x
+    23.88889,                !- Maximum Value of x
+    23.88889,                !- Minimum Value of y
+    46.11111;                !- Maximum Value of y
+
+  CURVE:QUADRATIC,
+    WindACCoolCapFFF,        !- Name
+    0.8,                     !- Coefficient1 Constant
+    0.2,                     !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.5,                     !- Minimum Value of x
+    1.5;                     !- Maximum Value of x
+
+  CURVE:QUADRATIC,
+    WindACEIRFFF,            !- Name
+    1.1552,                  !- Coefficient1 Constant
+    -0.1808,                 !- Coefficient2 x
+    0.0256,                  !- Coefficient3 x**2
+    -999.0,                  !- Minimum Value of x
+    999.0;                   !- Maximum Value of x
+
+  CURVE:QUADRATIC,
+    WindACPLFFPLR,           !- Name
+    0.75,                    !- Coefficient1 Constant
+    0.25,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    -999.0,                  !- Minimum Value of x
+    999.0;                   !- Maximum Value of x
+
+!---- System: PSZ ---Begin---
+!-- ZoneThermostat-Autosize[] --Begin--: COMFENZone! Zone 1
+
+  ZoneControl:Thermostat,
+    COMFENZone Thermostat,   !- Name
+    COMFENZone,              !- Zone or ZoneList Name
+    Zone-Control-Type-Sched, !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    COMFENZone DualSPSched;  !- Control 1 Name
+
+  ThermostatSetpoint:DualSetpoint,
+    COMFENZone DualSPSched,  !- Name
+    HTG-SCHED,               !- Heating Setpoint Temperature Schedule Name
+    CLG-SCHED;               !- Cooling Setpoint Temperature Schedule Name
+
+!-- ZoneThermostat-Autosize[] --End--: COMFENZone
+!-- DirectAirZone-Autosize[] --Begin--: COMFENZone
+
+  Sizing:Zone,
+    COMFENZone,              !- Zone or ZoneList Name
+    14.,                     !- Zone Cooling Design Supply Air Temperature {C}
+    40.,                     !- Zone Heating Design Supply Air Temperature {C}
+    0.008,                   !- Zone Cooling Design Supply Air Humidity Ratio {kg-H2O/kg-air}
+    0.008,                   !- Zone Heating Design Supply Air Humidity Ratio {kg-H2O/kg-air}
+    SZ DSOA COMFENZone,      !- Design Specification Outdoor Air Object Name
+    1.3,                     !- Zone Heating Sizing Factor
+    1.3,                     !- Zone Cooling Sizing Factor
+    DesignDay,               !- Cooling Design Air Flow Method
+    0,                       !- Cooling Design Air Flow Rate {m3/s}
+    ,                        !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Cooling Minimum Air Flow {m3/s}
+    ,                        !- Cooling Minimum Air Flow Fraction
+    DesignDay,               !- Heating Design Air Flow Method
+    0,                       !- Heating Design Air Flow Rate {m3/s}
+    ,                        !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Heating Maximum Air Flow {m3/s}
+    ,                        !- Heating Maximum Air Flow Fraction
+    ,                        !- Design Zone Air Distribution Effectiveness in Cooling Mode
+    ;                        !- Design Zone Air Distribution Effectiveness in Heating Mode
+
+  DesignSpecification:OutdoorAir,
+    SZ DSOA COMFENZone,      !- Name
+    Flow/Person,             !- Outdoor Air Method
+    0.00944,                 !- Outdoor Air Flow per Person {m3/s-person}
+    0.0,                     !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    0.0;                     !- Outdoor Air Flow per Zone {m3/s}
+
+  ZoneHVAC:EquipmentConnections,
+    COMFENZone,              !- Zone Name
+    COMFENZone Equipment,    !- Zone Conditioning Equipment List Name
+    COMFENZone Inlets,       !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    COMFENZone Zone Air Node,!- Zone Air Node Name
+    COMFENZone Return Outlet;!- Zone Return Air Node Name
+
+  ZoneHVAC:EquipmentList,
+    COMFENZone Equipment,    !- Name
+    AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Object Type
+    COMFENZone Direct Air,   !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1;                       !- Zone Equipment 1 Heating or No-Load Sequence
+
+  NodeList,
+    COMFENZone Inlets,       !- Name
+    COMFENZone Supply Inlet; !- Node 1 Name
+
+  AirTerminal:SingleDuct:Uncontrolled,
+    COMFENZone Direct Air,   !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    COMFENZone Supply Inlet, !- Zone Supply Air Node Name
+    autosize;                !- Maximum Air Flow Rate {m3/s}
+
+!-- DirectAirZone-Autosize[] --End--: COMFENZone
+!-- PSZAirLoop-Autosize[] --Begin--: SYS-1
+! PSZ Air Loop
+
+  Sizing:System,
+    SYS-1,                   !- AirLoop Name
+    Sensible,                !- Type of Load to Size On
+    autosize,                !- Design Outdoor Air Flow Rate {m3/s}
+    0.3,                     !- Minimum System Air Flow Ratio
+    7.0,                     !- Preheat Design Temperature {C}
+    0.008,                   !- Preheat Design Humidity Ratio {kg-H2O/kg-Air}
+    11.0,                    !- Precool Design Temperature {C}
+    0.008,                   !- Precool Design Humidity Ratio {kg-H2O/kg-Air}
+    12.77779,                !- Central Cooling Design Supply Air Temperature {C}
+    40.0,                    !- Central Heating Design Supply Air Temperature {C}
+    NonCoincident,           !- Sizing Option
+    No,                      !- 100% Outdoor Air in Cooling
+    No,                      !- 100% Outdoor Air in Heating
+    0.008,                   !- Central Cooling Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    0.008,                   !- Central Heating Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    DesignDay,               !- Cooling Design Air Flow Method
+    0.0,                     !- Cooling Design Air Flow Rate {m3/s}
+    DesignDay,               !- Heating Design Air Flow Method
+    0.0,                     !- Heating Design Air Flow Rate {m3/s}
+    ZoneSum;                 !- System Outdoor Air Method
+
+  AirLoopHVAC,
+    SYS-1,                   !- Name
+    ,                        !- Controller List Name
+    SYS-1 Availability Managers,  !- Availability Manager List Name
+    autosize,                !- Design Supply Air Flow Rate {m3/s}
+    SYS-1 Branches,          !- Branch List Name
+    ,                        !- Connector List Name
+    SYS-1 Air Loop Inlet,    !- Supply Side Inlet Node Name
+    SYS-1 Return Air Outlet, !- Demand Side Outlet Node Name
+    SYS-1 Zone Equip Inlet,  !- Demand Side Inlet Node Names
+    SYS-1 Fan Outlet;        !- Supply Side Outlet Node Names
+
+  BranchList,
+    SYS-1 Branches,          !- Name
+    SYS-1 Main Branch;       !- Branch 1 Name
+
+  Branch,
+    SYS-1 Main Branch,       !- Name
+    autosize,                !- Maximum Flow Rate {m3/s}
+    ,                        !- Pressure Drop Curve Name
+    AirLoopHVAC:OutdoorAirSystem,  !- Component 1 Object Type
+    SYS-1 OA System,         !- Component 1 Name
+    SYS-1 Air Loop Inlet,    !- Component 1 Inlet Node Name
+    SYS-1 Mixed Air Outlet,  !- Component 1 Outlet Node Name
+    PASSIVE,                 !- Component 1 Branch Control Type
+    AirLoopHVAC:UnitaryCoolOnly,  !- Component 2 Object Type
+    SYS-1 Cooling Coil,      !- Component 2 Name
+    SYS-1 Mixed Air Outlet,  !- Component 2 Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- Component 2 Outlet Node Name
+    PASSIVE,                 !- Component 2 Branch Control Type
+    Coil:Heating:Gas,        !- Component 3 Object Type
+    SYS-1 Heating Coil,      !- Component 3 Name
+    SYS-1 Cooling Coil Outlet,  !- Component 3 Inlet Node Name
+    SYS-1 Heating Coil Outlet,  !- Component 3 Outlet Node Name
+    PASSIVE,                 !- Component 3 Branch Control Type
+    Fan:ConstantVolume,      !- Component 4 Object Type
+    SYS-1 Supply Fan,        !- Component 4 Name
+    SYS-1 Heating Coil Outlet,  !- Component 4 Inlet Node Name
+    SYS-1 Fan Outlet,        !- Component 4 Outlet Node Name
+    ACTIVE;                  !- Component 4 Branch Control Type
+
+  AirLoopHVAC:SupplyPath,
+    SYS-1 Supply Path,       !- Name
+    SYS-1 Zone Equip Inlet,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,!- Component 1 Object Type
+    SYS-1 Zone Splitter;     !- Component 1 Name
+
+  AirLoopHVAC:ZoneSplitter,
+    SYS-1 Zone Splitter,     !- Name
+    SYS-1 Zone Equip Inlet,  !- Inlet Node Name
+    COMFENZone Supply Inlet; !- Outlet 1 Node Name
+
+  AirLoopHVAC:ReturnPath,
+    SYS-1 Return Path,       !- Name
+    SYS-1 Return Air Outlet, !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,   !- Component 1 Object Type
+    SYS-1 Zone Mixer;        !- Component 1 Name
+
+  AirLoopHVAC:ZoneMixer,
+    SYS-1 Zone Mixer,        !- Name
+    SYS-1 Return Air Outlet, !- Outlet Node Name
+    COMFENZone Return Outlet;!- Inlet 1 Node Name
+
+  AvailabilityManagerAssignmentList,
+    SYS-1 Availability Managers,  !- Name
+    AvailabilityManager:NightCycle,  !- Availability Manager 1 Object Type
+    SYS-1 Availability 1;    !- Availability Manager 1 Name
+
+  AvailabilityManager:NightCycle,
+    SYS-1 Availability 1,    !- Name
+    SysAvailApplicSch,       !- Applicability Schedule Name
+    FAN-SCHED,               !- Fan Schedule Name
+    CycleOnAny,              !- Control Type
+    4.0,                     !- Thermostat Tolerance {deltaC}
+    7200.;                   !- Cycling Run Time {s}
+
+  SetpointManager:SingleZone:Reheat,
+    SYS-1 Setpoint Manager 1,!- Name
+    Temperature,             !- Control Variable
+    14.,                     !- Minimum Supply Air Temperature {C}
+    45.,                     !- Maximum Supply Air Temperature {C}
+    COMFENZone,              !- Control Zone Name
+    COMFENZone Zone Air Node,!- Zone Node Name
+    COMFENZone Supply Inlet, !- Zone Inlet Node Name
+    SYS-1 Sup Air Temp Nodes;!- Setpoint Node or NodeList Name
+
+  NodeList,
+    SYS-1 Sup Air Temp Nodes,!- Name
+    SYS-1 Fan Outlet;        !- Node 1 Name
+
+  SetpointManager:MixedAir,
+    SYS-1 Setpoint Manager 2,!- Name
+    Temperature,             !- Control Variable
+    SYS-1 Fan Outlet,        !- Reference Setpoint Node Name
+    SYS-1 Heating Coil Outlet,  !- Fan Inlet Node Name
+    SYS-1 Fan Outlet,        !- Fan Outlet Node Name
+    SYS-1 Supply Fan Upstream Nodes;  !- Setpoint Node or NodeList Name
+
+  NodeList,
+    SYS-1 Supply Fan Upstream Nodes,  !- Name
+    SYS-1 Mixed Air Outlet,  !- Node 1 Name
+    SYS-1 Cooling Coil Outlet,  !- Node 2 Name
+    SYS-1 Heating Coil Outlet;  !- Node 3 Name
+
+  AirLoopHVAC:UnitaryCoolOnly,
+    SYS-1 Cooling Coil,      !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    SYS-1 Mixed Air Outlet,  !- DX Cooling Coil System Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- DX Cooling Coil System Outlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- DX Cooling Coil System Sensor Node Name
+    Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
+    SYS-1 DX Cooling Coil;   !- Cooling Coil Name
+
+  Coil:Cooling:DX:SingleSpeed,
+    SYS-1 DX Cooling Coil,   !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    autosize,                !- Rated Total Cooling Capacity {W}
+    autosize,                !- Rated Sensible Heat Ratio
+    2.777778,                !- Rated COP {W/W}
+    autosize,                !- Rated Air Flow Rate {m3/s}
+    ,                        !- Rated Evaporator Fan Power Per Volume Flow Rate {W/(m3/s)}
+    SYS-1 Mixed Air Outlet,  !- Air Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- Air Outlet Node Name
+    WindACCoolCapFT,         !- Total Cooling Capacity Function of Temperature Curve Name
+    WindACCoolCapFFF,        !- Total Cooling Capacity Function of Flow Fraction Curve Name
+    WindACEIRFT,             !- Energy Input Ratio Function of Temperature Curve Name
+    WindACEIRFFF,            !- Energy Input Ratio Function of Flow Fraction Curve Name
+    WindACPLFFPLR,           !- Part Load Fraction Correlation Curve Name
+    ,                        !- Nominal Time for Condensate Removal to Begin {s}
+    ,                        !- Ratio of Initial Moisture Evaporation Rate and Steady State Latent Capacity {dimensionless}
+    ,                        !- Maximum Cycling Rate {cycles/hr}
+    ,                        !- Latent Capacity Time Constant {s}
+    ;                        !- Condenser Air Inlet Node Name
+
+  Coil:Heating:Gas,
+    SYS-1 Heating Coil,      !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    0.7407407,               !- Gas Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SYS-1 Cooling Coil Outlet,  !- Air Inlet Node Name
+    SYS-1 Heating Coil Outlet,  !- Air Outlet Node Name
+    SYS-1 Heating Coil Outlet;  !- Temperature Setpoint Node Name
+
+  Fan:ConstantVolume,
+    SYS-1 Supply Fan,        !- Name
+    FAN-SCHED,               !- Availability Schedule Name
+    0.6,                     !- Fan Efficiency
+    600,                     !- Pressure Rise {Pa}
+    autosize,                !- Maximum Flow Rate {m3/s}
+    0.9,                     !- Motor Efficiency
+    1.,                      !- Motor In Airstream Fraction
+    SYS-1 Heating Coil Outlet,  !- Air Inlet Node Name
+    SYS-1 Fan Outlet;        !- Air Outlet Node Name
+
+  OutdoorAir:NodeList,
+    SYS-1 Outside Air Inlet; !- Node or NodeList Name 1
+
+  AirLoopHVAC:OutdoorAirSystem,
+    SYS-1 OA System,         !- Name
+    SYS-1 OA System Controllers,  !- Controller List Name
+    SYS-1 OA System Equipment,  !- Outdoor Air Equipment List Name
+    SYS-1 Availability Managers;  !- Availability Manager List Name
+
+  AirLoopHVAC:ControllerList,
+    SYS-1 OA System Controllers,  !- Name
+    Controller:OutdoorAir,   !- Controller 1 Object Type
+    SYS-1 OA Controller;     !- Controller 1 Name
+
+  AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    SYS-1 OA System Equipment,  !- Name
+    OutdoorAir:Mixer,        !- Component 1 Object Type
+    SYS-1 OA Mixing Box;     !- Component 1 Name
+
+  OutdoorAir:Mixer,
+    SYS-1 OA Mixing Box,     !- Name
+    SYS-1 Mixed Air Outlet,  !- Mixed Air Node Name
+    SYS-1 Outside Air Inlet, !- Outdoor Air Stream Node Name
+    SYS-1 Relief Air Outlet, !- Relief Air Stream Node Name
+    SYS-1 Air Loop Inlet;    !- Return Air Stream Node Name
+
+  Controller:OutdoorAir,
+    SYS-1 OA Controller,     !- Name
+    SYS-1 Relief Air Outlet, !- Relief Air Outlet Node Name
+    SYS-1 Air Loop Inlet,    !- Return Air Node Name
+    SYS-1 Mixed Air Outlet,  !- Mixed Air Node Name
+    SYS-1 Outside Air Inlet, !- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+    NoEconomizer,            !- Economizer Control Type
+    ModulateFlow,            !- Economizer Control Action Type
+    23.884,                  !- Economizer Maximum Limit Dry-Bulb Temperature {C}
+    ,                        !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    ,                        !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithCompressor,   !- Lockout Type
+    FixedMinimum,            !- Minimum Limit Type
+    Min OA Sched;            !- Minimum Outdoor Air Schedule Name
+
+!-- PSZAirLoop-Autosize[] --End--: SYS-1
+!---- System: PSZ ----End----
+!- ##======================================================================
+!- ##          COMFEN Report FILE (Report_PSZ.inc)
+!- ##======================================================================
+
+  Output:Diagnostics,
+    DisplayAdvancedReportVariables;  !- Key 1
+
+  Output:Surfaces:Drawing,DXF;
+
+  Output:VariableDictionary,Regular;
+
+  Output:Constructions,Constructions;
+
+  OutputControl:Table:Style,
+    Comma;                   !- Column Separator
+
+!-----------------------------------------------------------
+!         Weather report variables
+!--------------------------------------------------------------
+
+  Output:Variable,*,Outdoor Dry Bulb,hourly;
+
+  Output:Variable,*,Outdoor Wet Bulb,hourly;
+
+  Output:Variable,*,Wind Speed,hourly;
+
+  Output:Variable,*,Wind Direction,hourly;
+
+  Output:Variable,*,Outdoor Relative Humidity,hourly;
+
+  Output:Variable,*,Diffuse Solar,hourly;
+
+  Output:Variable,*,Direct Solar,hourly;
+
+  Output:Variable,*,Exterior Horizontal Beam Illuminance,hourly;
+
+  Output:Variable,*,Exterior Horizontal Illuminance From Sky,hourly;
+
+  Output:Variable,*,Sky Clearness for Daylighting Calculation,hourly;
+
+  Output:Variable,*,Solar Altitude Angle,hourly;
+
+  Output:Table:Monthly,
+    Occupant Comfort Data Summary,  !- Name
+    5,                       !- Digits After Decimal
+    FANGERPPD,               !- Variable or Meter 1 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 1
+

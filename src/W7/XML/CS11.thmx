@@ -1,0 +1,968 @@
+<?xml version="1.0"?>
+<THERM-XML xmlns="http://windows.lbl.gov">
+<ThermVersion>Version 7.5.18.0</ThermVersion>
+<FileVersion>1</FileVersion>
+<SaveDate>2017-09-28T16:04:52</SaveDate>
+
+<Title></Title>
+<CreatedBy></CreatedBy>
+<Company></Company>
+<Client></Client>
+<CrossSectionType>Sill</CrossSectionType>
+<Notes></Notes>
+<Units>SI</Units>
+<MeshControl MeshLevel="8" ErrorCheckFlag="1" ErrorLimit="10.000000" MaxIterations="5" CMAflag="0" />
+<Materials>
+	<Material Name="CS11:D8_WhiteSheer.txt" Type="5" Conductivity="0.120000" Tir="0.580000" EmissivityFront="0.370000" EmissivityBack="0.370000" RGBColor="0x495162">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.884052" R="0.115933"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.890393" R="0.106555"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.884052" R="0.115933"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.890393" R="0.106555"/>
+	</Material>
+	<Material Name="Frame Cavity NFRC 100_Cavity_238" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_216" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_194" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_172" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_150" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_128" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_106" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_84" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_62" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_31" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+	<Material Name="Frame Cavity NFRC 100_Cavity_17" Type="1" Conductivity="-1.000000" Tir="-1.000000" Absorptivity="0.500000" EmissivityFront="0.900000" EmissivityBack="0.900000" RGBColor="0x00FF00" CavityModel="4" />
+</Materials>
+<BoundaryConditions>
+	<BoundaryCondition Name="Frame Cavity Surface" Type="7" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x0000FF" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeOutE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="-18.000000" RGBColor="0xFF8000" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="Adiabatic" Type="0" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x000000" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="1" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeInE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="21.110001" RGBColor="0x8000FF" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+</BoundaryConditions>
+<Polygons>
+	<Polygon ID="243" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-32.988003" />
+		<Point index="1" x="246.295212" y="-32.788021" />
+		<Point index="2" x="236.876709" y="-19.088009" />
+		<Point index="3" x="236.634003" y="-19.088009" />
+	</Polygon>
+	<Polygon ID="242" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-32.788021" />
+		<Point index="1" x="253.809998" y="-32.988003" />
+		<Point index="2" x="263.365997" y="-19.088009" />
+		<Point index="3" x="263.123291" y="-19.088009" />
+	</Polygon>
+	<Polygon ID="241" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-5.388012" />
+		<Point index="1" x="246.190002" y="-5.188015" />
+		<Point index="2" x="236.634003" y="-19.088009" />
+		<Point index="3" x="236.876709" y="-19.088009" />
+	</Polygon>
+	<Polygon ID="240" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-5.188015" />
+		<Point index="1" x="246.295212" y="-5.388012" />
+		<Point index="2" x="253.704788" y="-5.388012" />
+		<Point index="3" x="253.809998" y="-5.188015" />
+		<Point index="4" x="253.704788" y="-4.988003" />
+		<Point index="5" x="246.295212" y="-4.988003" />
+	</Polygon>
+	<Polygon ID="239" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-5.188015" />
+		<Point index="1" x="253.704788" y="-5.388012" />
+		<Point index="2" x="263.123291" y="-19.088009" />
+		<Point index="3" x="263.365997" y="-19.088009" />
+	</Polygon>
+	<Polygon ID="238" Material="Frame Cavity NFRC 100_Cavity_238" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-19.088009" />
+		<Point index="1" x="246.295212" y="-32.788021" />
+		<Point index="2" x="253.704788" y="-32.788021" />
+		<Point index="3" x="263.123291" y="-19.088009" />
+		<Point index="4" x="253.704788" y="-5.388012" />
+		<Point index="5" x="246.295212" y="-5.388012" />
+	</Polygon>
+	<Polygon ID="221" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-60.787991" />
+		<Point index="1" x="246.295212" y="-60.588009" />
+		<Point index="2" x="236.876709" y="-46.887997" />
+		<Point index="3" x="236.634003" y="-46.887997" />
+	</Polygon>
+	<Polygon ID="220" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-60.588009" />
+		<Point index="1" x="253.809998" y="-60.787991" />
+		<Point index="2" x="263.365997" y="-46.887997" />
+		<Point index="3" x="263.123291" y="-46.887997" />
+	</Polygon>
+	<Polygon ID="219" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-33.188000" />
+		<Point index="1" x="246.190002" y="-32.988003" />
+		<Point index="2" x="236.634003" y="-46.887997" />
+		<Point index="3" x="236.876709" y="-46.887997" />
+	</Polygon>
+	<Polygon ID="218" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-32.988003" />
+		<Point index="1" x="246.295212" y="-33.188000" />
+		<Point index="2" x="253.704788" y="-33.188000" />
+		<Point index="3" x="253.809998" y="-32.988003" />
+		<Point index="4" x="253.704788" y="-32.788021" />
+		<Point index="5" x="246.295212" y="-32.788021" />
+	</Polygon>
+	<Polygon ID="217" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-32.988003" />
+		<Point index="1" x="253.704788" y="-33.188000" />
+		<Point index="2" x="263.123291" y="-46.887997" />
+		<Point index="3" x="263.365997" y="-46.887997" />
+	</Polygon>
+	<Polygon ID="216" Material="Frame Cavity NFRC 100_Cavity_216" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-46.887997" />
+		<Point index="1" x="246.295212" y="-60.588009" />
+		<Point index="2" x="253.704788" y="-60.588009" />
+		<Point index="3" x="263.123291" y="-46.887997" />
+		<Point index="4" x="253.704788" y="-33.188000" />
+		<Point index="5" x="246.295212" y="-33.188000" />
+	</Polygon>
+	<Polygon ID="199" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-88.587975" />
+		<Point index="1" x="246.295212" y="-88.387993" />
+		<Point index="2" x="236.876709" y="-74.687981" />
+		<Point index="3" x="236.634003" y="-74.687981" />
+	</Polygon>
+	<Polygon ID="198" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-88.387993" />
+		<Point index="1" x="253.809998" y="-88.587975" />
+		<Point index="2" x="263.365997" y="-74.687981" />
+		<Point index="3" x="263.123291" y="-74.687981" />
+	</Polygon>
+	<Polygon ID="197" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-60.987988" />
+		<Point index="1" x="246.190002" y="-60.787991" />
+		<Point index="2" x="236.634003" y="-74.687981" />
+		<Point index="3" x="236.876709" y="-74.687981" />
+	</Polygon>
+	<Polygon ID="196" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-60.787991" />
+		<Point index="1" x="246.295212" y="-60.987988" />
+		<Point index="2" x="253.704788" y="-60.987988" />
+		<Point index="3" x="253.809998" y="-60.787991" />
+		<Point index="4" x="253.704788" y="-60.588009" />
+		<Point index="5" x="246.295212" y="-60.588009" />
+	</Polygon>
+	<Polygon ID="195" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-60.787991" />
+		<Point index="1" x="253.704788" y="-60.987988" />
+		<Point index="2" x="263.123291" y="-74.687981" />
+		<Point index="3" x="263.365997" y="-74.687981" />
+	</Polygon>
+	<Polygon ID="194" Material="Frame Cavity NFRC 100_Cavity_194" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-74.687981" />
+		<Point index="1" x="246.295212" y="-88.387993" />
+		<Point index="2" x="253.704788" y="-88.387993" />
+		<Point index="3" x="263.123291" y="-74.687981" />
+		<Point index="4" x="253.704788" y="-60.987988" />
+		<Point index="5" x="246.295212" y="-60.987988" />
+	</Polygon>
+	<Polygon ID="177" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-116.387962" />
+		<Point index="1" x="246.295212" y="-116.187981" />
+		<Point index="2" x="236.876709" y="-102.487968" />
+		<Point index="3" x="236.634003" y="-102.487968" />
+	</Polygon>
+	<Polygon ID="176" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-116.187981" />
+		<Point index="1" x="253.809998" y="-116.387962" />
+		<Point index="2" x="263.365997" y="-102.487968" />
+		<Point index="3" x="263.123291" y="-102.487968" />
+	</Polygon>
+	<Polygon ID="175" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-88.787971" />
+		<Point index="1" x="246.190002" y="-88.587975" />
+		<Point index="2" x="236.634003" y="-102.487968" />
+		<Point index="3" x="236.876709" y="-102.487968" />
+	</Polygon>
+	<Polygon ID="174" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-88.587975" />
+		<Point index="1" x="246.295212" y="-88.787971" />
+		<Point index="2" x="253.704788" y="-88.787971" />
+		<Point index="3" x="253.809998" y="-88.587975" />
+		<Point index="4" x="253.704788" y="-88.387993" />
+		<Point index="5" x="246.295212" y="-88.387993" />
+	</Polygon>
+	<Polygon ID="173" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-88.587975" />
+		<Point index="1" x="253.704788" y="-88.787971" />
+		<Point index="2" x="263.123291" y="-102.487968" />
+		<Point index="3" x="263.365997" y="-102.487968" />
+	</Polygon>
+	<Polygon ID="172" Material="Frame Cavity NFRC 100_Cavity_172" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-102.487968" />
+		<Point index="1" x="246.295212" y="-116.187981" />
+		<Point index="2" x="253.704788" y="-116.187981" />
+		<Point index="3" x="263.123291" y="-102.487968" />
+		<Point index="4" x="253.704788" y="-88.787971" />
+		<Point index="5" x="246.295212" y="-88.787971" />
+	</Polygon>
+	<Polygon ID="155" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-144.187958" />
+		<Point index="1" x="246.295212" y="-143.987976" />
+		<Point index="2" x="236.876709" y="-130.287964" />
+		<Point index="3" x="236.634003" y="-130.287964" />
+	</Polygon>
+	<Polygon ID="154" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-143.987976" />
+		<Point index="1" x="253.809998" y="-144.187958" />
+		<Point index="2" x="263.365997" y="-130.287964" />
+		<Point index="3" x="263.123291" y="-130.287964" />
+	</Polygon>
+	<Polygon ID="153" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-116.587959" />
+		<Point index="1" x="246.190002" y="-116.387962" />
+		<Point index="2" x="236.634003" y="-130.287964" />
+		<Point index="3" x="236.876709" y="-130.287964" />
+	</Polygon>
+	<Polygon ID="152" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-116.387962" />
+		<Point index="1" x="246.295212" y="-116.587959" />
+		<Point index="2" x="253.704788" y="-116.587959" />
+		<Point index="3" x="253.809998" y="-116.387962" />
+		<Point index="4" x="253.704788" y="-116.187981" />
+		<Point index="5" x="246.295212" y="-116.187981" />
+	</Polygon>
+	<Polygon ID="151" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-116.387962" />
+		<Point index="1" x="253.704788" y="-116.587959" />
+		<Point index="2" x="263.123291" y="-130.287964" />
+		<Point index="3" x="263.365997" y="-130.287964" />
+	</Polygon>
+	<Polygon ID="150" Material="Frame Cavity NFRC 100_Cavity_150" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-130.287964" />
+		<Point index="1" x="246.295212" y="-143.987976" />
+		<Point index="2" x="253.704788" y="-143.987976" />
+		<Point index="3" x="263.123291" y="-130.287964" />
+		<Point index="4" x="253.704788" y="-116.587959" />
+		<Point index="5" x="246.295212" y="-116.587959" />
+	</Polygon>
+	<Polygon ID="133" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-171.987946" />
+		<Point index="1" x="246.295212" y="-171.787964" />
+		<Point index="2" x="236.876709" y="-158.087952" />
+		<Point index="3" x="236.634003" y="-158.087952" />
+	</Polygon>
+	<Polygon ID="132" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-171.787964" />
+		<Point index="1" x="253.809998" y="-171.987946" />
+		<Point index="2" x="263.365997" y="-158.087952" />
+		<Point index="3" x="263.123291" y="-158.087952" />
+	</Polygon>
+	<Polygon ID="131" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-144.387955" />
+		<Point index="1" x="246.190002" y="-144.187958" />
+		<Point index="2" x="236.634003" y="-158.087952" />
+		<Point index="3" x="236.876709" y="-158.087952" />
+	</Polygon>
+	<Polygon ID="130" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-144.187958" />
+		<Point index="1" x="246.295212" y="-144.387955" />
+		<Point index="2" x="253.704788" y="-144.387955" />
+		<Point index="3" x="253.809998" y="-144.187958" />
+		<Point index="4" x="253.704788" y="-143.987976" />
+		<Point index="5" x="246.295212" y="-143.987976" />
+	</Polygon>
+	<Polygon ID="129" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-144.187958" />
+		<Point index="1" x="253.704788" y="-144.387955" />
+		<Point index="2" x="263.123291" y="-158.087952" />
+		<Point index="3" x="263.365997" y="-158.087952" />
+	</Polygon>
+	<Polygon ID="128" Material="Frame Cavity NFRC 100_Cavity_128" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-158.087952" />
+		<Point index="1" x="246.295212" y="-171.787964" />
+		<Point index="2" x="253.704788" y="-171.787964" />
+		<Point index="3" x="263.123291" y="-158.087952" />
+		<Point index="4" x="253.704788" y="-144.387955" />
+		<Point index="5" x="246.295212" y="-144.387955" />
+	</Polygon>
+	<Polygon ID="111" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-199.787933" />
+		<Point index="1" x="246.295212" y="-199.587952" />
+		<Point index="2" x="236.876709" y="-185.887939" />
+		<Point index="3" x="236.634003" y="-185.887939" />
+	</Polygon>
+	<Polygon ID="110" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-199.587952" />
+		<Point index="1" x="253.809998" y="-199.787933" />
+		<Point index="2" x="263.365997" y="-185.887939" />
+		<Point index="3" x="263.123291" y="-185.887939" />
+	</Polygon>
+	<Polygon ID="109" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-172.187943" />
+		<Point index="1" x="246.190002" y="-171.987946" />
+		<Point index="2" x="236.634003" y="-185.887939" />
+		<Point index="3" x="236.876709" y="-185.887939" />
+	</Polygon>
+	<Polygon ID="108" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-171.987946" />
+		<Point index="1" x="246.295212" y="-172.187943" />
+		<Point index="2" x="253.704788" y="-172.187943" />
+		<Point index="3" x="253.809998" y="-171.987946" />
+		<Point index="4" x="253.704788" y="-171.787964" />
+		<Point index="5" x="246.295212" y="-171.787964" />
+	</Polygon>
+	<Polygon ID="107" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-171.987946" />
+		<Point index="1" x="253.704788" y="-172.187943" />
+		<Point index="2" x="263.123291" y="-185.887939" />
+		<Point index="3" x="263.365997" y="-185.887939" />
+	</Polygon>
+	<Polygon ID="106" Material="Frame Cavity NFRC 100_Cavity_106" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-185.887939" />
+		<Point index="1" x="246.295212" y="-199.587952" />
+		<Point index="2" x="253.704788" y="-199.587952" />
+		<Point index="3" x="263.123291" y="-185.887939" />
+		<Point index="4" x="253.704788" y="-172.187943" />
+		<Point index="5" x="246.295212" y="-172.187943" />
+	</Polygon>
+	<Polygon ID="89" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-227.587921" />
+		<Point index="1" x="246.295212" y="-227.387939" />
+		<Point index="2" x="236.876709" y="-213.687927" />
+		<Point index="3" x="236.634003" y="-213.687927" />
+	</Polygon>
+	<Polygon ID="88" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-227.387939" />
+		<Point index="1" x="253.809998" y="-227.587921" />
+		<Point index="2" x="263.365997" y="-213.687927" />
+		<Point index="3" x="263.123291" y="-213.687927" />
+	</Polygon>
+	<Polygon ID="87" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-199.987930" />
+		<Point index="1" x="246.190002" y="-199.787933" />
+		<Point index="2" x="236.634003" y="-213.687927" />
+		<Point index="3" x="236.876709" y="-213.687927" />
+	</Polygon>
+	<Polygon ID="86" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-199.787933" />
+		<Point index="1" x="246.295212" y="-199.987930" />
+		<Point index="2" x="253.704788" y="-199.987930" />
+		<Point index="3" x="253.809998" y="-199.787933" />
+		<Point index="4" x="253.704788" y="-199.587952" />
+		<Point index="5" x="246.295212" y="-199.587952" />
+	</Polygon>
+	<Polygon ID="85" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-199.787933" />
+		<Point index="1" x="253.704788" y="-199.987930" />
+		<Point index="2" x="263.123291" y="-213.687927" />
+		<Point index="3" x="263.365997" y="-213.687927" />
+	</Polygon>
+	<Polygon ID="84" Material="Frame Cavity NFRC 100_Cavity_84" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-213.687927" />
+		<Point index="1" x="246.295212" y="-227.387939" />
+		<Point index="2" x="253.704788" y="-227.387939" />
+		<Point index="3" x="263.123291" y="-213.687927" />
+		<Point index="4" x="253.704788" y="-199.987930" />
+		<Point index="5" x="246.295212" y="-199.987930" />
+	</Polygon>
+	<Polygon ID="67" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-255.387909" />
+		<Point index="1" x="246.295212" y="-255.187927" />
+		<Point index="2" x="236.876709" y="-241.487915" />
+		<Point index="3" x="236.634003" y="-241.487915" />
+	</Polygon>
+	<Polygon ID="66" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-255.187927" />
+		<Point index="1" x="253.809998" y="-255.387909" />
+		<Point index="2" x="263.365997" y="-241.487915" />
+		<Point index="3" x="263.123291" y="-241.487915" />
+	</Polygon>
+	<Polygon ID="65" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-227.787918" />
+		<Point index="1" x="246.190002" y="-227.587921" />
+		<Point index="2" x="236.634003" y="-241.487915" />
+		<Point index="3" x="236.876709" y="-241.487915" />
+	</Polygon>
+	<Polygon ID="64" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-227.587921" />
+		<Point index="1" x="246.295212" y="-227.787918" />
+		<Point index="2" x="253.704788" y="-227.787918" />
+		<Point index="3" x="253.809998" y="-227.587921" />
+		<Point index="4" x="253.704788" y="-227.387939" />
+		<Point index="5" x="246.295212" y="-227.387939" />
+	</Polygon>
+	<Polygon ID="63" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-227.587921" />
+		<Point index="1" x="253.704788" y="-227.787918" />
+		<Point index="2" x="263.123291" y="-241.487915" />
+		<Point index="3" x="263.365997" y="-241.487915" />
+	</Polygon>
+	<Polygon ID="62" Material="Frame Cavity NFRC 100_Cavity_62" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-241.487915" />
+		<Point index="1" x="246.295212" y="-255.187927" />
+		<Point index="2" x="253.704788" y="-255.187927" />
+		<Point index="3" x="263.123291" y="-241.487915" />
+		<Point index="4" x="253.704788" y="-227.787918" />
+		<Point index="5" x="246.295212" y="-227.787918" />
+	</Polygon>
+	<Polygon ID="36" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-283.187897" />
+		<Point index="1" x="246.295212" y="-282.987915" />
+		<Point index="2" x="236.876709" y="-269.287903" />
+		<Point index="3" x="236.634003" y="-269.287903" />
+	</Polygon>
+	<Polygon ID="35" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-282.987915" />
+		<Point index="1" x="253.809998" y="-283.187897" />
+		<Point index="2" x="263.365997" y="-269.287903" />
+		<Point index="3" x="263.123291" y="-269.287903" />
+	</Polygon>
+	<Polygon ID="34" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-255.587906" />
+		<Point index="1" x="246.190002" y="-255.387909" />
+		<Point index="2" x="236.634003" y="-269.287903" />
+		<Point index="3" x="236.876709" y="-269.287903" />
+	</Polygon>
+	<Polygon ID="33" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-255.387909" />
+		<Point index="1" x="246.295212" y="-255.587906" />
+		<Point index="2" x="253.704788" y="-255.587906" />
+		<Point index="3" x="253.809998" y="-255.387909" />
+		<Point index="4" x="253.704788" y="-255.187927" />
+		<Point index="5" x="246.295212" y="-255.187927" />
+	</Polygon>
+	<Polygon ID="32" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-255.387909" />
+		<Point index="1" x="253.704788" y="-255.587906" />
+		<Point index="2" x="263.123291" y="-269.287903" />
+		<Point index="3" x="263.365997" y="-269.287903" />
+	</Polygon>
+	<Polygon ID="31" Material="Frame Cavity NFRC 100_Cavity_31" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-269.287903" />
+		<Point index="1" x="246.295212" y="-282.987915" />
+		<Point index="2" x="253.704788" y="-282.987915" />
+		<Point index="3" x="263.123291" y="-269.287903" />
+		<Point index="4" x="253.704788" y="-255.587906" />
+		<Point index="5" x="246.295212" y="-255.587906" />
+	</Polygon>
+	<Polygon ID="10" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-310.987885" />
+		<Point index="1" x="246.295212" y="-310.787903" />
+		<Point index="2" x="236.876709" y="-297.087891" />
+		<Point index="3" x="236.634003" y="-297.087891" />
+	</Polygon>
+	<Polygon ID="9" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-310.787903" />
+		<Point index="1" x="246.190002" y="-310.987885" />
+		<Point index="2" x="246.295212" y="-311.187897" />
+		<Point index="3" x="253.704788" y="-311.187897" />
+		<Point index="4" x="253.809998" y="-310.987885" />
+		<Point index="5" x="253.704788" y="-310.787903" />
+	</Polygon>
+	<Polygon ID="8" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.704788" y="-310.787903" />
+		<Point index="1" x="253.809998" y="-310.987885" />
+		<Point index="2" x="263.365997" y="-297.087891" />
+		<Point index="3" x="263.123291" y="-297.087891" />
+	</Polygon>
+	<Polygon ID="4" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="246.295212" y="-283.387909" />
+		<Point index="1" x="246.190002" y="-283.187897" />
+		<Point index="2" x="236.634003" y="-297.087891" />
+		<Point index="3" x="236.876709" y="-297.087891" />
+	</Polygon>
+	<Polygon ID="1" Material="CS11:D8_WhiteSheer.txt" NSides="6" Type="1" units="mm">
+		<Point index="0" x="246.190002" y="-283.187897" />
+		<Point index="1" x="246.295212" y="-283.387909" />
+		<Point index="2" x="253.704788" y="-283.387909" />
+		<Point index="3" x="253.809998" y="-283.187897" />
+		<Point index="4" x="253.704788" y="-282.987915" />
+		<Point index="5" x="246.295212" y="-282.987915" />
+	</Polygon>
+	<Polygon ID="2" Material="CS11:D8_WhiteSheer.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="253.809998" y="-283.187897" />
+		<Point index="1" x="253.704788" y="-283.387909" />
+		<Point index="2" x="263.123291" y="-297.087891" />
+		<Point index="3" x="263.365997" y="-297.087891" />
+	</Polygon>
+	<Polygon ID="17" Material="Frame Cavity NFRC 100_Cavity_17" NSides="6" Type="1" units="mm">
+		<Point index="0" x="236.876709" y="-297.087891" />
+		<Point index="1" x="246.295212" y="-310.787903" />
+		<Point index="2" x="253.704788" y="-310.787903" />
+		<Point index="3" x="263.123291" y="-297.087891" />
+		<Point index="4" x="253.704788" y="-283.387909" />
+		<Point index="5" x="246.295212" y="-283.387909" />
+	</Polygon>
+</Polygons>
+<Boundaries>
+	<BCPolygon ID="237" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-32.788021" />
+		<Point index="1" x="236.876709" y="-19.088009" />
+	</BCPolygon>
+	<BCPolygon ID="236" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-32.788021" />
+		<Point index="1" x="246.295212" y="-32.788021" />
+	</BCPolygon>
+	<BCPolygon ID="235" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-19.088009" />
+		<Point index="1" x="253.704788" y="-32.788021" />
+	</BCPolygon>
+	<BCPolygon ID="234" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-5.388012" />
+		<Point index="1" x="263.123291" y="-19.088009" />
+	</BCPolygon>
+	<BCPolygon ID="233" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-5.388012" />
+		<Point index="1" x="253.704788" y="-5.388012" />
+	</BCPolygon>
+	<BCPolygon ID="232" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="238" EnclosureID="1" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-19.088009" />
+		<Point index="1" x="246.295212" y="-5.388012" />
+	</BCPolygon>
+	<BCPolygon ID="229" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-33.188015" />
+		<Point index="1" x="253.704788" y="-33.188015" />
+	</BCPolygon>
+	<BCPolygon ID="215" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-60.588009" />
+		<Point index="1" x="236.876709" y="-46.887997" />
+	</BCPolygon>
+	<BCPolygon ID="214" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-60.588009" />
+		<Point index="1" x="246.295212" y="-60.588009" />
+	</BCPolygon>
+	<BCPolygon ID="213" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-46.887997" />
+		<Point index="1" x="253.704788" y="-60.588009" />
+	</BCPolygon>
+	<BCPolygon ID="212" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-33.188000" />
+		<Point index="1" x="263.123291" y="-46.887997" />
+	</BCPolygon>
+	<BCPolygon ID="210" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="216" EnclosureID="2" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-46.887997" />
+		<Point index="1" x="246.295212" y="-33.188000" />
+	</BCPolygon>
+	<BCPolygon ID="207" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-60.988003" />
+		<Point index="1" x="253.704788" y="-60.988003" />
+	</BCPolygon>
+	<BCPolygon ID="193" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-88.387993" />
+		<Point index="1" x="236.876709" y="-74.687981" />
+	</BCPolygon>
+	<BCPolygon ID="192" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-88.387993" />
+		<Point index="1" x="246.295212" y="-88.387993" />
+	</BCPolygon>
+	<BCPolygon ID="191" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-74.687981" />
+		<Point index="1" x="253.704788" y="-88.387993" />
+	</BCPolygon>
+	<BCPolygon ID="190" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-60.987988" />
+		<Point index="1" x="263.123291" y="-74.687981" />
+	</BCPolygon>
+	<BCPolygon ID="188" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="194" EnclosureID="3" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-74.687981" />
+		<Point index="1" x="246.295212" y="-60.987988" />
+	</BCPolygon>
+	<BCPolygon ID="185" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-88.787987" />
+		<Point index="1" x="253.704788" y="-88.787987" />
+	</BCPolygon>
+	<BCPolygon ID="171" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-116.187981" />
+		<Point index="1" x="236.876709" y="-102.487968" />
+	</BCPolygon>
+	<BCPolygon ID="170" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-116.187981" />
+		<Point index="1" x="246.295212" y="-116.187981" />
+	</BCPolygon>
+	<BCPolygon ID="169" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-102.487968" />
+		<Point index="1" x="253.704788" y="-116.187981" />
+	</BCPolygon>
+	<BCPolygon ID="168" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-88.787971" />
+		<Point index="1" x="263.123291" y="-102.487968" />
+	</BCPolygon>
+	<BCPolygon ID="166" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="172" EnclosureID="4" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-102.487968" />
+		<Point index="1" x="246.295212" y="-88.787971" />
+	</BCPolygon>
+	<BCPolygon ID="163" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-116.587975" />
+		<Point index="1" x="253.704788" y="-116.587975" />
+	</BCPolygon>
+	<BCPolygon ID="149" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-143.987976" />
+		<Point index="1" x="236.876709" y="-130.287964" />
+	</BCPolygon>
+	<BCPolygon ID="148" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-143.987976" />
+		<Point index="1" x="246.295212" y="-143.987976" />
+	</BCPolygon>
+	<BCPolygon ID="147" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-130.287964" />
+		<Point index="1" x="253.704788" y="-143.987976" />
+	</BCPolygon>
+	<BCPolygon ID="146" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-116.587959" />
+		<Point index="1" x="263.123291" y="-130.287964" />
+	</BCPolygon>
+	<BCPolygon ID="144" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="150" EnclosureID="5" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-130.287964" />
+		<Point index="1" x="246.295212" y="-116.587959" />
+	</BCPolygon>
+	<BCPolygon ID="141" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-144.387970" />
+		<Point index="1" x="253.704788" y="-144.387970" />
+	</BCPolygon>
+	<BCPolygon ID="127" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-171.787964" />
+		<Point index="1" x="236.876709" y="-158.087952" />
+	</BCPolygon>
+	<BCPolygon ID="126" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-171.787964" />
+		<Point index="1" x="246.295212" y="-171.787964" />
+	</BCPolygon>
+	<BCPolygon ID="125" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-158.087952" />
+		<Point index="1" x="253.704788" y="-171.787964" />
+	</BCPolygon>
+	<BCPolygon ID="124" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-144.387955" />
+		<Point index="1" x="263.123291" y="-158.087952" />
+	</BCPolygon>
+	<BCPolygon ID="122" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="128" EnclosureID="6" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-158.087952" />
+		<Point index="1" x="246.295212" y="-144.387955" />
+	</BCPolygon>
+	<BCPolygon ID="119" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-172.187958" />
+		<Point index="1" x="253.704788" y="-172.187958" />
+	</BCPolygon>
+	<BCPolygon ID="105" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-199.587952" />
+		<Point index="1" x="236.876709" y="-185.887939" />
+	</BCPolygon>
+	<BCPolygon ID="104" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-199.587952" />
+		<Point index="1" x="246.295212" y="-199.587952" />
+	</BCPolygon>
+	<BCPolygon ID="103" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-185.887939" />
+		<Point index="1" x="253.704788" y="-199.587952" />
+	</BCPolygon>
+	<BCPolygon ID="102" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-172.187943" />
+		<Point index="1" x="263.123291" y="-185.887939" />
+	</BCPolygon>
+	<BCPolygon ID="100" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="106" EnclosureID="7" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-185.887939" />
+		<Point index="1" x="246.295212" y="-172.187943" />
+	</BCPolygon>
+	<BCPolygon ID="97" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-199.987946" />
+		<Point index="1" x="253.704788" y="-199.987946" />
+	</BCPolygon>
+	<BCPolygon ID="83" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-227.387939" />
+		<Point index="1" x="236.876709" y="-213.687927" />
+	</BCPolygon>
+	<BCPolygon ID="82" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-227.387939" />
+		<Point index="1" x="246.295212" y="-227.387939" />
+	</BCPolygon>
+	<BCPolygon ID="81" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-213.687927" />
+		<Point index="1" x="253.704788" y="-227.387939" />
+	</BCPolygon>
+	<BCPolygon ID="80" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-199.987930" />
+		<Point index="1" x="263.123291" y="-213.687927" />
+	</BCPolygon>
+	<BCPolygon ID="78" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="84" EnclosureID="8" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-213.687927" />
+		<Point index="1" x="246.295212" y="-199.987930" />
+	</BCPolygon>
+	<BCPolygon ID="75" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-227.787933" />
+		<Point index="1" x="253.704788" y="-227.787933" />
+	</BCPolygon>
+	<BCPolygon ID="61" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-255.187927" />
+		<Point index="1" x="236.876709" y="-241.487915" />
+	</BCPolygon>
+	<BCPolygon ID="60" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-255.187927" />
+		<Point index="1" x="246.295212" y="-255.187927" />
+	</BCPolygon>
+	<BCPolygon ID="59" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-241.487915" />
+		<Point index="1" x="253.704788" y="-255.187927" />
+	</BCPolygon>
+	<BCPolygon ID="58" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-227.787918" />
+		<Point index="1" x="263.123291" y="-241.487915" />
+	</BCPolygon>
+	<BCPolygon ID="56" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="62" EnclosureID="9" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-241.487915" />
+		<Point index="1" x="246.295212" y="-227.787918" />
+	</BCPolygon>
+	<BCPolygon ID="53" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-255.587921" />
+		<Point index="1" x="253.704788" y="-255.587921" />
+	</BCPolygon>
+	<BCPolygon ID="30" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-282.987915" />
+		<Point index="1" x="236.876709" y="-269.287903" />
+	</BCPolygon>
+	<BCPolygon ID="29" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-282.987915" />
+		<Point index="1" x="246.295212" y="-282.987915" />
+	</BCPolygon>
+	<BCPolygon ID="28" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-269.287903" />
+		<Point index="1" x="253.704788" y="-282.987915" />
+	</BCPolygon>
+	<BCPolygon ID="27" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-255.587906" />
+		<Point index="1" x="263.123291" y="-269.287903" />
+	</BCPolygon>
+	<BCPolygon ID="18" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="31" EnclosureID="10" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-269.287903" />
+		<Point index="1" x="246.295212" y="-255.587906" />
+	</BCPolygon>
+	<BCPolygon ID="47" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-283.387909" />
+		<Point index="1" x="253.704788" y="-283.387909" />
+	</BCPolygon>
+	<BCPolygon ID="19" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-310.787903" />
+		<Point index="1" x="236.876709" y="-297.087891" />
+	</BCPolygon>
+	<BCPolygon ID="20" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-310.787903" />
+		<Point index="1" x="246.295212" y="-310.787903" />
+	</BCPolygon>
+	<BCPolygon ID="21" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.123291" y="-297.087891" />
+		<Point index="1" x="253.704788" y="-310.787903" />
+	</BCPolygon>
+	<BCPolygon ID="22" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-283.387909" />
+		<Point index="1" x="263.123291" y="-297.087891" />
+	</BCPolygon>
+	<BCPolygon ID="24" BC="Frame Cavity Surface" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="17" EnclosureID="11" UFactorTag="" Emissivity="0.370000" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.876709" y="-297.087891" />
+		<Point index="1" x="246.295212" y="-283.387909" />
+	</BCPolygon>
+	<BCPolygon ID="101" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="10" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-297.087891" />
+		<Point index="1" x="246.190002" y="-310.987885" />
+	</BCPolygon>
+	<BCPolygon ID="112" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="9" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-310.987885" />
+		<Point index="1" x="246.295212" y="-311.187897" />
+	</BCPolygon>
+	<BCPolygon ID="113" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="9" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-311.187897" />
+		<Point index="1" x="253.704788" y="-311.187897" />
+	</BCPolygon>
+	<BCPolygon ID="114" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="9" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-311.187897" />
+		<Point index="1" x="253.809998" y="-310.987885" />
+	</BCPolygon>
+	<BCPolygon ID="115" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="8" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-310.987885" />
+		<Point index="1" x="263.365997" y="-297.087891" />
+	</BCPolygon>
+	<BCPolygon ID="116" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="2" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-297.087891" />
+		<Point index="1" x="253.809998" y="-283.187897" />
+	</BCPolygon>
+	<BCPolygon ID="117" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="35" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-283.187897" />
+		<Point index="1" x="263.365997" y="-269.287903" />
+	</BCPolygon>
+	<BCPolygon ID="118" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="32" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-269.287903" />
+		<Point index="1" x="253.809998" y="-255.387909" />
+	</BCPolygon>
+	<BCPolygon ID="120" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="66" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-255.387909" />
+		<Point index="1" x="263.365997" y="-241.487915" />
+	</BCPolygon>
+	<BCPolygon ID="121" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="63" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-241.487915" />
+		<Point index="1" x="253.809998" y="-227.587921" />
+	</BCPolygon>
+	<BCPolygon ID="123" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="88" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-227.587921" />
+		<Point index="1" x="263.365997" y="-213.687927" />
+	</BCPolygon>
+	<BCPolygon ID="134" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="85" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-213.687927" />
+		<Point index="1" x="253.809998" y="-199.787933" />
+	</BCPolygon>
+	<BCPolygon ID="135" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="110" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-199.787933" />
+		<Point index="1" x="263.365997" y="-185.887939" />
+	</BCPolygon>
+	<BCPolygon ID="136" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="107" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-185.887939" />
+		<Point index="1" x="253.809998" y="-171.987946" />
+	</BCPolygon>
+	<BCPolygon ID="137" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="132" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-171.987946" />
+		<Point index="1" x="263.365997" y="-158.087952" />
+	</BCPolygon>
+	<BCPolygon ID="138" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="129" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-158.087952" />
+		<Point index="1" x="253.809998" y="-144.187958" />
+	</BCPolygon>
+	<BCPolygon ID="139" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="154" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-144.187958" />
+		<Point index="1" x="263.365997" y="-130.287964" />
+	</BCPolygon>
+	<BCPolygon ID="140" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="151" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-130.287964" />
+		<Point index="1" x="253.809998" y="-116.387962" />
+	</BCPolygon>
+	<BCPolygon ID="142" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="176" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-116.387962" />
+		<Point index="1" x="263.365997" y="-102.487968" />
+	</BCPolygon>
+	<BCPolygon ID="143" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="173" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-102.487968" />
+		<Point index="1" x="253.809998" y="-88.587975" />
+	</BCPolygon>
+	<BCPolygon ID="145" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="198" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-88.587975" />
+		<Point index="1" x="263.365997" y="-74.687981" />
+	</BCPolygon>
+	<BCPolygon ID="156" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="195" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-74.687981" />
+		<Point index="1" x="253.809998" y="-60.787991" />
+	</BCPolygon>
+	<BCPolygon ID="157" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="220" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-60.787991" />
+		<Point index="1" x="263.365997" y="-46.887997" />
+	</BCPolygon>
+	<BCPolygon ID="158" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="217" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-46.887997" />
+		<Point index="1" x="253.809998" y="-32.988003" />
+	</BCPolygon>
+	<BCPolygon ID="159" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="242" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-32.988003" />
+		<Point index="1" x="263.365997" y="-19.088009" />
+	</BCPolygon>
+	<BCPolygon ID="160" BC="ShadeInE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="239" EnclosureID="0" UFactorTag="Edge" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="263.365997" y="-19.088009" />
+		<Point index="1" x="253.809998" y="-5.188015" />
+	</BCPolygon>
+	<BCPolygon ID="161" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="240" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.809998" y="-5.188015" />
+		<Point index="1" x="253.704788" y="-4.988003" />
+	</BCPolygon>
+	<BCPolygon ID="162" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="240" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="253.704788" y="-4.988003" />
+		<Point index="1" x="246.295212" y="-4.988003" />
+	</BCPolygon>
+	<BCPolygon ID="164" BC="Adiabatic" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="240" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.295212" y="-4.988003" />
+		<Point index="1" x="246.190002" y="-5.188015" />
+	</BCPolygon>
+	<BCPolygon ID="165" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="241" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-5.188015" />
+		<Point index="1" x="236.634003" y="-19.088009" />
+	</BCPolygon>
+	<BCPolygon ID="167" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="243" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-19.088009" />
+		<Point index="1" x="246.190002" y="-32.988003" />
+	</BCPolygon>
+	<BCPolygon ID="178" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="219" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-32.988003" />
+		<Point index="1" x="236.634003" y="-46.887997" />
+	</BCPolygon>
+	<BCPolygon ID="179" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="221" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-46.887997" />
+		<Point index="1" x="246.190002" y="-60.787991" />
+	</BCPolygon>
+	<BCPolygon ID="180" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="197" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-60.787991" />
+		<Point index="1" x="236.634003" y="-74.687981" />
+	</BCPolygon>
+	<BCPolygon ID="181" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="199" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-74.687981" />
+		<Point index="1" x="246.190002" y="-88.587975" />
+	</BCPolygon>
+	<BCPolygon ID="182" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="175" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-88.587975" />
+		<Point index="1" x="236.634003" y="-102.487968" />
+	</BCPolygon>
+	<BCPolygon ID="183" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="177" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-102.487968" />
+		<Point index="1" x="246.190002" y="-116.387962" />
+	</BCPolygon>
+	<BCPolygon ID="184" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="153" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-116.387962" />
+		<Point index="1" x="236.634003" y="-130.287964" />
+	</BCPolygon>
+	<BCPolygon ID="186" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="155" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-130.287964" />
+		<Point index="1" x="246.190002" y="-144.187958" />
+	</BCPolygon>
+	<BCPolygon ID="187" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="131" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="246.190002" y="-144.187958" />
+		<Point index="1" x="236.634003" y="-158.087952" />
+	</BCPolygon>
+	<BCPolygon ID="189" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="133" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="236.634003" y="-158.087952" />
+		<Point index="1" x="246.190002" y="-171.987946" />
+	</BCPolygon>
+	<BCPolygon ID="200" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="109" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-171.987946" />
+		<Point index="1" x="236.634003" y="-185.887939" />
+	</BCPolygon>
+	<BCPolygon ID="201" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="111" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-185.887939" />
+		<Point index="1" x="246.190002" y="-199.787933" />
+	</BCPolygon>
+	<BCPolygon ID="202" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="87" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-199.787933" />
+		<Point index="1" x="236.634003" y="-213.687927" />
+	</BCPolygon>
+	<BCPolygon ID="203" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="89" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-213.687927" />
+		<Point index="1" x="246.190002" y="-227.587921" />
+	</BCPolygon>
+	<BCPolygon ID="204" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="65" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-227.587921" />
+		<Point index="1" x="236.634003" y="-241.487915" />
+	</BCPolygon>
+	<BCPolygon ID="205" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="67" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-241.487915" />
+		<Point index="1" x="246.190002" y="-255.387909" />
+	</BCPolygon>
+	<BCPolygon ID="206" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="34" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-255.387909" />
+		<Point index="1" x="236.634003" y="-269.287903" />
+	</BCPolygon>
+	<BCPolygon ID="208" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="36" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="236.634003" y="-269.287903" />
+		<Point index="1" x="246.190002" y="-283.187897" />
+	</BCPolygon>
+	<BCPolygon ID="209" BC="ShadeOutE" units="mm" MaterialName="CS11:D8_WhiteSheer.txt" PolygonID="4" EnclosureID="0" UFactorTag="" Emissivity="0.370000" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="246.190002" y="-283.187897" />
+		<Point index="1" x="236.634003" y="-297.087891" />
+	</BCPolygon>
+</Boundaries>
+</THERM-XML>

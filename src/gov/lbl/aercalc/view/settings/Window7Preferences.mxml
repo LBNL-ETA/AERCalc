@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<settings:SettingsEditor xmlns:fx="http://ns.adobe.com/mxml/2009"
+                         xmlns:s="library://ns.adobe.com/flex/spark"
+                         xmlns:settings="gov.lbl.aercalc.view.settings.*"
+                         gap="15">
+
+
+    <fx:Script>
+		<![CDATA[
+        import flash.events.EventDispatcher;
+        
+        import spark.components.Alert;
+        
+        import gov.lbl.aercalc.model.ApplicationModel;
+        import gov.lbl.aercalc.model.settings.AppSettings;
+        import gov.lbl.aercalc.util.Logger;
+
+        [Bindable]
+        public var appSettings:AppSettings
+
+
+        protected override function read(settings:AppSettings):void
+        {
+			window7DBPath.text = settings.lblWindowDBPath;
+        }
+
+        protected override function write(settings:AppSettings):void
+        {
+            settings.lblWindowDBPath = window7DBPath.text;
+        }
+
+
+        private function browseForNewW7DB():void {
+            try {
+                var newW7DBFile:File = ApplicationModel.baseStorageDir.resolvePath(ApplicationModel.WINDOW_DEFAULT_MDB_FILE_PATH);
+                newW7DBFile.browseForOpen("Select new W7 database");
+                newW7DBFile.addEventListener(Event.SELECT, onNewW7DBSelected, false, 0, true);
+                newW7DBFile.addEventListener(Event.CANCEL, onNewW7DBCancel, false, 0, true);
+            }
+            catch (error:Error){
+                Logger.error("onBrowseForNewDB() error: " + error);
+                Alert.show("Cannot browse for W7 db. See log for details. (Error: " + error + ")", "Error");
+            }
+        }
+
+
+        private function onNewW7DBSelected(event:Event):void{
+            var newW7DBFile:File = event.target as File;
+            newW7DBFile.removeEventListener(Event.SELECT, onNewW7DBSelected);
+            newW7DBFile.removeEventListener(Event.CANCEL, onNewW7DBCancel);
+
+            // Error Checks
+            if (!newW7DBFile.exists){
+                Alert.show("No file exists at " + newW7DBFile.nativePath, "File Not Found");
+                return;
+            }
+            if (newW7DBFile.extension != "mdb") {
+                Alert.show("Selected file is not a W7 database", "Incorrect File Type");
+                return;
+            }
+
+            // Update settings to make new default
+            if ( window7DBPath.text !=  newW7DBFile.nativePath){
+                window7DBPath.text = newW7DBFile.nativePath;
+                //call onChange event so settings model is updated
+                onChange();
+            }
+
+        }
+
+        private function onNewW7DBCancel(event:Event):void {
+            var newW7DBFile:File = event.target as File;
+            newW7DBFile.removeEventListener(Event.SELECT, onNewW7DBSelected);
+            newW7DBFile.removeEventListener(Event.CANCEL, onNewW7DBCancel);
+        }
+
+
+
+        ]]>
+
+	</fx:Script>
+
+
+    <s:Label text="Imports" width="100%" styleName="formSectionHeader"/>
+
+    <s:Label text="Locate the WINDOW 7 database for importing products" width="100%"/>
+
+    <s:HGroup width="100%">
+        <s:Label text="WINDOW 7 DB:" toolTip="WINDOW 7 Database" width="100"/>
+        <s:TextInput id="window7DBPath" 
+					 width="100%"
+                     editable="false"
+					 toolTip="{appSettings.lblWindowDBPath}"/>
+        <s:Button id="btnBrowseW7" label="Browse" click="browseForNewW7DB()"/>
+    </s:HGroup>
+    <s:HGroup>
+        <s:Spacer width="100"/>
+        <s:Label text="(Path is read-only and shown only for reference.)" styleName="formNote"/>
+    </s:HGroup>
+
+</settings:SettingsEditor>

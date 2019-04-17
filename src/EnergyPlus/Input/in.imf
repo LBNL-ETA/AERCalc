@@ -1,0 +1,2894 @@
+
+
+##set1 blank " "
+!- ##======================================================================
+!- ##          COMFEN ENERGY PLUS PARAMETERS FILE 
+!- ##======================================================================
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##          PROJECT : South Facade Example
+!- ##---------------------------------------------------------------------
+blank[]
+##set1 Building                            small_office
+##set1 Start_Day                           UseWeatherFile
+##set1 Run_Period                          Date
+##set1 StMon                               1
+##set1 StDay                               1
+##set1 EndMon                              12
+##set1 EndDay                              31
+##set1 location                            USA_IL_Chicago-OHare_TMY2
+##set1 Vintage                             new
+##set1 Azimuth_Bldg                        0
+##set1 Furn_Sqft                           .0465
+##set1 Roof_R                              4.4025
+##set1 Roof_Abs_Thm                        .8
+##set1 Roof_Abs_Slr                        .8
+##set1 Roof_Abs_vsb                        .8
+##set1 Wall_R                              2.958648
+##set1 Wall_Abs_Thm                        .65
+##set1 Wall_Abs_Slr                        .65
+##set1 Wall_Abs_vsb                        .65
+##set1 ExtShade_Solar_Reflectance          .5
+##set1 ExtShade_Visible_Reflectance        .5
+blank[]
+blank[]
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##          Scenario name: Single Clear
+!- ##---------------------------------------------------------------------
+blank[]
+##set1 Lights_Area                         13.454888020887152
+##set1 People                              0.96
+##set1 Equip_Area                          8.072932812532292
+##set1 ACH                                 0.3
+##set1 Azimuth_Scenario                    180
+##set1 RmWidth                             6.096
+##set1 RmDepth                             6.096
+##set1 Multiplier                          1
+##set1 wall_height                         3.048
+##set1 HVAC                                PSZ
+blank[]
+blank[]
+!- ##=============  WINDOWS =================== 
+blank[]
+!- ##  --- WINDOW ( id: 22 name: Upper clerestory)
+
+!- ##  --- Window Glazing System Construction 
+##set1 Win_22_GlzSys_Const                 GlzSys_18
+blank[]
+!- ##  --- Window Vision Area Geometry 	
+##set1 Win_22_x_hi                         5.715
+##set1 Win_22_x_lo                         0.38099999999999934
+##set1 Win_22_y                            6.096
+##set1 Win_22_z_hi                         2.6670000000000003
+##set1 Win_22_z_lo                         1.9050000000000002
+
+!- ##  --- Window Frame & Setback 
+##set1 Win_22_FW                           0.07619999999999999
+##set1 Win_22_FC                           56.424
+##set1 Win_22_FEC                          3.9
+##set1 Win_22_SB                           0.0762
+
+!- ##  --- SHADING CONTROL	
+!- ## (no shading control for this window)
+blank[]
+!- ##  --- WINDOW ( id: 23 name: Lower Left)
+
+!- ##  --- Window Glazing System Construction 
+##set1 Win_23_GlzSys_Const                 GlzSys_18
+blank[]
+!- ##  --- Window Vision Area Geometry 	
+##set1 Win_23_x_hi                         5.715
+##set1 Win_23_x_lo                         4.3434
+##set1 Win_23_y                            6.096
+##set1 Win_23_z_hi                         1.4478000000000002
+##set1 Win_23_z_lo                         0.381
+
+!- ##  --- Window Frame & Setback 
+##set1 Win_23_FW                           0.07619999999999999
+##set1 Win_23_FC                           56.424
+##set1 Win_23_FEC                          3.9
+##set1 Win_23_SB                           0.0762
+
+!- ##  --- SHADING CONTROL	
+!- ## (no shading control for this window)
+blank[]
+!- ##  --- WINDOW ( id: 24 name: Lower Middle)
+
+!- ##  --- Window Glazing System Construction 
+##set1 Win_24_GlzSys_Const                 GlzSys_18
+blank[]
+!- ##  --- Window Vision Area Geometry 	
+##set1 Win_24_x_hi                         3.7338
+##set1 Win_24_x_lo                         2.3622
+##set1 Win_24_y                            6.096
+##set1 Win_24_z_hi                         1.4478000000000002
+##set1 Win_24_z_lo                         0.381
+
+!- ##  --- Window Frame & Setback 
+##set1 Win_24_FW                           0.07619999999999999
+##set1 Win_24_FC                           56.424
+##set1 Win_24_FEC                          3.9
+##set1 Win_24_SB                           0.0762
+
+!- ##  --- SHADING CONTROL	
+!- ## (no shading control for this window)
+blank[]
+!- ##  --- WINDOW ( id: 25 name: Lower Right)
+
+!- ##  --- Window Glazing System Construction 
+##set1 Win_25_GlzSys_Const                 GlzSys_18
+blank[]
+!- ##  --- Window Vision Area Geometry 	
+##set1 Win_25_x_hi                         1.7526000000000002
+##set1 Win_25_x_lo                         0.3810000000000002
+##set1 Win_25_y                            6.096
+##set1 Win_25_z_hi                         1.4478000000000002
+##set1 Win_25_z_lo                         0.381
+
+!- ##  --- Window Frame & Setback 
+##set1 Win_25_FW                           0.07619999999999999
+##set1 Win_25_FC                           56.424
+##set1 Win_25_FEC                          3.9
+##set1 Win_25_SB                           0.0762
+
+!- ##  --- SHADING CONTROL	
+!- ## (no shading control for this window)
+
+!- ##========== EXTERIOR SHADES =============== 
+
+!- ##===========  DAYLIGHTING ================= 
+blank[]
+##set1 DYL_Flag                            Yes
+##set1 DYL_Nref                            2
+##set1 DYL_x_ref1                          3.05
+##set1 DYL_y_ref1                          3.05
+##set1 DYL_z_ref1                          .762
+##set1 DYL_x_ref2                          3.05
+##set1 DYL_y_ref2                          0.76
+##set1 DYL_z_ref2                          .762
+##set1 DYL_frac_ref1                       0
+##set1 DYL_frac_ref2                       0
+##set1 Litecontrol                         1
+##set1 DYL_frac_ref1                       0
+##set1 DYL_frac_ref2                       0
+##set1 Litecontrol                         1
+##set1 DYL_Illum_ref1                      538.195
+##set1 DYL_Illum_ref2                      538.195
+##set1 LC_MinPwr                           .1
+##set1 LC_MinLit                           .05
+##set1 LC_Nstep                            3
+##set1 LC_Prob                             1
+
+!- ##===========  GLARE CONTROL ================= 
+blank[]
+##set1 Glare_Az                            0
+##set1 Glare_Max                           22
+blank[]
+blank[]
+! Edits to convert from COMFEN2 to COMFEN 3 (EPlus 2.1) started by Robin 2/2/09
+! Mehry will have to make the more complicated edits
+! Took out sections for Zones 2-4
+
+blank[]
+
+##!====================================================================
+##!           ZONE-1
+##!====================================================================
+
+blank[]
+
+##set1 Area_Scenario      =  #[multiplier[] * #[RmWidth[] * RmDepth[]]]
+
+blank[]
+blank[]
+
+##set1 Volume_Scenario     =  #[Area_Scenario[] * wall_height[]]
+
+!## Zone1 Origin
+
+##set1 zone_x = 0
+##set1 zone_y = 0
+##set1 zone_z = 0
+
+
+blank[]
+
+
+
+! general.inc
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
+
+blank[]
+
+VERSION,
+    3.1.0;                   !- Version Identifier !- Build 014
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: BUILDING ===========
+
+blank[]
+
+Building,
+    Building[],                !- Building Name
+    Azimuth_Bldg[],          !- North Axis {deg}
+    Suburbs,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value {W}
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExteriorWithReflections, !- Solar Distribution
+    25;                      !- Maximum Number of Warmup Days
+
+blank[]
+
+ShadowCalculation,
+    20,
+    50000;
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP IN HOUR ===========
+
+blank[]
+
+Timestep,
+    4;                       !- Time Step in Hour
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: INSIDE CONVECTION ALGORITHM ===========
+
+blank[]
+
+SurfaceConvectionAlgorithm:Inside,
+    Detailed;                !- InsideConvectionValue
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: OUTSIDE CONVECTION ALGORITHM ===========
+
+blank[]
+
+SurfaceConvectionAlgorithm:Outside,
+    Simple;                  !- OutsideConvectionValue
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: SOLUTION ALGORITHM ===========
+
+blank[]
+
+HeatBalanceAlgorithm,
+    ConductionTransferFunction;  !- Algorithm
+
+blank[]
+
+ ZoneCapacitanceMultiplier,
+    1;                       !- Capacitance Multiplier
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: RUN CONTROL ===========
+
+blank[]
+
+SimulationControl,
+##if #[HVAC[] eqs "PurAir" ]
+    No,                     !- Do the zone sizing calculation
+    No,                     !- Do the system sizing calculation
+    No,                     !- Do the plant sizing calculation
+##else
+    Yes,                     !- Do the zone sizing calculation
+    Yes,                     !- Do the system sizing calculation
+    No,                      !- Do the plant sizing calculation
+##endif
+  ##if #[Run_Period[] eqs DesignDay]
+     Yes,                     !- Do the design day simulations
+     No;                     !- Do the weather file simulation
+  ##else
+     No,                     !- Do the design day simulations
+    Yes;                     !- Do the weather file simulation
+  ##endif
+
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: RUNPERIOD ===========
+
+blank[]
+
+##if #[Run_Period[] eqs DesignDay]                                                  
+
+RunPeriod,
+     1,          !- Begin Month
+    21,          !- Begin Day Of Month
+     1,          !- End Month
+    21,          !- End Day Of Month
+    Start_Day[], !- Day Of Week For Start Day
+    No,          !- Use WeatherFile Holidays/Special Days
+    No,          !- Use WeatherFile DaylightSavingPeriod
+    Yes,         !- Apply Weekend Holiday Rule
+    Yes,         !- Rain
+    Yes;         !- Snow
+ 
+RunPeriod,
+     7,            !- Begin Month
+    21,            !- Begin Day Of Month
+     7,            !- End Month
+    21,            !- End Day Of Month
+    Start_Day[],   !- Day Of Week For Start Day
+    No,            !- Use WeatherFile Holidays/Special Days
+    No,            !- Use WeatherFile DaylightSavingPeriod
+    Yes,
+    Yes,
+    Yes;
+
+blank[]
+
+##elseif #[Run_Period[] eqs Annual]                                              
+
+RunPeriod,
+    1,           !- Begin Month
+    1,           !- Begin Day Of Month
+    12,          !- End Month
+    31,          !- End Day Of Month
+    Start_Day[], !- Day Of Week For Start Day
+    No,          !- Use WeatherFile Holidays/Special Days
+    No,          !- Use WeatherFile DaylightSavingPeriod
+    Yes,
+    Yes,
+    Yes;
+
+blank[]
+
+##elseif #[Run_Period[] eqs OneDay]                                              
+
+RunPeriod,
+    1,           !- Begin Month
+    1,           !- Begin Day Of Month
+    1,           !- End Month
+    1,           !- End Day Of Month
+    Start_Day[], !- Day Of Week For Start Day
+    No,          !- Use WeatherFile Holidays/Special Days
+    No,          !- Use WeatherFile DaylightSavingPeriod
+    Yes,
+    Yes,
+    Yes;
+
+blank[]
+
+##elseif #[Run_Period[] eqs Date] 
+
+RunPeriod,
+    StMon[],           !- Begin Month
+    StDay[],           !- Begin Day Of Month
+    EndMon[],           !- End Month
+    EndDay[],           !- End Day Of Month
+    Start_Day[], !- Day Of Week For Start Day
+    No,          !- Use WeatherFile Holidays/Special Days
+    No,          !- Use WeatherFile DaylightSavingPeriod
+    Yes,
+    Yes,
+    Yes;
+
+##endif
+
+blank[]                                                                        
+
+RunPeriodControl:SpecialDays,
+  New Years Day,
+    1 January,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Martin Luther King Day,
+    3rd Monday in January,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Washington's Birthday,
+    3rd Monday in February,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Memorial Day,
+    Last Monday in May,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Independence Day,
+    4 July,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Labor Day,
+    1st Monday in September,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Veteran's Day,
+    11 November,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Thanksgiving Day,
+    4th Thursday in November,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  Christmas Day,
+    25 December,
+    1,
+    Holiday;
+RunPeriodControl:SpecialDays,
+  New Year's Eve,
+    31 December,
+    1,
+    Holiday;
+
+blank[]
+blank[]
+blank[]
+blank[]
+!- ##======================================================================
+!- ##          COMFEN LOCATION INFO FILE 
+!- ##======================================================================
+blank[]
+blank[]
+Site:Location,
+  CHICAGO_IL_USA Design_Conditions,     !- Location Name
+      41.78,     !- Latitude {N+ S-}
+     -87.75,     !- Longitude {W- E+}
+      -6.00,     !- Time Zone Relative to GMT {GMT+/-}
+     190.00;     !- Elevation {m}
+ 
+blank[]
+blank[]
+!- 4m depth undisturbed ground temperatures
+Site:GroundTemperature:BuildingSurface,
+     5.79,     !- January Ground Temperature {C}
+     3.71,     !- February Ground Temperature {C}
+     3.25,     !- March Ground Temperature {C}
+     3.88,     !- April Ground Temperature {C}
+     7.01,     !- May Ground Temperature {C}
+     10.37,     !- June Ground Temperature {C}
+     13.46,     !- July Ground Temperature {C}
+     15.61,     !- August Ground Temperature {C}
+     16.11,     !- September Ground Temperature {C}
+     14.89,     !- October Ground Temperature {C}
+     12.22,     !- November Ground Temperature {C}
+     8.95;     !- December Ground Temperature {C}
+blank[]
+blank[]
+ ! CHICAGO_IL_USA Annual Heating Design Conditions Wind Speed=4.9m/s Wind Dir=270
+ ! Coldest Month=JAN
+ ! CHICAGO_IL_USA Annual Heating 99.6%, MaxDB=-20.6°C
+ SizingPeriod:DesignDay, 
+  CHICAGO Ann Htg 99.6% Condns DB,     !- Name
+      -20.6,      !- Max Dry-Bulb {C}
+        0.0,      !- Daily Temp Range {C}
+      -20.6,      !- Humidity Indicating Condition at Max Dry-Bulb
+     99063.,      !- Barometric Pressure {Pa}
+        4.9,      !- Wind Speed {m/s} design conditions vs. traditional 6.71 m/s (15 mph)
+        270,      !- Wind Direction {Degrees; N=0, S=180}
+       0.00,      !- Clearness {0.0 to 1.1}
+          0,      !- Rain {0-no,1-yes}
+          0,      !- Snow on ground {0-no,1-yes}
+         21,      !- Day of Month
+          1,      !- Month
+  WinterDesignDay,!- Day Type
+          0,      !- Daylight Savings Time Indicator
+   WetBulb;
+blank[]
+blank[]
+ ! CHICAGO Annual Cooling Design Conditions Wind Speed=5.3m/s Wind Dir=230
+ ! Hottest Month=JUL
+ ! CHICAGO_IL_USA Annual Cooling (DB=>MWB) .4%, MaxDB=33.2°C MWB=23.8°C
+ SizingPeriod:DesignDay, 
+  CHICAGO Ann Clg .4% Condns DB=>MWB,     !- Name
+       33.2,      !- Max Dry-Bulb {C}
+       10.7,      !- Daily Temp Range {C}
+       23.8,      !- Humidity Indicating Condition at Max Dry-Bulb
+     99063.,      !- Barometric Pressure {Pa}
+        5.3,      !- Wind Speed {m/s} design conditions vs. traditional 3.35 m/s (7mph)
+        230,      !- Wind Direction {Degrees; N=0, S=180}
+       1.00,      !- Clearness {0.0 to 1.1}
+          0,      !- Rain {0-no,1-yes}
+          0,      !- Snow on ground {0-no,1-yes}
+         21,      !- Day of Month
+          7,      !- Month
+  SummerDesignDay,!- Day Type
+          0,      !- Daylight Savings Time Indicator
+   WetBulb;
+blank[]
+! material.inc
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: Material:NoMass ===========
+
+blank[]
+
+Material:NoMass,          !- Wall Insulation
+    IN-W,                    !- Name
+    Rough,                   !- Roughness
+    Wall_R[],    !- Thermal Resistance {h-sqft-F/Btu} to {m2-K/W}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material:NoMass,          !- Roof Insulation
+    IN-R,                    !- Name
+    Rough,                   !- Roughness
+    Roof_R[],    !- Thermal Resistance {h-sqft-F/Btu} to {m2-K/W}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material:NoMass,          !- Carpet with Fibrous Pad
+    CP01,                    !- Name
+    Rough,                   !- Roughness
+    0.366,                   !- Thermal Resistance {m2-K/W} {R-2.08}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:REGULAR ===========
+
+Material,            !- Built-Up Roofing 3/8"
+    BR01,                    !- Name
+    VeryRough,               !- Roughness
+    0.009525,                !- Thickness {m}
+    0.163,                   !- Conductivity {W/m-K}
+    1121,                    !- Density {kg/m3}
+    1465,                    !- Specific Heat {J/kg-K}
+    Roof_Abs_Thm[],          !- Absorptance:Thermal
+    Roof_Abs_Slr[],          !- Absorptance:Solar
+    Roof_Abs_Vsb[];          !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Face Brick 4"
+    BK05,                    !- Name
+    VeryRough,               !- Roughness
+    0.1016,                  !- Thickness {m}
+    1.311,                   !- Conductivity {W/m-K}
+    2080,                    !- Density {kg/m3}
+    921,                     !- Specific Heat {J/kg-K}
+    Wall_Abs_Thm[],          !- Absorptance:Thermal
+    Wall_Abs_Slr[],          !- Absorptance:Solar
+    Wall_Abs_Vsb[];          !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Stone 1"
+    ST01,                    !- Name
+    MediumRough,             !- Roughness
+    0.0254,                  !- Thickness {m}
+    1.803,                   !- Conductivity {W/m-K}
+    2243,                    !- Density {kg/m3}
+    837,                     !- Specific Heat {J/kg-K}
+    Wall_Abs_Thm[],          !- Absorptance:Thermal
+    Wall_Abs_Slr[],          !- Absorptance:Solar
+    Wall_Abs_Vsb[];          !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Acoustic Tile 1/2"
+    AC02,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.057,                   !- Conductivity {W/m-K}
+    288,                     !- Density {kg/m3}
+    1340,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Gypsum 5/8"
+    GP02,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.160,                   !- Conductivity {W/m-K}
+    801,                     !- Density {kg/m3}
+    837,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,         !- Concrete 6" Heavy Weight Dried Aggregate 140lbs
+    CC04,                 !- Name
+    MediumRough,          !- Roughness
+    0.1524,               !- Thickness {m}
+    1.311,                !- Conductivity {W/m-K}
+    2240,                 !- Density {kg/m3}
+    838,                  !- Specific Heat {J/kg-K}
+    0.90,                 !- Absorptance:Thermal
+    0.75,                 !- Absorptance:Solar
+    0.75;                 !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Concrete 6" Heavy Weight Undried Aggregate 140lb
+    CC15,                    !- Name
+    MediumRough,             !- Roughness
+    0.1524,                  !- Thickness {m}
+    1.803,                   !- Conductivity {W/m-K}
+    2240,                    !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Concrete 4" Light Weight 80lb
+    CC24,                    !- Name
+    MediumRough,             !- Roughness
+    0.1016,                  !- Thickness {m}
+    0.361,                   !- Conductivity {W/m-K}
+    1280,                    !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Concrete Block 8" Medium Weight Hollow
+    CB31,                    !- Name
+    MediumRough,             !- Roughness
+    0.2032,                  !- Thickness {m}
+    0.671,                   !- Conductivity {W/m-K}
+    848,                     !- Density {kg/m3}
+    838,                     !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- plywood 1/2"
+    PW03,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- plywood 5/8"
+    PW04,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0159,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- plywood 3/4"
+    PW05,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0191,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- plywood 1"
+    PW06,                    !- Name
+    MediumSmooth,            !- Roughness
+    0.0254,                  !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    544,                     !- Density {kg/m3}
+    1215,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,
+    MediumFurniture,         !- Name
+    MediumSmooth,            !- Roughness
+    0.57,                    !- Thickness {m}
+    0.115,                   !- Conductivity {W/m-K}
+    513,                     !- Density {kg/m3}
+    1381,                    !- Specific Heat {J/kg-K}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+
+blank[]
+
+Material,            !- Soil 2'
+    SOIL,                    !- Name
+    Rough,                   !- Roughness
+    0.6096,                  !- Thickness {m}
+    1.731,                   !- Conductivity {W/m-K}
+    1842,                    !- Density {kg/m3}
+    1089,                    !- Specific Heat {J/kg-K} {DOE-2,0.1=419}
+    0.90,                    !- Absorptance:Thermal
+    0.75,                    !- Absorptance:Solar
+    0.75;                    !- Absorptance:Visible
+blank[]
+blank[]
+
+!-   ===========  ALL OBJECTS IN CLASS: MATERIAL:AIR ===========
+blank[]
+
+Material:AirGap,                !- Air Layer Vertical 3/4-4"
+    AL21,                    !- Name
+    0.157;                   !- Thermal Resistance {m2-K/W} {R-0.89}
+
+Material:AirGap,                !- Air Layer Horizontal Roof 4"+
+    AL33,                    !- Name
+    0.162;                   !- Thermal Resistance {m2-K/W} {R-0.92}
+
+blank[]
+blank[]
+
+
+
+
+!-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
+
+blank[]
+
+!Construction,
+!    WALL-1,                  !- Name
+!    BK05,                    !- Outside Layer
+!    PW06,                    !- Layer #2
+!    IN-W,                    !- Layer #3
+!    GP02;                    !- Layer #5
+
+blank[]
+
+ Construction,
+     ROOF-1,                  !- Name
+     BR01,                    !- Outside Layer
+     CC24,                    !- Layer #2
+     IN-R,                    !- Layer #3
+     AL33,                    !- Layer #4
+     AC02;                    !- Layer #5
+
+blank[]
+
+ Construction,
+     ExtWall_Const,           !- Name
+     ST01,                    !- Outside Layer
+     IN-W,                    !- Layer #2
+     AL21,                    !- Layer #3
+     GP02;                    !- Layer #4
+
+blank[]
+
+Construction,
+    FLOOR-1,                 !- Name
+    CC24,                    !- Layer #1
+    CP01;                    !- Layer #2
+
+blank[]
+
+
+Construction,
+    CEILING-1,               !- Name
+    CP01,                    !- Layer #1
+    CC24;                    !- Layer #2
+
+blank[]
+
+Construction,
+    SLAB-1,                  !- Name
+    SOIL,                    !- Outside Layer
+    CC15;                    !- Layer #2
+
+blank[]
+
+Construction,
+    INTWALL-1,               !- Name
+    GP02,                    !- Outside Layer
+    AL21,                    !- Layer #2
+    GP02;                    !- Layer #3
+
+blank[]
+
+Construction,
+    Medium Furniture,        !- Name
+    MediumFurniture;         !- Outside Layer
+
+blank[]
+
+
+
+blank[]
+blank[]
+!- ##======================================================================
+!- ##     COMFEN WINDOW MATERIAL CONSTRUCTION FILE (WindowMatConst.inc) 
+!- ##======================================================================
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Glass Layers
+!- ##---------------------------------------------------------------------
+blank[]
+WindowMaterial:Glazing,
+Glass_102_Layer,                             !- Layer name : CLEAR_3.DAT
+Spectral,                                    !- Optical Data Type
+Glass_102_Layer_SpecDat,                     !- Spectral Data name
+0.003048,                                    !- Thickness
+,                                            !- Solar transmittance at normal incidence
+,                                            !- Solar reflectance at normal incidence: front side
+,                                            !- Solar reflectance at normal incidence: back side
+,                                            !- Visible transmittance at normal incidence
+,                                            !- Visible reflectance at normal incidence: front side
+,                                            !- Visible reflectance at normal incidence: back side
+0,                                           !- IR transmittance at normal incidence
+0.839999973773956,                           !- IR hemispherical emissivity: front side
+0.839999973773956,                           !- IR hemispherical emissivity: back side
+1;                                           !- Conductivity (W/m-K)
+blank[]
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Gap Layers
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Mixed Gas Layers
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Glazing System Construction 
+!- ##---------------------------------------------------------------------
+blank[]
+CONSTRUCTION,
+GlzSys_18,                                   !- Glazing System name: Single Clear 3mm
+Glass_102_Layer;                             !- glass name : CLEAR_3.DAT
+blank[]
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Shade  
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Blind  
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Exterior Screen  
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Switchable Glazings   
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window ShadingControl  
+!- ##---------------------------------------------------------------------
+blank[]
+blank[]
+!- ##---------------------------------------------------------------------
+!- ##         Window Spectral Data   
+!- ##---------------------------------------------------------------------
+blank[]
+MaterialProperty:GlazingSpectralData,
+Glass_102_Layer_SpecDat,                     !- Spectral Data Name
+0.300000011920929,0.0020000000949949,0.0469999983906746,0.0480000004172325,
+0.305000007152557,0.00300000002607703,0.0469999983906746,0.0480000004172325,
+0.310000002384186,0.00899999961256981,0.0469999983906746,0.0480000004172325,
+0.314999997615814,0.0350000001490116,0.0469999983906746,0.0480000004172325,
+0.319999992847443,0.100000001490116,0.0469999983906746,0.0480000004172325,
+0.324999988079071,0.217999994754791,0.0489999987185001,0.0500000007450581,
+0.330000013113022,0.356000006198883,0.0529999993741512,0.0540000014007092,
+0.33500000834465,0.497999995946884,0.0599999986588955,0.0610000006854534,
+0.340000003576279,0.61599999666214,0.0670000016689301,0.0670000016689301,
+0.344999998807907,0.708999991416931,0.0729999989271164,0.0740000009536743,
+0.349999994039536,0.773999989032745,0.0780000016093254,0.0790000036358833,
+0.354999989271164,0.818000018596649,0.0820000022649765,0.0820000022649765,
+0.360000014305115,0.847000002861023,0.0839999988675117,0.0839999988675117,
+0.365000009536743,0.862999975681305,0.0850000008940697,0.0850000008940697,
+0.370000004768372,0.869000017642975,0.0850000008940697,0.0860000029206276,
+0.375,0.861000001430511,0.0850000008940697,0.0850000008940697,
+0.379999995231628,0.856000006198883,0.0839999988675117,0.0839999988675117,
+0.384999990463257,0.86599999666214,0.0850000008940697,0.0850000008940697,
+0.389999985694885,0.880999982357025,0.0860000029206276,0.0860000029206276,
+0.395000010728836,0.888999998569489,0.0860000029206276,0.0860000029206276,
+0.400000005960464,0.89300000667572,0.0860000029206276,0.0860000029206276,
+0.409999996423721,0.89300000667572,0.0860000029206276,0.0860000029206276,
+0.419999986886978,0.892000019550323,0.0860000029206276,0.0860000029206276,
+0.430000007152557,0.892000019550323,0.0850000008940697,0.0850000008940697,
+0.439999997615814,0.892000019550323,0.0850000008940697,0.0850000008940697,
+0.449999988079071,0.896000027656555,0.0850000008940697,0.0850000008940697,
+0.46000000834465,0.899999976158142,0.0850000008940697,0.0850000008940697,
+0.469999998807907,0.90200001001358,0.0839999988675117,0.0839999988675117,
+0.479999989271164,0.902999997138977,0.0839999988675117,0.0839999988675117,
+0.490000009536743,0.903999984264374,0.0850000008940697,0.0850000008940697,
+0.5,0.904999971389771,0.0839999988675117,0.0839999988675117,
+0.509999990463257,0.904999971389771,0.0839999988675117,0.0839999988675117,
+0.519999980926514,0.904999971389771,0.0839999988675117,0.0839999988675117,
+0.529999971389771,0.903999984264374,0.0839999988675117,0.0839999988675117,
+0.540000021457672,0.903999984264374,0.0829999968409538,0.0829999968409538,
+0.550000011920929,0.902999997138977,0.0829999968409538,0.0829999968409538,
+0.560000002384186,0.90200001001358,0.0829999968409538,0.0829999968409538,
+0.569999992847443,0.899999976158142,0.0820000022649765,0.0820000022649765,
+0.579999983310699,0.898000001907349,0.0820000022649765,0.0820000022649765,
+0.589999973773956,0.896000027656555,0.0810000002384186,0.0810000002384186,
+0.600000023841858,0.89300000667572,0.0810000002384186,0.0810000002384186,
+0.610000014305115,0.889999985694885,0.0810000002384186,0.0810000002384186,
+0.620000004768372,0.885999977588654,0.0799999982118607,0.0799999982118607,
+0.629999995231628,0.883000016212463,0.0799999982118607,0.0799999982118607,
+0.639999985694885,0.879000008106232,0.0790000036358833,0.0790000036358833,
+0.649999976158142,0.875,0.0790000036358833,0.0790000036358833,
+0.660000026226044,0.871999979019165,0.0790000036358833,0.0790000036358833,
+0.670000016689301,0.867999970912933,0.0780000016093254,0.0780000016093254,
+0.680000007152557,0.862999975681305,0.0780000016093254,0.0780000016093254,
+0.689999997615814,0.859000027179718,0.0769999995827675,0.0769999995827675,
+0.699999988079071,0.853999972343445,0.0759999975562096,0.0769999995827675,
+0.709999978542328,0.850000023841858,0.0759999975562096,0.0759999975562096,
+0.720000028610229,0.845000028610229,0.0750000029802322,0.0759999975562096,
+0.730000019073486,0.839999973773956,0.0750000029802322,0.0750000029802322,
+0.740000009536743,0.834999978542328,0.0750000029802322,0.0750000029802322,
+0.75,0.830999970436096,0.0740000009536743,0.0740000009536743,
+0.759999990463257,0.825999975204468,0.0740000009536743,0.0740000009536743,
+0.769999980926514,0.820999979972839,0.0740000009536743,0.0740000009536743,
+0.779999971389771,0.815999984741211,0.0729999989271164,0.0729999989271164,
+0.790000021457672,0.811999976634979,0.0729999989271164,0.0729999989271164,
+0.800000011920929,0.808000028133392,0.0719999969005585,0.0719999969005585,
+0.810000002384186,0.802999973297119,0.0719999969005585,0.0719999969005585,
+0.819999992847443,0.800000011920929,0.0719999969005585,0.0719999969005585,
+0.829999983310699,0.796000003814697,0.0710000023245811,0.0710000023245811,
+0.839999973773956,0.792999982833862,0.0700000002980232,0.0710000023245811,
+0.850000023841858,0.787999987602234,0.0700000002980232,0.0710000023245811,
+0.860000014305115,0.78600001335144,0.0700000002980232,0.0700000002980232,
+0.870000004768372,0.782000005245209,0.0740000009536743,0.0740000009536743,
+0.879999995231628,0.779999971389771,0.0719999969005585,0.0719999969005585,
+0.889999985694885,0.77700001001358,0.0729999989271164,0.0740000009536743,
+0.899999976158142,0.776000022888184,0.0719999969005585,0.0719999969005585,
+0.910000026226044,0.773000001907349,0.0719999969005585,0.0719999969005585,
+0.920000016689301,0.771000027656555,0.0710000023245811,0.0710000023245811,
+0.930000007152557,0.769999980926514,0.0700000002980232,0.0700000002980232,
+0.939999997615814,0.76800000667572,0.0689999982714653,0.0689999982714653,
+0.949999988079071,0.765999972820282,0.068000003695488,0.068000003695488,
+0.959999978542328,0.765999972820282,0.0670000016689301,0.068000003695488,
+0.970000028610229,0.763999998569489,0.068000003695488,0.068000003695488,
+0.980000019073486,0.763000011444092,0.068000003695488,0.068000003695488,
+0.990000009536743,0.762000024318695,0.0670000016689301,0.0670000016689301,
+1,0.762000024318695,0.0659999996423721,0.0670000016689301,
+1.04999995231628,0.759999990463257,0.0659999996423721,0.0659999996423721,
+1.10000002384186,0.75900000333786,0.0659999996423721,0.0659999996423721,
+1.14999997615814,0.760999977588654,0.0659999996423721,0.0659999996423721,
+1.20000004768372,0.764999985694885,0.0659999996423721,0.0659999996423721,
+1.25,0.769999980926514,0.0649999976158142,0.0649999976158142,
+1.29999995231628,0.77700001001358,0.0670000016689301,0.0670000016689301,
+1.35000002384186,0.78600001335144,0.0659999996423721,0.0670000016689301,
+1.39999997615814,0.795000016689301,0.0670000016689301,0.068000003695488,
+1.45000004768372,0.808000028133392,0.0670000016689301,0.0670000016689301,
+1.5,0.819000005722046,0.0689999982714653,0.0689999982714653,
+1.54999995231628,0.828999996185303,0.0689999982714653,0.0689999982714653,
+1.60000002384186,0.836000025272369,0.0700000002980232,0.0700000002980232,
+1.64999997615814,0.839999973773956,0.0700000002980232,0.0700000002980232,
+1.70000004768372,0.842000007629395,0.0689999982714653,0.0700000002980232,
+1.75,0.842000007629395,0.0689999982714653,0.0700000002980232,
+1.79999995231628,0.841000020503998,0.0700000002980232,0.0700000002980232,
+1.85000002384186,0.839999973773956,0.0689999982714653,0.0689999982714653,
+1.89999997615814,0.83899998664856,0.068000003695488,0.068000003695488,
+1.95000004768372,0.83899998664856,0.0710000023245811,0.0710000023245811,
+2,0.83899998664856,0.0689999982714653,0.0689999982714653,
+2.04999995231628,0.839999973773956,0.068000003695488,0.068000003695488,
+2.09999990463257,0.841000020503998,0.068000003695488,0.068000003695488,
+2.15000009536743,0.83899998664856,0.0689999982714653,0.0689999982714653,
+2.20000004768372,0.829999983310699,0.0700000002980232,0.0700000002980232,
+2.25,0.829999983310699,0.0700000002980232,0.0700000002980232,
+2.29999995231628,0.832000017166138,0.0689999982714653,0.0689999982714653,
+2.34999990463257,0.832000017166138,0.0689999982714653,0.0700000002980232,
+2.40000009536743,0.832000017166138,0.0700000002980232,0.0700000002980232,
+2.45000004768372,0.825999975204468,0.0689999982714653,0.0689999982714653,
+2.5,0.822000026702881,0.068000003695488,0.068000003695488;
+blank[]
+blank[]! BldgGeom.inc
+!  Small Office
+
+blank[]
+!  
+!   ===========  ALL OBJECTS IN CLASS: SURFACEGEOMETRY ===========
+
+blank[]
+
+GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative;                !- Coordinate System
+
+blank[]
+
+! -----------------------   SCENARIO INFORMATION   ----------------------------
+
+blank[]
+
+
+!   ===========  ALL OBJECTS IN CLASS: ZONE ===========
+
+blank[]
+  
+ZONE,
+ COMFENZone,          ! zone Name
+ Azimuth_Scenario[],  ! Cardinal orientation of scenario {deg}
+ zone_x[],            ! X Origin {m}
+ zone_y[],            ! Y Origin {m}
+ zone_z[],            ! Z Origin {m}
+ 1,                   ! Type (currently unused)
+ Multiplier[],        ! Multiplier
+ wall_height[],       ! zone Height {m}
+ Volume_Scenario[];       ! zone Volume {m3}
+
+blank[]
+!  
+!   ===========  ALL OBJECTS IN CLASS: SURFACE:HEATTRANSFER ===========
+
+blank[]
+  
+!   -------------------------  Exterior Wall  -------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ ExtWall,              ! Surface Name
+ WALL,                 ! Surface Type
+ ExtWall_Const,        ! Construction Name
+ COMFENZone,           ! zone Name for Inside Face Environment
+ Outdoors,             ! Outside Face Environment
+ ,               ! Outside Face Environment Object
+ SunExposed,     ! Solar Exposure
+ WindExposed,    ! Wind Exposure
+ 0.5,            ! VF to Ground
+ 4,              ! Number of Vertices
+ RmWidth[],      ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ wall_height[],  ! Z Coordinate {m}
+ RmWidth[],      ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ 0.,             ! Z Coordinate {m}
+ 0.,             ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ 0.,             ! Z Coordinate {m}
+ 0.,             ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ wall_height[];  ! Z Coordinate {m}
+
+blank[]
+  
+!   -------------------------  Floor  --------------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ Floor-COMFENZone,   ! Surface Name
+ ! U-EFFECTIVE should NOT be used in DOE-2,  ! U-EFFECTIVE Error
+ FLOOR,              ! Surface Type
+ FLOOR-1,            ! Construction Name
+ COMFENZone,         ! zone Name for Inside Face Environment
+ Surface,   ! Outside Face Environment
+ Floor-COMFENZone,   ! Outside Face Environment Object
+ NoSun,          ! Solar Exposure
+ NoWind,         ! Wind Exposure
+ 0.,             ! VF to Ground
+ 4,              ! Number of Vertices
+ RmWidth[],      ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ 0.,             ! Z Coordinate {m}
+ RmWidth[],      ! X Coordinate {m}
+ 0.,             ! Y Coordinate {m}
+ 0.,             ! Z Coordinate {m}
+ 0.,             ! X Coordinate {m}
+ 0.,             ! Y Coordinate {m}
+ 0.,             ! Z Coordinate {m}
+ 0.,             ! X Coordinate {m}
+ RmDepth[],      ! Y Coordinate {m}
+ 0.;             ! Z Coordinate {m}
+
+blank[]
+  
+!   --------------------  Left Interior Wall  ---------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ IntWall-Left,      ! Surface Name
+ WALL,              ! Surface Type
+ INTWALL-1,         ! Construction Name
+ COMFENZone,        ! zone Name for Inside Face Environment
+ Surface,  ! Outside Face Environment
+ IntWall-Left,    ! Outside Face Environment Object
+ NoSun,           ! Solar Exposure
+ NoWind,          ! Wind Exposure
+ 0.,              ! VF to Ground
+ 4,               ! Number of Vertices
+ RmWidth[],       ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ wall_height[];   ! Z Coordinate {m}
+
+blank[]
+  
+!   --------------------  Back Interior Wall  ---------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ IntWall-Back,      ! Surface Name
+ WALL,              ! Surface Type
+ INTWALL-1,         ! Construction Name
+ COMFENZone,        ! zone Name for Inside Face Environment
+ Surface,  ! Outside Face Environment
+ IntWall-Back,    ! Outside Face Environment Object
+ NoSun,           ! Solar Exposure
+ NoWind,          ! Wind Exposure
+ 0.,              ! VF to Ground
+ 4,               ! Number of Vertices
+ 0.,              ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ 0.,              ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[];   ! Z Coordinate {m}
+
+blank[]
+  
+!   --------------------  Right Interior Wall  -------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ IntWall-Right,              ! Surface Name
+ WALL,                       ! Surface Type
+ INTWALL-1,                  ! Construction Name
+ COMFENZone,                 ! zone Name for Inside Face Environment
+ Surface,           ! Outside Face Environment
+ IntWall-Right,   ! Outside Face Environment Object
+ NoSun,           ! Solar Exposure
+ NoWind,          ! Wind Exposure
+ 0.,              ! VF to Ground
+ 4,               ! Number of Vertices
+ 0.,              ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ 0.,              ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ 0.,              ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ 0.,              ! Z Coordinate {m}
+ 0.,              ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[];   ! Z Coordinate {m}
+
+blank[]
+  
+!   -------------------------  Ceiling  -------------------------------
+
+blank[]
+
+BuildingSurface:Detailed,
+ Ceiling-COMFENZone,  ! Surface Name
+ CEILING,             ! Surface Type
+ INTWALL-1,           ! Construction Name
+ COMFENZone,          ! zone Name for Inside Face Environment
+ Surface,    ! Outside Face Environment
+ Ceiling-COMFENZone,  ! Outside Face Environment Object
+ NoSun,           ! Solar Exposure
+ NoWind,          ! Wind Exposure
+ 0.,              ! VF to Ground
+ 4,               ! Number of Vertices
+ 0.,              ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ 0.,              ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ 0.,              ! Y Coordinate {m}
+ wall_height[],   ! Z Coordinate {m}
+ RmWidth[],       ! X Coordinate {m}
+ RmDepth[],       ! Y Coordinate {m}
+ wall_height[];   ! Z Coordinate {m}
+
+blank[]
+
+!   ===========  ALL OBJECTS IN CLASS: Daylighting
+
+blank[]
+
+##if #[DYL_Flag[] eqs "Yes" ]     
+Daylighting:Controls,
+ COMFENZone,      ! zone Name
+ DYL_Nref[],  ! Total Daylight Reference Points
+ 
+ DYL_x_ref1[],  ! RefPt1 Coordinate {m}
+ DYL_y_ref1[],  ! RefPt1 Coordinate {m}
+ DYL_z_ref1[],  ! RefPt1 Coordinate {m}
+ DYL_x_ref2[],  ! RefPt2 Coordinate {m}
+ DYL_y_ref2[],  ! RefPt2 Coordinate {m}
+ DYL_z_ref2[],  ! RefPt2 Coordinate {m}
+ 
+ DYL_frac_ref1[],  ! Fraction of zone controlled by RefPt1
+ DYL_frac_ref2[],  ! Fraction of zone controlled by RefPt2
+ 
+ DYL_Illum_ref1[],  ! Illuminance Setpoint at RefPt1 {lux}
+ DYL_Illum_ref2[],  ! Illuminance Setpoint at RefPt2 {lux}
+ 
+ Litecontrol[],  ! Lighting control type {1=continuous,2=stepped}
+ 
+ Glare_Az[],   ! Glare View Azimuth angle
+ Glare_Max[],  ! Maximum Glare Index
+ 
+ LC_MinPwr[],  ! Minimum Input Power Fraction for continuous control
+ LC_MinLit[],  ! Minimum Light Output Fraction for continuous control
+ LC_Nstep[],   ! Number of steps for stepped control
+ LC_Prob[];    ! Probability manual stepped lighting will be reset 
+ 
+##endif
+ 
+blank[]
+blank[]
+
+blank[]
+blank[]
+!- ##======================================================================
+!- ##          COMFEN WINDOW GEOMETRY FILE ( WindowGeom.inc)
+!- ##======================================================================
+blank[]
+blank[]
+!- ##   ALL OBJECTS IN CLASS: FenestrationSurface:Detailed 
+blank[]
+blank[]
+FenestrationSurface:Detailed,
+Win_22,                                      !- window name: Upper clerestory
+WINDOW,                                      !- Sub-Surface Type
+Win_22_GlzSys_Const[],                       !- Glz Sys name: Single Clear 3mm
+ExtWall,                                     !- Host Surface Name
+,                                            !- Outside Face Environment Object
+0.5,                                         !- VF to Ground
+,                                            !- Window Shading Control Name
+Win_22_Frame,                                !- Frame/Divider Name
+1,                                           !- Multiplier
+4,                                           !- Number of Vertices
+! -- Upper left corner
+Win_22_x_hi[],                               !- X Coordinate {m}
+#[Win_22_y[] - Win_22_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_22_z_hi[],                               !- Z Coordinate {m}
+! -- Lower left corner
+Win_22_x_hi[],                               !- X Coordinate {m}
+#[Win_22_y[] - Win_22_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_22_z_lo[],                               !- Z Coordinate {m}
+! -- Lower right corner
+Win_22_x_lo[],                               !- X Coordinate {m}
+#[Win_22_y[] - Win_22_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_22_z_lo[],                               !- Z Coordinate {m}
+! -- Upper right corner
+Win_22_x_lo[],                               !- X Coordinate {m}
+#[Win_22_y[] - Win_22_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_22_z_hi[];                               !- Z Coordinate {m}
+blank[]
+blank[]
+WindowProperty:FrameAndDivider,
+Win_22_Frame,                                !- User Supplied Frame/Divider Name
+Win_22_FW[],                                 !- Frame Width {m}
+0.05,                                        !- Frame Outside Projection {m}
+0.05,                                        !- Frame Inside Projection {m}
+Win_22_FC[],                                 !- Frame Conductance {W/m2-K}
+Win_22_FEC[],                                !- Ratio of Frame-Edge Glass Conductance to Center-Of-Glass Co
+0.8,                                         !- Frame Solar Absorptance
+0.8,                                         !- Frame Visible Absorptance
+0.9,                                         !- Frame Thermal Hemispherical Emissivity
+,                                            !- Divider Type
+0,                                           !- Divider Width {m}
+0,                                           !- Number of Horizontal Dividers
+0,                                           !- Number of Vertical Dividers
+0,                                           !- Divider Outside Projection {m}
+0,                                           !- Divider Inside Projection {m}
+0,                                           !- Divider Conductance {W/m2-K}
+1,                                           !- Ratio of Divider-Edge Glass Conductance to Center-Of-Glass
+0,                                           !- Divider Solar Absorptance
+0,                                           !- Divider Visible Absorptance
+0.9,                                         !- Divider Thermal Hemispherical Emissivity
+0.7,                                         !- Outside Reveal Solar Absorptance
+0.0,                                         !- Inside Sill Depth (m)
+.6,                                          !- Inside Sill Solar Absorptance
+0.0,                                         !- Inside Reveal Depth (m)
+0.5;                                         !- Inside Reveal Solar Absorptance
+blank[]
+blank[]
+FenestrationSurface:Detailed,
+Win_23,                                      !- window name: Lower Left
+WINDOW,                                      !- Sub-Surface Type
+Win_23_GlzSys_Const[],                       !- Glz Sys name: Single Clear 3mm
+ExtWall,                                     !- Host Surface Name
+,                                            !- Outside Face Environment Object
+0.5,                                         !- VF to Ground
+,                                            !- Window Shading Control Name
+Win_23_Frame,                                !- Frame/Divider Name
+1,                                           !- Multiplier
+4,                                           !- Number of Vertices
+! -- Upper left corner
+Win_23_x_hi[],                               !- X Coordinate {m}
+#[Win_23_y[] - Win_23_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_23_z_hi[],                               !- Z Coordinate {m}
+! -- Lower left corner
+Win_23_x_hi[],                               !- X Coordinate {m}
+#[Win_23_y[] - Win_23_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_23_z_lo[],                               !- Z Coordinate {m}
+! -- Lower right corner
+Win_23_x_lo[],                               !- X Coordinate {m}
+#[Win_23_y[] - Win_23_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_23_z_lo[],                               !- Z Coordinate {m}
+! -- Upper right corner
+Win_23_x_lo[],                               !- X Coordinate {m}
+#[Win_23_y[] - Win_23_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_23_z_hi[];                               !- Z Coordinate {m}
+blank[]
+blank[]
+WindowProperty:FrameAndDivider,
+Win_23_Frame,                                !- User Supplied Frame/Divider Name
+Win_23_FW[],                                 !- Frame Width {m}
+0.05,                                        !- Frame Outside Projection {m}
+0.05,                                        !- Frame Inside Projection {m}
+Win_23_FC[],                                 !- Frame Conductance {W/m2-K}
+Win_23_FEC[],                                !- Ratio of Frame-Edge Glass Conductance to Center-Of-Glass Co
+0.8,                                         !- Frame Solar Absorptance
+0.8,                                         !- Frame Visible Absorptance
+0.9,                                         !- Frame Thermal Hemispherical Emissivity
+,                                            !- Divider Type
+0,                                           !- Divider Width {m}
+0,                                           !- Number of Horizontal Dividers
+0,                                           !- Number of Vertical Dividers
+0,                                           !- Divider Outside Projection {m}
+0,                                           !- Divider Inside Projection {m}
+0,                                           !- Divider Conductance {W/m2-K}
+1,                                           !- Ratio of Divider-Edge Glass Conductance to Center-Of-Glass
+0,                                           !- Divider Solar Absorptance
+0,                                           !- Divider Visible Absorptance
+0.9,                                         !- Divider Thermal Hemispherical Emissivity
+0.7,                                         !- Outside Reveal Solar Absorptance
+0.0,                                         !- Inside Sill Depth (m)
+.6,                                          !- Inside Sill Solar Absorptance
+0.0,                                         !- Inside Reveal Depth (m)
+0.5;                                         !- Inside Reveal Solar Absorptance
+blank[]
+blank[]
+FenestrationSurface:Detailed,
+Win_24,                                      !- window name: Lower Middle
+WINDOW,                                      !- Sub-Surface Type
+Win_24_GlzSys_Const[],                       !- Glz Sys name: Single Clear 3mm
+ExtWall,                                     !- Host Surface Name
+,                                            !- Outside Face Environment Object
+0.5,                                         !- VF to Ground
+,                                            !- Window Shading Control Name
+Win_24_Frame,                                !- Frame/Divider Name
+1,                                           !- Multiplier
+4,                                           !- Number of Vertices
+! -- Upper left corner
+Win_24_x_hi[],                               !- X Coordinate {m}
+#[Win_24_y[] - Win_24_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_24_z_hi[],                               !- Z Coordinate {m}
+! -- Lower left corner
+Win_24_x_hi[],                               !- X Coordinate {m}
+#[Win_24_y[] - Win_24_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_24_z_lo[],                               !- Z Coordinate {m}
+! -- Lower right corner
+Win_24_x_lo[],                               !- X Coordinate {m}
+#[Win_24_y[] - Win_24_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_24_z_lo[],                               !- Z Coordinate {m}
+! -- Upper right corner
+Win_24_x_lo[],                               !- X Coordinate {m}
+#[Win_24_y[] - Win_24_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_24_z_hi[];                               !- Z Coordinate {m}
+blank[]
+blank[]
+WindowProperty:FrameAndDivider,
+Win_24_Frame,                                !- User Supplied Frame/Divider Name
+Win_24_FW[],                                 !- Frame Width {m}
+0.05,                                        !- Frame Outside Projection {m}
+0.05,                                        !- Frame Inside Projection {m}
+Win_24_FC[],                                 !- Frame Conductance {W/m2-K}
+Win_24_FEC[],                                !- Ratio of Frame-Edge Glass Conductance to Center-Of-Glass Co
+0.8,                                         !- Frame Solar Absorptance
+0.8,                                         !- Frame Visible Absorptance
+0.9,                                         !- Frame Thermal Hemispherical Emissivity
+,                                            !- Divider Type
+0,                                           !- Divider Width {m}
+0,                                           !- Number of Horizontal Dividers
+0,                                           !- Number of Vertical Dividers
+0,                                           !- Divider Outside Projection {m}
+0,                                           !- Divider Inside Projection {m}
+0,                                           !- Divider Conductance {W/m2-K}
+1,                                           !- Ratio of Divider-Edge Glass Conductance to Center-Of-Glass
+0,                                           !- Divider Solar Absorptance
+0,                                           !- Divider Visible Absorptance
+0.9,                                         !- Divider Thermal Hemispherical Emissivity
+0.7,                                         !- Outside Reveal Solar Absorptance
+0.0,                                         !- Inside Sill Depth (m)
+.6,                                          !- Inside Sill Solar Absorptance
+0.0,                                         !- Inside Reveal Depth (m)
+0.5;                                         !- Inside Reveal Solar Absorptance
+blank[]
+blank[]
+FenestrationSurface:Detailed,
+Win_25,                                      !- window name: Lower Right
+WINDOW,                                      !- Sub-Surface Type
+Win_25_GlzSys_Const[],                       !- Glz Sys name: Single Clear 3mm
+ExtWall,                                     !- Host Surface Name
+,                                            !- Outside Face Environment Object
+0.5,                                         !- VF to Ground
+,                                            !- Window Shading Control Name
+Win_25_Frame,                                !- Frame/Divider Name
+1,                                           !- Multiplier
+4,                                           !- Number of Vertices
+! -- Upper left corner
+Win_25_x_hi[],                               !- X Coordinate {m}
+#[Win_25_y[] - Win_25_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_25_z_hi[],                               !- Z Coordinate {m}
+! -- Lower left corner
+Win_25_x_hi[],                               !- X Coordinate {m}
+#[Win_25_y[] - Win_25_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_25_z_lo[],                               !- Z Coordinate {m}
+! -- Lower right corner
+Win_25_x_lo[],                               !- X Coordinate {m}
+#[Win_25_y[] - Win_25_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_25_z_lo[],                               !- Z Coordinate {m}
+! -- Upper right corner
+Win_25_x_lo[],                               !- X Coordinate {m}
+#[Win_25_y[] - Win_25_SB[]],                 !- Y Coordinate {m} minus setback (SB)
+Win_25_z_hi[];                               !- Z Coordinate {m}
+blank[]
+blank[]
+WindowProperty:FrameAndDivider,
+Win_25_Frame,                                !- User Supplied Frame/Divider Name
+Win_25_FW[],                                 !- Frame Width {m}
+0.05,                                        !- Frame Outside Projection {m}
+0.05,                                        !- Frame Inside Projection {m}
+Win_25_FC[],                                 !- Frame Conductance {W/m2-K}
+Win_25_FEC[],                                !- Ratio of Frame-Edge Glass Conductance to Center-Of-Glass Co
+0.8,                                         !- Frame Solar Absorptance
+0.8,                                         !- Frame Visible Absorptance
+0.9,                                         !- Frame Thermal Hemispherical Emissivity
+,                                            !- Divider Type
+0,                                           !- Divider Width {m}
+0,                                           !- Number of Horizontal Dividers
+0,                                           !- Number of Vertical Dividers
+0,                                           !- Divider Outside Projection {m}
+0,                                           !- Divider Inside Projection {m}
+0,                                           !- Divider Conductance {W/m2-K}
+1,                                           !- Ratio of Divider-Edge Glass Conductance to Center-Of-Glass
+0,                                           !- Divider Solar Absorptance
+0,                                           !- Divider Visible Absorptance
+0.9,                                         !- Divider Thermal Hemispherical Emissivity
+0.7,                                         !- Outside Reveal Solar Absorptance
+0.0,                                         !- Inside Sill Depth (m)
+.6,                                          !- Inside Sill Solar Absorptance
+0.0,                                         !- Inside Reveal Depth (m)
+0.5;                                         !- Inside Reveal Solar Absorptance
+blank[]
+blank[]
+!- ##======================================================================
+!- ##          COMFEN EXTERIOR SHADE FILE (ExtShade.inc) 
+!- ##======================================================================
+blank[]
+blank[]
+!- ## ALL OBJECTS IN CLASS: Surface:Exterior Shading 
+blank[]
+blank[]blank[]
+! Space Condition
+!  Small Office
+
+! Edits to convert from COMFEN2 to COMFEN3 (EPlus 2.1) started by Robin 2/2/09
+! Took out sections for Zones 2-4
+! Changed ZONE-NORTHActSched t ActivitySched
+! Replaced zone name of ZONE-1 to COMFENZone 
+! Changed names to Lights_Area, People_Area, Equip_Area
+! Changed Area_zone1 to FloorArea
+
+!--------------------------------------------------------
+!	SPACE CONDITIONS FOR SCENARIO
+!--------------------------------------------------------
+
+blank[]
+
+People,
+    COMFENZone People 1,     !- Name
+    COMFENZone,              ! Zone Name
+    OCC-OFC,                 ! People Schedule Name
+    People,                  ! Number of people calculation method
+    People[],                !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    ,                        !- Sensible Heat Fraction
+    ActivitySched,           !- Activity Level Schedule Name
+    ,                        !- Enable ASHRAE 55 Comfort Warnings
+    zoneaveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    Work Eff Sch,            !- Work Efficiency Schedule Name
+    Clothing Sch,            !- Clothing Insulation Schedule Name
+    Air velo Sch,            !- Air Velocity Schedule Name
+    Fanger;                  !- Thermal Comfort Model 1 Type
+
+blank[]
+   
+
+Lights,
+    COMFENZone Lights,       !- Name
+    COMFENZone,              !- Zone Name
+    LIGHT-OFC,               !- Schedule Name
+    LightingLevel,           !- Design Level Calculation Method
+    #[Area_Scenario[] * Lights_Area[]],           !- Lighting Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.,                      !- Return Air Fraction
+    0.67,                    !- Fraction Radiant
+    0.1,                     !- Fraction Visible
+    1.,                      !- Fraction Replaceable
+    GeneralLights;           !- End-Use Subcategory
+
+blank[]
+  
+  ElectricEquipment,
+    COMFENZone ElecEq,       !- Name
+    COMFENZone,              !- Zone Name
+    EQUIP-OFC,               !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    #[Area_Scenario[] * Equip_Area[]],  ! Design Level {W}
+    ,                        !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.,                      !- Fraction Latent
+    0.7,                     !- Fraction Radiant
+    0.,                      !- Fraction Lost
+    0;                       !- End-Use Subcategory
+
+blank[]
+  
+  ZoneInfiltration:DesignFlowRate,
+    COMFENZone Infil,        !- Name
+    COMFENZone,              !- Zone Name
+    INF-OFC,                 !- Schedule Name
+    Flow/Zone,               !- Design Flow Rate Calculation Method
+    #[ACH[] * #[Volume_Scenario[] / 3600]],  ! DOE2 Wind Spd Terrain Corr=0.6696504
+    ,                        !- Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour
+    1.,                      !- Constant Term Coefficient
+    0.,                      !- Temperature Term Coefficient
+    0.,                      !- Velocity Term Coefficient
+    0.;                      !- Velocity Squared Term Coefficient
+
+blank[]
+blank[]
+
+blank[]
+! Schedule.inc
+!  Small Office
+
+blank[]
+  
+ScheduleTypeLimits,
+ AnyNumber,  ! ScheduleType Name
+ ,  ! range
+ CONTINUOUS;  ! Numeric Type
+
+blank[]
+  
+  ScheduleTypeLimits,
+    On/OffHV,                  !- ScheduleType Name
+    0:1,                     !- range
+    DISCRETE;                !- Numeric Type
+
+blank[]
+  
+  ScheduleTypeLimits,
+    Control TypeHV,
+    0:4,
+    DISCRETE;
+
+blank[]
+  
+  ScheduleTypeLimits,
+    TemperatureHV,          !- ScheduleType Name
+    -60:200,                 !- range
+    CONTINUOUS;              !- Numeric Type
+
+blank[]
+  
+ScheduleTypeLimits,
+    On/Off,  ! ScheduleType Name
+    0:1,  ! range
+    DISCRETE;  ! Numeric Type
+
+blank[]
+
+  ScheduleTypeLimits,
+    Fraction,                !- ScheduleType Name
+    0:1,                     !- range
+    CONTINUOUS;              !- Numeric Type
+
+blank[]
+  
+ScheduleTypeLimits,
+ Temperature,  ! ScheduleType Name
+ -60:200,  ! range
+ CONTINUOUS;  ! Numeric Type
+
+blank[]
+  
+Schedule:Compact,
+ OCC-OFC,
+ AnyNumber,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays SummerDesignDay,
+     Until:  7:00, 0.,
+     Until:  8:00, 0.33,
+     Until: 9:00, 0.67,
+     Until: 18:00, 1.,
+     Until: 19:00, 0.5,
+     Until: 24:00, 0.,
+    For: CustomDay1 CustomDay2,
+     Until:  7:00, 0.,
+     Until:  8:00, 0.33,
+     Until: 9:00, 0.67,
+     Until: 18:00, 1.,
+     Until: 19:00, 0.5,
+     Until: 24:00, 0.,
+    For: Weekends Holidays WinterDesignDay,
+     Until:  7:00, 0.,
+     Until:  8:00, 0.07,
+     Until: 9:00, 0.13,
+     Until: 12:00, 0.2,
+     Until: 13:00, 0.1,
+     Until: 24:00, 0.;
+
+blank[]
+  
+Schedule:Compact,
+ LIGHT-OFC,
+ AnyNumber,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays SummerDesignDay,
+     Until:  7:00, 0.2,
+     Until: 19:00, 0.9,
+     Until: 24:00, 0.2,
+    For: CustomDay1 CustomDay2,
+     Until:  7:00, 0.2,
+     Until: 19:00, 0.9,
+     Until: 24:00, 0.2,
+    For: Weekends Holidays WinterDesignDay,
+     Until: 24:00, 0.2;
+
+blank[]
+  
+Schedule:Compact,
+ EQUIP-OFC,
+ AnyNumber,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays SummerDesignDay,
+     Until:  7:00, 0.17,
+     Until: 18:00, 1.,
+     Until: 24:00, 0.17,
+    For: CustomDay1 CustomDay2,
+     Until:  7:00, 0.17,
+     Until: 18:00, 1.,
+     Until: 24:00, 0.17,
+    For: Weekends Holidays WinterDesignDay,
+     Until: 24:00, 0.17;
+
+blank[]
+
+Schedule:Compact,
+ INF-OFC,
+ AnyNumber,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays SummerDesignDay,
+     Until:  6:00, 1.0,
+     Until: 20:00, 0.0,
+     Until: 24:00, 1.0,
+    For: CustomDay1 CustomDay2,
+     Until:  6:00, 1.0,
+     Until: 20:00, 0.0,
+     Until: 24:00, 1.0,
+    For: Weekends Holidays WinterDesignDay,
+     Until:  7:00, 1.0,
+     Until: 14:00, 0.0,
+     Until: 24:00, 1.0;
+
+blank[]
+  
+  
+Schedule:Compact,
+ ALWAYSON,
+ On/Off,  ! ScheduleType
+  Through: 12/31,
+    For: AllDays,
+     Until: 24:00, 1.;
+
+blank[]
+
+Schedule:Compact,
+
+! Mehry's nomenclature from COMFEN2
+! ZONE-NORTHActSched,  ! Activity Level Schedule Name
+
+ ActivitySched,        ! Activity Level Schedule Name
+ AnyNumber,            ! Schedule Type
+ Through: 12/31,       ! Schedule Through Date
+ For: AllDays,         ! Schedule Days
+ Until: 24:00,         ! Schedule Until Time
+ 115;                  ! Schedule Value {W/person}
+
+blank[]
+  
+ 
+Schedule:Compact,
+    SysAvailApplicSch,       !- Name
+    On/OffHV,                  !- ScheduleType
+    Through: 12/31,           !- Complex Field #1
+     For: AllDays,            !- Complex Field #2
+      Until: 24:00,            !- Complex Field #3
+       1.0;                     !- Complex Field #4
+
+blank[]
+
+Schedule:Compact,
+    Zone-Control-Type-Sched,  !- Name
+    Control TypeHV,  !- ScheduleType
+    Through: 12/31,
+     For: AllDays,
+      Until: 24:00, 4;
+
+blank[]
+
+Schedule:Compact,
+  Min OA Sched,  !- Name
+  Fraction,  !- ScheduleType
+  Through: 12/31,
+    For: Weekdays,
+     Until:  7:00, 0.02,
+     Until: 19:00, 1.,
+     Until: 24:00, 0.02,
+    For: WinterDesignDay SummerDesignDay,
+     Until: 24:00, 0.02,
+    For: Weekends Holidays CustomDay1 CustomDay2,
+     Until: 24:00, 0.02;
+
+blank[]
+
+!  suggested by Fred B.
+Schedule:Compact,
+ FAN-SCHED,  ! {FAN-SCHEDULE}
+ On/Off,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays,
+     Until:  7:00, 0.,
+     Until: 19:00, 1.,
+     Until: 24:00, 0.,
+    For: Weekends Holidays CustomDay1 CustomDay2,
+     Until: 24:00, 0.,
+    For: WinterDesignDay SummerDesignDay,
+     Until: 24:00, 1.;
+
+blank[]
+  
+Schedule:Compact,
+ CLG-SCHED,  ! {COOL-TEMP-SCH}
+ Temperature,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays CustomDay1 CustomDay2,
+     Until:  7:00, 40,
+     Until: 18:00, 24,
+     Until: 24:00, 40,
+    For: Weekends Holidays,
+     Until:  7:00, 40,
+     Until: 13:00, 24,
+     Until: 24:00, 32,
+    For: SummerDesignDay,
+     Until: 24:00, 24,
+    For: WinterDesignDay,
+     Until: 24:00, 40;
+
+blank[]
+  
+Schedule:Compact,
+ HTG-SCHED,  ! {HEAT-TEMP-SCH}
+ Temperature,  ! ScheduleType
+  Through: 12/31,
+    For: Weekdays,
+     Until:  7:00, 12.8,
+     Until: 18:00, 21.1,
+     Until: 24:00, 12.8,
+    For: Weekends Holidays CustomDay1 CustomDay2,
+     Until:  7:00, 12.8,
+     Until: 13:00, 21.1,
+     Until: 24:00, 12.8,
+    For: SummerDesignDay,
+     Until: 24:00, 12.8,
+    For: WinterDesignDay,
+     Until: 24:00, 21.1;
+
+blank[]
+
+!  Thermal comfort schedules
+Schedule:Compact,
+   Work Eff Sch,            !- Name
+    AnyNumber,              !- ScheduleType
+    Through: 12/31,
+     For: AllDays,
+      Until: 24:00, 0;  
+
+blank[]
+
+
+Schedule:Compact,
+   Clothing Sch,            !- Name
+    AnyNumber,              !- ScheduleType
+    Through: 12/31,
+     For: AllDays,
+      Until: 24:00, 0.9;  
+
+blank[]
+
+Schedule:Compact,
+   Air Velo Sch,            !- Name
+    AnyNumber,              !- ScheduleType
+    Through: 12/31,
+     For: AllDays,
+      Until: 24:00, 0.137;
+
+blank[]
+blank[]  
+!  System.inc
+!  Small Office
+!
+
+! Edits to convert from COMFEN2 to COMFEN3 (EPlus 2.1) started by Robin 2/2/09
+! Took out sections for Zones 2-4
+! Left in names ZONE-1 for now as it is referenced in other places
+
+
+##!=======================  PSZ SYSTEM======================================
+!
+!======== file: PerfCurves.inc ====Start========
+ CURVE:BIQUADRATIC,
+    WindACCoolCapFT,         !- Name
+    0.942587793,             !- Coeff1 Constant
+    0.009543347,             !- Coeff2 x
+    0.000683770,             !- Coeff3 x**2
+    -0.011042676,            !- Coeff4 y
+    0.000005249,             !- Coeff5 y**2
+    -0.000009720,            !- Coeff6 x*y
+    -999.0,                !- minimum value of x --12.77778
+    999.0,                !- maximum value of x --  23.88889
+    -999.0,                !- minimum value of y --23.88889
+    999.0;                !- maximum value of y -- 46.11111
+
+  CURVE:BIQUADRATIC,
+    WindACEIRFT,             !- Name
+    0.342414409,             !- Coeff1 Constant
+    0.034885008,             !- Coeff2 x
+    -0.000623700,            !- Coeff3 x**2
+    0.004977216,             !- Coeff4 y
+    0.000437951,             !- Coeff5 y**2
+    -0.000728028,            !- Coeff6 x*y
+    12.77778,                !- minimum value of x --12.77778
+    23.88889,                !- maximum value of x --  23.88889
+    23.88889,                !- minimum value of y --  23.88889
+    46.11111;                !- maximum value of y --  46.11111
+
+  CURVE:QUADRATIC,
+    WindACCoolCapFFF,        !- Name
+    0.8,                     !- Coeff1 Constant
+    0.2,                     !- Coeff2 x
+    0.0,                     !- Coeff3 x**2
+    0.5,                     !- minimum value of x
+    1.5;                     !- maximum value of x
+
+  CURVE:QUADRATIC,
+    WindACEIRFFF,            !- Name
+    1.1552,                  !- Coeff1 Constant
+    -0.1808,                 !- Coeff2 x
+    0.0256,                  !- Coeff3 x**2
+    -999.0,                     !- minimum value of x -- 0.5
+    999.0;                     !- maximum value of x -- 1.5
+
+  CURVE:QUADRATIC,
+    WindACPLFFPLR,           !- Name
+    0.75,                    !- Coeff1 Constant
+    0.25,                    !- Coeff2 x
+    0.0,                     !- Coeff3 x**2
+    -999.0,                     !- minimum value of x -- 0.0
+    999.0;                     !- maximum value of x -- 1.0
+
+blank[]
+blank[]
+
+!---- System: PSZ ---Begin---
+
+!-- ZoneThermostat-Autosize[] --Begin--: COMFENZone! Zone 1  
+  ZoneControl:Thermostat,
+    COMFENZone Thermostat,   !- Name
+    COMFENZone,              !- Zone Name
+    Zone-Control-Type-Sched, !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    COMFENZone DualSPSched;  !- Control 1 Name
+
+blank[]
+ 
+  ThermostatSetpoint:DualSetpoint,
+    COMFENZone DualSPSched,  !- Name
+    HTG-SCHED,               !- Heating Setpoint Temperature Schedule Name
+    CLG-SCHED;               !- Cooling Setpoint Temperature Schedule Name
+
+blank[]
+ 
+!-- ZoneThermostat-Autosize[] --End--: COMFENZone
+!-- DirectAirZone-Autosize[] --Begin--: COMFENZone
+ 
+  Sizing:Zone,
+    COMFENZone,              !- Zone Name
+    14.,                     !- Zone Cooling Design Supply Air Temperature {C}
+    40.,                     !- Zone Heating Design Supply Air Temperature {C}
+    0.008,                   !- Zone Cooling Design Supply Air Humidity Ratio {kg-H2O/kg-air}
+    0.008,                   !- Zone Heating Design Supply Air Humidity Ratio {kg-H2O/kg-air}
+    Flow/Person,             !- Outdoor Air Method
+    0.00944,                 !- Outdoor Air Flow per Person {m3/s}
+    0.0,                     !- Outdoor Air Flow per Zone Floor Area {m3/s-m2}
+    0.0,                     !- Outdoor Air Flow per Zone {m3/s}
+    1.3,                     !- Zone Sizing Factor
+    DesignDay,               !- Cooling Design Air Flow Method
+    0,                       !- Cooling Design Air Flow Rate {m3/s}
+    ,                        !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Cooling Minimum Air Flow {m3/s}
+    ,                        !- Cooling Minimum Air Flow Fraction
+    DesignDay,               !- Heating Design Air Flow Method
+    0,                       !- Heating Design Air Flow Rate {m3/s}
+    ,                        !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    ,                        !- Heating Maximum Air Flow {m3/s}
+    ;                        !- Heating Maximum Air Flow Fraction
+
+blank[]
+ 
+  ZoneHVAC:EquipmentConnections,
+    COMFENZone,              !- Zone Name
+    COMFENZone Equipment,    !- Zone Conditioning Equipment List Name
+    COMFENZone Inlets,       !- Zone Air Inlet Node or NodeList Name
+    ,                        !- Zone Air Exhaust Node or NodeList Name
+    COMFENZone Zone Air Node,!- Zone Air Node Name
+    COMFENZone Return Outlet;!- Zone Return Air Node Name
+
+blank[]
+ 
+  ZoneHVAC:EquipmentList,
+    COMFENZone Equipment,    !- Name
+    AirTerminal:SingleDuct:Uncontrolled,  !- Zone Equipment 1 Object Type
+    COMFENZone Direct Air,   !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Priority
+    1;                       !- Zone Equipment 1 Heating Priority
+
+blank[]
+ 
+  NodeList,
+    COMFENZone Inlets,       !- Name
+    COMFENZone Supply Inlet; !- Node 1 Name
+
+blank[]
+ 
+  AirTerminal:SingleDuct:Uncontrolled,
+    COMFENZone Direct Air,   !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    COMFENZone Supply Inlet, !- Zone Supply Air Node Name
+    autosize;                !- Maximum Air Flow Rate {m3/s}
+
+blank[]
+blank[]
+ 
+!-- DirectAirZone-Autosize[] --End--: COMFENZone
+!-- PSZAirLoop-Autosize[] --Begin--: SYS-1
+! PSZ Air Loop
+
+blank[]
+ 
+  Sizing:System,
+    SYS-1,                   !- AirLoop Name
+    Sensible,                !- Type of Load to Size On
+    autosize,                !- Design Outdoor Air Flow Rate {m3/s}
+    0.3,                     !- Minimum System Air Flow Ratio
+    7.0,                     !- Preheat Design Temperature {C}
+    0.008,                   !- Preheat Design Humidity Ratio {kg-H2O/kg-Air}
+    11.0,                    !- Precool Design Temperature {C}
+    0.008,                   !- Precool Design Humidity Ratio {kg-H2O/kg-Air}
+    12.77779,                !- Central Cooling Design Supply Air Temperature {C}
+    40.0,                    !- Central Heating Design Supply Air Temperature {C}
+    NonCoincident,           !- Sizing Option
+    No,                      !- 100% Outdoor Air in Cooling
+    No,                      !- 100% Outdoor Air in Heating
+    0.008,                   !- Central Cooling Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    0.008,                   !- Central Heating Design Supply Air Humidity Ratio {kg-H2O/kg-Air}
+    DesignDay,               !- Cooling Design Air Flow Method
+    0.0,                     !- Cooling Design Air Flow Rate {m3/s}
+    DesignDay,               !- Heating Design Air Flow Method
+    0.0;                     !- Heating Design Air Flow Rate {m3/s}
+
+blank[]
+ 
+  AirLoopHVAC,
+    SYS-1,                   !- Name
+    ,                        !- Controller List Name
+    SYS-1 Availability Managers,  !- Availability Manager List Name
+    autosize,                !- Design Supply Air Flow Rate {m3/s}
+    SYS-1 Branches,          !- Branch List Name
+    ,                        !- Connector List Name
+    SYS-1 Air Loop Inlet,    !- Supply Side Inlet Node Name
+    SYS-1 Return Air Outlet, !- Demand Side Outlet Node Name
+    SYS-1 Zone Equip Inlet,  !- Demand Side Inlet Node Names
+    SYS-1 Fan Outlet;        !- Supply Side Outlet Node Names
+
+blank[]
+ 
+  BranchList,
+    SYS-1 Branches,          !- Name
+    SYS-1 Main Branch;       !- Branch 1 Name
+
+blank[]
+ 
+  Branch,
+    SYS-1 Main Branch,       !- Name
+    autosize,                !- Maximum Flow Rate {m3/s}
+    AirLoopHVAC:OutdoorAirSystem,      !- Component 1 Object Type
+    SYS-1 OA System,         !- Component 1 Name
+    SYS-1 Air Loop Inlet,    !- Component 1 Inlet Node Name
+    SYS-1 Mixed Air Outlet,  !- Component 1 Outlet Node Name
+    Passive,                 !- Component 1 Branch Control Type
+    AirLoopHVAC:UnitaryCoolOnly,        !- Component 2 Object Type
+    SYS-1 Cooling Coil,      !- Component 2 Name
+    SYS-1 Mixed Air Outlet,  !- Component 2 Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- Component 2 Outlet Node Name
+    Passive,                 !- Component 2 Branch Control Type
+    Coil:Heating:Gas,        !- Component 3 Object Type
+    SYS-1 Heating Coil,      !- Component 3 Name
+    SYS-1 Cooling Coil Outlet,  !- Component 3 Inlet Node Name
+    SYS-1 Heating Coil Outlet,  !- Component 3 Outlet Node Name
+    Passive,                 !- Component 3 Branch Control Type
+    FAN:ConstantVolume,  !- Component 4 Object Type
+    SYS-1 Supply Fan,        !- Component 4 Name
+    SYS-1 Heating Coil Outlet,  !- Component 4 Inlet Node Name
+    SYS-1 Fan Outlet,        !- Component 4 Outlet Node Name
+    Active;                  !- Component 4 Branch Control Type
+
+blank[]
+ 
+  AirLoopHVAC:SupplyPath,
+    SYS-1 Supply Path,       !- Name
+    SYS-1 Zone Equip Inlet,  !- Supply Air Path Inlet Node Name
+    AirLoopHVAC:ZoneSplitter,           !- Component 1 Object Type
+    SYS-1 Zone Splitter;     !- Component 1 Name
+
+blank[]
+ 
+  AirLoopHVAC:ZoneSplitter,
+    SYS-1 Zone Splitter,     !- Name
+    SYS-1 Zone Equip Inlet,  !- Inlet Node Name
+    COMFENZone Supply Inlet; !- Outlet 1 Node Name
+
+blank[]
+ 
+  AirLoopHVAC:ReturnPath,
+    SYS-1 Return Path,       !- Name
+    SYS-1 Return Air Outlet, !- Return Air Path Outlet Node Name
+    AirLoopHVAC:ZoneMixer,              !- Component 1 Object Type
+    SYS-1 Zone Mixer;        !- Component 1 Name
+
+blank[]
+ 
+  AirLoopHVAC:ZoneMixer,
+    SYS-1 Zone Mixer,        !- Name
+    SYS-1 Return Air Outlet, !- Outlet Node Name
+    COMFENZone Return Outlet;!- Inlet 1 Node Name
+
+blank[]
+ 
+  AvailabilityManagerAssignmentList,
+    SYS-1 Availability Managers,  !- Name
+    AvailabilityManager:NightCycle,  !- Availability Manager 1 Object Type
+    SYS-1 Availability 1;    !- Availability Manager 1 Name
+
+blank[]
+ 
+  AvailabilityManager:NightCycle,
+    SYS-1 Availability 1,    !- Name
+    SysAvailApplicSch,       !- Applicability Schedule Name
+    FAN-SCHED,               !- Fan Schedule Name
+    CycleOnAny,              !- Control Type
+    4.0,                     !- Thermostat Tolerance {deltaC}
+    7200.;                   !- Cycling Run Time {s}
+
+blank[]
+ 
+  SetpointManager:SingleZone:Reheat,
+    SYS-1 Setpoint Manager 1,!- Name
+    Temperature,             !- Control Variable
+    14.,                     !- Minimum Supply Air Temperature {C}
+    45.,                     !- Maximum Supply Air Temperature {C}
+    COMFENZone,              !- Control Zone Name
+    COMFENZone Zone Air Node,!- Zone Node Name
+    COMFENZone Supply Inlet, !- Zone Inlet Node Name
+    SYS-1 Sup Air Temp Nodes;!- Setpoint Node or NodeList Name
+
+blank[]
+ 
+  NodeList,
+    SYS-1 Sup Air Temp Nodes,!- Name
+    SYS-1 Fan Outlet;        !- Node 1 Name
+
+blank[]
+ 
+  SetpointManager:MixedAir,
+    SYS-1 Setpoint Manager 2,!- Name
+    Temperature,             !- Control Variable
+    SYS-1 Fan Outlet,        !- Reference Setpoint Node Name
+    SYS-1 Heating Coil Outlet,  !- Fan Inlet Node Name
+    SYS-1 Fan Outlet,        !- Fan Outlet Node Name
+    SYS-1 Supply Fan Upstream Nodes;  !- Setpoint Node or NodeList Name
+
+blank[]
+ 
+  NodeList,
+    SYS-1 Supply Fan Upstream Nodes,  !- Name
+    SYS-1 Mixed Air Outlet,  !- Node 1 Name
+    SYS-1 Cooling Coil Outlet,  !- Node 2 Name
+    SYS-1 Heating Coil Outlet;  !- Node 3 Name
+
+blank[]
+ 
+  AirLoopHVAC:UnitaryCoolOnly,
+    SYS-1 Cooling Coil,      !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    SYS-1 Mixed Air Outlet,  !- DX Cooling Coil System Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- DX Cooling Coil System Outlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- DX Cooling Coil System Sensor Node Name
+    Coil:Cooling:DX:SingleSpeed,  !- Cooling Coil Object Type
+    SYS-1 DX Cooling Coil;   !- Cooling Coil Name
+
+blank[]
+ 
+  Coil:Cooling:DX:SingleSpeed,
+    SYS-1 DX Cooling Coil,   !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    autosize,                !- Rated Total Cooling Capacity {W}
+    autosize,                !- Rated Sensible Heat Ratio
+    2.777778,                !- Rated COP
+    autosize,                !- Rated Air Flow Rate {m3/s}
+    SYS-1 Mixed Air Outlet,  !- Air Inlet Node Name
+    SYS-1 Cooling Coil Outlet,  !- Air Outlet Node Name
+    WindACCoolCapFT,         !- Total Cooling Capacity Function of Temperature Curve Name
+    WindACCoolCapFFF,        !- Total Cooling Capacity Function of Flow Fraction Curve Name
+    WindACEIRFT,             !- Energy Input Ratio Function of Temperature Curve Name
+    WindACEIRFFF,            !- Energy Input Ratio Function of Flow Fraction Curve Name
+    WindACPLFFPLR,           !- Part Load Fraction Correlation Curve Name
+    ContinuousFanWithCyclingCompressor;  !- Supply Air Fan Operating Mode
+
+blank[]
+ 
+  Coil:Heating:Gas,
+    SYS-1 Heating Coil,      !- Name
+    ALWAYSON,                !- Availability Schedule Name
+    0.7407407,               !- Gas Burner Efficiency
+    autosize,                !- Nominal Capacity {W}
+    SYS-1 Cooling Coil Outlet,  !- Air Inlet Node Name
+    SYS-1 Heating Coil Outlet,  !- Air Outlet Node Name
+    SYS-1 Heating Coil Outlet;  !- Temperature Setpoint Node Name
+
+blank[]
+ 
+  Fan:ConstantVolume,
+    SYS-1 Supply Fan,        !- Name
+    FAN-SCHED,               !- Availability Schedule Name
+    0.6,                     !- Fan Efficiency
+    600,                     !- Pressure Rise {Pa}
+    autosize,                !- Maximum Flow Rate {m3/s}
+    0.9,                     !- Motor Efficiency
+    1.,                      !- Motor In Airstream Fraction
+    SYS-1 Heating Coil Outlet,  !- Air Inlet Node Name
+    SYS-1 Fan Outlet;        !- Air Outlet Node Name
+
+blank[]
+ 
+  OutdoorAir:NodeList,
+    SYS-1 Outside Air Inlet; !- Node or NodeList Name 1
+
+blank[]
+ 
+  AirLoopHVAC:OutdoorAirSystem,
+    SYS-1 OA System,         !- Name
+    SYS-1 OA System Controllers,  !- Controller List Name
+    SYS-1 OA System Equipment,  !- Outdoor Air Equipment List Name
+    SYS-1 Availability Managers;  !- Availability Manager List Name
+
+blank[]
+ 
+  AirLoopHVAC:ControllerList,
+    SYS-1 OA System Controllers,  !- Name
+    Controller:OutdoorAir,   !- Controller 1 Object Type
+    SYS-1 OA Controller;     !- Controller 1 Name
+
+blank[]
+ 
+  AirLoopHVAC:OutdoorAirSystem:EquipmentList,
+    SYS-1 OA System Equipment,  !- Name
+    OutdoorAir:Mixer,       !- Component 1 Object Type
+    SYS-1 OA Mixing Box;     !- Component 1 Name
+
+blank[]
+ 
+  OutdoorAir:Mixer,
+    SYS-1 OA Mixing Box,     !- Name
+    SYS-1 Mixed Air Outlet,  !- Mixed Air Node Name
+    SYS-1 Outside Air Inlet, !- Outdoor Air Stream Node Name
+    SYS-1 Relief Air Outlet, !- Relief Air Stream Node Name
+    SYS-1 Air Loop Inlet;    !- Return Air Stream Node Name
+
+blank[]
+ 
+  Controller:OutdoorAir,
+    SYS-1 OA Controller,     !- Name
+    SYS-1 Relief Air Outlet, !- Relief Air Outlet Node Name
+    SYS-1 Air Loop Inlet,    !- Return Air Node Name
+    SYS-1 Mixed Air Outlet,  !- Mixed Air Node Name
+    SYS-1 Outside Air Inlet, !- Actuator Node Name
+    autosize,                !- Minimum Outdoor Air Flow Rate {m3/s}
+    autosize,                !- Maximum Outdoor Air Flow Rate {m3/s}
+    NoEconomizer,            !- Economizer Control Type
+    ModulateFlow,            !- Economizer Control Action Type
+    23.884,                  !- Economizer Maximum Limit Dry-Bulb Temperature {C}
+    ,                        !- Economizer Maximum Limit Enthalpy {J/kg}
+    ,                        !- Economizer Maximum Limit Dewpoint Temperature {C}
+    ,                        !- Electronic Enthalpy Limit Curve Name
+    ,                        !- Economizer Minimum Limit Dry-Bulb Temperature {C}
+    LockoutWithCompressor,   !- Lockout Type
+    FixedMinimum,            !- Minimum Limit Type
+    Min OA Sched;            !- Minimum Outdoor Air Schedule Name
+
+blank[]
+
+!-- PSZAirLoop-Autosize[] --End--: SYS-1
+!---- System: PSZ ----End----
+
+blank[]
+blank[]
+
+blank[]
+! Edits to convert from COMFEN2 to COMFEN 3 (EPlus 2.1) started by Robin 2/2/09
+! Commented out sections for electricity meters for Zones 2-4
+
+blank[]
+
+!==== file: report.inc ====Start====
+
+blank[]
+ 
+  Output:Diagnostics,
+    DisplayAdvancedReportVariables;  !- Key 1
+
+blank[]
+ 
+  Output:Surfaces:Drawing,  
+    DXF;
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Outdoor Dry Bulb,        !- Variable Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone/Sys Air Temperature,!- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone Infiltration Sensible Heat Loss,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone Total Internal Total Heat Gain,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Lights Total Heat Gain,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Air Loop Fan Heating Energy,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone/Sys Sensible Cooling Rate,  !- Variable Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone/Sys Sensible Heating Rate,  !- Variable Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+blank[]
+ 
+!-----------------------------------------------------------
+!         Daylighting and Glare report variables
+!--------------------------------------------------------------
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Daylight Illum at Ref Point 1,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Daylight Illum at Ref Point 2,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Glare Index at Ref Point 1,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Glare Index at Ref Point 2,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Surface Ext Sunlit Area, !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Surface Ext Solar Incident,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Surface Ext Solar Beam Incident,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Surface Ext Solar Sky Diffuse Incident,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Surface Ext Solar Ground Diffuse Incident,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Window Transmitted Solar,!- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Window Solar Absorbed:All Glass Layers,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone/Sys Sensible Heating Energy,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone/Sys Sensible Cooling Energy,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Zone Lights Electric Consumption,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Air Loop Gas Consumption,!- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Air Loop Fan Electric Consumption,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:Variable,
+    *,                       !- Key Value
+    Air Loop DX Cooling Coil Electric Consumption,  !- Variable Name
+    Hourly;                  !- Reporting Frequency
+
+blank[]
+ 
+  Output:VariableDictionary,
+    Regular;      !- Type of Report
+
+blank[]
+ 
+  Output:Constructions,
+    Constructions;            !- Type of Report
+
+blank[]
+ 
+  OutputControl:Table:Style,
+    Comma;                     !- Column Separator
+
+blank[]
+blank[]
+ 
+  Output:Table:Monthly,
+    Zone Cooling Summary,    !- Name
+    2,                       !- Digits After Decimal
+    Zone/Sys Sensible Cooling Energy,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Zone/Sys Sensible Cooling Rate,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Outdoor Dry Bulb,        !- Variable or Meter 3 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 3
+    Outdoor Wet Bulb,        !- Variable or Meter 4 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 4
+    Zone Total Internal Latent Gain,  !- Variable or Meter 5 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 5
+    Zone Total Internal Latent Gain,  !- Variable or Meter 6 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 6
+    Outdoor Dry Bulb,        !- Variable or Meter 7 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 7
+    Outdoor Wet Bulb,        !- Variable or Meter 8 Name
+    ValueWhenMaximumOrMinimum;  !- Aggregation Type for Variable or Meter 8
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Building Loads - Heating,!- Name
+    2,                       !- Digits After Decimal
+    Zone/Sys Sensible Heating Energy,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Zone/Sys Sensible Heating Rate,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Outdoor Dry Bulb,        !- Variable or Meter 3 Name
+    ValueWhenMaximumOrMinimum;  !- Aggregation Type for Variable or Meter 3
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Zone Electric Summary,   !- Name
+    2,                       !- Digits After Decimal
+    Zone Lights Electric Consumption,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Zone Lights Electric Consumption,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Zone Electric Equipment Electric Consumption,  !- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Zone Electric Equipment Electric Consumption,  !- Variable or Meter 4 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 4
+
+blank[]
+ 
+ 
+  Output:Table:Monthly,
+    Peak Zone Electric Summary,  !- Name
+    2,                       !- Digits After Decimal
+    Electricity:Zone:COMFENZone,  !- Variable or Meter 1 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 1
+
+    Output:Table:Monthly,    !- Variable or Meter 2 Name
+    Space Gains,             !- Aggregation Type for Variable or Meter 2
+    2,                       !- Variable or Meter 3 Name
+    Zone People Total Heat Gain,  !- Aggregation Type for Variable or Meter 3
+    SumOrAverage,            !- Variable or Meter 4 Name
+    Zone Lights Total Heat Gain,  !- Aggregation Type for Variable or Meter 4
+    SumOrAverage,            !- Variable or Meter 5 Name
+    Zone Electric Equipment Total Heat Gain,  !- Aggregation Type for Variable or Meter 5
+    SumOrAverage,            !- Variable or Meter 6 Name
+    Zone Infiltration Sensible Heat Gain,  !- Aggregation Type for Variable or Meter 6
+    SumOrAverage,            !- Variable or Meter 7 Name
+    Zone Infiltration Sensible Heat Loss,  !- Aggregation Type for Variable or Meter 7
+    SumOrAverage;            !- Variable or Meter 8 Name
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Occupant Comfort Data Summary,  !- Name
+    5,                       !- Digits After Decimal
+    FANGERPMV,               !- Variable or Meter 1 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 1
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Energy Consumption - Electricity & Natural Gas,  !- Name
+    2,                       !- Digits After Decimal
+    Electricity:Building,    !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Electricity:Building,    !- Variable or Meter 2 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 2
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Building Energy Performance - Electricity,  !- Name
+    2,                       !- Digits After Decimal
+    InteriorLights:Electricity,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    InteriorEquipment:Electricity,  !- Variable or Meter 2 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 2
+    Fans:Electricity,        !- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Heating:Electricity,     !- Variable or Meter 4 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 4
+    Cooling:Electricity,     !- Variable or Meter 5 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 5
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Building Energy Performance - Natural Gas,  !- Name
+    2,                       !- Digits After Decimal
+    Heating:Gas,             !- Variable or Meter 1 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 1
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Peak Energy End-Use - Electricity Part 1,  !- Name
+    2,                       !- Digits After Decimal
+    InteriorLights:Electricity,  !- Variable or Meter 1 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 1
+    InteriorEquipment:Electricity,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Fans:Electricity,        !- Variable or Meter 3 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 3
+    Heating:Electricity,     !- Variable or Meter 4 Name
+    Maximum;                        !- Aggregation Type for Variable or Meter 4
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Peak Energy End-Use - Electricity Part 2,  !- Name
+    ,                        !- Digits After Decimal
+    Cooling:Electricity,     !- Variable or Meter 1 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 1
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Electric Components of Peak Demand,  !- Name
+    ,                        !- Digits After Decimal
+    Electricity:Facility,    !- Variable or Meter 1 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 1
+    InteriorLights:Electricity,  !- Variable or Meter 2 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 2
+    InteriorEquipment:Electricity,  !- Variable or Meter 3 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 3
+    Fans:Electricity,        !- Variable or Meter 4 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 4
+    Heating:Electricity,     !- Variable or Meter 5 Name
+    ValueWhenMaximumOrMinimum,  !- Aggregation Type for Variable or Meter 5
+    Cooling:Electricity,     !- Variable or Meter 6 Name
+    ValueWhenMaximumOrMinimum;  !- Aggregation Type for Variable or Meter 6
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Peak Energy End-Use - Natural Gas,  !- Name
+    2,                       !- Digits After Decimal
+    Heating:Gas,             !- Variable or Meter 1 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 1
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Daylighting & Glare,     !- Name
+    2,                       !- Digits After Decimal
+    Daylight Illum at Ref Point 1,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Daylight Illum at Ref Point 2,  !- Variable or Meter 2 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 2
+    Glare Index at Ref Point 1,  !- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Glare Index at Ref Point 2,  !- Variable or Meter 4 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 4
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Air Loop System Energy Use,  !- Name
+    ,                        !- Digits After Decimal
+    Air Loop Electric Consumption,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Air Loop Electric Consumption,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Air Loop Gas Consumption,!- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Air Loop Heating Coil Gas Consumption,  !- Variable or Meter 4 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 4
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Peak Air Loop System Energy Use,  !- Name
+    ,                        !- Digits After Decimal
+    Air Loop Electric Consumption,  !- Variable or Meter 1 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 1
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Air Loop System Component Loads,  !- Name
+    ,                        !- Digits After Decimal
+    Air Loop Fan Heating Energy,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Air Loop Total Cooling Coil Energy,  !- Variable or Meter 2 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 2
+    Air Loop Total Heating Coil Energy,  !- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Air Loop Total Heating Energy,  !- Variable or Meter 4 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 4
+    Air Loop Total Heating Coil Energy,  !- Variable or Meter 5 Name
+    SumOrAverage;            !- Aggregation Type for Variable or Meter 5
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Air Loop System Component Energy Use,  !- Name
+    ,                        !- Digits After Decimal
+    Air Loop Fan Electric Consumption,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Air Loop Fan Electric Consumption,  !- Variable or Meter 2 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 2
+    Air Loop DX Cooling Coil Electric Consumption,  !- Variable or Meter 3 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 3
+    Air Loop DX Cooling Coil Electric Consumption,  !- Variable or Meter 4 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 4
+    Air Loop Heating Coil Electric Consumption,  !- Variable or Meter 5 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 5
+    Air Loop Heating Coil Electric Consumption,  !- Variable or Meter 6 Name
+    Maximum,                 !- Aggregation Type for Variable or Meter 6
+    Air Loop Heating Coil Gas Consumption,  !- Variable or Meter 7 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 7
+    Air Loop Heating Coil Gas Consumption,  !- Variable or Meter 8 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 8
+
+blank[]
+ 
+  Output:Table:Monthly,
+    Other System Energy Use, !- Name
+    ,                        !- Digits After Decimal
+    Heating Coil Gas Consumption,  !- Variable or Meter 1 Name
+    SumOrAverage,            !- Aggregation Type for Variable or Meter 1
+    Heating Coil Gas Consumption,  !- Variable or Meter 2 Name
+    Maximum;                 !- Aggregation Type for Variable or Meter 2
+
+blank[]
+
+ 
+  Output:Table:SummaryReports,
+    AnnualBuildingUtilityPerformanceSummary;  !- Report 1 Name
+ 
+blank[]
+
+!--------------------------------------------------------------------------------------
+!
+!  Report Meter
+!
+!-------------------------------------------------------------------------------------
+
+blank[]
+ 
+  Output:Meter,
+    InteriorLights:Electricity,  !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    InteriorEquipment:Electricity,  !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Fans:Electricity,        !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Heating:Electricity,     !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Cooling:Electricity,     !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Electricity:Zone:COMFENZone,  !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+!  Report Meter,
+!    Electricity:Zone:ZONE-2,    !- Meter_Name
+!    monthly;
+!  Report Meter,
+!    Electricity:Zone:ZONE-3,    !- Meter_Name
+!    monthly;
+!  Report Meter,
+!    Electricity:Zone:ZONE-4,    !- Meter_Name
+!    monthly;
+ 
+  Output:Meter,
+    Electricity:Building,    !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Electricity:HVAC,        !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Electricity:Facility,    !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Heating:Gas,             !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Gas:HVAC,                !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+!  Report Meter,
+!    Gas:Plant,       !- Meter_Name
+!    monthly;                 !- Reporting_Frequency
+
+blank[]
+ 
+  Output:Meter,
+    Gas:Facility,            !- Name
+    Monthly;                 !- Reporting Frequency
+
+blank[]
+ 
+!  Report Meter,
+!    Gas:Facility,    !- Meter_Name
+!    runperiod;
+!  Report Meter,
+!    Electricity:Facility,    !- Meter_Name
+!    runperiod;
+
+blank[]
+ 
+  Output:Table:TimeBins,
+    *,                       !- Key Value
+    FANGERPMV,               !- Variable Name
+    -2.5,                    !- Interval Start
+    1,                       !- Interval Size
+    5,                       !- Interval Count
+    OCC-OFC;                 !- Schedule Name
+
+blank[]
+blank[]
+ 

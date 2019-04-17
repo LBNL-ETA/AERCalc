@@ -1,0 +1,88 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace sparkComponents "spark.components.*";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace components "gov.lbl.aercalc.components.*";
+@namespace properties "gov.lbl.aercalc.view.properties.*";
+@namespace dialogs "gov.lbl.aercalc.view.dialogs.*";
+@namespace settings "gov.lbl.aercalc.view.settings.*";
+@namespace view "gov.lbl.aercalc.view.*";
+
+
+/* CLASSES FOR COMPONENTS*/
+
+mx|ProgressBar
+{
+	indeterminateSkin: ClassReference("gov.lbl.aercalc.view.skins.MyProgressIndeterminateSkin");
+}
+
+/* FONTS */
+
+
+/* BASIC STYLES */
+
+.linkButton {
+	color: #4c73dd;
+	cornerRadius: 5px;
+}
+
+.errorBox {
+	color: #df5046;	
+}
+
+.errorText {
+	color: #CC0000;
+}
+
+
+.formSectionHeader {
+	font-weight: bold;
+}
+
+.formItemTitle {
+	fontWeight: bold;
+}
+
+.formLabel
+{
+	color:#666666;
+}
+
+.formNote
+{
+	color: #666666;
+}
+
+.formHint {
+	color: #000088;
+}
+
+.infoWindowHeader {
+	fontSize: 16px;
+}
+
+
+
+/* CLASSES FOR CONTROLS*/
+s|DataGrid
+{
+	borderThickness: 4;
+	borderColor: #AAAAAA;
+	headerColors : #6db8e0, #50a3ce;
+	horizontalGridLines: false;
+	verticalGridLines: true;
+	verticalGridLineColor: #003366; 
+	alternatingRowColors: #FFFFFF, #FAFAFA;
+	rollOverColor: #b3b7d9;
+	textRollOverColor: #0c1e37;
+	/*selection-color:#9FA0A1;*/
+	color :#0c1e37;
+}
+
+s|Button {
+	skinClass: ClassReference("gov.lbl.aercalc.view.skins.ButtonSkin");
+}
+
+s|TitleWindow {
+	skinClass: ClassReference("gov.lbl.aercalc.view.skins.MyTitleWindowSkin");
+}

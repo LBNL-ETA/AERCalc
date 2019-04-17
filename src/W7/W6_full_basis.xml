@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layer xmlns="http://windows.lbl.gov" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://windows.lbl.gov
+BSDF.xsd">
+	<!-- XML file containing the angles for the standard basis set for WINDOW6 calcs. Created by Charlie on 11/7/2005, jckohler@lbl.gov. This file follows the same style sheet as the BSDF XML files -->
+	<DataDefinition>
+		<AngleBasis>
+			<AngleBasisType>Incidence</AngleBasisType>
+			<Name>WINDOW6 Full Basis</Name>
+			<AngleBasisBlock>
+				<Theta>0</Theta>
+				<Bound>5</Bound>
+				<nPhis>1</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>10</Theta>
+				<Bound>15</Bound>
+				<nPhis>8</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>20</Theta>
+				<Bound>25</Bound>
+				<nPhis>16</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>30</Theta>
+				<Bound>35</Bound>
+				<nPhis>20</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>40</Theta>
+				<Bound>45</Bound>
+				<nPhis>24</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>50</Theta>
+				<Bound>55</Bound>
+				<nPhis>24</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>60</Theta>
+				<Bound>65</Bound>
+				<nPhis>24</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>70</Theta>
+				<Bound>75</Bound>
+				<nPhis>16</nPhis>
+			</AngleBasisBlock>
+			<AngleBasisBlock>
+				<Theta>82.5</Theta>
+				<Bound>90</Bound>
+				<nPhis>12</nPhis>
+			</AngleBasisBlock>
+		</AngleBasis>
+	</DataDefinition>
+</Layer>

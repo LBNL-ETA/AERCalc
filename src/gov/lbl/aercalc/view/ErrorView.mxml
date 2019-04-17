@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   title="Error" 
+			   width="600" 
+			   height="600" 
+			   close="onClose()">
+	
+	
+	<fx:Script><![CDATA[
+		
+		import mx.core.FlexGlobals;
+		import mx.events.CloseEvent;
+		import mx.managers.PopUpManager;
+		
+		private var _loader:URLLoader;		
+		private var _message:String;
+		
+		
+		private var _statusReceived:Boolean = false;		
+		[Bindable]
+		private var _sendToUsMsg:String = 	"We know there's nothing more frustrating that having an error stop your work. " +
+											"But if you send this information to LBNL, it will help us resolve the issue as quickly as possible. " +
+											"Please copy the error text and send to rdmitchell@lbl.gov.";
+		
+		
+		[Bindable]
+		private var _msgReceived:String = "Ok thanks. We got the report. Time to mash some bugs. Thanks for helping make this a better app!";
+		
+		private var _msgFail:String = "Hmm. The message to our server didn't seem to work. Please try again, or just copy the text and email it to support@lbl.gov.";
+		
+				
+		public static function show(message:String):ErrorView
+		{
+			var instance:ErrorView = new ErrorView();
+			instance.message = message;
+			PopUpManager.addPopUp(instance, FlexGlobals.topLevelApplication as DisplayObject, true);
+			PopUpManager.centerPopUp(instance);
+			return instance;
+		}
+		
+		public function get message():String
+		{
+			return _message;
+		}
+		
+		public function set message(value:String):void
+		{
+			_message = value;
+			invalidateProperties();
+		}
+		
+		
+		
+		
+		private function onClose():void
+		{
+			removeEventListeners();
+			if (isPopUp)
+				PopUpManager.removePopUp(this);
+		}
+		
+		private function onCopy(event:MouseEvent):void
+		{
+			Clipboard.generalClipboard.setData(ClipboardFormats.TEXT_FORMAT, _message);
+		}
+		
+		/* TODO: IMPLEMENT A SIMPLE ERROR REPORTING ENDPOINT FOR AERCalc */
+		
+		private function onSend(event:MouseEvent):void
+		{
+			
+			/*
+			return;
+			
+			_statusReceived = false;
+			currentState = "sendErrorProgress";
+			
+			var urlRequest:URLRequest = new URLRequest();
+			urlRequest.method = URLRequestMethod.POST;
+			
+			var vars:URLVariables = new URLVariables();
+			
+			_message += " \n\nApp Version: " + AboutInfo.applicationVersion;
+			_message += " \nFlash player version : " + AboutInfo.flashPlayerVersion;
+			_message += " \nOS : " + CapabilitiesUtils.getOS();
+			_message += " \nInstall date : " + appModel.firstInstallDate;
+			_message += "\n\nError message:\n================================\n"			
+			_message += "\n\n\nNotes on what user was doing:\n================================\n" + txtUserNotes.text;
+			
+			vars.message = _message;
+			
+			urlRequest.data = vars;
+			urlRequest.url = ApplicationModel.ERROR_MESSAGE_URL;
+			
+			if (_loader)
+			{
+				_loader.close();
+			}
+			else
+			{				
+				_loader = new URLLoader();
+				_loader.addEventListener(HTTPStatusEvent.HTTP_STATUS, onHTTPStatus);
+				_loader.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+				_loader.addEventListener(Event.COMPLETE, onComplete);
+			}
+			_loader.load(urlRequest);
+			*/
+			
+		}
+		
+		
+		private function onIOError(event:IOErrorEvent):void
+		{
+			_sendToUsMsg = _msgFail;
+			currentState = "messageFailed";
+		}		
+		
+		private function onHTTPStatus(event:HTTPStatusEvent):void
+		{
+			_statusReceived = true;
+			
+			if (event.status == 200 || event.status == 302)
+			{				
+				_sendToUsMsg = _msgReceived;
+				currentState = "messageSent";
+			}
+			else
+			{
+				_sendToUsMsg = _msgFail;
+				currentState = "messageFailed";
+			}
+			
+		}
+		
+		override protected function commitProperties():void
+		{
+			super.commitProperties();
+			errorTextArea.text = _message;
+		}
+		
+		private function onComplete(event:Event):void
+		{
+			// We should always get the http status event first, but if we don't and we get this error, assume that message went through
+			if(!_statusReceived)
+			{
+				_sendToUsMsg = _msgReceived;
+				currentState = "messageSent";
+			}
+			
+		}
+		
+		private function removeEventListeners():void
+		{
+			if(_loader)
+			{
+				_loader.removeEventListener(HTTPStatusEvent.HTTP_STATUS, onHTTPStatus);
+				_loader.removeEventListener(IOErrorEvent.IO_ERROR, onIOError);
+				_loader.removeEventListener(Event.COMPLETE, onComplete);
+			}
+			
+		}
+		
+		private function onCancel():void
+		{
+			if(_loader)
+				_loader.close();
+			removeEventListeners();
+			onClose();
+		}
+		
+		
+		
+	]]>
+	</fx:Script>
+	
+	<s:layout>
+		<s:VerticalLayout paddingLeft="5" paddingRight="5" paddingBottom="5" paddingTop="5"/>
+	</s:layout>
+	
+	
+	<s:states>
+		<s:State name="displayErrorContent"/>
+		<s:State name="sendErrorProgress"/>
+		<s:State name="messageFailed"/>
+		<s:State name="messageSent"/>
+	</s:states>
+	
+	
+	
+	<s:VGroup includeIn="displayErrorContent,messageFailed"
+			  width="100%" 
+			  height="100%"
+			  paddingLeft="10"
+			  paddingRight="10"
+			  paddingBottom="10"
+			  paddingTop="10"
+			  >				
+		
+		<s:Label text="Darn. This app had an internal error:" fontWeight="bold" color="#CC0000"/>			
+		<s:Spacer height="5"/>			
+		<s:TextArea id="errorTextArea" editable="false" width="100%" height="100%"/>		
+		<s:Spacer height="5"/>		
+		<s:HGroup verticalAlign="top" width="100%">			
+			<s:TextArea width="100%"
+						height="80"
+						contentBackgroundAlpha="0"
+						borderVisible="false"
+						text="{_sendToUsMsg}"
+						editable="false"
+						/> 			
+		</s:HGroup>		
+		<s:Spacer height="5"/>
+	</s:VGroup>
+		
+	<s:Group includeIn="messageSent"
+			 width="100%" 
+			 height="100%"
+			 >								
+		<s:VGroup horizontalCenter="0" verticalCenter="0">			
+			<s:TextArea width="100%"
+						height="80"
+						contentBackgroundAlpha="0"
+						verticalCenter="50"
+						borderVisible="false"
+						textAlign="center"
+						text="{_msgReceived}"
+						/> 								
+		</s:VGroup>	
+	</s:Group>
+		
+	<s:VGroup includeIn="sendErrorProgress" 
+			  horizontalAlign="center" 
+			  verticalAlign="middle" 
+			  width="100%"
+			  height="100%">
+		<mx:ProgressBar id="progressBar"
+						indeterminate="true"
+						labelPlacement="center" 
+						trackHeight="30" 
+						label=""/>
+		<s:Label text="Sending error text to LBL"/>
+	</s:VGroup>
+		
+	
+	<s:controlBarLayout>
+		<s:HorizontalLayout horizontalAlign="right" paddingTop="5" paddingBottom="5" paddingRight="5"/>
+	</s:controlBarLayout>
+	
+	<s:controlBarContent>
+		
+		<s:HGroup>
+			<s:Button id="closeButton" 
+					  includeIn="displayErrorContent"
+					  label="Close" 
+					  click="onClose()" 		
+					  styleName="defaultButton"			  
+					  minWidth="90"
+					  minHeight="30"/>
+			
+		</s:HGroup>
+		
+		
+	</s:controlBarContent>
+	
+</s:TitleWindow>

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               creationComplete="onCC()"
+               width="500"
+               title="Database Update Required"
+               height="480">
+
+
+    <fx:Script>
+		<![CDATA[
+        import mx.collections.ArrayCollection;
+        import mx.controls.Alert;
+        import mx.core.Application;
+        import mx.managers.PopUpManager;
+
+
+        [Bindable]
+        private var _closeHandler:Function;
+
+        [Bindable]
+        private var _userNotesAC:ArrayCollection;
+
+        [Bindable]
+        public var _currDBVersion:int;
+
+        [Bindable]
+        private var _targetDBVersion:int;
+
+
+        [Embed(source="/assets/img/icons/warning-icon.png")]
+        [Bindable]
+        public var WarningIcon:Class;
+
+
+        private var _msg:String =  "Your database is from an earlier version of AERCalc and must be updated to the latest database version. " +
+                                    "Once updated you cannot use the database in earlier versions of AERCalc.";
+        private var _msg2:String = "Press 'OK' below to start updating or 'CANCEL' to cancel and close AERCalc.";
+
+
+        public function setValues(userNotesArr:Array, closeHandler:Function, currDBVersion:int, targetDBVersion:int):void {
+
+            _closeHandler = closeHandler;
+            _currDBVersion = currDBVersion;
+            _targetDBVersion = targetDBVersion;
+            _userNotesAC = new ArrayCollection(userNotesArr);
+
+        }
+
+        private function onCC():void
+        {
+            lbl1.text = _msg;
+            lbl2.text = _msg2;
+        }
+
+        private function onOK():void
+        {
+            _closeHandler(Alert.OK);
+            PopUpManager.removePopUp(this);
+        }
+
+        private function onCancel():void
+        {
+            _closeHandler(Alert.CANCEL);
+            PopUpManager.removePopUp(this);
+        }
+
+
+        ]]>
+	</fx:Script>
+
+    <s:VGroup width="100%"
+              height="100%"
+             paddingTop="20"
+             paddingLeft="10"
+             paddingRight="10">
+
+        <s:HGroup width="100%">
+            <s:Spacer width="20"/>
+            <s:Image id="warningIcon"
+                     source="{WarningIcon}"
+                     width="50"
+                     height="50"/>
+            <s:Spacer width="20"/>
+            <s:Label id="lbl1"
+                     maxDisplayedLines="4"
+                     width="100%"
+                     height="70"
+                     text="{_msg}"/>
+            <s:Spacer width="30"/>
+        </s:HGroup>
+
+        <s:Spacer width="20"/>
+
+        <s:HGroup>
+            <s:Label text="Current DB Version:" width="100" color="#555555"/>
+            <s:Label id="txtCurrDBVersion"
+                     text="{_currDBVersion}" />
+        </s:HGroup>
+        <s:Spacer height="5"/>
+        <s:HGroup>
+            <s:Label text="Target DB Version:"  width="100" color="#555555"/>
+            <s:Label id="txtTargetDBVersion"
+                     text="{_targetDBVersion}"/>
+        </s:HGroup>
+
+        <s:Spacer height="20"/>
+
+        <s:Label text="Update Notes:" color="#555555"/>
+
+        <s:List id="list"
+                alternatingItemColors="[0xF1F1F1, 0xE1E1E1]"
+                width="100%"
+                height="120"
+                dataProvider="{_userNotesAC}"
+        />
+
+        <s:Spacer height="20"/>
+
+        <s:Label id="lbl2"
+                 width="100%"
+                 maxDisplayedLines="4"
+                 text="{_msg2}"
+                 height="50"/>
+
+        <s:Spacer height="10"/>
+
+    </s:VGroup>
+
+    <s:controlBarLayout>
+        <s:HorizontalLayout horizontalAlign="right"
+                            paddingBottom="5"
+                            paddingTop="5"
+                            paddingLeft="10"
+                            paddingRight="10"/>
+    </s:controlBarLayout>
+
+    <s:controlBarContent>
+        <s:Button id="btnOK" click="onOK()" label="OK" width="90" height="30"/>
+        <s:Button id="btnCancel" click="onCancel()" label="Cancel"  width="90" height="30"/>
+    </s:controlBarContent>
+
+ </s:TitleWindow>

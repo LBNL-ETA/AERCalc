@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<THERM-XML xmlns="http://windows.lbl.gov">
+<ThermVersion>Version 7.5.18.0</ThermVersion>
+<FileVersion>1</FileVersion>
+<SaveDate>2017-09-28T16:04:46</SaveDate>
+
+<Title></Title>
+<CreatedBy></CreatedBy>
+<Company></Company>
+<Client></Client>
+<CrossSectionType>Sill</CrossSectionType>
+<Notes></Notes>
+<Units>SI</Units>
+<MeshControl MeshLevel="8" ErrorCheckFlag="1" ErrorLimit="10.000000" MaxIterations="5" CMAflag="0" />
+<Materials>
+	<Material Name="ps03-sie361.txt" Type="5" Conductivity="0.120000" Tir="0.205640" EmissivityFront="0.679410" EmissivityBack="0.679410" RGBColor="0xDCE447">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.495350" R="0.502023"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.490710" R="0.486382"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.495350" R="0.502023"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.490710" R="0.486382"/>
+	</Material>
+</Materials>
+<BoundaryConditions>
+	<BoundaryCondition Name="Adiabatic" Type="0" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x000000" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="1" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeInE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="21.110001" RGBColor="0x8000FF" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeOutE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="-18.000000" RGBColor="0xFF8000" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+</BoundaryConditions>
+<Polygons>
+	<Polygon ID="88" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-26.800001" />
+		<Point index="1" x="250.332230" y="-26.800001" />
+		<Point index="2" x="266.248901" y="-14.800001" />
+		<Point index="3" x="265.916656" y="-14.800001" />
+	</Polygon>
+	<Polygon ID="87" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-14.800001" />
+		<Point index="1" x="266.248901" y="-14.800001" />
+		<Point index="2" x="250.332230" y="-2.800001" />
+		<Point index="3" x="250.000000" y="-2.800001" />
+	</Polygon>
+	<Polygon ID="80" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-50.800003" />
+		<Point index="1" x="250.332230" y="-50.800003" />
+		<Point index="2" x="266.248901" y="-38.800003" />
+		<Point index="3" x="265.916656" y="-38.800003" />
+	</Polygon>
+	<Polygon ID="79" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-38.800003" />
+		<Point index="1" x="266.248901" y="-38.800003" />
+		<Point index="2" x="250.332230" y="-26.800001" />
+		<Point index="3" x="250.000000" y="-26.800001" />
+	</Polygon>
+	<Polygon ID="72" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-74.800003" />
+		<Point index="1" x="250.332230" y="-74.800003" />
+		<Point index="2" x="266.248901" y="-62.800003" />
+		<Point index="3" x="265.916656" y="-62.800003" />
+	</Polygon>
+	<Polygon ID="71" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-62.800003" />
+		<Point index="1" x="266.248901" y="-62.800003" />
+		<Point index="2" x="250.332230" y="-50.800003" />
+		<Point index="3" x="250.000000" y="-50.800003" />
+	</Polygon>
+	<Polygon ID="64" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-98.800003" />
+		<Point index="1" x="250.332230" y="-98.800003" />
+		<Point index="2" x="266.248901" y="-86.800003" />
+		<Point index="3" x="265.916656" y="-86.800003" />
+	</Polygon>
+	<Polygon ID="63" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-86.800003" />
+		<Point index="1" x="266.248901" y="-86.800003" />
+		<Point index="2" x="250.332230" y="-74.800003" />
+		<Point index="3" x="250.000000" y="-74.800003" />
+	</Polygon>
+	<Polygon ID="56" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-122.800003" />
+		<Point index="1" x="250.332230" y="-122.800003" />
+		<Point index="2" x="266.248901" y="-110.800003" />
+		<Point index="3" x="265.916656" y="-110.800003" />
+	</Polygon>
+	<Polygon ID="55" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-110.800003" />
+		<Point index="1" x="266.248901" y="-110.800003" />
+		<Point index="2" x="250.332230" y="-98.800003" />
+		<Point index="3" x="250.000000" y="-98.800003" />
+	</Polygon>
+	<Polygon ID="48" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-146.800003" />
+		<Point index="1" x="250.332230" y="-146.800003" />
+		<Point index="2" x="266.248901" y="-134.800003" />
+		<Point index="3" x="265.916656" y="-134.800003" />
+	</Polygon>
+	<Polygon ID="47" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-134.800003" />
+		<Point index="1" x="266.248901" y="-134.800003" />
+		<Point index="2" x="250.332230" y="-122.800003" />
+		<Point index="3" x="250.000000" y="-122.800003" />
+	</Polygon>
+	<Polygon ID="40" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-170.800003" />
+		<Point index="1" x="250.332230" y="-170.800003" />
+		<Point index="2" x="266.248901" y="-158.800003" />
+		<Point index="3" x="265.916656" y="-158.800003" />
+	</Polygon>
+	<Polygon ID="39" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-158.800003" />
+		<Point index="1" x="266.248901" y="-158.800003" />
+		<Point index="2" x="250.332230" y="-146.800003" />
+		<Point index="3" x="250.000000" y="-146.800003" />
+	</Polygon>
+	<Polygon ID="10" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-194.800003" />
+		<Point index="1" x="250.332230" y="-194.800003" />
+		<Point index="2" x="266.248901" y="-182.800003" />
+		<Point index="3" x="265.916656" y="-182.800003" />
+	</Polygon>
+	<Polygon ID="9" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-182.800003" />
+		<Point index="1" x="266.248901" y="-182.800003" />
+		<Point index="2" x="250.332230" y="-170.800003" />
+		<Point index="3" x="250.000000" y="-170.800003" />
+	</Polygon>
+	<Polygon ID="33" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-218.800003" />
+		<Point index="1" x="250.332230" y="-218.800003" />
+		<Point index="2" x="266.248901" y="-206.800003" />
+		<Point index="3" x="265.916656" y="-206.800003" />
+	</Polygon>
+	<Polygon ID="32" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-206.800003" />
+		<Point index="1" x="266.248901" y="-206.800003" />
+		<Point index="2" x="250.332230" y="-194.800003" />
+		<Point index="3" x="250.000000" y="-194.800003" />
+	</Polygon>
+	<Polygon ID="25" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-242.800003" />
+		<Point index="1" x="250.332230" y="-242.800003" />
+		<Point index="2" x="266.248901" y="-230.800003" />
+		<Point index="3" x="265.916656" y="-230.800003" />
+	</Polygon>
+	<Polygon ID="24" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-230.800003" />
+		<Point index="1" x="266.248901" y="-230.800003" />
+		<Point index="2" x="250.332230" y="-218.800003" />
+		<Point index="3" x="250.000000" y="-218.800003" />
+	</Polygon>
+	<Polygon ID="1" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-266.799988" />
+		<Point index="1" x="250.332230" y="-266.799988" />
+		<Point index="2" x="266.248901" y="-254.800003" />
+		<Point index="3" x="265.916656" y="-254.800003" />
+	</Polygon>
+	<Polygon ID="4" Material="ps03-sie361.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-254.800003" />
+		<Point index="1" x="266.248901" y="-254.800003" />
+		<Point index="2" x="250.332230" y="-242.800003" />
+		<Point index="3" x="250.000000" y="-242.800003" />
+	</Polygon>
+</Polygons>
+<Boundaries>
+	<BCPolygon ID="2" BC="Adiabatic" units="mm" MaterialName="ps03-sie361.txt" PolygonID="1" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-266.799988" />
+		<Point index="1" x="250.332230" y="-266.799988" />
+	</BCPolygon>
+	<BCPolygon ID="3" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="1" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-266.799988" />
+		<Point index="1" x="266.248901" y="-254.800003" />
+	</BCPolygon>
+	<BCPolygon ID="5" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="4" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-254.800003" />
+		<Point index="1" x="250.332230" y="-242.800003" />
+	</BCPolygon>
+	<BCPolygon ID="6" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="25" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-242.800003" />
+		<Point index="1" x="266.248901" y="-230.800003" />
+	</BCPolygon>
+	<BCPolygon ID="7" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="24" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-230.800003" />
+		<Point index="1" x="250.332230" y="-218.800003" />
+	</BCPolygon>
+	<BCPolygon ID="8" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="33" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-218.800003" />
+		<Point index="1" x="266.248901" y="-206.800003" />
+	</BCPolygon>
+	<BCPolygon ID="11" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="32" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-206.800003" />
+		<Point index="1" x="250.332230" y="-194.800003" />
+	</BCPolygon>
+	<BCPolygon ID="12" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="10" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-194.800003" />
+		<Point index="1" x="266.248901" y="-182.800003" />
+	</BCPolygon>
+	<BCPolygon ID="13" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="9" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-182.800003" />
+		<Point index="1" x="250.332230" y="-170.800003" />
+	</BCPolygon>
+	<BCPolygon ID="14" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="40" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-170.800003" />
+		<Point index="1" x="266.248901" y="-158.800003" />
+	</BCPolygon>
+	<BCPolygon ID="15" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="39" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-158.800003" />
+		<Point index="1" x="250.332230" y="-146.800003" />
+	</BCPolygon>
+	<BCPolygon ID="16" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="48" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-146.800003" />
+		<Point index="1" x="266.248901" y="-134.800003" />
+	</BCPolygon>
+	<BCPolygon ID="17" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="47" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-134.800003" />
+		<Point index="1" x="250.332230" y="-122.800003" />
+	</BCPolygon>
+	<BCPolygon ID="18" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="56" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-122.800003" />
+		<Point index="1" x="266.248901" y="-110.800003" />
+	</BCPolygon>
+	<BCPolygon ID="19" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="55" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-110.800003" />
+		<Point index="1" x="250.332230" y="-98.800003" />
+	</BCPolygon>
+	<BCPolygon ID="20" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="64" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-98.800003" />
+		<Point index="1" x="266.248901" y="-86.800003" />
+	</BCPolygon>
+	<BCPolygon ID="21" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="63" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-86.800003" />
+		<Point index="1" x="250.332230" y="-74.800003" />
+	</BCPolygon>
+	<BCPolygon ID="22" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="72" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-74.800003" />
+		<Point index="1" x="266.248901" y="-62.800003" />
+	</BCPolygon>
+	<BCPolygon ID="23" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="71" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-62.800003" />
+		<Point index="1" x="250.332230" y="-50.800003" />
+	</BCPolygon>
+	<BCPolygon ID="26" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="80" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-50.800003" />
+		<Point index="1" x="266.248901" y="-38.800003" />
+	</BCPolygon>
+	<BCPolygon ID="27" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="79" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-38.800003" />
+		<Point index="1" x="250.332230" y="-26.800001" />
+	</BCPolygon>
+	<BCPolygon ID="28" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="88" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-26.800001" />
+		<Point index="1" x="266.248901" y="-14.800001" />
+	</BCPolygon>
+	<BCPolygon ID="29" BC="ShadeInE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="87" EnclosureID="0" UFactorTag="Edge" Emissivity="0.679410" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-14.800001" />
+		<Point index="1" x="250.332230" y="-2.800001" />
+	</BCPolygon>
+	<BCPolygon ID="30" BC="Adiabatic" units="mm" MaterialName="ps03-sie361.txt" PolygonID="87" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-2.800001" />
+		<Point index="1" x="250.000000" y="-2.800001" />
+	</BCPolygon>
+	<BCPolygon ID="31" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="87" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-2.800001" />
+		<Point index="1" x="265.916656" y="-14.800001" />
+	</BCPolygon>
+	<BCPolygon ID="34" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="88" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-14.800001" />
+		<Point index="1" x="250.000000" y="-26.800001" />
+	</BCPolygon>
+	<BCPolygon ID="35" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="79" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-26.800001" />
+		<Point index="1" x="265.916656" y="-38.800003" />
+	</BCPolygon>
+	<BCPolygon ID="36" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="80" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-38.800003" />
+		<Point index="1" x="250.000000" y="-50.800003" />
+	</BCPolygon>
+	<BCPolygon ID="37" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="71" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-50.800003" />
+		<Point index="1" x="265.916656" y="-62.800003" />
+	</BCPolygon>
+	<BCPolygon ID="38" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="72" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-62.800003" />
+		<Point index="1" x="250.000000" y="-74.800003" />
+	</BCPolygon>
+	<BCPolygon ID="41" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="63" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-74.800003" />
+		<Point index="1" x="265.916656" y="-86.800003" />
+	</BCPolygon>
+	<BCPolygon ID="42" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="64" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-86.800003" />
+		<Point index="1" x="250.000000" y="-98.800003" />
+	</BCPolygon>
+	<BCPolygon ID="43" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="55" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-98.800003" />
+		<Point index="1" x="265.916656" y="-110.800003" />
+	</BCPolygon>
+	<BCPolygon ID="44" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="56" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-110.800003" />
+		<Point index="1" x="250.000000" y="-122.800003" />
+	</BCPolygon>
+	<BCPolygon ID="45" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="47" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-122.800003" />
+		<Point index="1" x="265.916656" y="-134.800003" />
+	</BCPolygon>
+	<BCPolygon ID="46" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="48" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="265.916656" y="-134.800003" />
+		<Point index="1" x="250.000000" y="-146.800003" />
+	</BCPolygon>
+	<BCPolygon ID="49" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="39" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="250.000000" y="-146.800003" />
+		<Point index="1" x="265.916656" y="-158.800003" />
+	</BCPolygon>
+	<BCPolygon ID="50" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="40" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-158.800003" />
+		<Point index="1" x="250.000000" y="-170.800003" />
+	</BCPolygon>
+	<BCPolygon ID="51" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="9" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-170.800003" />
+		<Point index="1" x="265.916656" y="-182.800003" />
+	</BCPolygon>
+	<BCPolygon ID="52" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="10" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-182.800003" />
+		<Point index="1" x="250.000000" y="-194.800003" />
+	</BCPolygon>
+	<BCPolygon ID="53" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="32" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-194.800003" />
+		<Point index="1" x="265.916656" y="-206.800003" />
+	</BCPolygon>
+	<BCPolygon ID="54" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="33" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-206.800003" />
+		<Point index="1" x="250.000000" y="-218.800003" />
+	</BCPolygon>
+	<BCPolygon ID="57" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="24" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-218.800003" />
+		<Point index="1" x="265.916656" y="-230.800003" />
+	</BCPolygon>
+	<BCPolygon ID="58" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="25" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-230.800003" />
+		<Point index="1" x="250.000000" y="-242.800003" />
+	</BCPolygon>
+	<BCPolygon ID="59" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="4" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-242.800003" />
+		<Point index="1" x="265.916656" y="-254.800003" />
+	</BCPolygon>
+	<BCPolygon ID="60" BC="ShadeOutE" units="mm" MaterialName="ps03-sie361.txt" PolygonID="1" EnclosureID="0" UFactorTag="" Emissivity="0.679410" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-254.800003" />
+		<Point index="1" x="250.000000" y="-266.799988" />
+	</BCPolygon>
+</Boundaries>
+</THERM-XML>

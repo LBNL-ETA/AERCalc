@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:components="gov.lbl.aercalc.view.components.*"
+		 creationComplete="onCC()"
+		 >
+	
+	<fx:Script>
+		<![CDATA[
+		import gov.lbl.aercalc.constants.Commands;
+		import gov.lbl.aercalc.events.ExportEvent;
+		import gov.lbl.aercalc.events.MenuEvent;
+		import gov.lbl.aercalc.model.settings.SettingsModel;
+
+		import mx.collections.IHierarchicalCollectionView;
+
+		import mx.events.AdvancedDataGridEvent;
+			
+			import gov.lbl.aercalc.events.DeleteWindowsEvent;
+			import gov.lbl.aercalc.events.SettingsEvent;
+			import gov.lbl.aercalc.util.AERCalcResources;
+			import gov.lbl.aercalc.util.Utils;
+			import gov.lbl.aercalc.view.model.WindowListViewPM;
+
+			[Inject]
+			[Bindable]
+			public var windowListViewPM:WindowListViewPM;
+
+
+			[Inject]
+			[Bindable]
+			public var settingsModel:SettingsModel;
+
+			/*
+			We don't know if onCC or onPostConstruct will hit first,
+			and we need both the datagrid and the PM to be available
+			when creating context menu, so have a check in each for
+			the other, and when present create context menu.
+			*/
+			[PostConstruct]
+			public function onPostConstruct():void{
+				
+				if (adgWindows && windowListViewPM){
+					doSetup();
+				}
+			}
+
+
+			private function onCC():void {
+				if (windowListViewPM && adgWindows){
+					doSetup();
+				}
+			}
+
+		
+			private function doSetup():void{
+				windowListViewPM.createGridContextMenu(this.adgWindows);
+				windowListViewPM.addEventListener(WindowListViewPM.HEADERS_UPDATED, onHeadersUpdated);
+				windowListViewPM.formatHeaders();
+			}
+
+			
+			/* SWIZ EVENT HANDLERS */
+			
+			[EventHandler(event="W7ImportEvent.W7_WINDOW_IMPORTED")]
+			[EventHandler(event="SettingsEvent.SETTINGS_CHANGED")]
+			[EventHandler(event="DeleteWindowsEvent.DELETE_WINDOWS_COMPLETE")]
+			public function onChangeAffectingData():void {
+				adgWindows.invalidateList();
+			}
+
+
+			/* Normally the PM should handle all events, but
+			 select all and deselect all can be handled here
+			 to avoid what will be a circular process between PM
+			 and view since view needs to pass the ADG into PM.*/
+			[EventHandler(event="MenuEvent.MENU_COMMAND", priority="1")]
+			public function onMenuCommand(event:MenuEvent):void {
+
+				// Events shouldn't reach this method if the
+				// import window is open.
+
+				switch (event.command){
+					case Commands.SELECT_ALL:
+						windowListViewPM.onSelectAll(adgWindows);
+						break;
+					case Commands.DESELECT_ALL:
+						windowListViewPM.onDeselectAll(adgWindows);
+						break;
+				}
+			}
+
+
+			/* We watch for this event here rather than in the export controller
+			   or in PM, as we need to gather a bit of information directly from
+			   ADG about which rows are unfolded. This means we need to pass
+			   in the ADG's
+			 */
+			[EventHandler(event="ExportEvent.ON_EXPORT_WINDOWS")]
+			public function onExportWindows(event:ExportEvent):void {
+				var view:IHierarchicalCollectionView = adgWindows.dataProvider as IHierarchicalCollectionView;
+				windowListViewPM.doExportWindows( view.openNodes);
+			}
+
+
+			/* PRESENTATION MODEL EVENT HANDLES AND CALLBACKS*/
+			private function onHeadersUpdated(event:Event):void{
+				this.adgWindows.invalidateProperties();
+				this.adgWindows.invalidateDisplayList();
+			}
+			
+			
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:DateTimeFormatter id="dateTimeFormatter"/>
+	</fx:Declarations>
+	
+	<s:Rect left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:LinearGradient>
+				<s:GradientEntry color="{Utils.COLOR_BLUE_1}" ratio="0" alpha="1"/>
+				<s:GradientEntry color="{Utils.COLOR_BLUE_2}" ratio=".5" alpha="1"/>
+			</s:LinearGradient>
+		</s:fill>
+	</s:Rect>
+	
+	<s:VGroup left="0" right="0" top="0" bottom="60" gap="0" paddingLeft="20" paddingRight="20" paddingBottom="10" paddingTop="10">
+		
+		<s:Group width="100%">
+			
+			<s:Rect width="100%" height="100%" radiusX="5" radiusY="5">
+				<s:fill>
+					<s:SolidColor color="#FFFFFF" alpha=".1"/>
+				</s:fill>
+			</s:Rect>
+			
+			<s:HGroup left="10" right="10" top="10" verticalAlign="middle" >
+				
+				<s:VGroup paddingBottom="10"  paddingLeft="10">
+					<s:Image source="@Embed('/assets/img/logo.png')" width="400" height="41"/>
+					<s:Label text="by Lawrence Berkeley National Laboratory" fontSize="9" color="#ffffff"/>
+				</s:VGroup>
+				
+				<s:Spacer width="100%"/>
+				
+				<s:VGroup >
+					
+					<s:HGroup>
+						<s:Label text="Num. Products :"
+								 alpha=".8"
+								 textAlign="right"
+								 color="#FFFFFF"/>
+						<s:Label text="{windowListViewPM.windowsAC.length}"
+								 color="#FFFFFF"/>
+					</s:HGroup>
+					
+					<s:HGroup>
+						<s:Label text="Last simulation :"
+								 textAlign="right"
+								 alpha=".8"
+								 color="#FFFFFF"/>
+						<s:Label text="{windowListViewPM.lastCalculated}"
+								 color="#FFFFFF"/>
+					</s:HGroup>
+					<s:Spacer height="100%"/>
+					
+				</s:VGroup>
+				
+			</s:HGroup>
+			
+		</s:Group>
+		
+		<s:Spacer height="5"/>
+		
+		<s:HGroup width="100%" verticalAlign="bottom">
+			<s:Spacer width="100%"/>
+			<mx:LinkButton label="select all"
+						   click="{windowListViewPM.onSelectAll(adgWindows)}"
+						   color="#FFFFFF"
+						   />
+			<s:Label text="|" color="#FFFFFF" alpha=".2"/>
+			
+			<mx:LinkButton label="deselect all"
+						   click="{windowListViewPM.onDeselectAll(adgWindows)}"
+						   color="#FFFFFF"
+						   />
+		</s:HGroup>
+		
+		<s:Spacer height="5"/>
+		
+		<mx:AdvancedDataGrid id="adgWindows" 
+							 allowMultipleSelection="true" 
+							 selectionMode="multipleRows"
+							 editable="true"
+							 width="100%"
+							 height="100%"
+							 defaultLeafIcon="{null}"
+							 folderOpenIcon="{null}"
+							 folderClosedIcon="{null}"
+							 groupIconFunction="{windowListViewPM.myIconFunc}"
+							 styleFunction="{windowListViewPM.formatGridRow}"
+							 itemEditBegin="windowListViewPM.disallowParentRowEdits(event)" 
+							 itemEditEnd="windowListViewPM.onUserChangeFinished(adgWindows, event, adgWindows.selectedItem)" 
+							 mouseUp="windowListViewPM.onDGSelectedItemsChanged(adgWindows.selectedItems)"
+							 keyUp="windowListViewPM.onDGKeyUp(event, adgWindows.selectedItems)"
+							 headerWordWrap="true"
+							 sortExpertMode="true"
+							 headerRenderer="gov.lbl.aercalc.view.item_renderers.MyADGHeaderRenderer">
+			
+			<mx:dataProvider>
+				<mx:HierarchicalData source="{windowListViewPM.windowsAC}" childrenField="children"/>
+			</mx:dataProvider>
+
+			<mx:columns>
+
+				<!-- we need a blank column to handle the accordion controls -->
+				
+				<mx:AdvancedDataGridColumn headerText="" width="30" editable="false"/>
+
+				<mx:AdvancedDataGridColumn id="windowID_display"
+										   dataField="id"
+										   dataTipField="ID"
+										   width="80"
+										   textAlign="left"
+										   headerText="ID"
+										   visible="{settingsModel.appSettings.showIDColumn}"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn id="windowName"
+										   dataField="name"
+										   dataTipField="name"
+										   width="250"
+										   textAlign="left"
+										   headerText="Name"
+										   editable="false"/>
+
+				<mx:AdvancedDataGridColumn id="bsdfStatus"
+										   dataField="hasBSDF"
+										   width="30"
+										   headerText="BSDF"
+										   editable="false"
+										   textAlign="center"
+										   itemRenderer="gov.lbl.aercalc.view.item_renderers.BSDFStatusRenderer"
+											/>
+				
+				<mx:AdvancedDataGridColumn id="versionStatus"
+										   dataField="versionStatus"
+										   width="50"
+										   headerText="Error Status"
+										   showDataTips="true"
+										   editable="false"
+										   textAlign="center"
+										   itemRenderer="gov.lbl.aercalc.view.item_renderers.VersionStatusRenderer"
+										   />
+
+				<mx:AdvancedDataGridColumn id="userID"
+										   dataField="userID"
+										   dataTipField="userID"
+										   width="100"
+										   textAlign="center"
+										   headerText="AERC ID"
+										   editable="true"/>
+
+				<mx:AdvancedDataGridColumn dataField="shadingSystemManufacturer"
+										   width="150"
+										   showDataTips="true"
+										   dataTipField="shadingSystemManufacturer"
+										   headerText="Manufacturer"
+										   itemRenderer="gov.lbl.aercalc.view.item_renderers.ShadingSystemManufacturerRenderer"
+										   textAlign="center"
+										   editable="false"/>
+
+				<mx:AdvancedDataGridColumn dataField="W7ID"
+										   headerText="W7 Product ID"
+										   showDataTips="false"
+										   textAlign="center"
+										   width="70"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="W7GlzSysID"
+										   width="70"
+										   showDataTips="true"
+										   dataTipField="W7GlzSysID"
+										   headerText="W7 Glazing System ID"
+										   textAlign="center"
+										   editable="false"/>
+
+				<mx:AdvancedDataGridColumn dataField="W7ShdSysID"
+										   width="70"
+										   showDataTips="true"
+										   dataTipField="W7ShdSysID"
+										   headerText="CGDB ID"
+										   textAlign="center"
+										   editable="false"/>
+
+				<mx:AdvancedDataGridColumn dataField="cgdbVersion"
+										   width="90"
+										   showDataTips="true"
+										   dataTipField="cgdbVersion"
+										   headerText="CGDB Version"
+										   textAlign="center"
+										   editable="false"/>
+
+				<mx:AdvancedDataGridColumn dataField="WINDOWOriginDB"
+										   width="100"
+										   headerText="W7 DB"
+										   textAlign="center"
+										   showDataTips="true"
+										   dataTipField="WINDOWOriginDB"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="WINDOWVersion"
+										   width="100"
+										   headerText="W7 Version"
+										   textAlign="center"
+										   dataTipField="WINDOWVersion"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="shadingSystemType"
+										   headerText="Window Attachment"
+										   width="80"
+										   showDataTips="false"
+										   textAlign="center"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="baseWindowType"
+										   headerText="Baseline Window"
+										   width="70"
+										   showDataTips="false"
+										   textAlign="center"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="UvalWinter"
+										   headerText="{windowListViewPM.uFactorHeader}"
+										   wordWrap="true"
+										   labelFunction="{windowListViewPM.windowValueLabelFunction}"
+										   textAlign="right"
+										   showDataTips="false"
+										   editable="false"
+										   width="85"/>
+				
+				<mx:AdvancedDataGridColumn dataField="SHGC"
+										   headerText="SHGC"
+										   labelFunction="{windowListViewPM.windowValueLabelFunction}"
+										   textAlign="right"
+										   showDataTips="false"
+										   editable="false"
+										   width="50"/>
+				
+				<mx:AdvancedDataGridColumn dataField="Tvis"
+										   headerText="TVIS"
+										   showDataTips="false"
+										   labelFunction="{windowListViewPM.windowValueLabelFunction}"
+										   textAlign="right"
+										   editable="false"
+										   width="50"/>
+				
+				<mx:AdvancedDataGridColumn dataField="airInfiltration"
+										   showDataTips="false"
+										   headerText="{windowListViewPM.airInfiltrationHeader}"
+										   labelFunction="{windowListViewPM.windowValueLabelFunction}"
+										   textAlign="right"
+										   editable="true"
+										   width="70"/>
+								
+				<mx:AdvancedDataGridColumn dataField="epc"
+										   headerText="EPc"
+										   showDataTips="false"
+										   width="50"
+										   labelFunction="{windowListViewPM.epLabelFunction}"
+										   textAlign="right"
+										   editable="false"/>
+				
+				<mx:AdvancedDataGridColumn dataField="eph"
+										   headerText="EPh"
+										   showDataTips="false"
+										   width="50"
+										   labelFunction="{windowListViewPM.epLabelFunction}"
+										   textAlign="right"
+										   editable="false"/>
+				
+			</mx:columns>
+			
+			
+			<mx:rendererProviders>
+				<mx:AdvancedDataGridRendererProvider column="{windowName}"
+													 depth="2"
+													 renderer="gov.lbl.aercalc.view.item_renderers.WindowNameRenderer"/>
+			</mx:rendererProviders>
+			
+		</mx:AdvancedDataGrid>
+		
+		
+	</s:VGroup>
+	
+	<s:Group left="0" right="0" bottom="0" height="60">
+		
+		<s:Rect width="100%" height="100%">
+			<s:fill>
+				<s:SolidColor color="{Utils.COLOR_BLUE_DARK}"/>
+			</s:fill>
+		</s:Rect>
+		
+		<s:HGroup width="100%" paddingLeft="20" paddingRight="20" verticalCenter="0">
+			<s:Button id="btnImport"
+					  label="Import Products"
+					  height="35"
+					  minWidth="120"
+					  click="adgWindows.selectedItems=null;windowListViewPM.onImport();"
+					  icon="{AERCalcResources.WINDOW_ICON}"
+					  />
+			<s:Spacer width="100%"/>
+			<s:Button id="btnSimulate"
+					  label="Run Simulation"
+					  height="35"
+					  minWidth="120"
+					  enabled="{adgWindows.selectedIndices.length>0}"
+					  click="windowListViewPM.onRunSimulation(event)"
+					  icon="{AERCalcResources.LIGHTNING_ICON}"
+					  />
+		</s:HGroup>
+		
+	</s:Group>
+	
+</s:Group>

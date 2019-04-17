@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ArrayCollection xmlns:fx="http://ns.adobe.com/mxml/2009"
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:menu="gov.lbl.aercalc.view.components.menu.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import gov.lbl.aercalc.constants.Commands;
+			import gov.lbl.aercalc.model.MenuModel;
+			
+			private var _menuModel:MenuModel;
+			
+			[Bindable]
+			public function set model(value:MenuModel):void
+			{
+				_menuModel = value;
+				_menuModel.mainMenu = this;
+			}
+			public function get model():MenuModel
+			{
+				return _menuModel;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<menu:MenuItem label="File" enabled="{model.menuEnabled}">
+		<menu:MenuItem label="Open..." command="{Commands.FILE_OPEN}"/>
+		<menu:MenuItem label="Save As..." command="{Commands.FILE_SAVE_AS}"/>
+		<menu:MenuItem type="separator"/>
+		<menu:MenuItem label="Preferences..." command="{Commands.PREFERENCES}"/>
+		<!--
+		<menu:MenuItem label="Check for updates..." command="{Commands.CHECK_FOR_UPDATES}"/>
+		-->
+		<menu:MenuItem type="separator"/>
+		<menu:MenuItem label="Quit" command="{Commands.QUIT_APPLICATION}" key="q"/>
+	</menu:MenuItem>
+	
+	<menu:MenuItem id="windowsMenu" menuID="windows" label="Products" enabled="{model.menuEnabled}">
+		<menu:MenuItem label="Select All" controlKey="true" key="a" command="{Commands.SELECT_ALL}" />
+		<menu:MenuItem label="Deselect All" controlKey="true" shiftKey="true" key="a" command="{Commands.DESELECT_ALL}" />
+		<menu:MenuItem type="separator"/>
+		<menu:MenuItem label="Simulate" controlKey="true" key="s" />
+		<menu:MenuItem type="separator"/>
+		<menu:MenuItem label="Import" command="{Commands.IMPORT_W7_WINDOWS}" controlKey="true" key="i" />
+		<menu:MenuItem label="Export as CSV" controlKey="true" key="e" command="{Commands.EXPORT_WINDOWS}"/>
+		<menu:MenuItem type="separator"/>
+		<menu:MenuItem label="Delete"  controlKey="true" key="d" command="{Commands.DELETE_SELECTED_WINDOWS}"/>
+	</menu:MenuItem>
+
+
+
+	<menu:MenuItem label="Help">
+		<menu:MenuItem label="About AERCalc" command="{Commands.ABOUT}"  controlKey="true" key="p"/>
+	</menu:MenuItem>
+
+	
+</s:ArrayCollection>

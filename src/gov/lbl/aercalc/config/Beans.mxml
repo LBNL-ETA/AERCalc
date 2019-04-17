@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swiz:BeanProvider
+		xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:swiz="http://swiz.swizframework.org"
+		xmlns:business="gov.lbl.aercalc.business.*"
+		xmlns:model="gov.lbl.aercalc.model.*"
+		xmlns:settingsModel="gov.lbl.aercalc.model.settings.*"
+		xmlns:settings="gov.lbl.aercalc.model.settings.*"
+		xmlns:controller="gov.lbl.aercalc.controller.*"
+>
+
+	<fx:Script><![CDATA[
+
+		import gov.lbl.aercalc.view.model.WindowListViewPM;
+
+		]]></fx:Script>
+
+    <fx:Declarations>
+
+		<!-- PRESENTATION MODELS -->
+		<!-- This didn't work, didn't seem to allow bindings to be set up: <swiz:Prototype type="{WindowListViewPM}" id="windowListViewPM" /> -->
+		<swiz:Prototype type="{WindowListViewPM}"/>
+
+		<!-- MODELS -->
+		<model:MenuModel id="menuModel"/>
+		<model:ApplicationModel id="applicationModel"/>
+		<model:PopupModel id="popupModel" />
+		<model:LibraryModel id="libraryModel" />
+		<model:SimulationModel id="simulationModel" />
+		<model:ImportModel id="importModel"/>
+		<settingsModel:AppSettings id="appSettings"/>
+		<settings:SettingsModel id="settingsModel"/>
+		<settings:VariableSettingsModel id="variableSettingsModel"/>
+
+		<!-- CONTROLLERS -->
+		<controller:ApplicationController id="applicationController"/>
+		<controller:DialogsController id="dialogsController"/>
+		<controller:MenuController id="menuController"/>
+		<controller:DBController id="dbController"/>
+		<controller:SimulationController id="simulationController"/>
+		<controller:W7ImportController id="importController"/>
+		<controller:LibraryController id="libraryController"/>
+		<controller:FileController id="fileController"/>
+		<controller:ExportController id="exportController"/>
+
+		<!-- MANAGERS -->
+		<business:DBManager id="dbManager"/>
+		<business:MigrationManager id="migrationManager"/>
+
+		<!-- DELEGATES -->
+		<business:LibraryDelegate id="libraryDelegate"/>
+		<business:W7ImportDelegate id="w7ImportDelegate"/>
+		<business:AppSettingsDelegate id="appSettingsDelegate"/>
+		<business:ESCalcDelegate id="esCalcDelegate"/>
+		<business:EPlusSimulationDelegate id="ePlusSimulationDelegate"/>
+		<business:ESCalcResultsLoader id="eSCalcResultsLoader"/>
+		<business:ExportDelegate id="exportDelegate"/>
+		<business:InfiltrationCalcs id="infiltrationCalcs"/>
+		<business:FileManager id="fileManager"/>
+		
+		
+    </fx:Declarations>
+
+
+</swiz:BeanProvider>

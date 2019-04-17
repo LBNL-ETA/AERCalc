@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<THERM-XML xmlns="http://windows.lbl.gov">
+<ThermVersion>Version 7.5.18.0</ThermVersion>
+<FileVersion>1</FileVersion>
+<SaveDate>2017-09-28T16:04:50</SaveDate>
+
+<Title></Title>
+<CreatedBy></CreatedBy>
+<Company></Company>
+<Client></Client>
+<CrossSectionType>Sill</CrossSectionType>
+<Notes></Notes>
+<Units>SI</Units>
+<MeshControl MeshLevel="8" ErrorCheckFlag="1" ErrorLimit="10.000000" MaxIterations="5" CMAflag="0" />
+<Materials>
+	<Material Name="ps01-lux278.txt" Type="5" Conductivity="0.120000" Tir="0.092767" EmissivityFront="0.807260" EmissivityBack="0.807260" RGBColor="0xDCE447">
+		<Property Side="Front" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Visible" Specularity="Diffuse" T="0.296641" R="0.688250"/>
+		<Property Side="Front" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Front" Range="Solar" Specularity="Diffuse" T="0.354086" R="0.603932"/>
+		<Property Side="Back" Range="Visible" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Visible" Specularity="Diffuse" T="0.296641" R="0.688250"/>
+		<Property Side="Back" Range="Solar" Specularity="Direct" T="0.000000" R="0.000000"/>
+		<Property Side="Back" Range="Solar" Specularity="Diffuse" T="0.354086" R="0.603932"/>
+	</Material>
+</Materials>
+<BoundaryConditions>
+	<BoundaryCondition Name="Adiabatic" Type="0" H="0.000000" HeatFLux="0.000000" Temperature="0.000000" RGBColor="0x000000" 
+		Tr="0.000000" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="0" FluxFlag="1" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeInE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="21.110001" RGBColor="0x8000FF" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+	<BoundaryCondition Name="ShadeOutE" Type="0" H="9999.000000" HeatFLux="0.000000" Temperature="-18.000000" RGBColor="0xFF8000" 
+		Tr="21.110001" Hr="0.000000" Ei="1.000000" Viewfactor="1.000000" RadiationModel="0"
+		ConvectionFlag="1" FluxFlag="0" RadiationFlag="0" ConstantTemperatureFlag="0" EmisModifier="1.000000" />
+</BoundaryConditions>
+<Polygons>
+	<Polygon ID="88" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-26.800001" />
+		<Point index="1" x="250.332230" y="-26.800001" />
+		<Point index="2" x="266.248901" y="-14.800001" />
+		<Point index="3" x="265.916656" y="-14.800001" />
+	</Polygon>
+	<Polygon ID="87" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-14.800001" />
+		<Point index="1" x="266.248901" y="-14.800001" />
+		<Point index="2" x="250.332230" y="-2.800001" />
+		<Point index="3" x="250.000000" y="-2.800001" />
+	</Polygon>
+	<Polygon ID="80" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-50.800003" />
+		<Point index="1" x="250.332230" y="-50.800003" />
+		<Point index="2" x="266.248901" y="-38.800003" />
+		<Point index="3" x="265.916656" y="-38.800003" />
+	</Polygon>
+	<Polygon ID="79" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-38.800003" />
+		<Point index="1" x="266.248901" y="-38.800003" />
+		<Point index="2" x="250.332230" y="-26.800001" />
+		<Point index="3" x="250.000000" y="-26.800001" />
+	</Polygon>
+	<Polygon ID="72" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-74.800003" />
+		<Point index="1" x="250.332230" y="-74.800003" />
+		<Point index="2" x="266.248901" y="-62.800003" />
+		<Point index="3" x="265.916656" y="-62.800003" />
+	</Polygon>
+	<Polygon ID="71" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-62.800003" />
+		<Point index="1" x="266.248901" y="-62.800003" />
+		<Point index="2" x="250.332230" y="-50.800003" />
+		<Point index="3" x="250.000000" y="-50.800003" />
+	</Polygon>
+	<Polygon ID="64" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-98.800003" />
+		<Point index="1" x="250.332230" y="-98.800003" />
+		<Point index="2" x="266.248901" y="-86.800003" />
+		<Point index="3" x="265.916656" y="-86.800003" />
+	</Polygon>
+	<Polygon ID="63" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-86.800003" />
+		<Point index="1" x="266.248901" y="-86.800003" />
+		<Point index="2" x="250.332230" y="-74.800003" />
+		<Point index="3" x="250.000000" y="-74.800003" />
+	</Polygon>
+	<Polygon ID="56" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-122.800003" />
+		<Point index="1" x="250.332230" y="-122.800003" />
+		<Point index="2" x="266.248901" y="-110.800003" />
+		<Point index="3" x="265.916656" y="-110.800003" />
+	</Polygon>
+	<Polygon ID="55" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-110.800003" />
+		<Point index="1" x="266.248901" y="-110.800003" />
+		<Point index="2" x="250.332230" y="-98.800003" />
+		<Point index="3" x="250.000000" y="-98.800003" />
+	</Polygon>
+	<Polygon ID="48" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-146.800003" />
+		<Point index="1" x="250.332230" y="-146.800003" />
+		<Point index="2" x="266.248901" y="-134.800003" />
+		<Point index="3" x="265.916656" y="-134.800003" />
+	</Polygon>
+	<Polygon ID="47" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-134.800003" />
+		<Point index="1" x="266.248901" y="-134.800003" />
+		<Point index="2" x="250.332230" y="-122.800003" />
+		<Point index="3" x="250.000000" y="-122.800003" />
+	</Polygon>
+	<Polygon ID="40" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-170.800003" />
+		<Point index="1" x="250.332230" y="-170.800003" />
+		<Point index="2" x="266.248901" y="-158.800003" />
+		<Point index="3" x="265.916656" y="-158.800003" />
+	</Polygon>
+	<Polygon ID="39" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-158.800003" />
+		<Point index="1" x="266.248901" y="-158.800003" />
+		<Point index="2" x="250.332230" y="-146.800003" />
+		<Point index="3" x="250.000000" y="-146.800003" />
+	</Polygon>
+	<Polygon ID="10" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-194.800003" />
+		<Point index="1" x="250.332230" y="-194.800003" />
+		<Point index="2" x="266.248901" y="-182.800003" />
+		<Point index="3" x="265.916656" y="-182.800003" />
+	</Polygon>
+	<Polygon ID="9" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-182.800003" />
+		<Point index="1" x="266.248901" y="-182.800003" />
+		<Point index="2" x="250.332230" y="-170.800003" />
+		<Point index="3" x="250.000000" y="-170.800003" />
+	</Polygon>
+	<Polygon ID="33" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-218.800003" />
+		<Point index="1" x="250.332230" y="-218.800003" />
+		<Point index="2" x="266.248901" y="-206.800003" />
+		<Point index="3" x="265.916656" y="-206.800003" />
+	</Polygon>
+	<Polygon ID="32" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-206.800003" />
+		<Point index="1" x="266.248901" y="-206.800003" />
+		<Point index="2" x="250.332230" y="-194.800003" />
+		<Point index="3" x="250.000000" y="-194.800003" />
+	</Polygon>
+	<Polygon ID="25" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-242.800003" />
+		<Point index="1" x="250.332230" y="-242.800003" />
+		<Point index="2" x="266.248901" y="-230.800003" />
+		<Point index="3" x="265.916656" y="-230.800003" />
+	</Polygon>
+	<Polygon ID="24" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-230.800003" />
+		<Point index="1" x="266.248901" y="-230.800003" />
+		<Point index="2" x="250.332230" y="-218.800003" />
+		<Point index="3" x="250.000000" y="-218.800003" />
+	</Polygon>
+	<Polygon ID="1" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="250.000000" y="-266.799988" />
+		<Point index="1" x="250.332230" y="-266.799988" />
+		<Point index="2" x="266.248901" y="-254.800003" />
+		<Point index="3" x="265.916656" y="-254.800003" />
+	</Polygon>
+	<Polygon ID="4" Material="ps01-lux278.txt" NSides="4" Type="1" units="mm">
+		<Point index="0" x="265.916656" y="-254.800003" />
+		<Point index="1" x="266.248901" y="-254.800003" />
+		<Point index="2" x="250.332230" y="-242.800003" />
+		<Point index="3" x="250.000000" y="-242.800003" />
+	</Polygon>
+</Polygons>
+<Boundaries>
+	<BCPolygon ID="61" BC="Adiabatic" units="mm" MaterialName="ps01-lux278.txt" PolygonID="1" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-266.799988" />
+		<Point index="1" x="250.332230" y="-266.799988" />
+	</BCPolygon>
+	<BCPolygon ID="62" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="1" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-266.799988" />
+		<Point index="1" x="266.248901" y="-254.800003" />
+	</BCPolygon>
+	<BCPolygon ID="65" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="4" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-254.800003" />
+		<Point index="1" x="250.332230" y="-242.800003" />
+	</BCPolygon>
+	<BCPolygon ID="66" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="25" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-242.800003" />
+		<Point index="1" x="266.248901" y="-230.800003" />
+	</BCPolygon>
+	<BCPolygon ID="67" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="24" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-230.800003" />
+		<Point index="1" x="250.332230" y="-218.800003" />
+	</BCPolygon>
+	<BCPolygon ID="68" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="33" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-218.800003" />
+		<Point index="1" x="266.248901" y="-206.800003" />
+	</BCPolygon>
+	<BCPolygon ID="69" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="32" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-206.800003" />
+		<Point index="1" x="250.332230" y="-194.800003" />
+	</BCPolygon>
+	<BCPolygon ID="70" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="10" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-194.800003" />
+		<Point index="1" x="266.248901" y="-182.800003" />
+	</BCPolygon>
+	<BCPolygon ID="73" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="9" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-182.800003" />
+		<Point index="1" x="250.332230" y="-170.800003" />
+	</BCPolygon>
+	<BCPolygon ID="74" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="40" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-170.800003" />
+		<Point index="1" x="266.248901" y="-158.800003" />
+	</BCPolygon>
+	<BCPolygon ID="75" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="39" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-158.800003" />
+		<Point index="1" x="250.332230" y="-146.800003" />
+	</BCPolygon>
+	<BCPolygon ID="76" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="48" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-146.800003" />
+		<Point index="1" x="266.248901" y="-134.800003" />
+	</BCPolygon>
+	<BCPolygon ID="77" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="47" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-134.800003" />
+		<Point index="1" x="250.332230" y="-122.800003" />
+	</BCPolygon>
+	<BCPolygon ID="78" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="56" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-122.800003" />
+		<Point index="1" x="266.248901" y="-110.800003" />
+	</BCPolygon>
+	<BCPolygon ID="81" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="55" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-110.800003" />
+		<Point index="1" x="250.332230" y="-98.800003" />
+	</BCPolygon>
+	<BCPolygon ID="82" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="64" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-98.800003" />
+		<Point index="1" x="266.248901" y="-86.800003" />
+	</BCPolygon>
+	<BCPolygon ID="83" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="63" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-86.800003" />
+		<Point index="1" x="250.332230" y="-74.800003" />
+	</BCPolygon>
+	<BCPolygon ID="84" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="72" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-74.800003" />
+		<Point index="1" x="266.248901" y="-62.800003" />
+	</BCPolygon>
+	<BCPolygon ID="85" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="71" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-62.800003" />
+		<Point index="1" x="250.332230" y="-50.800003" />
+	</BCPolygon>
+	<BCPolygon ID="86" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="80" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-50.800003" />
+		<Point index="1" x="266.248901" y="-38.800003" />
+	</BCPolygon>
+	<BCPolygon ID="89" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="79" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-38.800003" />
+		<Point index="1" x="250.332230" y="-26.800001" />
+	</BCPolygon>
+	<BCPolygon ID="90" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="88" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-26.800001" />
+		<Point index="1" x="266.248901" y="-14.800001" />
+	</BCPolygon>
+	<BCPolygon ID="91" BC="ShadeInE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="87" EnclosureID="0" UFactorTag="Edge" Emissivity="0.807260" MaterialSide="Back" IlluminatedSurface="FALSE">
+		<Point index="0" x="266.248901" y="-14.800001" />
+		<Point index="1" x="250.332230" y="-2.800001" />
+	</BCPolygon>
+	<BCPolygon ID="92" BC="Adiabatic" units="mm" MaterialName="ps01-lux278.txt" PolygonID="87" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.332230" y="-2.800001" />
+		<Point index="1" x="250.000000" y="-2.800001" />
+	</BCPolygon>
+	<BCPolygon ID="93" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="87" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-2.800001" />
+		<Point index="1" x="265.916656" y="-14.800001" />
+	</BCPolygon>
+	<BCPolygon ID="94" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="88" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-14.800001" />
+		<Point index="1" x="250.000000" y="-26.800001" />
+	</BCPolygon>
+	<BCPolygon ID="95" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="79" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-26.800001" />
+		<Point index="1" x="265.916656" y="-38.800003" />
+	</BCPolygon>
+	<BCPolygon ID="96" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="80" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-38.800003" />
+		<Point index="1" x="250.000000" y="-50.800003" />
+	</BCPolygon>
+	<BCPolygon ID="97" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="71" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-50.800003" />
+		<Point index="1" x="265.916656" y="-62.800003" />
+	</BCPolygon>
+	<BCPolygon ID="98" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="72" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-62.800003" />
+		<Point index="1" x="250.000000" y="-74.800003" />
+	</BCPolygon>
+	<BCPolygon ID="99" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="63" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-74.800003" />
+		<Point index="1" x="265.916656" y="-86.800003" />
+	</BCPolygon>
+	<BCPolygon ID="100" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="64" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-86.800003" />
+		<Point index="1" x="250.000000" y="-98.800003" />
+	</BCPolygon>
+	<BCPolygon ID="101" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="55" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-98.800003" />
+		<Point index="1" x="265.916656" y="-110.800003" />
+	</BCPolygon>
+	<BCPolygon ID="102" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="56" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-110.800003" />
+		<Point index="1" x="250.000000" y="-122.800003" />
+	</BCPolygon>
+	<BCPolygon ID="103" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="47" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-122.800003" />
+		<Point index="1" x="265.916656" y="-134.800003" />
+	</BCPolygon>
+	<BCPolygon ID="104" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="48" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="265.916656" y="-134.800003" />
+		<Point index="1" x="250.000000" y="-146.800003" />
+	</BCPolygon>
+	<BCPolygon ID="105" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="39" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="True">
+		<Point index="0" x="250.000000" y="-146.800003" />
+		<Point index="1" x="265.916656" y="-158.800003" />
+	</BCPolygon>
+	<BCPolygon ID="106" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="40" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-158.800003" />
+		<Point index="1" x="250.000000" y="-170.800003" />
+	</BCPolygon>
+	<BCPolygon ID="107" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="9" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-170.800003" />
+		<Point index="1" x="265.916656" y="-182.800003" />
+	</BCPolygon>
+	<BCPolygon ID="108" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="10" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-182.800003" />
+		<Point index="1" x="250.000000" y="-194.800003" />
+	</BCPolygon>
+	<BCPolygon ID="109" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="32" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-194.800003" />
+		<Point index="1" x="265.916656" y="-206.800003" />
+	</BCPolygon>
+	<BCPolygon ID="110" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="33" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-206.800003" />
+		<Point index="1" x="250.000000" y="-218.800003" />
+	</BCPolygon>
+	<BCPolygon ID="111" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="24" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-218.800003" />
+		<Point index="1" x="265.916656" y="-230.800003" />
+	</BCPolygon>
+	<BCPolygon ID="112" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="25" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-230.800003" />
+		<Point index="1" x="250.000000" y="-242.800003" />
+	</BCPolygon>
+	<BCPolygon ID="113" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="4" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="250.000000" y="-242.800003" />
+		<Point index="1" x="265.916656" y="-254.800003" />
+	</BCPolygon>
+	<BCPolygon ID="114" BC="ShadeOutE" units="mm" MaterialName="ps01-lux278.txt" PolygonID="1" EnclosureID="0" UFactorTag="" Emissivity="0.807260" MaterialSide="Front" IlluminatedSurface="FALSE">
+		<Point index="0" x="265.916656" y="-254.800003" />
+		<Point index="1" x="250.000000" y="-266.799988" />
+	</BCPolygon>
+</Boundaries>
+</THERM-XML>
