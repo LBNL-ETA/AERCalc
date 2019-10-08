@@ -32,7 +32,7 @@ package gov.lbl.aercalc.model
 		//to do an initial import and parse the xml
 		public static const VERSION_WINDOW:String				= "7.7.01";
 		public static const VERSION_ENERGYPLUS:String			= "8.5.0";
-		public static const VERSION_ESCALC:String				= "1.0.9";
+		public static const VERSION_ESCALC:String				= "1.0.11";
 		public static const VERSION_THERM:String				= "7.7.01";
 
 		public static const BASE_STORAGE_PATH_DIRNAME:String 	= "AppData/LBNL/aercalc";

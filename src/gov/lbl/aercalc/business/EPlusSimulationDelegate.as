@@ -387,6 +387,36 @@ package gov.lbl.aercalc.business
 			ac.addItem(minneapolis_half);
 			return ac;
 		}
+		
+		public function createWindowQuiltFiles(wVO:WindowVO, baselineType:String):ArrayCollection
+		{
+			var houston_full:File = createFullyShadedIdf(wVO, "Houston", baselineType);
+			var minneapolis_full:File = createFullyShadedIdf(wVO, "Minneapolis", baselineType);
+			var houston_half:File = createHalfShadedIdf(wVO, "Houston", baselineType);
+			var minneapolis_half:File = createHalfShadedIdf(wVO, "Minneapolis", baselineType);
+			
+			var ac:ArrayCollection = new ArrayCollection();
+			ac.addItem(houston_full);
+			ac.addItem(minneapolis_full);
+			ac.addItem(houston_half);
+			ac.addItem(minneapolis_half);
+			return ac;
+		}
+		
+		public function createRollerShutterFiles(wVO:WindowVO, baselineType:String):ArrayCollection
+		{
+			var houston_full:File = createFullyShadedIdf(wVO, "Houston", baselineType);
+			var minneapolis_full:File = createFullyShadedIdf(wVO, "Minneapolis", baselineType);
+			var houston_half:File = createHalfShadedIdf(wVO, "Houston", baselineType);
+			var minneapolis_half:File = createHalfShadedIdf(wVO, "Minneapolis", baselineType);
+			
+			var ac:ArrayCollection = new ArrayCollection();
+			ac.addItem(houston_full);
+			ac.addItem(minneapolis_full);
+			ac.addItem(houston_half);
+			ac.addItem(minneapolis_half);
+			return ac;
+		}
 			   
 		public function createCellularShadesFiles(wVO:WindowVO, baselineType:String):ArrayCollection
 		{
@@ -513,7 +543,13 @@ package gov.lbl.aercalc.business
 					return createPleatedShadesFiles(windowList[0], baselineType);
 				
 				case "RS":
-					return createRollerShadesFiles(windowList[0], baselineType);	
+					return createRollerShadesFiles(windowList[0], baselineType);
+					
+				case "WQ":
+					return createWindowQuiltFiles(windowList[0], baselineType);
+					
+				case "ER":
+					return createRollerShutterFiles(windowList[0], baselineType);
 				
 				case "SS":
 					return createSolarScreensFiles(windowList[0], baselineType);	

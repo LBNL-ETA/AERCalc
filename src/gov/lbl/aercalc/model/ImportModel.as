@@ -61,6 +61,8 @@ import gov.lbl.aercalc.view.dialogs.ImportW7WindowsDialog;
             { data: "CS", label:"Cellular Shade", is_blind:false },
             { data: "PS", label:"Pleated Shade", is_blind:false },
             { data: "RS", label:"Roller Shade", is_blind:false },
+			{ data: "WQ", label:"Window Quilt", is_blind:false },
+			{ data: "ER", label:"Roller Shutter", is_blind:false },
             { data: "SS", label:"Solar Screen", is_blind:false },
             { data: "WP", label:"Window Panel", is_blind:false },
             { data: "AF", label:"Applied Film", is_blind:false }
