@@ -30,10 +30,10 @@ package gov.lbl.aercalc.model
 		//xml list, we want a constant defined here
 		//so we can immediately flag rows without having
 		//to do an initial import and parse the xml
-		public static const VERSION_WINDOW:String				= "7.7.01";
+		public static const VERSION_WINDOW:String				= "7.7.07";
 		public static const VERSION_ENERGYPLUS:String			= "8.5.0";
 		public static const VERSION_ESCALC:String				= "1.0.11";
-		public static const VERSION_THERM:String				= "7.7.01";
+		public static const VERSION_THERM:String				= "7.7.07";
 
 		public static const BASE_STORAGE_PATH_DIRNAME:String 	= "AppData/LBNL/aercalc";
 		public static const ENERGY_PLUS_SUBDIR:String 			= "EnergyPlus/";
