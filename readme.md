@@ -17,5 +17,3 @@ To build it, you'll need :
 ### Applications currently not in repository
 
 There are currently two binaries (ESCalc.exe and RunEPlus.exe) necessary for running the application that are not in this repository.  Once licensing issues regarding them have been resolved this repository will be updated and this message will be removed. Both of those binaries are included in the LBNL installation of AERCalc: https://windows.lbl.gov/tools/aercalc/software-download
-
-(more info to come)
